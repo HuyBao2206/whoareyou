@@ -1,9 +1,9 @@
 // Trang kết quả 5 thẻ thông điệp và trang Tra cứu.
 // Trang kết quả chỉ đọc các con số trên URL, không cần (và không có) tên hay ngày sinh.
 
-import { MESSAGES } from './messages.js';
+import { MESSAGES, PERSONAL_MONTH, ORIGINS } from './messages.js';
 import { INDEX_META, INDEX_ORDER } from './content.js';
-import { VALID, display } from './calc.js';
+import { VALID, display, personalMonths } from './calc.js';
 import { numColor, countUp } from './anim.js';
 import { escapeHtml as e, G, reducedMotion } from '../../core/utils.js';
 
@@ -29,15 +29,39 @@ function list(items, ordered = false) {
   return `<${tag} class="msg__list">${items.map((x) => `<li>${e(x)}</li>`).join('')}</${tag}>`;
 }
 
-function moreHtml(k, m) {
+/** 12 tháng cá nhân của một năm cá nhân. */
+function monthsHtml(py) {
+  const rows = personalMonths(py)
+    .map(({ month, value }) => {
+      const pm = PERSONAL_MONTH[value];
+      if (!pm) return '';
+      return `<li><span>Tháng ${month}</span><p><b>${e(pm.title)}</b> <i aria-label="tháng cá nhân ${value}">· ${value}</i><br>${e(pm.text)}</p></li>`;
+    })
+    .join('');
+  return rows ? `<ol class="msg__quarters msg__months" role="list">${rows}</ol>` : '';
+}
+
+/** Đoạn “Vì sao số này mang ý nghĩa đó”. */
+function originHtml(n) {
+  const o = ORIGINS[n];
+  return o ? `<div class="msg__block"><h5 class="msg__h">Gốc gác của số ${e(display(n))}</h5><p>${e(o)}</p></div>` : '';
+}
+
+function moreHtml(k, m, n) {
   if (k === 'personalYear') {
+    const months = monthsHtml(n);
     return `
-      <div class="msg__block"><h5 class="msg__h">Chủ đề của năm</h5><p>${e(m.theme)}</p></div>
       <div class="msg__block"><h5 class="msg__h">Nên làm nhiều hơn</h5>${list(m.doMore)}</div>
       <div class="msg__block"><h5 class="msg__h">Nên bớt lại</h5>${list(m.doLess)}</div>
-      <div class="msg__block"><h5 class="msg__h">Gợi ý theo từng quý</h5>
-        <ol class="msg__quarters">${m.byQuarter.map((q, i) => `<li><span>Quý ${i + 1}</span><p>${e(q)}</p></li>`).join('')}</ol>
-      </div>`;
+      ${
+        months
+          ? `<div class="msg__block"><h5 class="msg__h">Từng tháng trong năm</h5>
+               <p class="msg__fine">Tháng cá nhân bằng năm cá nhân cộng số của tháng dương lịch, rồi rút gọn về một chữ số.</p>
+               ${months}
+             </div>`
+          : ''
+      }
+      ${originHtml(n)}`;
   }
   const fields = m.fields
     ? `<div class="msg__block"><h5 class="msg__h">Lĩnh vực có thể hợp</h5>
@@ -49,7 +73,8 @@ function moreHtml(k, m) {
     <div class="msg__block"><h5 class="msg__h">Điểm mạnh</h5>${list(m.strengths)}</div>
     <div class="msg__block"><h5 class="msg__h">Điều cần để ý</h5>${list(m.watchOut)}</div>
     <div class="msg__block"><h5 class="msg__h">Gợi ý làm được ngay</h5>${list(m.advice)}</div>
-    ${fields}`;
+    ${fields}
+    ${originHtml(n)}`;
 }
 
 /** HTML cho một thẻ thông điệp. n = null nghĩa là chỉ số chưa tính. */
@@ -88,7 +113,8 @@ export function cardHtml(k, n, i, { expanded = false, prefix = 'msg' } = {}) {
       </div>
       <ul class="msg__keys" role="list" aria-label="Từ khoá">${m.keywords.map((w) => `<li class="chip">${e(w)}</li>`).join('')}</ul>
       <p class="msg__summary">${e(m.summary)}</p>
-      <div class="msg__more" id="${id}-more"${expanded ? '' : ' hidden'}>${moreHtml(k, m)}</div>
+      ${m.note ? `<blockquote class="msg__note"><p>${e(m.note)}</p></blockquote>` : ''}
+      <div class="msg__more" id="${id}-more"${expanded ? '' : ' hidden'}>${moreHtml(k, m, n)}</div>
       ${
         expanded
           ? ''
