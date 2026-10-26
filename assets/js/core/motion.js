@@ -55,39 +55,33 @@ export function buildRing(host) {
   );
 }
 
-/** Tên web hiện ra theo từng dòng. */
-export async function heroIntro() {
+/**
+ * Tiêu đề các phần hiện ra theo từng dòng khi cuộn tới (GSAP SplitText).
+ * Tiêu đề hero dùng CSS để chữ hiện ngay ở lần vẽ đầu, không phải chờ JS hay font.
+ */
+export function splitTitles(root = document) {
   const gsap = G();
-  const title = document.querySelector('.hero__title');
-  const rest = $$('.hero [data-hero-in]');
-  if (!gsap || reducedMotion()) {
-    document.documentElement.classList.add('hero-ready');
-    return;
-  }
-  // Chờ font tải xong (tối đa 1,2 giây) để SplitText cắt dòng đúng và không làm vỡ dấu.
-  if (document.fonts?.ready) await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 1200))]);
-  // Bỏ lớp ẩn ngay trước khi dựng timeline; gsap.from đặt trạng thái đầu trong cùng tick nên không nháy.
-  document.documentElement.classList.add('hero-ready');
-  const tl = gsap.timeline({ delay: 0.05 });
   const SplitText = window.SplitText;
-  let split = null;
-  if (SplitText && title) {
-    try {
+  const ST = window.ScrollTrigger;
+  if (!gsap || !SplitText || !ST || reducedMotion()) return;
+  const run = () => {
+    $$('[data-split]', root).forEach((el) => {
+      if (el.dataset.splitDone) return;
+      el.dataset.splitDone = '1';
       // Chuẩn hoá NFC trước khi tách để dấu tiếng Việt không bị tách khỏi chữ.
-      $$('.line', title).forEach((el) => (el.textContent = nfc(el.textContent)));
-      split = SplitText.create(title.querySelectorAll('.line'), { type: 'lines', mask: 'lines', linesClass: 'split-line' });
-    } catch {
-      split = null;
-    }
-  }
-  if (split) {
-    tl.from(split.lines, { yPercent: 110, duration: 1.1, ease: 'expo.out', stagger: 0.12 }, 0);
-  } else if (title) {
-    tl.from(title, { opacity: 0, y: 24, duration: 0.9, ease: 'power3.out' }, 0);
-  }
-  tl.from(rest, { opacity: 0, y: 18, duration: 0.8, ease: 'power3.out', stagger: 0.1 }, 0.45);
-  tl.from('.ring', { opacity: 0, scale: 0.92, duration: 1.6, ease: 'power2.out' }, 0);
-  tl.fromTo('.signature', { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 1.3, ease: 'power2.inOut' }, 1);
+      el.textContent = nfc(el.textContent);
+      const split = SplitText.create(el, { type: 'lines', mask: 'lines', linesClass: 'split-line' });
+      gsap.from(split.lines, {
+        yPercent: 110,
+        duration: 1,
+        ease: 'expo.out',
+        stagger: 0.1,
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+      });
+    });
+  };
+  // Đợi font tải xong để cắt dòng đúng.
+  (document.fonts?.ready || Promise.resolve()).then(run);
 }
 
 /** Hiệu ứng spotlight theo con trỏ và tilt rất nhẹ cho thẻ chủ đề. */

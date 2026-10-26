@@ -4,7 +4,7 @@ import { openOverlay, closeOverlay, isOpen } from './core/overlay.js';
 import { initTheme } from './core/theme.js';
 import { toast } from './core/toast.js';
 import { glyph } from './core/glyphs.js';
-import { buildRing, heroIntro, bindCards, scrollReveals, customCursor } from './core/motion.js';
+import { buildRing, bindCards, scrollReveals, splitTitles, customCursor } from './core/motion.js';
 import { escapeHtml, nfc, G } from './core/utils.js';
 
 const gsap = G();
@@ -22,7 +22,7 @@ function fillSite() {
   if (title) {
     // Ngắt dòng sau dấu "&" để tiêu đề cân đối.
     const parts = nfc(nameVi).split(/(?<=&)\s+/);
-    title.innerHTML = parts.map((p) => `<span class="line">${escapeHtml(p)}</span>`).join(' ');
+    title.innerHTML = parts.map((p) => `<span class="line"><span class="line__in">${escapeHtml(p)}</span></span>`).join(' ');
   }
   document.querySelectorAll('[data-site="nameEn"]').forEach((el) => (el.textContent = nameEn));
   document.querySelectorAll('[data-site="nameVi"]').forEach((el) => (el.textContent = nfc(nameVi)));
@@ -143,8 +143,8 @@ fillSite();
 initTheme(document.getElementById('theme-toggle'));
 buildRing(document.querySelector('.ring'));
 buildTopics();
-heroIntro();
 scrollReveals();
+splitTitles();
 customCursor();
 onRoute(handleRoute);
 startRouter();

@@ -38,14 +38,19 @@
         var t = localStorage.getItem('hub-theme');
         if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
       } catch (e) {}
+      document.documentElement.classList.add('js');
     })();
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap&text=%E2%80%94%20HUB">
+  <!-- Font tải không chặn render; chữ hiện bằng font hệ thống trước rồi đổi sang font web. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:ital@1&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap&text=%E2%80%94%20HUB" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:ital@1&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&display=swap">
+  </noscript>
 
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -65,7 +70,7 @@
   <div id="page" class="page">
     <header class="site-header">
       <div class="wrap site-header__inner">
-        <a class="brand" href="./" aria-label="HUB, về trang chủ">
+        <a class="brand" href="./" aria-label="a HUB project, về trang chủ">
           <svg class="brand__mono" viewBox="0 0 66 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
             <path pathLength="1" d="M4 5 V29 M4 17 H16 M16 5 V29"/>
             <path pathLength="1" d="M25 5 V21 Q25 29 32 29 Q39 29 39 21 V5"/>
@@ -88,7 +93,7 @@
         <div class="ring" aria-hidden="true"></div>
         <div class="wrap hero__inner">
           <p class="hero__eyebrow" data-hero-in>Một trang nhỏ để ngẫm về mình</p>
-          <h1 class="hero__title" id="hero-title"><span class="line">Thấu Hiểu &amp;</span> <span class="line">Phát Triển Bản Thân</span></h1>
+          <h1 class="hero__title" id="hero-title"><span class="line"><span class="line__in">Thấu Hiểu &amp;</span></span> <span class="line"><span class="line__in">Phát Triển Bản Thân</span></span></h1>
           <p class="hero__en" lang="en" data-site="nameEn" data-hero-in>Understand Yourself · Grow Yourself</p>
           <p class="hero__intro" data-hero-in>
             Mỗi thẻ dưới đây là một cách nhìn về con người. Bạn đọc để hiểu mình thêm một chút, rồi tự chọn điều gì đáng giữ lại.
@@ -105,7 +110,7 @@
         <div class="wrap">
           <div class="section-head" data-reveal>
             <p class="eyebrow">Các thẻ chủ đề</p>
-            <h2 class="section-title" id="topics-title">Chọn một góc để nhìn lại mình</h2>
+            <h2 class="section-title" id="topics-title" data-split>Chọn một góc để nhìn lại mình</h2>
             <p class="section-lead">Thần số học đã mở để bạn dùng. Những thẻ còn lại HUB đang viết dần, bạn vẫn có thể bấm vào để xem trước nội dung.</p>
           </div>
           <ul class="topics__grid" id="topic-list" role="list"></ul>
@@ -116,7 +121,7 @@
         <div class="wrap">
           <div class="section-head" data-reveal>
             <p class="eyebrow">Về trang này</p>
-            <h2 class="section-title" id="about-title">Đọc để hiểu mình, không phải để được phán</h2>
+            <h2 class="section-title" id="about-title" data-split>Đọc để hiểu mình, không phải để được phán</h2>
           </div>
           <div class="about__grid">
             <article class="about__item" data-reveal>

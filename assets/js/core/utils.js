@@ -33,4 +33,3 @@ export function focusables(root) {
   return $$(FOCUSABLE, root).filter((el) => !el.closest('[inert]') && el.offsetParent !== null);
 }
 
-export const wait = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -46,14 +46,14 @@ export function openOverlay({ origin, title, kicker = '', size = 'full', toc = [
       <div class="ov__backdrop"></div>
       <div class="ov__sheet" role="dialog" aria-modal="true" aria-labelledby="ov-title" tabindex="-1">
         <div class="ov__grab" aria-hidden="true"><span></span></div>
-        <header class="ov__bar">
+        <div class="ov__bar">
           <div class="ov__heading">
             <p class="ov__kicker">${escapeHtml(kicker)}</p>
             <h2 class="ov__title" id="ov-title">${escapeHtml(title)}</h2>
           </div>
           <nav class="ov__toc" aria-label="Đi nhanh tới">${tocHtml(toc)}</nav>
           <button type="button" class="ov__close" aria-label="Đóng">${CLOSE_ICON}</button>
-        </header>
+        </div>
         <div class="ov__scroll"><div class="ov__body"></div></div>
       </div>
     </div>`);

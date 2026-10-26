@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Không tìm thấy trang · Thấu Hiểu &amp; Phát Triển Bản Thân</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F5F1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1220" media="(prefers-color-scheme: dark)">
+  <script>
+    // GitHub Pages trả trang này cho mọi đường dẫn sai, kể cả đường dẫn sâu như /ten-repo/a/b.
+    // Tính thư mục gốc của web để link và favicon luôn đúng. Với web dạng username.github.io/ten-repo/
+    // thư mục gốc là đoạn đầu tiên của đường dẫn.
+    (function () {
+      var parts = location.pathname.split('/').filter(Boolean);
+      var base = /github\.io$/.test(location.hostname) && parts.length > 0 ? '/' + parts[0] + '/' : '/';
+      window.__BASE__ = base;
+      try {
+        var t = localStorage.getItem('hub-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+      var link = document.createElement('link');
+      link.rel = 'icon';
+      link.type = 'image/svg+xml';
+      link.href = base + 'assets/images/favicon.svg';
+      document.head.appendChild(link);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&display=swap">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #F5F1EA; --surface: #FBF8F3; --ink: #141A2E; --ink-2: #3A3F52; --muted: #625D57;
+      --line: rgba(20, 26, 46, 0.14); --gold: #B8893B; --gold-ink: #85601F;
+      --n4: #56693A; --n0: #625D57; --n8: #7B4B28;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme='light']) {
+        color-scheme: dark;
+        --paper: #0F1220; --surface: #161A2B; --ink: #ECE6DC; --ink-2: #CFC8BC; --muted: #A8A196;
+        --line: rgba(236, 230, 220, 0.14); --gold: #D2A55A; --gold-ink: #DDB570;
+        --n4: #A9C27D; --n0: #A8A196; --n8: #D49C70;
+      }
+    }
+    :root[data-theme='dark'] {
+      color-scheme: dark;
+      --paper: #0F1220; --surface: #161A2B; --ink: #ECE6DC; --ink-2: #CFC8BC; --muted: #A8A196;
+      --line: rgba(236, 230, 220, 0.14); --gold: #D2A55A; --gold-ink: #DDB570;
+      --n4: #A9C27D; --n0: #A8A196; --n8: #D49C70;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--paper); color: var(--ink); }
+    body {
+      min-height: 100vh; min-height: 100svh;
+      display: grid; place-items: center;
+      padding: 32px 16px;
+      font-family: 'Be Vietnam Pro', system-ui, sans-serif; line-height: 1.7;
+      overflow-x: hidden;
+    }
+    main { max-width: 640px; text-align: center; }
+    .sum {
+      display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0.08em 0.22em;
+      margin: 0 0 24px;
+      font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-variation-settings: 'opsz' 144;
+      font-size: clamp(3.4rem, 1.6rem + 9vw, 8rem); line-height: 1; letter-spacing: -0.03em;
+    }
+    .sum .op { color: var(--muted); font-size: 0.5em; font-weight: 300; }
+    .sum .n4 { color: var(--n4); }
+    .sum .n0 { color: var(--n0); font-style: italic; }
+    .sum .n8 { color: var(--n8); font-style: italic; }
+    .eyebrow { margin: 0 0 8px; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-ink); }
+    h1 { margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem); line-height: 1.2; }
+    p.lead { margin: 0 auto 28px; max-width: 34rem; color: var(--ink-2); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px;
+      border-radius: 999px; background: var(--ink); color: var(--paper);
+      font-weight: 500; text-decoration: none; transition: transform 0.3s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible { outline: 2px solid var(--gold-ink); outline-offset: 3px; }
+    .sign { margin-top: 40px; font-size: 0.875rem; color: var(--muted); }
+    .rule { width: 64px; height: 1px; margin: 0 auto 28px; background: var(--gold); }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="sum" aria-hidden="true"><span class="n4">4</span><span class="op">+</span><span class="n0">0</span><span class="op">+</span><span class="n4">4</span><span class="op">=</span><span class="n8">8</span></p>
+    <div class="rule"></div>
+    <p class="eyebrow">Lỗi 404</p>
+    <h1>Trang này không có ở đây</h1>
+    <p class="lead">Đường link bạn mở có thể đã đổi, hoặc bị gõ nhầm một chữ. Mình thử cộng các con số của lỗi này cho vui thì ra 8, con số của người cầm lái. Bạn cầm lái quay về trang chủ để chọn lại hướng đi nhé.</p>
+    <a class="btn" id="home" href="/">Về trang chủ</a>
+    <p class="sign">Thấu Hiểu &amp; Phát Triển Bản Thân · a HUB project</p>
+  </main>
+  <script>
+    document.getElementById('home').setAttribute('href', window.__BASE__ || '/');
+  </script>
+</body>
+</html>
