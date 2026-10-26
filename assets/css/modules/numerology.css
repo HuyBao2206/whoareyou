@@ -18,10 +18,15 @@
   font-family: var(--f-display);
   font-size: clamp(3.2rem, 2rem + 6vw, 6rem);
   font-weight: 300;
-  font-variation-settings: 'opsz' 144;
+  font-optical-sizing: auto;
   line-height: 1.05;
   letter-spacing: -0.025em;
   padding-top: 0.1em;
+}
+@media (min-width: 900px) {
+  .nm-hero__title {
+    font-variation-settings: 'opsz' 144;
+  }
 }
 .nm-hero__lead {
   max-width: 40rem;
