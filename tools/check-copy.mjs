@@ -1,83 +1,287 @@
 #!/usr/bin/env node
-// Quét văn phong cho mọi chữ hiển thị trên web (mục 3 của brief).
-// Chạy: node tools/check-copy.mjs
-// Lỗi (exit 1): cụm từ bị cấm, dấu "!" hoặc "—" bất thường, emoji ngoài danh sách cho phép,
-//               chuỗi chưa chuẩn NFC, đoạn mở đầu bằng câu hỏi tu từ, lời khẳng định định mệnh.
-// Cảnh báo: câu quá ngắn kiểu ghi chú, "không chỉ… mà còn…" lặp lại, liệt kê ba tính từ.
-// Đọc lại cả phần cảnh báo; script chỉ bắt được dấu hiệu, không thay được việc tự đọc.
+// Quét văn phong cho mọi chữ hiển thị trên web, theo mục 3 và 5.4 của docs/BRIEF-v3.md.
+// Chạy: node tools/check-copy.mjs            (bảng lỗi và cảnh báo)
+//       node tools/check-copy.mjs --errors   (chỉ in lỗi)
+//
+// Hai nguồn chữ:
+//   1. MODULES: file nội dung JS (import trực tiếp, đi qua mọi chuỗi). Mỗi object có trường `summary`
+//      được coi là một "thẻ" (một mục kết quả): hạn mức từ hạn chế, dấu "!", "không chỉ… mà còn…" tính theo thẻ.
+//      Các thẻ cùng cha là một "nhóm" (vd 13 mục Số chủ đạo): kiểm tra lặp khuôn mở bài, kết bài.
+//   2. FILES: HTML và file giao diện JS, lấy chữ bằng biểu thức chính quy. Hạn mức tính theo file.
+//
+// Lỗi (exit 1) phải sửa hết trước khi coi một lô là xong. Cảnh báo cần đọc lại bằng mắt.
 
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, join, relative } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const ONLY_ERRORS = process.argv.includes('--errors');
 
+/* ---------- Danh sách file ---------- */
+
+// File nội dung có cấu trúc. Thêm file nội dung của thẻ mới vào đây.
+const MODULES = [
+  'assets/js/modules/numerology/messages.js',
+  'assets/js/modules/numerology/content.js',
+  'assets/js/config.js',
+];
+
+// File HTML và file giao diện (chữ nằm lẫn trong code).
 const FILES = [
   'index.html',
   '404.html',
-  'assets/js/config.js',
   'assets/js/main.js',
   'assets/js/core/router.js',
   'assets/js/core/overlay.js',
-  'assets/js/modules/numerology/content.js',
-  'assets/js/modules/numerology/messages.js',
+  'assets/js/core/theme.js',
   'assets/js/modules/numerology/view.js',
   'assets/js/modules/numerology/results.js',
   'assets/js/modules/numerology/calc.js',
 ];
 
-// Cụm từ cấm: sáo rỗng, "văn AI", và khẳng định định mệnh.
+// Câu được HUB cho phép giữ nguyên (mục 3.9, H2). So khớp sau khi chuẩn hoá khoảng trắng.
+const ALLOW_LINES = ['Khám phá bản thân qua những thông điệp từ vũ trụ :))))'];
+
+// Chuỗi kỹ thuật, không phải câu chữ (bỏ qua hẳn).
+const SKIP_KEYS = new Set(['slug', 'glyph', 'size', 'status', 'id', 'key', 'calc', 'url', 'email', 'bio', 'facebook', 'tiktok', 'lifePathMethod', 'yMode']);
+
+/* ---------- Quy tắc ---------- */
+
+// Mục 3.5: cấm trong nội dung.
 const BANNED = [
-  'hành trình', 'khám phá bản thân', 'đầy thú vị', 'bí ẩn', 'vũ trụ', 'gửi gắm', 'chìa khoá', 'chìa khóa',
-  'mở ra cánh cửa', 'cánh cửa', 'đánh thức', 'tiềm năng vô hạn', 'thế giới hiện đại', 'hãy cùng', 'đừng bỏ lỡ',
-  'tóm lại', 'nói cách khác', 'tuyệt vời', 'lung linh', 'kỳ diệu', 'diệu kỳ', 'thần kỳ', 'toả sáng', 'tỏa sáng',
-  'bùng nổ', 'năng lượng tích cực', 'phiên bản tốt nhất', 'vươn tới thành công', 'định mệnh', 'số phận',
-  'chắc chắn sẽ', 'sẽ thất bại', 'chắc chắn giàu', 'số xấu', 'con số xấu', 'xui xẻo', 'đổi đời',
+  'hành trình', 'khám phá bản thân', 'bí ẩn', 'vũ trụ gửi gắm', 'vũ trụ', 'năng lượng', 'rung động', 'tần số',
+  'thăng hoa', 'bứt phá', 'lan toả', 'lan tỏa', 'đánh thức', 'khai mở', 'nội tại', 'bản thể',
+  'phiên bản tốt nhất', 'tiềm năng vô hạn', 'toả sáng', 'tỏa sáng', 'rực rỡ', 'kỳ diệu', 'diệu kỳ', 'tuyệt vời',
+  'trong thế giới hiện đại', 'thế giới hiện đại ngày nay', 'hãy cùng', 'đừng bỏ lỡ', 'tóm lại', 'nói cách khác', 'hãy nhớ rằng',
+  // khẳng định định mệnh (mục 3.2, 4.6)
+  'định mệnh', 'số phận', 'chắc chắn sẽ', 'số xấu', 'xui xẻo', 'đổi đời',
 ];
-// Cụm nên tránh nhưng không chặn hẳn.
-const SOFT = ['khám phá', 'chữa lành', 'không chỉ', 'nhé!', 'cực kỳ', 'vô cùng'];
+// Mục 3.5: hạn chế, tối đa 2 lần mỗi thẻ.
+const LIMITED = ['sâu sắc', 'tinh tế', 'trọn vẹn', 'chữa lành', 'giá trị', 'trải nghiệm', 'kết nối', 'chạm', 'thấu hiểu'];
+// Mục 3.2 và mục 2 của brief: cụm dịch hoặc kết hợp từ sai.
+const CALQUES = [
+  ['rộng rãi thời gian', 'dành thời gian, chịu bỏ công'], ['rộng rãi công sức', 'chịu bỏ công'],
+  ['chạm tới', 'khiến người ta để tâm, nói trúng lòng'], ['chạm được', 'khiến người ta để tâm'],
+  ['cho phép bản thân', 'cứ, không ngại'], ['cho phép mình', 'cứ, không ngại'],
+  ['mang lại năng lượng', 'làm không khí vui lên'], ['nạp năng lượng', '(đổi cách nói)'],
+  ['đời sống nội tâm phong phú', 'hay nghĩ ngợi'], ['đời sống bên trong', 'hay nghĩ ngợi'],
+  ['không gian an toàn', 'chỗ để nói thật mà không sợ bị chê'], ['phiên bản tốt hơn', '(bỏ)'],
+  ['đóng vai trò quan trọng', '(nói thẳng vai trò)'], ['điều này cho thấy', '(lược, hoặc “nghĩa là”)'],
+  ['đặt chân xuống đất', '(đổi cách nói)'], ['có hình dạng rõ', '(đổi cách nói)'], ['lên lịch nghỉ ngơi', '(đổi cách nói)'],
+  ['có nghiên cứu đứng sau', 'có cơ sở nghiên cứu'], ['hướng vào bên trong', 'sống nội tâm'],
+  ['kết nối với', 'quen, làm thân, giữ liên lạc'], ['tạo được không gian', '(đổi cách nói)'],
+];
+// Cụm hành chính chen vào giọng gần gũi (mục 3.1b).
+const BUREAUCRATIC = ['nhằm mục đích', 'trên cơ sở', 'tiến hành', 'đối với việc'];
+// Trường lời khuyên: không mở bằng “Bạn + động từ” (mục 3.2, 5.4).
+const ADVICE_KEYS = new Set(['advice', 'doMore', 'doLess']);
+// Từ rào đón: tối đa 1 lần mỗi đoạn (mục 3.9).
+const HEDGES = ['thường', 'có thể', 'đôi khi'];
+// Từ ở đầu câu kết hay thành khuôn.
+const END_PATTERNS = [
+  ['Mặt trái', /^Mặt trái\b/], ['Bài học', /^Bài học\b/], ['Thử thách', /^Thử thách\b/], ['Có điều', /^Có điều\b/],
+  ['Điểm yếu', /^Điểm yếu\b/], ['Điều cần', /^Điều cần\b/], ['Đi kèm', /^Đi kèm\b/], ['Cái giá', /^Cái giá\b/],
+  ['Nhưng', /^Nhưng\b/], ['Tuy vậy', /^Tuy (vậy|nhiên)\b/],
+];
 
-// Dấu "—" chỉ được dùng trong chữ ký "— HUB".
 const DASH_OK = /—\s*HUB/g;
-// Emoji duy nhất được phép: dòng easter egg.
-const EMOJI_OK = ['👀', '©'];
 const EMOJI = /\p{Extended_Pictographic}/gu;
+const EMOJI_OK = new Set(['©']);
 
-const errors = [];
-const warns = [];
+/* ---------- Tiện ích ---------- */
+
+const issues = [];
+const add = (level, where, rule, text) => issues.push({ level, where, rule, text: (text || '').replace(/\s+/g, ' ').slice(0, 90) });
+const low = (t) => t.normalize('NFC').toLowerCase();
+const count = (hay, needle) => {
+  const re = new RegExp(`(^|[^\\p{L}])${needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?=$|[^\\p{L}])`, 'gu');
+  return (hay.match(re) || []).length;
+};
+const sentencesOf = (t) => t.split(/(?<=[.?!…])["”’)]?\s+(?=[\p{Lu}“"0-9])/u).map((s) => s.trim()).filter(Boolean);
+const isAllowed = (t) => ALLOW_LINES.some((a) => t.replace(/\s+/g, ' ').trim().startsWith(a));
+
+/** Các kiểm tra trên một chuỗi. key: tên trường (nếu có). unit: object đếm hạn mức của thẻ hoặc file. */
+function checkString(text, where, key, unit) {
+  if (!text || isAllowed(text)) return;
+  if (text !== text.normalize('NFC')) add('lỗi', where, 'Chuỗi chưa chuẩn NFC', text);
+  const l = low(text);
+
+  for (const b of BANNED) if (count(l, b)) { add('lỗi', where, `Từ cấm “${b}”`, text); break; }
+  for (const [c, fix] of CALQUES) if (l.includes(c)) add('lỗi', where, `Cụm dịch “${c}” → ${fix}`, text);
+  for (const b of BUREAUCRATIC) if (l.includes(b)) add('cảnh báo', where, `Cụm hành chính “${b}”`, text);
+  for (const w of LIMITED) unit.limited[w] = (unit.limited[w] || 0) + count(l, w);
+  unit.khongChi += (l.match(/không chỉ[^.?!]*mà còn/g) || []).length;
+  unit.bang += (text.match(/!(?!=)/g) || []).length;
+
+  if ((text.replace(DASH_OK, '').match(/—/g) || []).length) add('lỗi', where, 'Dấu “—” trong câu văn (chỉ dùng cho chữ ký “— HUB”)', text);
+  const emo = (text.match(EMOJI) || []).filter((e) => !EMOJI_OK.has(e));
+  if (emo.length) add('lỗi', where, `Emoji ${emo.join(' ')}`, text);
+
+  const ss = sentencesOf(text);
+  // Mở đoạn bằng câu hỏi tu từ.
+  if (ss.length > 1 && ss[0].endsWith('?') && ss[0].split(/\s+/).length >= 3) add('lỗi', where, 'Mở đoạn bằng câu hỏi', text);
+  // Hơn 2 câu liền nhau bắt đầu bằng “Bạn”.
+  let run = 0;
+  for (const s of ss) {
+    run = /^Bạn\b/.test(s) ? run + 1 : 0;
+    if (run === 3) add('lỗi', where, 'Hơn 2 câu liền nhau mở bằng “Bạn”', text);
+  }
+  if (ADVICE_KEYS.has(key) && /^Bạn\s/.test(text)) add('lỗi', where, 'Câu khuyên mở bằng “Bạn + động từ”', text);
+  if (ADVICE_KEYS.has(key) && /^[^,.]{2,25}, bạn [\p{Ll}]/u.test(text) && !/^(Khi|Nếu|Trước|Lần|Mỗi|Sau)/.test(text)) {
+    add('lỗi', where, 'Câu khuyên kiểu dịch “…, bạn + động từ”', text);
+  }
+  if (['strengths', 'watchOut', 'advice', 'doMore', 'doLess'].includes(key) && ss.length > 2) add('lỗi', where, 'Ý gạch đầu dòng dài hơn 2 câu', text);
+  if (['strengths', 'watchOut', 'advice', 'doMore', 'doLess'].includes(key) && /^\*\*[^*]+:\*\*/.test(text)) add('lỗi', where, 'Gắn nhãn in đậm đầu dòng', text);
+
+  // Từ rào đón dày trong một đoạn.
+  for (const h of HEDGES) {
+    const n = count(l, h);
+    if (n >= 2) add('cảnh báo', where, `“${h}” ×${n} trong một đoạn`, text);
+  }
+  const hedgeTotal = HEDGES.reduce((a, h) => a + count(l, h), 0);
+  if (hedgeTotal >= 3) add('cảnh báo', where, `Từ rào đón dày (${hedgeTotal} lần)`, text);
+  if (ss.length && count(l, 'có thể') / ss.length > 0.5 && count(l, 'có thể') >= 2) add('lỗi', where, 'Mật độ “có thể” cao bất thường', text);
+
+  // Liệt kê từ 3 vế trở lên: tối đa 1 lần mỗi đoạn.
+  const lists = ss.filter((s) => /(?:[^,]+,){2,}[^,]*(?: và | hay | hoặc )/.test(s) || (s.match(/,/g) || []).length >= 3).length;
+  if (lists >= 2) add('cảnh báo', where, `${lists} câu liệt kê dài trong một đoạn`, text);
+
+  // Câu cụt kiểu ghi chú.
+  if (ss.length >= 2) for (const s of ss) if (s.replace(/[.?!”“"]/g, '').trim().split(/\s+/).length <= 2 && /\.$/.test(s)) add('cảnh báo', where, `Câu cụt “${s}”`, text);
+
+  // Viết hoa để gây chú ý.
+  const caps = text.match(/\b[A-ZÀ-Ỹ]{4,}\b/gu)?.filter((w) => !['RIASEC', 'HUB', 'IPIP', 'NEO', 'WEF', 'ILO', 'IAU'].includes(w) && !/^[A-Z]+$/.test(w));
+  if (caps?.length) add('cảnh báo', where, `Chữ in hoa ${caps.join(', ')}`, text);
+}
+
+/** Tiêu đề viết hoa mọi chữ (mục 3.6). Bỏ qua tên thương hiệu. */
+function checkTitleCase(text, where) {
+  if (/Thấu Hiểu & Phát Triển Bản Thân|Thấu Hiểu &amp; Phát Triển Bản Thân/.test(text)) return;
+  const words = text.replace(/[“”"(),.:·]/g, ' ').split(/\s+/).filter((w) => /^\p{L}/u.test(w));
+  if (words.length >= 3 && words.every((w) => /^\p{Lu}/u.test(w))) add('lỗi', where, 'Tiêu đề viết hoa mọi chữ', text);
+}
+
+const newUnit = () => ({ limited: {}, khongChi: 0, bang: 0 });
+function closeUnit(unit, where) {
+  for (const [w, n] of Object.entries(unit.limited)) if (n > 2) add('lỗi', where, `Từ hạn chế “${w}” ×${n} (tối đa 2)`, '');
+  if (unit.khongChi > 1) add('lỗi', where, `“không chỉ… mà còn…” ×${unit.khongChi} (tối đa 1)`, '');
+  if (unit.bang > 1) add('lỗi', where, `Dấu chấm than ×${unit.bang} (tối đa 1)`, '');
+}
+
+/* ---------- 1. File nội dung có cấu trúc ---------- */
+
+const firstWords = (t, n = 3) => low(t).replace(/[“”"(),.:]/g, '').split(/\s+/).slice(0, n).join(' ');
+const endKind = (t) => {
+  const ss = sentencesOf(t);
+  const last = ss[ss.length - 1] || '';
+  return END_PATTERNS.find(([, re]) => re.test(last))?.[0] || null;
+};
+
+/** Kiểm tra lặp khuôn trong một nhóm thẻ (mục 3.3). */
+function checkGroup(groupPath, cards) {
+  const fields = ['summary', 'note', 'origin'];
+  for (const f of fields) {
+    const items = cards.filter(([, c]) => typeof c[f] === 'string');
+    if (items.length < 3) continue;
+    const open = {};
+    const end = {};
+    for (const [k, c] of items) {
+      (open[firstWords(c[f])] ||= []).push(k);
+      const e = endKind(c[f]);
+      if (e) (end[e] ||= []).push(k);
+    }
+    for (const [w, ks] of Object.entries(open)) if (ks.length > 2) add('lỗi', `${groupPath}.*.${f}`, `Lặp khuôn mở “${w}…” ở ${ks.length} mục (${ks.join(', ')})`, '');
+    for (const [w, ks] of Object.entries(end)) if (ks.length > 2) add('lỗi', `${groupPath}.*.${f}`, `Lặp khuôn kết “${w}…” ở ${ks.length} mục (${ks.join(', ')})`, '');
+  }
+  // Tên gọi theo một khuôn chung (mục 2.6).
+  const heads = {};
+  for (const [k, c] of cards) if (typeof c.title === 'string') (heads[c.title.split(/\s+/)[0]] ||= []).push(k);
+  for (const [w, ks] of Object.entries(heads)) if (ks.length > 3) add('lỗi', `${groupPath}.*.title`, `Tên gọi lặp chữ đầu “${w}” ở ${ks.length} mục`, '');
+  // Lời khuyên: không quá 2 câu khuyên trong nhóm mở cùng 2 chữ đầu… tính trên toàn nhóm cho mỗi trường.
+  for (const f of ['advice', 'doMore', 'doLess', 'strengths', 'watchOut']) {
+    const all = cards.flatMap(([, c]) => (Array.isArray(c[f]) ? c[f] : []));
+    if (all.length < 6) continue;
+    const open2 = {};
+    for (const s of all) open2[firstWords(s, 2)] = (open2[firstWords(s, 2)] || 0) + 1;
+    for (const [w, n] of Object.entries(open2)) if (n / all.length > 0.25 && n > 3) add('cảnh báo', `${groupPath}.*.${f}`, `${n}/${all.length} ý mở bằng “${w}”`, '');
+  }
+}
+
+function walk(value, path, key, unit, file) {
+  if (typeof value === 'string') {
+    if (SKIP_KEYS.has(key)) return;
+    // Chỉ xét chuỗi trông như chữ tiếng Việt.
+    if (!/[\p{L}]{2,}/u.test(value) || (!/\s/.test(value) && value.length < 3)) return;
+    checkString(value, `${file} ${path}`, key, unit);
+    if (key === 'title' || key === 'nameVi') checkTitleCase(value, `${file} ${path}`);
+    return;
+  }
+  if (typeof value === 'function' || value == null) return;
+  if (Array.isArray(value)) return value.forEach((v, i) => walk(v, `${path}[${i}]`, key, unit, file));
+  if (typeof value !== 'object') return;
+
+  const entries = Object.entries(value);
+  const cards = entries.filter(([, v]) => v && typeof v === 'object' && !Array.isArray(v) && typeof v.summary === 'string');
+  if (cards.length >= 2) checkGroup(`${file} ${path}`, cards);
+  for (const [k, v] of entries) {
+    const p = path ? `${path}.${k}` : k;
+    if (v && typeof v === 'object' && !Array.isArray(v) && typeof v.summary === 'string') {
+      const u = newUnit();
+      walk(v, p, k, u, file);
+      closeUnit(u, `${file} ${p}`);
+    } else {
+      walk(v, p, k, unit, file);
+    }
+  }
+}
+
+for (const file of MODULES) {
+  let mod;
+  try {
+    mod = await import(pathToFileURL(join(ROOT, file)).href);
+  } catch (e) {
+    add('lỗi', file, `Không đọc được file: ${e.message}`, '');
+    continue;
+  }
+  const unit = newUnit();
+  for (const [k, v] of Object.entries(mod)) walk(v, k, k, unit, file);
+  closeUnit(unit, file);
+}
+
+/* ---------- 2. HTML và file giao diện ---------- */
 
 const lineOf = (src, idx) => src.slice(0, idx).split('\n').length;
 
-/** Lấy các đoạn chữ người đọc nhìn thấy. */
 function extract(file, src) {
   const out = [];
   if (file.endsWith('.html')) {
-    // Bỏ script/style/comment, giữ text và các thuộc tính hiển thị.
     const cleaned = src
-      .replace(/<script[\s\S]*?<\/script>/gi, (m) => ' '.repeat(m.length))
-      .replace(/<style[\s\S]*?<\/style>/gi, (m) => ' '.repeat(m.length))
-      .replace(/<!--[\s\S]*?-->/g, (m) => ' '.repeat(m.length));
-    const attr = /\s(?:content|alt|aria-label|title|placeholder)="([^"]+)"/g;
+      .replace(/<script[\s\S]*?<\/script>/gi, (m) => m.replace(/[^\n]/g, ' '))
+      .replace(/<style[\s\S]*?<\/style>/gi, (m) => m.replace(/[^\n]/g, ' '))
+      .replace(/<!--[\s\S]*?-->/g, (m) => m.replace(/[^\n]/g, ' '));
     let m;
-    while ((m = attr.exec(cleaned))) out.push({ text: m[1], line: lineOf(src, m.index) });
+    const attr = /\s(content|alt|aria-label|title|placeholder)="([^"]+)"/g;
+    while ((m = attr.exec(cleaned))) if (/\s/.test(m[2]) && /[\p{L}]{2,}/u.test(m[2])) out.push({ text: m[2], line: lineOf(src, m.index) });
+    const head = /<(h[1-6]|title)\b[^>]*>([\s\S]*?)<\/\1>/g;
+    while ((m = head.exec(cleaned))) out.push({ text: m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(), line: lineOf(src, m.index), heading: true });
     const text = />([^<]+)</g;
     while ((m = text.exec(cleaned))) {
       const t = m[1].replace(/\s+/g, ' ').trim();
-      if (t) out.push({ text: t, line: lineOf(src, m.index) });
+      if (t && /[\p{L}]{2,}/u.test(t)) out.push({ text: t, line: lineOf(src, m.index) });
     }
   } else {
-    // Bỏ comment trước khi lấy chuỗi.
-    const noComments = src.replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' ')).replace(/(^|[^:'"`])\/\/.*$/gm, (m, p) => p + ' '.repeat(m.length - p.length));
+    const noComments = src
+      .replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' '))
+      .replace(/(^|[^:'"`\\])\/\/.*$/gm, (m, p) => p + ' '.repeat(m.length - p.length));
     const str = /'((?:[^'\\\n]|\\.)*)'|"((?:[^"\\\n]|\\.)*)"|`((?:[^`\\]|\\.)*)`/g;
     let m;
     while ((m = str.exec(noComments))) {
       let t = m[1] ?? m[2] ?? m[3] ?? '';
-      // Bỏ HTML và biểu thức ${} trong template.
       t = t.replace(/\$\{[^}]*\}/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-      // Chỉ giữ chuỗi trông như câu chữ tiếng Việt (có khoảng trắng và chữ cái có dấu hoặc từ thường gặp).
       if (!/\s/.test(t) || !/[a-zA-ZÀ-ỹđĐ]{2,}/.test(t)) continue;
-      if (!/[À-ỹđĐ]/.test(t) && !/\b(bạn|của|và|là)\b/i.test(t)) continue;
-      out.push({ text: t, line: lineOf(src, m.index), raw: m[0] });
+      if (!/[À-ỹđĐ]/.test(t)) continue;
+      out.push({ text: t, line: lineOf(src, m.index) });
     }
   }
   return out;
@@ -90,60 +294,33 @@ for (const file of FILES) {
   } catch {
     continue;
   }
-  const where = (l) => `${file}:${l}`;
-  let khongChi = 0;
-
-  for (const { text, line, raw } of extract(file, src)) {
-    if ((raw ?? text) !== (raw ?? text).normalize('NFC')) errors.push(`${where(line)}  Chuỗi chưa chuẩn NFC: “${text.slice(0, 60)}”`);
-    const low = text.normalize('NFC').toLowerCase();
-
-    for (const b of BANNED) if (low.includes(b)) errors.push(`${where(line)}  Cụm bị cấm “${b}”: “${text.slice(0, 90)}”`);
-    for (const s of SOFT) if (low.includes(s)) warns.push(`${where(line)}  Nên tránh “${s}”: “${text.slice(0, 90)}”`);
-    if (low.includes('không chỉ')) khongChi++;
-
-    const dashes = (text.match(/—/g) || []).length - (text.match(DASH_OK) || []).length;
-    if (dashes > 0) errors.push(`${where(line)}  Dấu “—” ngoài chữ ký HUB: “${text.slice(0, 90)}”`);
-
-    if (/!(?!=)/.test(text)) errors.push(`${where(line)}  Dấu chấm than: “${text.slice(0, 90)}”`);
-
-    const emo = (text.match(EMOJI) || []).filter((e) => !EMOJI_OK.includes(e));
-    if (emo.length) errors.push(`${where(line)}  Emoji ${emo.join(' ')}: “${text.slice(0, 60)}”`);
-
-    // Đoạn văn mở đầu bằng câu hỏi tu từ.
-    const first = text.split(/(?<=[.?!])\s/)[0];
-    if (first.endsWith('?') && first.split(/\s+/).length >= 3 && text.length > first.length + 5) {
-      errors.push(`${where(line)}  Mở đầu đoạn bằng câu hỏi: “${first.slice(0, 90)}”`);
-    }
-
-    // VIẾT HOA để gây chú ý (bỏ qua tên viết tắt như HUB, RIASEC, A–Z).
-    const caps = text.match(/\b[A-ZÀ-Ỹ]{4,}\b/g)?.filter((w) => !['RIASEC', 'DANG', 'THUY', 'BAO', 'HUY', 'HUB'].includes(w));
-    if (caps && caps.length) warns.push(`${where(line)}  Chữ in hoa: ${caps.join(', ')}`);
-
-    // Câu cụt kiểu ghi chú: câu ≤ 2 từ đứng riêng trong đoạn nhiều câu.
-    const sentences = text.split(/(?<=[.?!])\s+/).filter(Boolean);
-    if (sentences.length >= 2) {
-      for (const s of sentences) {
-        const words = s.replace(/[.?!”“"]/g, '').trim().split(/\s+/);
-        if (words.length <= 2 && /[.]$/.test(s)) warns.push(`${where(line)}  Câu cụt “${s}” trong: “${text.slice(0, 70)}”`);
-      }
-    }
-
-    // Liệt kê ba tính từ ngắn liền nhau, vd "năng động, phóng khoáng và thú vị."
-    const triple = text.match(/(\b[\p{L}]+(?: [\p{L}]+)?), (\b[\p{L}]+(?: [\p{L}]+)?)(?:,| và) (\b[\p{L}]+(?: [\p{L}]+)?)[.]/gu);
-    if (triple) warns.push(`${where(line)}  Có thể là liệt kê ba tính từ: “${triple[0]}”`);
+  const unit = newUnit();
+  for (const { text, line, heading } of extract(file, src)) {
+    checkString(text, `${file}:${line}`, null, unit);
+    if (heading) checkTitleCase(text, `${file}:${line}`);
   }
-  if (khongChi > 2) warns.push(`${file}  “không chỉ” xuất hiện ${khongChi} lần`);
+  closeUnit(unit, file);
 }
 
-const rel = relative(process.cwd(), ROOT) || '.';
-console.log(`Quét văn phong trong ${FILES.length} file (${rel})`);
-if (warns.length) {
-  console.log(`\nCảnh báo (${warns.length}), cần đọc lại:`);
-  warns.forEach((w) => console.log('  · ' + w));
+/* ---------- Báo cáo ---------- */
+
+const errs = issues.filter((i) => i.level === 'lỗi');
+const warns = issues.filter((i) => i.level === 'cảnh báo');
+const esc = (s) => s.replace(/\|/g, '\\|');
+const table = (rows) => {
+  console.log('| Vị trí | Quy tắc | Trích |');
+  console.log('|---|---|---|');
+  rows.forEach((r) => console.log(`| ${esc(r.where)} | ${esc(r.rule)} | ${esc(r.text)} |`));
+};
+
+console.log(`Quét văn phong: ${MODULES.length} file nội dung, ${FILES.length} file giao diện.`);
+if (!ONLY_ERRORS && warns.length) {
+  console.log(`\n### Cảnh báo (${warns.length}), cần đọc lại\n`);
+  table(warns);
 }
-if (errors.length) {
-  console.log(`\nLỗi (${errors.length}):`);
-  errors.forEach((e) => console.log('  ✗ ' + e));
+if (errs.length) {
+  console.log(`\n### Lỗi (${errs.length})\n`);
+  table(errs);
   process.exit(1);
 }
 console.log('\nKhông có lỗi văn phong.');
