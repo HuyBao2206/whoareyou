@@ -29,7 +29,7 @@
   <script type="module">
     import {
       lifePath, personalYear, nameNumbers, normalizeName, validateBirthDate, isRealDate,
-      stepsToString, reduceKeepMasters, nameLetters,
+      stepsToString, reduceKeepMasters, nameLetters, personalMonth, personalMonths, VALID,
     } from './calc.js';
 
     const tests = [];
@@ -50,10 +50,13 @@
     t('"Bảo Huy" → chuẩn hoá', bh.name, 'BAO HUY');
     t('"Bảo Huy" → Sứ mệnh 9', bh.expression.value, 9);
     t('"Bảo Huy" → Sứ mệnh, phép tính', stepsToString(bh.expression.steps), '2+1+6+8+3+7 = 27 → 2+7 = 9');
-    t('"Bảo Huy" → Linh hồn 8 (A1+O6+U3+Y7 = 17)', stepsToString(bh.soul.steps), '1+6+3+7 = 17 → 1+7 = 8');
-    t('"Bảo Huy" → Linh hồn 8', bh.soul.value, 8);
-    t('"Bảo Huy" → Nhân cách 1 (B2+H8 = 10)', stepsToString(bh.personality.steps), '2+8 = 10 → 1+0 = 1');
-    t('"Bảo Huy" → Nhân cách 1', bh.personality.value, 1);
+    // Mặc định: Y theo vị trí. Trong HUY, Y đứng sát U nên là phụ âm.
+    t('"Bảo Huy" → Linh hồn 1 (A1+O6+U3 = 10)', stepsToString(bh.soul.steps), '1+6+3 = 10 → 1+0 = 1');
+    t('"Bảo Huy" → Linh hồn 1', bh.soul.value, 1);
+    t('"Bảo Huy" → Nhân cách 8 (B2+H8+Y7 = 17)', stepsToString(bh.personality.steps), '2+8+7 = 17 → 1+7 = 8');
+    t('"Bảo Huy" → Nhân cách 8', bh.personality.value, 8);
+    const bhv = nn('Bảo Huy', { yMode: 'vowel' });
+    t('"Bảo Huy", Y luôn là nguyên âm → Linh hồn 8, Nhân cách 1, Sứ mệnh 9', [bhv.soul.value, bhv.personality.value, bhv.expression.value], [8, 1, 9]);
 
     const hub = nn('HUB');
     t('"HUB" → Sứ mệnh 4 (13 → 4)', stepsToString(hub.expression.steps), '8+3+2 = 13 → 1+3 = 4');
@@ -97,7 +100,8 @@
     t('Tổng 22, cách western → 22/4', pick(lifePath(d22, { method: 'western' })), { value: 22, display: '22/4' });
 
     const d33 = { day: 29, month: 3, year: 1990 }; // 2+9+0+3+1+9+9+0 = 33
-    t('Tổng 33, cách vn → 33/6', pick(lifePath(d33, { method: 'vn' })), { value: 33, display: '33/6' });
+    t('Tổng 33, cách vn → 6 (theo Phillips, không giữ 33)', pick(lifePath(d33, { method: 'vn' })), { value: 6, display: '6' });
+    t('Tổng 33, cách vn → phép tính', stepsToString(lifePath(d33, { method: 'vn' }).steps), '2+9+0+3+1+9+9+0 = 33 → 3+3 = 6');
     t('Tổng 33, cách western → 33/6', pick(lifePath(d33, { method: 'western' })), { value: 33, display: '33/6' });
 
     t('Rút gọn tên: 29 → 11 (giữ số bậc thầy)', reduceKeepMasters(29).value, 11);
@@ -113,13 +117,33 @@
     t('Chuỗi tổ hợp NFD vẫn chuẩn hoá đúng', normalizeName('Bảo Huy'), 'BAO HUY');
     t('Khoảng trắng thừa: "  Bảo   Huy  " → BAO HUY', normalizeName('  Bảo   Huy  '), 'BAO HUY');
     const spaced = nn('  Bảo   Huy  ');
-    t('Khoảng trắng thừa không đổi kết quả', [spaced.expression.value, spaced.soul.value, spaced.personality.value], [9, 8, 1]);
+    t('Khoảng trắng thừa không đổi kết quả', [spaced.expression.value, spaced.soul.value, spaced.personality.value], [9, 1, 8]);
     t('Ký tự lạ bị bỏ: "Huy-2 (Bảo)!" → HUY BAO', normalizeName('Huy-2 (Bảo)!'), 'HUY BAO');
     t('Tên gõ dở vẫn giữ khoảng trắng cuối khi đang gõ', normalizeName('Bảo ', { trim: false }), 'BAO ');
-    t('Chip chữ cái "Bảo Huy"', nameLetters('Bảo Huy').map((l) => (l.space ? '_' : l.ch + l.value + (l.vowel ? 'v' : 'c'))).join(' '),
-      'B2c A1v O6v _ H8c U3v Y7v');
+    const chips = (s, o) => nameLetters(s, o).map((l) => (l.space ? '_' : l.ch + l.value + (l.vowel ? 'v' : 'c'))).join(' ');
+    t('Chip chữ cái "Bảo Huy" (Y theo vị trí)', chips('Bảo Huy'), 'B2c A1v O6v _ H8c U3v Y7c');
+    t('Chip chữ cái "Bảo Huy" (Y luôn là nguyên âm)', chips('Bảo Huy', { yMode: 'vowel' }), 'B2c A1v O6v _ H8c U3v Y7v');
+
+    /* --- Chữ Y theo vị trí --- */
+    const yOf = (s) => nameLetters(s).filter((l) => l.ch === 'Y').map((l) => (l.vowel ? 'v' : 'c')).join('');
+    t('Y theo vị trí: Vy → nguyên âm', yOf('Vy'), 'v');
+    t('Y theo vị trí: My, Ly, Thy → nguyên âm', [yOf('My'), yOf('Ly'), yOf('Thy')], ['v', 'v', 'v']);
+    t('Y theo vị trí: Huy, Duy, Thùy → phụ âm', [yOf('Huy'), yOf('Duy'), yOf('Thùy')], ['c', 'c', 'c']);
+    t('Y theo vị trí: Nguyễn, Quyên, Yến → phụ âm', [yOf('Nguyễn'), yOf('Quyên'), yOf('Yến')], ['c', 'c', 'c']);
+    t('Y theo vị trí: chỉ xét trong cùng một từ ("Vy An")', yOf('Vy An'), 'v');
+    t('Y luôn là nguyên âm: Huy → nguyên âm', nameLetters('Huy', { yMode: 'vowel' }).find((l) => l.ch === 'Y').vowel, true);
     const yCons = nn('Bảo Huy', { yIsVowel: false });
-    t('Tuỳ chọn Y là phụ âm: Linh hồn 1, Nhân cách 8, Sứ mệnh 9', [yCons.soul.value, yCons.personality.value, yCons.expression.value], [1, 8, 9]);
+    t('Tuỳ chọn cũ yIsVowel: false vẫn chạy (Y là phụ âm)', [yCons.soul.value, yCons.personality.value, yCons.expression.value], [1, 8, 9]);
+
+    /* --- Tháng cá nhân --- */
+    t('Tháng cá nhân: năm 6, tháng 4 → 1 (ví dụ của Decoz)', personalMonth(6, 4), 1);
+    t('Tháng cá nhân: năm 4, tháng 10 → 5 (ví dụ của Decoz)', personalMonth(4, 10), 5);
+    t('Tháng cá nhân: năm 9, tháng 9 → 9', personalMonth(9, 9), 9);
+    t('12 tháng của năm cá nhân 2', personalMonths(2).map((m) => m.value), [3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5]);
+
+    /* --- Dải giá trị hợp lệ --- */
+    t('Cách vn không còn 33', VALID.lifePath.vn.includes(33), false);
+    t('Tra cứu vẫn có 33', VALID.lifePath.all.includes(33), true);
     t('Tên toàn phụ âm: Linh hồn để trống', nn('NGH').soul.value, null);
     t('Tên rỗng: Sứ mệnh để trống', nn('   ').expression.value, null);
 

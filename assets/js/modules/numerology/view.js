@@ -24,7 +24,7 @@ const blankState = () => ({
 });
 
 let state = blankState();
-let yIsVowel = config.numerology.yIsVowel !== false;
+let yMode = config.numerology.yMode === 'vowel' ? 'vowel' : 'position';
 let api = null;
 let ctx = null;
 let pendingJump = null;
@@ -68,7 +68,8 @@ function alphabetTable() {
           .map((c) => {
             const ch = c[r];
             if (!ch) return '<td></td>';
-            return `<td><span class="alpha__ch ${C.isVowel(ch, { yIsVowel }) ? 'is-vowel' : 'is-cons'}" data-ch="${ch}">${ch}</span></td>`;
+            const cls = ch === 'Y' && yMode === 'position' ? 'is-ypos' : C.isVowel(ch, { yMode }) ? 'is-vowel' : 'is-cons';
+            return `<td><span class="alpha__ch ${cls}" data-ch="${ch}">${ch}</span></td>`;
           })
           .join('')}</tr>`
     )
@@ -81,11 +82,13 @@ function alphabetTable() {
         <tbody>${rows}</tbody>
       </table>
     </div>
-    <p class="legend" aria-hidden="true"><span class="legend__v">${e(NAME_METHOD.legendVowel)}</span><span class="legend__c">${e(NAME_METHOD.legendConsonant)}</span></p>`;
+    <p class="legend" aria-hidden="true"><span class="legend__v">${e(NAME_METHOD.legendVowel)}</span><span class="legend__c">${e(NAME_METHOD.legendConsonant)}</span>${
+      yMode === 'position' ? `<span class="legend__y">${e(NAME_METHOD.legendY)}</span>` : ''
+    }</p>`;
 }
 
 function lettersHtml(name, prev = '') {
-  const letters = C.nameLetters(name, { yIsVowel });
+  const letters = C.nameLetters(name, { yMode });
   if (!letters.length) return '';
   // Các chữ mới gõ thêm (khác với lần trước) sẽ có hiệu ứng bật lên.
   let firstNew = 0;
@@ -107,7 +110,7 @@ function lettersHtml(name, prev = '') {
 }
 
 function nameExampleHtml() {
-  const r = C.nameNumbers(NAME_METHOD.exampleName, { yIsVowel });
+  const r = C.nameNumbers(NAME_METHOD.exampleName, { yMode });
   const row = (key, res) => `
     <div class="ex-row">
       <p class="ex-row__label">${e(INDEX_META[key].name)}</p>
@@ -225,7 +228,7 @@ function introHtml() {
           <div class="nm-details__body">
             <p>${e(NAME_METHOD.yOption.text)}</p>
             <label class="switch">
-              <input type="checkbox" id="y-cons" ${yIsVowel ? '' : 'checked'}>
+              <input type="checkbox" id="y-vowel" ${yMode === 'vowel' ? 'checked' : ''}>
               <span class="switch__track" aria-hidden="true"><span></span></span>
               <span>${e(NAME_METHOD.yOption.label)}</span>
             </label>
@@ -535,7 +538,7 @@ function bindNameForm(form) {
       input.focus();
       return;
     }
-    state.names = C.nameNumbers(input.value, { yIsVowel });
+    state.names = C.nameNumbers(input.value, { yMode });
     renderNameOut(true);
     const n = state.names;
     const say = (label, r) => (r.value ? `${label} ${r.display.replace('/', ' trên ')}` : null);
@@ -548,19 +551,19 @@ function bindNameForm(form) {
 }
 
 function bindYOption(root) {
-  const cb = root.querySelector('#y-cons');
+  const cb = root.querySelector('#y-vowel');
   cb?.addEventListener('change', () => {
-    yIsVowel = !cb.checked;
+    yMode = cb.checked ? 'vowel' : 'position';
     root.querySelector('#alpha-host').innerHTML = alphabetTable();
     root.querySelector('#name-example').innerHTML = nameExampleHtml();
     const input = root.querySelector('#full-name');
     root.querySelector('#name-letters').innerHTML = lettersHtml(input.value);
     if (state.names) {
-      state.names = C.nameNumbers(state.names.name, { yIsVowel });
+      state.names = C.nameNumbers(state.names.name, { yMode });
       renderNameOut(false);
       syncCtas();
     }
-    ctx.toast(yIsVowel ? 'Đã tính Y là nguyên âm như tên tiếng Việt.' : 'Đã tính Y là phụ âm.');
+    ctx.toast(yMode === 'vowel' ? NAME_METHOD.yOption.toastVowel : NAME_METHOD.yOption.toastPosition);
   });
 }
 

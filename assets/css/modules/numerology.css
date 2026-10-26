@@ -373,6 +373,13 @@
   background: color-mix(in srgb, var(--vowel) 12%, transparent);
   font-weight: 600;
 }
+/* Y tính theo vị trí: lúc là nguyên âm, lúc là phụ âm */
+.alpha__ch.is-ypos {
+  color: var(--vowel);
+  font-weight: 600;
+  outline: 1.5px dashed var(--vowel);
+  outline-offset: -4px;
+}
 
 .legend {
   display: flex;
@@ -398,6 +405,9 @@
 }
 .legend__c::before {
   border: 1.5px solid var(--consonant);
+}
+.legend__y::before {
+  border: 1.5px dashed var(--vowel);
 }
 
 /* Mục thu gọn */

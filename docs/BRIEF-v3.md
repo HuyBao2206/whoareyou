@@ -256,6 +256,36 @@ Mọi nét nêu ra trong đoạn trên đều phải có trong tài liệu thầ
 6. Có thông tin nào chưa có nguồn mà lại khẳng định chắc chắn không?
 7. Đoạn này có giống đoạn bên cạnh về khuôn câu không?
 
+### 3.9 Quy tắc bổ sung sau khi HUB duyệt mẫu (26/10/2026)
+
+HUB duyệt toàn bộ theo đề xuất trong `review/hieu-chinh.md`. Các quy tắc dưới đây áp dụng từ Phase 1.
+
+**Giọng văn**
+- 11 đoạn mẫu trong `review/hieu-chinh.md` là chuẩn giọng cho từng loại nội dung.
+- Không mở đoạn tóm tắt theo đúng khung ví dụ ở mục 3.7 (“Theo thần số học, số X gắn với… / Người có số… thường… / Mặt trái là…”). Trước khi viết mỗi nhóm, lập bảng phân bổ kiểu câu mở và kiểu câu kết.
+- Liệt kê từ 3 vế trở lên: tối đa 1 lần mỗi đoạn. “Thường”, “có thể”, “đôi khi”: tối đa 1 lần mỗi đoạn.
+- “Theo thần số học” nói ở phần giới thiệu của từng chỉ số và ở chỗ dự báo; không chen giữa chủ ngữ và vị ngữ.
+- Ý chỉ có 1 nguồn: viết ở mức chắc chắn thấp hơn, hoặc nêu tên tác giả (“Sách của David A. Phillips cho rằng…”).
+- Lời nhắn không dùng lại hình ảnh của trường `origin` cùng số. Hai lời nhắn liền nhau trong cùng một trang kết quả không dùng chung khuôn câu.
+- Ca dao, thành ngữ chỉ dùng khi đúng nguyên văn và đúng nghĩa.
+
+**Thần số học**
+- Tên gọi `title`: chùm 2–3 từ khoá có nguồn, ví dụ “Trật tự và thực tế”. Không đặt tên kiểu “Người…”, “Muốn…”, “Dáng vẻ…”.
+- Mô tả: dùng nét có từ 2 nguồn trở lên. Chỗ sách Phillips nói khác (số 3, số 8, số 10…) thì thêm một câu “Theo sách của David A. Phillips, …”.
+- Số chủ đạo, cách tính mặc định: theo Phillips, cộng mọi chữ số, dừng khi kết quả từ 11 trở xuống, giữ 22/4; tổng 33 rút về 6. Trang tra cứu vẫn có số 33, kèm ghi chú “Một số trang giữ 33/6”.
+- Chế độ `western`: giữ cách tính, sửa mô tả cho đúng (không gọi là cách của Decoz).
+- Chữ Y: mặc định theo vị trí (Y đứng cạnh nguyên âm khác là phụ âm, như Huy, Duy, Nguyễn; đứng một mình hoặc sau phụ âm là nguyên âm, như Vy, My). Cho chọn “Y luôn là nguyên âm”.
+- Năm cá nhân: bỏ `byQuarter`, thay bằng tháng cá nhân (năm cá nhân + tháng dương lịch, rút về 1–9).
+- “Đọc 5 số cùng nhau”: chỉ dùng quy tắc có nguồn (số bậc thầy, “cầu nối” của Decoz, số trùng nhau giữa các chỉ số ở mức gợi ý). Quy tắc thiếu nguồn thì ghi rõ là nhận xét của trang.
+
+**Giọng riêng của HUB**
+- H1 (lời dẫn “Các thẻ chủ đề” có “ace”): giữ đến Phase 9, khi các thẻ mở thì viết lại theo nội dung mới.
+- H2 (tiêu đề “Khám phá bản thân qua những thông điệp từ vũ trụ :))))”): giữ nguyên như câu đùa có chủ ý của HUB, chỉ bỏ dấu chấm thừa. Đây là ngoại lệ duy nhất với danh sách từ cấm; `check-copy` bỏ qua dòng này.
+- H3 (lời mở đầu ở hero): thay bằng mẫu số 11 ở Phase 9. Trong lúc chờ, chỉ sửa “giá trị với bạn” thành “có giá trị với bạn”.
+- H4, H5: giữ nguyên.
+- H6 (easter egg): bỏ emoji, giữ câu.
+- H7 (trang 404): giữ phép cộng 4 + 0 + 4 = 8, bỏ phần “con số của người cầm lái”.
+
 ---
 
 ## 4. Chuẩn nội dung và nghiên cứu

@@ -17,11 +17,13 @@ export const config = {
   },
 
   numerology: {
-    // "vn": cộng hết chữ số, rút gọn tới khi ≤ 11, giữ 22 và 33 (cách phổ biến ở Việt Nam).
-    // "western": rút gọn về 1–9, giữ 11, 22, 33.
+    // "vn": cộng hết chữ số, rút gọn tới khi ≤ 11, giữ 22/4; tổng 33 rút về 6 (theo sách David A. Phillips,
+    //       cách phổ biến ở Việt Nam, xem research/than-so-hoc-cach-tinh.md).
+    // "western": cộng hết chữ số, rút gọn về 1–9, giữ 11, 22, 33 nếu gặp ở bất kỳ bước nào.
     lifePathMethod: 'vn',
-    // Mặc định coi Y là nguyên âm (đúng với tên tiếng Việt).
-    yIsVowel: true,
+    // Chữ Y: "position" = Y đứng sát nguyên âm khác là phụ âm (Huy, Nguyễn), còn lại là nguyên âm (Vy, My).
+    //        "vowel" = Y luôn là nguyên âm. Người dùng đổi được trong phần Cách tính.
+    yMode: 'position',
     minYear: 1900,
   },
 

@@ -50,9 +50,9 @@ export function reducePlain(total) {
   return reduceSteps(total, (n) => n <= 9);
 }
 
-/** Rút gọn kiểu Việt Nam: dừng khi ≤ 11, giữ 22 và 33. */
+/** Rút gọn kiểu Việt Nam (theo sách David A. Phillips): dừng khi ≤ 11, giữ 22. Tổng 33 rút về 6. */
 export function reduceVn(total) {
-  return reduceSteps(total, (n) => n <= 11 || n === 22 || n === 33);
+  return reduceSteps(total, (n) => n <= 11 || n === 22);
 }
 
 /* ---------- Ngày tháng ---------- */
@@ -145,6 +145,19 @@ export function personalYear({ day, month }, targetYear) {
   return { value: r.value, display: String(r.value), steps: [{ terms, total }, ...r.steps], year: targetYear };
 }
 
+/**
+ * Tháng cá nhân: năm cá nhân + số của tháng dương lịch, rút gọn về 1–9.
+ * vd năm cá nhân 6, tháng 4 → 10 → 1.
+ */
+export function personalMonth(personalYearValue, month) {
+  return reducePlain(personalYearValue + month).value;
+}
+
+/** Tháng cá nhân cho cả 12 tháng của một năm cá nhân. */
+export function personalMonths(personalYearValue) {
+  return Array.from({ length: 12 }, (_, i) => ({ month: i + 1, value: personalMonth(personalYearValue, i + 1) }));
+}
+
 /* ---------- Họ tên ---------- */
 
 /**
@@ -165,12 +178,46 @@ export function normalizeName(input, { trim = true } = {}) {
   return s;
 }
 
-export const isVowel = (ch, { yIsVowel = true } = {}) => 'AEIOU'.includes(ch) || (yIsVowel && ch === 'Y');
+const PURE_VOWELS = 'AEIOU';
+
+/**
+ * Cách coi chữ Y:
+ *   'position' (mặc định): Y đứng sát một nguyên âm khác trong cùng từ là phụ âm (HUY, DUY, NGUYEN),
+ *                          còn lại là nguyên âm (VY, MY, LY).
+ *   'vowel': Y luôn là nguyên âm.
+ *   'consonant': Y luôn là phụ âm.
+ * Tuỳ chọn cũ { yIsVowel: false } tương đương 'consonant'.
+ */
+export function yModeOf(opts = {}) {
+  if (opts.yMode) return opts.yMode;
+  if (opts.yIsVowel === false) return 'consonant';
+  if (opts.yIsVowel === true) return 'vowel';
+  return 'position';
+}
+
+/**
+ * Chữ ở vị trí i trong chuỗi s có phải nguyên âm không.
+ * @param {string} s  tên đã chuẩn hoá (A–Z và khoảng trắng)
+ */
+export function isVowelAt(s, i, opts = {}) {
+  const ch = s[i];
+  if (PURE_VOWELS.includes(ch)) return true;
+  if (ch !== 'Y') return false;
+  const mode = yModeOf(opts);
+  if (mode === 'vowel') return true;
+  if (mode === 'consonant') return false;
+  const pure = (c) => !!c && PURE_VOWELS.includes(c);
+  return !(pure(s[i - 1]) || pure(s[i + 1]));
+}
+
+/** Kiểm tra một chữ đứng riêng (không có ngữ cảnh). Y theo vị trí thì đứng riêng được coi là nguyên âm. */
+export const isVowel = (ch, opts = {}) => isVowelAt(ch, 0, opts);
 
 /** Danh sách chữ cái của tên đã chuẩn hoá, kèm giá trị và loại nguyên âm/phụ âm. Khoảng trắng giữ lại làm dấu ngắt từ. */
 export function nameLetters(name, opts = {}) {
-  return [...normalizeName(name, { trim: false })].map((ch) =>
-    ch === ' ' ? { ch, space: true } : { ch, value: LETTER_VALUES[ch], vowel: isVowel(ch, opts) }
+  const s = normalizeName(name, { trim: false });
+  return [...s].map((ch, i) =>
+    ch === ' ' ? { ch, space: true } : { ch, value: LETTER_VALUES[ch], vowel: isVowelAt(s, i, opts) }
   );
 }
 
@@ -185,7 +232,7 @@ function sumLetters(letters) {
 /**
  * Ba số từ họ tên: sứ mệnh (mọi chữ), linh hồn (nguyên âm), nhân cách (phụ âm).
  * @param {string} name
- * @param {{yIsVowel?: boolean}} opts
+ * @param {{yMode?: 'position'|'vowel'|'consonant', yIsVowel?: boolean}} opts
  */
 export function nameNumbers(name, opts = {}) {
   const normalized = normalizeName(name);
@@ -213,7 +260,7 @@ export function stepsToString(steps) {
 
 export const VALID = Object.freeze({
   lifePath: Object.freeze({
-    vn: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22, 33],
+    vn: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22],
     western: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33],
     all: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22, 33],
   }),
