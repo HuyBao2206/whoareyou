@@ -20,7 +20,7 @@ Các bản mới dưới đây **đã sửa một lượt** theo góp ý của b
 
 > Thần số học tính ra vài con số từ ngày sinh và họ tên của một người, rồi dựa vào đó để luận về tính cách và xu hướng của người ấy. Môn này hay được gắn với Pythagoras, nhà toán học Hy Lạp cổ đại. Trường phái Pythagoras có coi trọng con số và gán ý nghĩa riêng cho vài con số, chẳng hạn số 4 tượng trưng cho công lý. Còn cách tính theo ngày sinh và họ tên như hiện nay thì bắt đầu hình thành ở Mỹ đầu thế kỷ 20, từ sách của bà L. Dow Balliett. Chính bà đã gắn hệ thống của mình với tên Pythagoras ngay ở phụ đề cuốn sách.
 >
-> Ở Việt Nam, thần số học phổ biến từ khoảng năm 2020, chủ yếu qua cuốn *Thay đổi cuộc sống với Nhân số học* của Lê Đỗ Quỳnh Hương, viết dựa trên sách của David A. Phillips. Các nhà khoa học được báo VnExpress dẫn lời coi việc đoán tính cách qua con số là ngụy khoa học. Những lời mô tả nghe “rất đúng” thường được giải thích bằng hiệu ứng Barnum: người ta dễ tin một nhận xét chung chung là đang nói riêng về mình. Vì vậy, nên xem thần số học như một gợi ý để tự soi lại mình, không phải lời phán.
+> Ở Việt Nam, thần số học phổ biến từ khoảng năm 2020, một phần nhờ cuốn *Thay đổi cuộc sống với Nhân số học* của Lê Đỗ Quỳnh Hương, viết dựa trên sách của David A. Phillips. Theo các nhà khoa học mà báo VnExpress dẫn lời, việc đoán tính cách qua con số là ngụy khoa học. Những lời mô tả nghe “rất đúng” thường được giải thích bằng hiệu ứng Barnum: người ta dễ tin một nhận xét chung chung là đang nói riêng về mình. Vì vậy, nên xem thần số học như một gợi ý để tự soi lại mình, không phải lời phán.
 
 **Nguồn**
 
@@ -46,7 +46,7 @@ Các bản mới dưới đây **đã sửa một lượt** theo góp ý của b
 
 **Bản mới**
 
-> Theo thần số học, số 4 gắn với trật tự và tính thực tế. Người có số chủ đạo 4 thường làm việc có phương pháp, ngăn nắp và chịu khó. Việc đã nhận thì họ bền bỉ làm cho xong, nên được người xung quanh tin cậy. Mặt trái là tính cứng nhắc: đã quen một cách làm thì khó đổi, gặp việc chưa chắc ăn thì dè dặt, ngại thử.
+> Trong thần số học, trật tự và tính thực tế là hai nét gắn với số 4. Ai có số chủ đạo này thường làm việc có phương pháp và chịu khó, việc đã nhận thì bền bỉ làm cho xong, nên được người xung quanh tin cậy. Đi kèm là tính cứng nhắc và quá thận trọng: đã quen một cách làm thì khó đổi, gặp việc chưa chắc ăn thì dè dặt, ngại thử.
 
 **Nguồn**
 
@@ -62,7 +62,7 @@ Các bản mới dưới đây **đã sửa một lượt** theo góp ý của b
 
 **Mẫu thêm, trường `origin` cho số 4:**
 
-> Thời cổ, trường phái Pythagoras coi 4 là con số của công lý, vì đó là số chính phương đầu tiên, tích của hai số bằng nhau (2 × 2). Nghĩa “nền nếp, vững chãi” ngày nay thì có về sau: David A. Phillips gắn số 4 với hình vuông, nền tảng của xây dựng, còn Hans Decoz suy ra từ dáng chữ số 4 vuông vức, ngồi sát mặt đất, một kiểu chữ số mà người Hy Lạp thời Pythagoras chưa dùng.
+> Thời cổ, trường phái Pythagoras coi 4 là con số của công lý, vì đó là số chính phương đầu tiên, tích của hai số bằng nhau (2 × 2). Còn nghĩa “nền nếp, vững chãi” quen thuộc bây giờ là do người đời sau gán thêm: David A. Phillips dựa vào hình vuông, mà ông coi là nền của mọi việc xây cất; Hans Decoz dựa vào dáng chữ số 4 vuông vức, ngồi sát mặt đất, kiểu chữ số người Hy Lạp thời ấy chưa dùng.
 
 Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Phillips: hình vuông là nền tảng của xây dựng [N24]; Decoz: hình chữ số 4 như nền móng [N20]; người Hy Lạp viết số bằng chữ cái [N1]. Không dùng ý “bốn mùa, bốn phương” vì không nguồn nào nói [N, mục 5]. Không dùng hình ảnh ngôi nhà ở đây để khỏi trùng với lời nhắn (mẫu 9).
 
@@ -76,7 +76,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Thích phân tích và muốn hiểu tới gốc rễ là nét dễ thấy nhất ở người có số chủ đạo 7. Họ tập trung được lâu vào điều mình quan tâm, sống nội tâm và hay suy ngẫm. Cũng vì vậy mà họ dễ thu mình, có khi tới mức tách khỏi mọi người. Sách của David A. Phillips còn cho rằng số 7 học chủ yếu từ chính những gì mình trải qua, rồi đem điều đã học dạy lại người khác.
+> Thích phân tích và muốn hiểu tới gốc rễ là nét dễ thấy nhất ở người có số chủ đạo 7. Họ tập trung được lâu vào điều mình quan tâm, sống nội tâm và hay suy ngẫm. Họ cũng dễ thu mình, có khi tới mức tách khỏi mọi người. Sách của David A. Phillips còn cho rằng số 7 học chủ yếu từ chính những gì mình trải qua, rồi đem điều đã học dạy lại người khác.
 
 **Nguồn**
 
@@ -100,7 +100,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Trong chu kỳ chín năm của thần số học, năm cá nhân 4 là năm xây nền. Sau một năm 3 nhiều gặp gỡ và ý tưởng mới, năm này hợp với việc chăm chỉ và làm có tổ chức. Đáng bỏ công nhất là những thứ làm nền lâu dài: công việc, tiền bạc, nếp sinh hoạt, sức khoẻ, nhà cửa. Có thể sẽ có lúc thấy gò bó. Năm 5 tiếp theo hay có nhiều thay đổi, nên phần nền xây được trong năm nay sẽ là chỗ dựa lúc ấy.
+> Trong chu kỳ 9 năm của thần số học, năm cá nhân 4 là năm xây nền. Sau một năm 3 nhiều gặp gỡ và ý tưởng mới, năm này hợp với việc chăm chỉ và làm có tổ chức. Đáng bỏ công nhất là những việc có lợi về lâu dài: công việc, tiền bạc, nếp sinh hoạt, sức khoẻ, nhà cửa. Có thể sẽ có lúc thấy gò bó. Năm 5 kế tiếp là năm của thay đổi, nên những gì gây dựng được trong năm nay có thể thành chỗ dựa lúc ấy.
 
 **Nguồn**
 
@@ -126,7 +126,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Điều người có số linh hồn 5 mong mỏi nhất, theo thần số học, là được tự do. Họ thấy vui khi cuộc sống có đổi mới, khi được đi đây đi đó và thử những điều chưa làm. Thế nào là “tự do” thì có thể đổi theo từng giai đoạn, nhưng mong muốn ấy theo họ suốt đời. Cái giá của nó là việc bắt đầu thì nhiều, làm tới cùng thì ít, và đôi khi thiếu trách nhiệm với những gì đã nhận.
+> Điều người có số linh hồn 5 mong mỏi nhất là được tự do. Họ thấy vui khi cuộc sống có đổi mới, khi được đi đây đi đó và thử những điều chưa làm. Thế nào là “tự do” thì có thể đổi theo từng giai đoạn, nhưng mong muốn ấy theo họ suốt đời. Cái giá của nó là việc bắt đầu thì nhiều, làm tới cùng thì ít, và đôi khi thiếu trách nhiệm với những gì đã nhận.
 
 **Nguồn**
 
@@ -152,7 +152,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Lần đầu gặp, người có số nhân cách 7 thường cho người khác cảm giác là người kín đáo, có vẻ trí thức. Ngay giữa câu chuyện, họ vẫn như đang mải theo suy nghĩ riêng. Người mới quen vì thế dễ thấy họ khó gần, kém cởi mở.
+> Lần đầu gặp, ai có số nhân cách 7 thường trông kín đáo và có vẻ trí thức. Ngay giữa câu chuyện, họ vẫn như đang mải theo suy nghĩ riêng. Người mới quen vì thế dễ thấy họ khó gần, kém cởi mở.
 
 **Nguồn**
 
@@ -174,7 +174,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Lần tới, khi có người bày một cách làm khác hẳn cách quen của mình, thử làm theo cách ấy một lần rồi hãy so kết quả. Làm vậy sẽ dễ thấy cái nào là nguyên tắc đáng giữ, cái nào chỉ là thói quen.
+> Lần tới, khi có người bày một cách làm khác hẳn lối quen của mình, thử làm theo cách ấy một lần rồi hãy so kết quả. Làm vậy sẽ dễ thấy cái nào là nguyên tắc đáng giữ, cái nào chỉ là thói quen.
 
 **Cơ sở:** xuất phát từ nét cứng nhắc, bảo thủ [N20][N31]. Lời khuyên “thỉnh thoảng bước ra khỏi vùng an toàn và dám thử” có ở [N31]; bản này để chính người đọc thử, không phụ thuộc vào việc mình có quyền cho người khác làm hay không. Có cách tự kiểm chứng (so kết quả), làm được trong tuần (mục 4.5).
 
@@ -188,7 +188,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Trước khi chốt điều mình đã tìm hiểu kỹ, nên đem nó hỏi một người am hiểu và chịu nghe họ phản biện tới cùng. Giữ quan điểm riêng cũng được, miễn là đã thật lòng nghe ý kiến khác.
+> Trước khi chốt ý kiến về một chuyện mình đã tìm hiểu kỹ, nên đem nó hỏi một người am hiểu và chịu nghe họ phản biện tới cùng. Giữ quan điểm riêng cũng được, miễn là đã thật lòng nghe ý kiến khác.
 
 **Cơ sở:** Decoz khuyên số 7 giữ quan điểm của mình nhưng mở lòng đón hiểu biết của người khác [N20]; Millman coi tin tưởng và cởi mở là bài học của số 7 [N25]; xuất phát từ nét thu mình [N20][N31].
 
@@ -200,7 +200,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới**
 
-> Nhà có móng chắc mới đứng được lâu, và sự chịu khó của bạn là phần móng ấy. Chỉ mong căn nhà có thêm vài ô cửa, để khi cần đổi gió, bạn còn có chỗ mà mở ra.
+> Nhà có móng chắc mới đứng được lâu, và sự chịu khó của bạn là phần móng ấy. Nhưng nhà nào cũng cần vài ô cửa, để những hôm cần đổi gió, bạn còn có cửa mà mở.
 
 **Bám vào ý nghĩa:** móng nhà là nét chăm chỉ, bền bỉ, nền nếp [N20][N24][N31]; “ô cửa” và “đổi gió” là nét cứng nhắc, ngại thay đổi [N20][N31]. Hình ảnh nhà, móng, gió là hình ảnh đời thường, không dịch ẩn dụ tiếng Anh.
 
@@ -226,7 +226,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Philli
 
 **Bản mới** (viết cho lúc đủ 7 thẻ đã mở, tức sau Phase 9)
 
-> Trang này gom vài cách người ta vẫn dùng để hiểu mình, từ thần số học, cung hoàng đạo, con giáp tới các trắc nghiệm có cơ sở nghiên cứu về tính cách, sở thích nghề nghiệp và giá trị sống. Hai thẻ còn lại nhìn ra ngoài: các nghề đang đổi thay ra sao, kỹ năng nào nên học thêm. Thẻ nào cũng nói rõ đâu là quan niệm văn hoá, đâu là điều có nghiên cứu hay số liệu, kèm vài việc nhỏ làm được trong tuần.
+> Trang này gom vài cách người ta vẫn dùng để hiểu mình, từ thần số học, cung hoàng đạo, con giáp tới các trắc nghiệm có cơ sở nghiên cứu về tính cách, sở thích nghề nghiệp và giá trị sống. Hai thẻ khác nhìn ra ngoài: các nghề đang đổi thay ra sao, kỹ năng nào nên học thêm. Thẻ nào cũng nói rõ đâu là quan niệm văn hoá, đâu là điều có nghiên cứu hay số liệu, kèm vài việc nhỏ làm được trong tuần.
 
 **Cơ sở:** mô tả phạm vi 7 thẻ trong brief (mục 6–12, gồm cả hai thẻ Nghề nghiệp và Kỹ năng) và nguyên tắc trung thực về độ tin cậy (mục 4.6). Không có số liệu nên không cần nguồn ngoài.
 
