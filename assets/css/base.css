@@ -639,16 +639,21 @@ button {
   max-width: 46rem;
 }
 .hub-note::before {
+  /* Dấu ngoặc nằm đè lên viền trên. Khung nền chỉ cao vừa đủ che đoạn viền,
+     không lấn xuống dòng "Lời của HUB" bên dưới. */
   content: '“';
   position: absolute;
-  top: -0.42em;
-  left: 0.3em;
-  padding: 0 0.12em;
-  background: var(--paper);
+  top: -0.3em;
+  left: 0.45em;
+  height: 0.6em;
+  padding: 0 0.1em;
+  /* Nửa trên trùng màu trang (che viền), nửa dưới trùng màu khung nên không lộ thành ô vuông */
+  background: linear-gradient(var(--paper) 50%, var(--surface) 50%);
   font-family: var(--f-display);
-  font-size: 5rem;
-  line-height: 1;
+  font-size: 4.5rem;
+  line-height: 0.95;
   color: var(--gold);
+  pointer-events: none;
 }
 .hub-note__body {
   margin: var(--sp-3) 0 0;
