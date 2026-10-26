@@ -621,7 +621,18 @@ button {
 @media (min-width: 860px) {
   .about__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--sp-7);
+    gap: 0 var(--sp-7);
+  }
+  /* Ba cột dùng chung hàng (subgrid): số thứ tự, tiêu đề, đoạn văn luôn thẳng hàng
+     dù tiêu đề cột này một dòng, cột kia hai dòng */
+  .about__item {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    align-content: start;
+  }
+  .about__item h3 {
+    align-self: start;
   }
   .about__item + .about__item {
     border-left: 1px solid var(--line);
