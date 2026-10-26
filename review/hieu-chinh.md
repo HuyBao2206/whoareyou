@@ -4,7 +4,9 @@ Mỗi mẫu gồm bản cũ, bản mới và nguồn của từng ý trong bản
 
 Cách đọc: mẫu chỉ để HUB duyệt **giọng văn và cách xử lý nội dung**. Sau khi HUB góp ý, toàn bộ Thần số học sẽ được viết lại theo cùng cách.
 
-Lưu ý về nguồn: môi trường làm việc chặn tải trực tiếp các trang nguồn chính, nên ghi chú hiện dựa trên đoạn trích của công cụ tìm kiếm (xem `research/than-so-hoc.md`, mục “Giới hạn”). Các mẫu dưới đây chỉ dùng những nét có từ 2 nguồn độc lập trở lên, trừ chỗ ghi rõ.
+Lưu ý về nguồn: môi trường làm việc chặn tải trực tiếp các trang nguồn chính, nên ghi chú hiện dựa trên đoạn trích của công cụ tìm kiếm (xem `research/than-so-hoc.md`, mục “Giới hạn”). Các mẫu ưu tiên những nét có từ 2 nguồn độc lập trở lên. Ý chỉ có 1 nguồn được ghi “[1 nguồn]” trong bảng và viết ở mức chắc chắn thấp hơn.
+
+Các bản mới dưới đây **đã sửa một lượt** theo góp ý của biên tập độc lập (`review/bien-tap-mau.md`); điểm chấm lại ở `review/bien-tap-mau-lan-2.md`.
 
 ---
 
@@ -16,9 +18,9 @@ Lưu ý về nguồn: môi trường làm việc chặn tải trực tiếp các
 
 **Bản mới**
 
-> Thần số học là hệ quan niệm cho rằng các con số rút ra từ ngày sinh và họ tên phản ánh tính cách cũng như xu hướng của mỗi người. Môn này thường được gắn với tên Pythagoras, nhà toán học Hy Lạp cổ đại. Trường phái của ông quả thật rất coi trọng con số và gán cho một số con số những ý nghĩa riêng, chẳng hạn số 4 tượng trưng cho công lý. Tuy vậy, cách tính theo ngày sinh và họ tên như ngày nay mới hình thành ở Mỹ vào đầu thế kỷ 20, qua sách của bà L. Dow Balliett, và chính bà là người đặt hệ thống của mình dưới tên Pythagoras.
+> Thần số học tính ra vài con số từ ngày sinh và họ tên của một người, rồi dựa vào đó để luận về tính cách và xu hướng của người ấy. Môn này hay được gắn với Pythagoras, nhà toán học Hy Lạp cổ đại. Trường phái Pythagoras có coi trọng con số và gán ý nghĩa riêng cho vài con số, chẳng hạn số 4 tượng trưng cho công lý. Còn cách tính theo ngày sinh và họ tên như hiện nay thì bắt đầu hình thành ở Mỹ đầu thế kỷ 20, từ sách của bà L. Dow Balliett. Chính bà đã gắn hệ thống của mình với tên Pythagoras ngay ở phụ đề cuốn sách.
 >
-> Ở Việt Nam, thần số học phổ biến từ khoảng năm 2020, phần lớn theo sách của David A. Phillips và cuốn sách tiếng Việt phát triển từ đó của Lê Đỗ Quỳnh Hương. Bách khoa toàn thư Britannica xếp thần số học vào loại ngụy khoa học. Những lời mô tả nghe “rất đúng” phần nhiều nhờ hiệu ứng Barnum: người ta dễ nhận một nhận xét chung chung là đang nói riêng về mình. Vì thế, nên đọc thần số học như một dịp để tự soi lại mình, đừng coi đó là lời phán.
+> Ở Việt Nam, thần số học phổ biến từ khoảng năm 2020, chủ yếu qua cuốn *Thay đổi cuộc sống với Nhân số học* của Lê Đỗ Quỳnh Hương, viết dựa trên sách của David A. Phillips. Các nhà khoa học được báo VnExpress dẫn lời coi việc đoán tính cách qua con số là ngụy khoa học. Những lời mô tả nghe “rất đúng” thường được giải thích bằng hiệu ứng Barnum: người ta dễ tin một nhận xét chung chung là đang nói riêng về mình. Vì vậy, nên xem thần số học như một gợi ý để tự soi lại mình, không phải lời phán.
 
 **Nguồn**
 
@@ -28,8 +30,9 @@ Lưu ý về nguồn: môi trường làm việc chặn tải trực tiếp các
 | Trường phái Pythagoras coi trọng con số; số 4 là công lý | [N3][N5][N7] |
 | Hệ hiện đại hình thành đầu thế kỷ 20 qua Balliett; bà tự gắn hệ của mình với Pythagoras | [N10][N11][N14] |
 | Phổ biến ở Việt Nam từ khoảng 2020; sách Lê Đỗ Quỳnh Hương phát triển từ sách Phillips | [N44][C14][C15][N43] |
-| Britannica xếp vào ngụy khoa học | [S21] (bài về Neo-Pythagoreanism), [N1] |
-| Hiệu ứng Barnum | [S23][S28] |
+| Bà gắn hệ thống với Pythagoras ở phụ đề sách (“A System of Numbers as Taught by Pythagoras”) | [N14] |
+| Các nhà khoa học coi đoán tính cách qua con số là ngụy khoa học (VnExpress) | [S25][S26][N40] |
+| Hiệu ứng Barnum là cách giải thích thường gặp (chưa có thí nghiệm riêng cho thần số học) | [S23][S28] |
 
 **Thay đổi so với bản cũ:** bỏ câu “mỗi con số gắn với một bài học riêng” (không có nguồn chung cho khái niệm “bài học”); thêm phần lịch sử có nguồn; nói một lần, rõ ràng, rằng đây không phải khoa học (mục 4.6 của brief).
 
@@ -43,14 +46,14 @@ Lưu ý về nguồn: môi trường làm việc chặn tải trực tiếp các
 
 **Bản mới**
 
-> Theo thần số học, số 4 là con số của trật tự và óc thực tế. Người có số chủ đạo 4 thường làm việc có kế hoạch, ngăn nắp, chịu khó và bền bỉ. Việc gì đã nhận thì họ làm tới nơi tới chốn, nên người xung quanh dễ đặt lòng tin. Mặt trái là tính cứng nhắc: đã quen một cách làm thì khó đổi, gặp việc chưa chắc ăn thì dè dặt, ngại thử.
+> Theo thần số học, số 4 gắn với trật tự và tính thực tế. Người có số chủ đạo 4 thường làm việc có phương pháp, ngăn nắp và chịu khó. Việc đã nhận thì họ bền bỉ làm cho xong, nên được người xung quanh tin cậy. Mặt trái là tính cứng nhắc: đã quen một cách làm thì khó đổi, gặp việc chưa chắc ăn thì dè dặt, ngại thử.
 
 **Nguồn**
 
 | Ý | Nguồn |
 |---|---|
 | Trật tự, thực tế | [N24] (Phillips), [N20], [N45] |
-| Có kế hoạch, ngăn nắp, có hệ thống | [N20][N31][N32] |
+| Có phương pháp, ngăn nắp, có hệ thống | [N20][N31][N32] |
 | Chăm chỉ, bền bỉ, đáng tin cậy | [N20][N24][N31] |
 | Cứng nhắc, bảo thủ | [N20][N31] |
 | Quá thận trọng, ngại rủi ro | [N20][N31] |
@@ -59,9 +62,9 @@ Lưu ý về nguồn: môi trường làm việc chặn tải trực tiếp các
 
 **Mẫu thêm, trường `origin` cho số 4:**
 
-> Với trường phái Pythagoras thời cổ, 4 là số chính phương đầu tiên (2 × 2) và được xem là con số của công lý, vì “bằng nhân bằng”. Nghĩa nền nếp, vững chãi mà thần số học hiện đại gán cho số 4 thì đi qua hình vuông: bốn cạnh bằng nhau, đặt xuống là đứng vững, như nền móng của một ngôi nhà.
+> Thời cổ, trường phái Pythagoras coi 4 là con số của công lý, vì đó là số chính phương đầu tiên, tích của hai số bằng nhau (2 × 2). Nghĩa “nền nếp, vững chãi” ngày nay thì có về sau: David A. Phillips gắn số 4 với hình vuông, nền tảng của xây dựng, còn Hans Decoz suy ra từ dáng chữ số 4 vuông vức, ngồi sát mặt đất, một kiểu chữ số mà người Hy Lạp thời Pythagoras chưa dùng.
 
-Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình vuông là nền tảng xây dựng (Phillips) và chữ số 4 như nền móng (Decoz) [N24][N20]. Không dùng ý “bốn mùa, bốn phương” vì không nguồn nào nói [N, mục 5].
+Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; Phillips: hình vuông là nền tảng của xây dựng [N24]; Decoz: hình chữ số 4 như nền móng [N20]; người Hy Lạp viết số bằng chữ cái [N1]. Không dùng ý “bốn mùa, bốn phương” vì không nguồn nào nói [N, mục 5]. Không dùng hình ảnh ngôi nhà ở đây để khỏi trùng với lời nhắn (mẫu 9).
 
 ---
 
@@ -73,7 +76,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Số 7 trong thần số học là con số của sự tìm hiểu. Người có số chủ đạo 7 thích phân tích, muốn hiểu tới gốc rễ của vấn đề và có thể tập trung rất lâu vào thứ mình quan tâm. Họ hướng vào bên trong, hay chiêm nghiệm, và theo Phillips thì thường học bằng cách tự trải qua rồi mới rút ra điều để dạy lại người khác. Điểm yếu là dễ thu mình tới mức tách khỏi mọi người. Nhiều tài liệu coi việc học cách tin người và cởi lòng là bài học lớn của số này.
+> Thích phân tích và muốn hiểu tới gốc rễ là nét dễ thấy nhất ở người có số chủ đạo 7. Họ tập trung được lâu vào điều mình quan tâm, sống nội tâm và hay suy ngẫm. Cũng vì vậy mà họ dễ thu mình, có khi tới mức tách khỏi mọi người. Sách của David A. Phillips còn cho rằng số 7 học chủ yếu từ chính những gì mình trải qua, rồi đem điều đã học dạy lại người khác.
 
 **Nguồn**
 
@@ -84,9 +87,8 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 | Hướng nội, chiêm nghiệm | [N20][N24][N31] |
 | Học qua trải nghiệm rồi dạy lại (ghi rõ “theo Phillips” vì chỉ 1 nguồn) | [N24] |
 | Thu mình tới mức cô lập | [N20][N31] |
-| Bài học là tin tưởng, cởi mở | [N25] (Millman), [N20] (lời khuyên mở lòng đón ý người khác) |
 
-**Đã bỏ:** “một buổi tối đọc sách một mình quý hơn bữa tiệc” (ví dụ tự dựng), “lấy lại sức”.
+**Đã bỏ:** “một buổi tối đọc sách một mình quý hơn bữa tiệc” (ví dụ tự dựng); câu “bài học lớn là tin người” vì chỉ Millman nói, mà hệ của Millman khác hẳn [N25].
 
 ---
 
@@ -98,7 +100,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Năm cá nhân 4 là năm xây nền. Sau một năm 3 nhiều giao du và cảm hứng, năm này cần sự chăm chỉ, tính tổ chức và để ý tới chi tiết. Thứ đáng bỏ công nhất là những nền tảng dùng được lâu: công việc, tiền bạc, nếp sinh hoạt, sức khoẻ, nhà cửa. Có lúc sẽ thấy bị bó buộc vì việc nhiều, khuôn phép nhiều. Đổi lại, công sức bỏ ra đều đặn trong năm 4 thường được đền đáp, và nền đã xây sẽ đỡ mình khi năm 5 mang tới thay đổi.
+> Trong chu kỳ chín năm của thần số học, năm cá nhân 4 là năm xây nền. Sau một năm 3 nhiều gặp gỡ và ý tưởng mới, năm này hợp với việc chăm chỉ và làm có tổ chức. Đáng bỏ công nhất là những thứ làm nền lâu dài: công việc, tiền bạc, nếp sinh hoạt, sức khoẻ, nhà cửa. Có thể sẽ có lúc thấy gò bó. Năm 5 tiếp theo hay có nhiều thay đổi, nên phần nền xây được trong năm nay sẽ là chỗ dựa lúc ấy.
 
 **Nguồn**
 
@@ -106,11 +108,11 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 |---|---|
 | Năm làm việc chăm chỉ, tổ chức, đặt nền móng | [S1] (Decoz), [S9] (Affinity), [S10] (Bender) |
 | Năm 3 trước đó: giao lưu, sáng tạo | [S1][S9][S10] |
-| Chi tiết, quản lý thời gian | [S1] |
 | Nền móng về sự nghiệp, tài chính, thói quen sức khoẻ, việc nhà | [S1][S10] |
-| Có thể thấy bị giới hạn, bực bội | [S1] |
-| Nỗ lực đều đặn được đền đáp | [S10][S1] |
+| Có thể thấy bị giới hạn, bực bội | [S1] [1 nguồn], nên viết “có thể” |
 | Chuẩn bị cho thay đổi của năm sau; năm 5 là năm thay đổi | [S1][S9][S10] |
+
+**Đã bỏ:** “để ý tới chi tiết” [S1, 1 nguồn]; “nỗ lực đều đặn được đền đáp” (với năm 4 chỉ có [S10]; bản trước ghi nhầm [S1], vì Decoz nói ý này ở năm 8).
 
 **Về trường `byQuarter` (4 quý):** không nguồn nào chia năm cá nhân theo quý ([C], mục 3; [S], mục A2). Đề xuất thay bằng **tháng cá nhân** (năm cá nhân + tháng dương lịch, rút về 1–9), là cách tính có nguồn [C10][S2]. Xem câu hỏi D ở cuối file.
 
@@ -124,19 +126,19 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Điều người có số linh hồn 5 mong mỏi nhất là được tự do. Theo thần số học, họ thấy vui khi đời có thay đổi: được đi đây đi đó, được thử cái mới, được tự chọn cách sống. Thế nào là “tự do” thì có thể đổi theo từng giai đoạn, nhưng mong muốn ấy thường theo họ suốt đời. Mặt trái là việc bắt đầu thì nhiều, làm tới cùng thì ít, và đôi khi thiếu trách nhiệm với những gì đã nhận.
+> Điều người có số linh hồn 5 mong mỏi nhất, theo thần số học, là được tự do. Họ thấy vui khi cuộc sống có đổi mới, khi được đi đây đi đó và thử những điều chưa làm. Thế nào là “tự do” thì có thể đổi theo từng giai đoạn, nhưng mong muốn ấy theo họ suốt đời. Cái giá của nó là việc bắt đầu thì nhiều, làm tới cùng thì ít, và đôi khi thiếu trách nhiệm với những gì đã nhận.
 
 **Nguồn**
 
 | Ý | Nguồn |
 |---|---|
 | Tự do là điều kiện để hạnh phúc | [S3] (Decoz), [S9] (Affinity) |
-| Thích thay đổi, đi xa, cái mới | [S3] |
-| Định nghĩa “tự do” thay đổi theo thời gian | [S9] |
-| Số linh hồn là khao khát suốt đời | [S9] |
-| Dễ thiếu trách nhiệm, không làm đến cùng | [S3] |
+| Thích thay đổi, đi xa, cái mới | [S3] [1 nguồn]; trùng với số 5 nói chung [N20][N31] |
+| Định nghĩa “tự do” thay đổi theo thời gian | [S9] [1 nguồn] |
+| Số linh hồn là khao khát suốt đời | [S9] [1 nguồn] |
+| Dễ thiếu trách nhiệm, không làm đến cùng | [S3] [1 nguồn]; trùng với số 5 nói chung [N20][N31] |
 
-**Lưu ý:** phần “mặt trái” mới có 1 nguồn (Decoz) cho riêng số linh hồn 5. Nét này trùng với số chủ đạo 5 (dàn trải, khó cam kết [N20][N31]), nên tạm giữ. Nếu HUB muốn chặt hơn thì bỏ câu cuối.
+**Lưu ý:** riêng cho số linh hồn, các trang của Decoz và Affinity là hai nguồn duy nhất đọc được, nên nhiều ý chỉ có 1 nguồn. Các nét này trùng với ý nghĩa chung của số 5 (có từ 2 nguồn trở lên), nên tạm giữ. Cần đối chiếu lại khi mở được mạng.
 
 **Đã bỏ:** “bên kia ngọn đồi có gì” (dịch thành ngữ tiếng Anh “what’s over the hill”), “lịch trình kín mít” (ví dụ tự dựng).
 
@@ -150,18 +152,17 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Lần đầu gặp, người có số nhân cách 7 thường để lại ấn tượng kín đáo và có vẻ trí thức. Ngay giữa câu chuyện, họ vẫn như đang mải theo suy nghĩ riêng. Người mới quen vì thế dễ thấy họ khó gần, chưa cởi mở. Số nhân cách chỉ nói về vẻ ngoài mà người khác nhận ra trước, nên ấn tượng này chưa chắc đã khớp với con người bên trong.
+> Lần đầu gặp, người có số nhân cách 7 thường cho người khác cảm giác là người kín đáo, có vẻ trí thức. Ngay giữa câu chuyện, họ vẫn như đang mải theo suy nghĩ riêng. Người mới quen vì thế dễ thấy họ khó gần, kém cởi mở.
 
 **Nguồn**
 
 | Ý | Nguồn |
 |---|---|
 | Kín đáo, trí thức, hơi khép mình | [S4] (Decoz), [S11] |
-| Trong lúc trò chuyện hay hướng vào bên trong | [S4] |
-| Có thể bị thấy kém ấm áp | [S11] |
-| Số nhân cách là mặt người khác thấy trước tiên | [S4][S11][S20] |
+| Trong lúc trò chuyện hay hướng vào bên trong | [S4] [1 nguồn], khớp với nét kín đáo ở dòng trên |
+| Có thể bị thấy kém ấm áp | [S11] [1 nguồn], khớp với nét khép mình [S4] |
 
-**Đã bỏ:** “người ta tò mò nhưng chưa biết bắt chuyện từ đâu”, “thật ra bạn chỉ cần thêm thời gian” (đều không có nguồn). Không dùng chữ “bí ẩn” dù nguồn có nói, vì là từ cấm ở mục 3.5.
+**Đã bỏ:** “người ta tò mò nhưng chưa biết bắt chuyện từ đâu”, “thật ra bạn chỉ cần thêm thời gian” (đều không có nguồn). Không dùng chữ “bí ẩn” dù nguồn có nói, vì là từ cấm ở mục 3.5. Câu “số nhân cách chỉ nói về vẻ ngoài…” được chuyển lên phần giới thiệu chung của Số nhân cách, để 11 đoạn không cùng kết bằng một câu.
 
 ---
 
@@ -173,9 +174,9 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Lần tới, khi có người đề xuất một cách làm khác hẳn cách quen thuộc của mình, thử để họ làm theo cách ấy một lần rồi hãy so kết quả. Làm vậy sẽ dễ thấy chỗ nào đáng giữ nguyên tắc, chỗ nào chỉ là thói quen.
+> Lần tới, khi có người bày một cách làm khác hẳn cách quen của mình, thử làm theo cách ấy một lần rồi hãy so kết quả. Làm vậy sẽ dễ thấy cái nào là nguyên tắc đáng giữ, cái nào chỉ là thói quen.
 
-**Cơ sở:** xuất phát từ nét cứng nhắc, bảo thủ [N20][N31]. Lời khuyên “thỉnh thoảng bước ra khỏi vùng an toàn và dám thử” có ở [N31]. Có cách tự kiểm chứng (so kết quả), làm được trong tuần (mục 4.5).
+**Cơ sở:** xuất phát từ nét cứng nhắc, bảo thủ [N20][N31]. Lời khuyên “thỉnh thoảng bước ra khỏi vùng an toàn và dám thử” có ở [N31]; bản này để chính người đọc thử, không phụ thuộc vào việc mình có quyền cho người khác làm hay không. Có cách tự kiểm chứng (so kết quả), làm được trong tuần (mục 4.5).
 
 ---
 
@@ -187,7 +188,7 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Trước khi chốt một kết luận mình đã tìm hiểu kỹ, nên đem nó hỏi một người am hiểu và chịu nghe họ phản biện tới cùng. Giữ quan điểm riêng cũng được, miễn là đã thật lòng nghe ý kiến khác.
+> Trước khi chốt điều mình đã tìm hiểu kỹ, nên đem nó hỏi một người am hiểu và chịu nghe họ phản biện tới cùng. Giữ quan điểm riêng cũng được, miễn là đã thật lòng nghe ý kiến khác.
 
 **Cơ sở:** Decoz khuyên số 7 giữ quan điểm của mình nhưng mở lòng đón hiểu biết của người khác [N20]; Millman coi tin tưởng và cởi mở là bài học của số 7 [N25]; xuất phát từ nét thu mình [N20][N31].
 
@@ -199,9 +200,9 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Nhà có móng chắc mới đứng được lâu, và sự chịu khó của bạn chính là phần móng ấy. Chỉ mong ngôi nhà ấy có thêm vài ô cửa, để những hôm trời trở gió, mình còn biết mở ra.
+> Nhà có móng chắc mới đứng được lâu, và sự chịu khó của bạn là phần móng ấy. Chỉ mong căn nhà có thêm vài ô cửa, để khi cần đổi gió, bạn còn có chỗ mà mở ra.
 
-**Bám vào ý nghĩa:** móng nhà là nét chăm chỉ, bền bỉ, nền nếp [N20][N24][N31]; “ô cửa” và “trời trở gió” là nét cứng nhắc, ngại thay đổi [N20][N31]. Hình ảnh nhà, móng, gió là hình ảnh đời thường, không dịch ẩn dụ tiếng Anh.
+**Bám vào ý nghĩa:** móng nhà là nét chăm chỉ, bền bỉ, nền nếp [N20][N24][N31]; “ô cửa” và “đổi gió” là nét cứng nhắc, ngại thay đổi [N20][N31]. Hình ảnh nhà, móng, gió là hình ảnh đời thường, không dịch ẩn dụ tiếng Anh.
 
 ---
 
@@ -211,9 +212,9 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới**
 
-> Chim bay xa mấy cũng cần một cành để đậu. Cứ đi, cứ thử, chỉ cần giữ lại vài điều mình chịu theo tới cùng, để tự do không thành trôi dạt.
+> Ông bà mình vẫn dạy “đi cho biết đó biết đây”. Chỉ mong giữa những chuyến đi, có vài việc bạn chịu làm tới nơi tới chốn, để tự do không thành trôi dạt.
 
-**Bám vào ý nghĩa:** mong muốn tự do, thay đổi [S3][S9]; mặt trái là không làm đến cùng [S3].
+**Bám vào ý nghĩa:** mong muốn tự do, đi đây đi đó [S3][S9]; mặt trái là không làm đến cùng [S3]. Câu ca dao “Đi cho biết đó biết đây, ở nhà với mẹ biết ngày nào khôn” dùng đúng nghĩa: đi để mở mang hiểu biết.
 
 ---
 
@@ -225,9 +226,9 @@ Nguồn: 4 là công lý, số chính phương đầu tiên [N3][N7][N8]; hình 
 
 **Bản mới** (viết cho lúc đủ 7 thẻ đã mở, tức sau Phase 9)
 
-> Trang này gom vài cách người ta vẫn dùng để hiểu mình: thần số học, cung hoàng đạo, con giáp, và cả những trắc nghiệm có nghiên cứu đứng sau về tính cách, sở thích nghề nghiệp, giá trị sống. Thẻ nào cũng nói rõ đâu là quan niệm văn hoá, đâu là kết quả nghiên cứu, kèm vài việc nhỏ làm được ngay trong tuần.
+> Trang này gom vài cách người ta vẫn dùng để hiểu mình, từ thần số học, cung hoàng đạo, con giáp tới các trắc nghiệm có cơ sở nghiên cứu về tính cách, sở thích nghề nghiệp và giá trị sống. Hai thẻ còn lại nhìn ra ngoài: các nghề đang đổi thay ra sao, kỹ năng nào nên học thêm. Thẻ nào cũng nói rõ đâu là quan niệm văn hoá, đâu là điều có nghiên cứu hay số liệu, kèm vài việc nhỏ làm được trong tuần.
 
-**Cơ sở:** mô tả đúng phạm vi 7 thẻ trong brief (mục 6–12) và nguyên tắc trung thực về độ tin cậy (mục 4.6). Không có số liệu nên không cần nguồn ngoài.
+**Cơ sở:** mô tả phạm vi 7 thẻ trong brief (mục 6–12, gồm cả hai thẻ Nghề nghiệp và Kỹ năng) và nguyên tắc trung thực về độ tin cậy (mục 4.6). Không có số liệu nên không cần nguồn ngoài.
 
 ---
 
