@@ -1,0 +1,9 @@
+{
+  "name": "whoareyou",
+  "private": true,
+  "description": "Thấu Hiểu & Phát Triển Bản Thân · by HUB. Web tĩnh, không cần build.",
+  "type": "module",
+  "scripts": {
+    "check": "node tools/check-copy.mjs && node tools/check-messages.mjs"
+  }
+}
