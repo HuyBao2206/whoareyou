@@ -1,0 +1,155 @@
+/* Design tokens · Editorial Celestial */
+
+:root {
+  color-scheme: light;
+
+  /* Giấy & mực */
+  --paper: #F5F1EA;
+  --paper-2: #EEE8DD;
+  --surface: #FBF8F3;
+  --surface-2: #F1EBE1;
+  --ink: #141A2E;
+  --ink-2: #3A3F52;
+  --muted: #625D57;
+  --line: rgba(20, 26, 46, 0.13);
+  --line-strong: rgba(20, 26, 46, 0.3);
+  --backdrop: rgba(20, 26, 46, 0.34);
+
+  /* Accent dùng tiết chế */
+  --gold: #B8893B;
+  --gold-ink: #85601F;
+  --clay: #C4643F;
+  --clay-ink: #A24A2A;
+
+  /* Màu riêng cho từng con số (đủ tương phản cho chữ cỡ lớn trên nền giấy) */
+  --n1: #B4462B;
+  --n2: #2F7279;
+  --n3: #8C600C;
+  --n4: #56693A;
+  --n5: #2D58A0;
+  --n6: #A63F67;
+  --n7: #5A4A8C;
+  --n8: #7B4B28;
+  --n9: #8E2E3A;
+  --n10: #9C5B1F;
+  --n11: #7A5C16;
+  --n22: #1F5A6E;
+  --n33: #85507E;
+
+  --vowel: #A24A2A;
+  --consonant: #2D58A0;
+
+  --shadow-sm: 0 1px 0 rgba(20, 26, 46, 0.04), 0 8px 24px -16px rgba(20, 26, 46, 0.22);
+  --shadow-lg: 0 2px 0 rgba(20, 26, 46, 0.03), 0 40px 80px -40px rgba(20, 26, 46, 0.45);
+  --grain-opacity: 0.05;
+
+  /* Chữ */
+  --f-display: 'Fraunces', 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --f-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --f-en: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  --f-hand: 'Dancing Script', 'Segoe Script', cursive;
+
+  --fs-xs: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);
+  --fs-sm: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+  --fs-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --fs-md: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);
+  --fs-lg: clamp(1.375rem, 1.24rem + 0.6vw, 1.75rem);
+  --fs-xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.625rem);
+  --fs-2xl: clamp(2.25rem, 1.7rem + 2.6vw, 4rem);
+  --fs-hero: clamp(2.6rem, 1.4rem + 6vw, 7.25rem);
+  --fs-giant: clamp(6rem, 4rem + 10vw, 12rem);
+
+  /* Khoảng cách & bo góc */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --wrap: 1240px;
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: clamp(4rem, 3rem + 4vw, 7rem);
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Theme tối: theo hệ thống khi chưa chọn, hoặc khi người dùng chọn tối */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --paper: #0F1220;
+    --paper-2: #141829;
+    --surface: #161A2B;
+    --surface-2: #1C2134;
+    --ink: #ECE6DC;
+    --ink-2: #CFC8BC;
+    --muted: #A8A196;
+    --line: rgba(236, 230, 220, 0.13);
+    --line-strong: rgba(236, 230, 220, 0.3);
+    --backdrop: rgba(5, 7, 14, 0.6);
+    --gold: #D2A55A;
+    --gold-ink: #DDB570;
+    --clay: #D9805C;
+    --clay-ink: #E59573;
+    --n1: #E8846A;
+    --n2: #6CC0C4;
+    --n3: #E3B54F;
+    --n4: #A9C27D;
+    --n5: #86A9EE;
+    --n6: #E58BAE;
+    --n7: #AE9EEA;
+    --n8: #D49C70;
+    --n9: #E07884;
+    --n10: #E6A15D;
+    --n11: #E0C068;
+    --n22: #6FBAD3;
+    --n33: #D49ACB;
+    --vowel: #E59573;
+    --consonant: #86A9EE;
+    --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.2), 0 8px 24px -16px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 40px 80px -40px rgba(0, 0, 0, 0.8);
+    --grain-opacity: 0.07;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #0F1220;
+  --paper-2: #141829;
+  --surface: #161A2B;
+  --surface-2: #1C2134;
+  --ink: #ECE6DC;
+  --ink-2: #CFC8BC;
+  --muted: #A8A196;
+  --line: rgba(236, 230, 220, 0.13);
+  --line-strong: rgba(236, 230, 220, 0.3);
+  --backdrop: rgba(5, 7, 14, 0.6);
+  --gold: #D2A55A;
+  --gold-ink: #DDB570;
+  --clay: #D9805C;
+  --clay-ink: #E59573;
+  --n1: #E8846A;
+  --n2: #6CC0C4;
+  --n3: #E3B54F;
+  --n4: #A9C27D;
+  --n5: #86A9EE;
+  --n6: #E58BAE;
+  --n7: #AE9EEA;
+  --n8: #D49C70;
+  --n9: #E07884;
+  --n10: #E6A15D;
+  --n11: #E0C068;
+  --n22: #6FBAD3;
+  --n33: #D49ACB;
+  --vowel: #E59573;
+  --consonant: #86A9EE;
+  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.2), 0 8px 24px -16px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 40px 80px -40px rgba(0, 0, 0, 0.8);
+  --grain-opacity: 0.07;
+}

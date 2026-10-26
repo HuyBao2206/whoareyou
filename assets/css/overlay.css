@@ -1,0 +1,254 @@
+/* Overlay dùng chung */
+
+.ov {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.ov__backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--backdrop);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ov__sheet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.3s ease, transform 0.4s var(--ease-out);
+  will-change: transform;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Trạng thái mở khi không có GSAP hoặc khi giảm chuyển động */
+.ov.is-in .ov__backdrop {
+  opacity: 1;
+}
+.ov.is-in .ov__sheet {
+  opacity: 1;
+  transform: none;
+}
+.has-gsap .ov.is-in .ov__sheet {
+  transition: none;
+}
+.ov.is-out .ov__backdrop,
+.ov.is-out .ov__sheet {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.ov__grab {
+  display: grid;
+  place-items: center;
+  height: 20px;
+  flex: none;
+  touch-action: none;
+}
+.ov__grab span {
+  width: 42px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--line-strong);
+}
+
+.ov__bar {
+  position: relative;
+  z-index: 2;
+  flex: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'heading close'
+    'toc toc';
+  align-items: center;
+  gap: 4px var(--sp-3);
+  padding: 0 var(--gutter) 10px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.ov__heading {
+  grid-area: heading;
+  min-width: 0;
+}
+.ov__kicker {
+  font-family: var(--f-en);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  line-height: 1.2;
+}
+.ov__title {
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ov__toc {
+  grid-area: toc;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
+  mask-image: linear-gradient(90deg, transparent 0, #000 var(--gutter), #000 calc(100% - var(--gutter)), transparent 100%);
+  touch-action: pan-x;
+}
+.ov__toc::-webkit-scrollbar {
+  display: none;
+}
+.ov__toc:empty {
+  display: none;
+}
+
+.ov__toc-link {
+  flex: none;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.ov__toc-link:hover {
+  border-color: var(--line-strong);
+}
+@media (pointer: coarse) {
+  .ov__toc-link {
+    min-height: 44px;
+  }
+}
+
+.ov__close {
+  grid-area: close;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  transition: transform 0.4s var(--ease-out), border-color 0.25s ease;
+}
+.ov__close:hover {
+  transform: rotate(90deg);
+  border-color: var(--line-strong);
+}
+
+.ov__scroll {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.ov__body {
+  padding: var(--sp-6) var(--gutter) calc(var(--sp-8) + env(safe-area-inset-bottom));
+}
+
+.ov__loading {
+  padding: var(--sp-7) 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Overlay nhỏ (Sắp ra mắt): bottom sheet trên mobile */
+.ov--small {
+  place-items: end center;
+}
+.ov--small .ov__sheet {
+  height: auto;
+  max-height: 88dvh;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+}
+.ov--small .ov__bar {
+  grid-template-areas: 'heading close';
+  border-bottom: 0;
+}
+.ov--small .ov__body {
+  padding-top: var(--sp-4);
+  padding-bottom: calc(var(--sp-6) + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 720px) {
+  .ov {
+    padding: clamp(16px, 4vh, 48px) 24px;
+  }
+  .ov__sheet {
+    max-width: 980px;
+    height: 100%;
+    max-height: calc(100dvh - 2 * clamp(16px, 4vh, 48px));
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+  }
+  .ov__grab {
+    display: none;
+  }
+  .ov__bar {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 'heading toc close';
+    gap: var(--sp-4);
+    padding: 14px var(--sp-6) 14px;
+  }
+  .ov__toc {
+    margin: 0;
+    padding: 0 4px;
+    justify-content: flex-end;
+    mask-image: none;
+  }
+  .ov__body {
+    padding: var(--sp-7) clamp(28px, 5vw, 64px) var(--sp-8);
+  }
+  .ov--small {
+    place-items: center;
+  }
+  .ov--small .ov__sheet {
+    max-width: 560px;
+    height: auto;
+    border-radius: var(--r-lg);
+  }
+  .ov--small .ov__bar {
+    grid-template-columns: 1fr auto;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1240px) {
+  .ov__toc {
+    max-width: 52vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ov__sheet {
+    transform: none;
+  }
+  .ov__scroll {
+    scroll-behavior: auto;
+  }
+}

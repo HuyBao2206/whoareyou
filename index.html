@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thấu Hiểu &amp; Phát Triển Bản Thân · by HUB</title>
+  <meta name="description" content="Một trang nhỏ giúp bạn hiểu mình hơn qua những cách nhìn quen thuộc như thần số học, viết bằng lời dễ hiểu. Mọi phép tính chạy ngay trên máy của bạn.">
+  <meta name="author" content="HUB">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F5F1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1220" media="(prefers-color-scheme: dark)">
+
+  <!-- TODO: nếu đổi địa chỉ web, sửa các URL tuyệt đối bên dưới cho khớp config.site.url -->
+  <link rel="canonical" href="https://huybao2206.github.io/whoareyou/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Thấu Hiểu &amp; Phát Triển Bản Thân">
+  <meta property="og:title" content="Thấu Hiểu &amp; Phát Triển Bản Thân · by HUB">
+  <meta property="og:description" content="Đọc ngày sinh và họ tên của bạn thành năm con số, mỗi số kèm một lời gợi ý để bạn ngẫm về mình. Không lưu, không gửi dữ liệu đi đâu.">
+  <meta property="og:url" content="https://huybao2206.github.io/whoareyou/">
+  <meta property="og:image" content="https://huybao2206.github.io/whoareyou/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Thấu Hiểu &amp; Phát Triển Bản Thân, một dự án của HUB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Thấu Hiểu &amp; Phát Triển Bản Thân · by HUB">
+  <meta name="twitter:description" content="Đọc ngày sinh và họ tên của bạn thành năm con số, mỗi số kèm một lời gợi ý để bạn ngẫm về mình.">
+  <meta name="twitter:image" content="https://huybao2206.github.io/whoareyou/assets/images/og-image.png">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <script>
+    // Áp theme đã chọn trước khi vẽ trang để không bị nháy màu.
+    (function () {
+      try {
+        var t = localStorage.getItem('hub-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap&text=%E2%80%94%20HUB">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/overlay.css">
+  <link rel="stylesheet" href="assets/css/modules/numerology.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua, tới nội dung chính</a>
+
+  <div id="page" class="page">
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="./" aria-label="HUB, về trang chủ">
+          <svg class="brand__mono" viewBox="0 0 66 34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path pathLength="1" d="M4 5 V29 M4 17 H16 M16 5 V29"/>
+            <path pathLength="1" d="M25 5 V21 Q25 29 32 29 Q39 29 39 21 V5"/>
+            <path pathLength="1" d="M48 5 V29 H55 Q62 29 62 22.5 Q62 16.5 55 16.5 H48 M48 5 H54 Q60 5 60 10.8 Q60 16.5 54 16.5"/>
+          </svg>
+          <span class="brand__sub" lang="en">a HUB project</span>
+        </a>
+        <nav class="site-nav" aria-label="Điều hướng chính">
+          <a class="site-nav__link" href="#ve-trang-nay">Về trang này</a>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Đổi giao diện sáng tối" aria-pressed="false">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 14.6A8 8 0 0 1 9.4 4.5a8 8 0 1 0 10.1 10.1Z"/></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="ring" aria-hidden="true"></div>
+        <div class="wrap hero__inner">
+          <p class="hero__eyebrow" data-hero-in>Một trang nhỏ để ngẫm về mình</p>
+          <h1 class="hero__title" id="hero-title"><span class="line">Thấu Hiểu &amp;</span> <span class="line">Phát Triển Bản Thân</span></h1>
+          <p class="hero__en" lang="en" data-site="nameEn" data-hero-in>Understand Yourself · Grow Yourself</p>
+          <p class="hero__intro" data-hero-in>
+            Mỗi thẻ dưới đây là một cách nhìn về con người. Bạn đọc để hiểu mình thêm một chút, rồi tự chọn điều gì đáng giữ lại.
+            <span class="signature">— HUB</span>
+          </p>
+          <a class="hero__scroll" href="#chu-de" data-hero-in>
+            <span>Xem các chủ đề</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="topics" id="chu-de" aria-labelledby="topics-title">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Các thẻ chủ đề</p>
+            <h2 class="section-title" id="topics-title">Chọn một góc để nhìn lại mình</h2>
+            <p class="section-lead">Thần số học đã mở để bạn dùng. Những thẻ còn lại HUB đang viết dần, bạn vẫn có thể bấm vào để xem trước nội dung.</p>
+          </div>
+          <ul class="topics__grid" id="topic-list" role="list"></ul>
+        </div>
+      </section>
+
+      <section class="about" id="ve-trang-nay" aria-labelledby="about-title">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Về trang này</p>
+            <h2 class="section-title" id="about-title">Đọc để hiểu mình, không phải để được phán</h2>
+          </div>
+          <div class="about__grid">
+            <article class="about__item" data-reveal>
+              <span class="about__no" aria-hidden="true">i.</span>
+              <h3>Trang này giúp gì cho bạn</h3>
+              <p>Trang này gom những cách nhìn quen thuộc về con người vào một chỗ và viết lại bằng lời dễ hiểu. Mỗi thẻ cho bạn vài gợi ý để tự soi lại cách mình làm việc, cách mình thương người khác và cách mình ra quyết định. Bạn không cần đăng ký hay cài thêm gì cả.</p>
+            </article>
+            <article class="about__item" data-reveal>
+              <span class="about__no" aria-hidden="true">ii.</span>
+              <h3>Đọc kết quả thế nào cho đúng</h3>
+              <p>Bạn hãy đọc kết quả như lời nhận xét của một người quen tinh ý: có chỗ trúng, có chỗ trật. Đoạn nào khiến bạn gật gù thì giữ lại mà ngẫm thêm, đoạn nào không giống mình thì cứ bỏ qua. Không con số hay bài trắc nghiệm nào quyết định thay bạn được, và cũng chẳng có kết quả nào là xấu.</p>
+            </article>
+            <article class="about__item" data-reveal>
+              <span class="about__no" aria-hidden="true">iii.</span>
+              <h3>Dữ liệu của bạn ở yên trên máy bạn</h3>
+              <p>Mọi phép tính diễn ra ngay trên trình duyệt của bạn. Tên và ngày sinh không được lưu lại, không nằm trên đường link và không được gửi tới máy chủ nào. Trang cũng không gắn công cụ đếm lượt xem. Thứ duy nhất trang nhớ là bạn thích giao diện sáng hay tối.</p>
+            </article>
+          </div>
+
+          <figure class="hub-note" data-reveal>
+            <p class="eyebrow">Lời của HUB</p>
+            <blockquote class="hub-note__body">
+              <!-- TODO: HUB tự viết. Một đoạn ngắn, khoảng 3–5 câu, về lý do làm trang này. -->
+              <p class="hub-note__todo">TODO: HUB tự viết đoạn này.</p>
+            </blockquote>
+            <figcaption class="hub-note__sign"><span class="signature">— HUB</span></figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="site-footer__name" data-site="nameVi">Thấu Hiểu &amp; Phát Triển Bản Thân</p>
+          <p class="site-footer__by">Thực hiện bởi <a href="https://huybao2206.github.io/hubcuteee/" data-link="bio" rel="noopener" target="_blank">HUB</a></p>
+          <p class="site-footer__note">Trang thông tin để tham khảo, không thay cho lời khuyên chuyên môn về tâm lý, sức khoẻ hay tài chính.</p>
+        </div>
+        <ul class="site-footer__links" role="list">
+          <li><a href="https://huybao2206.github.io/hubcuteee/" data-link="bio" rel="noopener" target="_blank">Trang bio của HUB</a></li>
+          <li><a href="https://www.facebook.com/cynical2206/" data-link="facebook" rel="noopener" target="_blank">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/@hubmanifest" data-link="tiktok" rel="noopener" target="_blank">TikTok</a></li>
+          <li><a href="mailto:baohuy22062002@gmail.com" data-link="email">Email</a></li>
+        </ul>
+        <p class="site-footer__copy">© <span id="year">2026</span> HUB</p>
+      </div>
+    </footer>
+  </div>
+
+  <div id="overlay-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p class="noscript">Trang cần bật JavaScript để mở các thẻ và tính toán. Mọi phép tính đều chạy ngay trên máy của bạn.</p>
+  </noscript>
+</body>
+</html>
