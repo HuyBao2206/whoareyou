@@ -23,11 +23,6 @@
   letter-spacing: -0.025em;
   padding-top: 0.1em;
 }
-@media (min-width: 900px) {
-  .nm-hero__title {
-    font-variation-settings: 'opsz' 144;
-  }
-}
 .nm-hero__lead {
   max-width: 40rem;
   font-size: var(--fs-md);
@@ -973,11 +968,10 @@
   font-family: var(--f-display);
   font-size: var(--fs-giant);
   font-weight: 300;
-  font-variation-settings: 'opsz' 144;
   line-height: 0.9;
   letter-spacing: -0.04em;
   color: var(--c, var(--muted));
-  margin: 0;
+  margin: 0.12em 0 0;
 }
 .msg__num small {
   font-size: 0.32em;

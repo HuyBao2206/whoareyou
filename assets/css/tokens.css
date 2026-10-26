@@ -44,9 +44,9 @@
   --grain-opacity: 0.05;
 
   /* Chữ */
-  --f-display: 'Fraunces', 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --f-display: 'Newsreader', 'Noto Serif', Georgia, 'Times New Roman', serif;
   --f-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  --f-en: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
+  --f-en: 'Cormorant Garamond', 'Newsreader', Georgia, serif;
   --f-hand: 'Dancing Script', 'Segoe Script', cursive;
 
   --fs-xs: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);

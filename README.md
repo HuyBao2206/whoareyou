@@ -113,7 +113,7 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 - **Tiêu đề hero hiện ra theo dòng bằng CSS** ngay từ lần vẽ đầu, không phải chờ JS hay font. Nhờ vậy điểm Lighthouse cao. **GSAP SplitText** được dùng cho tiêu đề các phần khi cuộn tới; chuỗi được chuẩn hoá NFC và chỉ tách dòng sau khi font đã tải, mỗi dòng có chừa khoảng trống để dấu tiếng Việt không bị cắt.
 - **Không dùng Lenis.** Cuộn gốc của trình duyệt cần cho thao tác vuốt xuống để đóng overlay và cho trình đọc màn hình.
 - Thư viện qua CDN jsDelivr, cố định **GSAP 3.13.0** (gồm ScrollTrigger, Flip, SplitText, tất cả đều miễn phí từ bản này). Nếu CDN lỗi, trang vẫn chạy đủ chức năng, chỉ mất chuyển động.
-- Font: **Fraunces** (tiêu đề, chữ số lớn), **Be Vietnam Pro** (nội dung), **Cormorant Garamond** nghiêng (tên tiếng Anh), **Dancing Script** (chữ ký "— HUB", chỉ tải đúng 5 ký tự). Cả bốn đều có subset `vietnamese` và được tải không chặn render.
+- Font: **Newsreader** (tiêu đề, chữ số lớn), **Be Vietnam Pro** (nội dung), **Cormorant Garamond** nghiêng (tên tiếng Anh), **Dancing Script** (chữ ký "— HUB", chỉ tải đúng 5 ký tự). Cả bốn đều có subset `vietnamese` và được tải không chặn render.
 - **Trang kết quả trên mobile xếp dọc** thay vì carousel, vì đọc nội dung dài sẽ dễ hơn. Desktop dùng lưới so le hai cột.
 - "Đọc đầy đủ" mở rộng bằng **Flip + clip-path**: các thẻ xung quanh dịch chỗ bằng transform, không animate chiều cao.
 - **Con trỏ tuỳ biến** là một vòng mảnh đi kèm, vẫn giữ con trỏ gốc của hệ điều hành. Vòng này chỉ bật trên thiết bị có chuột.

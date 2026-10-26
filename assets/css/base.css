@@ -344,19 +344,11 @@ button {
 .hero__title {
   font-family: var(--f-display);
   font-size: var(--fs-hero);
-  font-weight: 360;
-  /* Optical size theo cỡ chữ thật. Ép 'opsz' 144 ở cỡ chữ nhỏ làm nét ngang (vd gạch giữa chữ H)
-     mảnh tới mức một số máy Android không vẽ ra. */
+  font-weight: 350;
   font-optical-sizing: auto;
   line-height: 1.06;
   letter-spacing: -0.02em;
   max-width: 13ch;
-}
-@media (min-width: 900px) {
-  .hero__title {
-    font-weight: 340;
-    font-variation-settings: 'opsz' 144;
-  }
 }
 .hero__title .line {
   display: block;
