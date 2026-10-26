@@ -41,7 +41,7 @@ HUB cần đọc `review/hieu-chinh.md`: 11 đoạn mẫu và danh sách câu ma
 - Nghiên cứu thần số học tách làm 3 file con (ý nghĩa số, cách tính, các chỉ số) và một file đầu mối `research/than-so-hoc.md`, vì làm song song bằng 3 subagent.
 - Chưa sửa bất kỳ chữ nào trên web. Mọi đề xuất nằm trong `review/`.
 - Các câu do chính HUB sửa trên GitHub (xác định qua lịch sử git) được đưa vào danh sách hỏi, không tự sửa.
-- Mẫu đã qua hai lượt biên tập độc lập (`review/bien-tap-mau.md`, `review/bien-tap-mau-lan-2.md`).
+- Mẫu đã qua hai lượt biên tập độc lập (`review/bien-tap-mau.md`, `review/bien-tap-mau-lan-2.md`). Lượt 2 chỉ còn trường `origin` số 4 dưới 4 điểm; đã thay bằng đúng bản biên tập viên đề xuất và sửa thêm các lỗi nhỏ lượt 2 nêu.
 
 ## Ghi chú cho Phase 1
 
