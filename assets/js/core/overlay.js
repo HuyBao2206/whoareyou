@@ -102,6 +102,8 @@ export function setToc(toc) {
 // Trên màn hình rộng, tên thẻ và mục lục nằm chung một hàng. Khi mục lục dài không vừa
 // (vd thẻ Cung hoàng đạo có 7 mục), thanh tiêu đề xuống hai hàng để thấy đủ mà không cần kéo ngang.
 const wide = window.matchMedia('(min-width: 720px)');
+// Font web đổi độ rộng chữ sau khi tải xong, nên đo lại lúc đó (phòng mạng chậm).
+document.fonts?.addEventListener?.('loadingdone', () => fitToc());
 function fitToc() {
   if (!ov) return;
   const { bar } = ov;
