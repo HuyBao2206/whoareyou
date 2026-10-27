@@ -26,9 +26,11 @@ Quy trình mỗi thẻ: nghiên cứu (ghi vào `research/`) → dàn ý → vi�
 
 | Thẻ | Nghiên cứu | Dàn ý | Viết | Thẩm định | Sửa | Giao diện | Lên web |
 |---|---|---|---|---|---|---|---|
-| Nghề nghiệp hôm nay & ngày mai | đang chạy | | | | | | |
-| Kỹ năng nên đầu tư | đang chạy | | | | | | |
-| Giá trị sống | đang chạy | | | | | | |
+| Nghề nghiệp hôm nay & ngày mai | xong | xong | xong | xong (47 mục) | xong | xong | xong |
+| Kỹ năng nên đầu tư | xong | đang làm | | | | | |
+| Giá trị sống | xong | | | | | | |
+
+Giới hạn của đợt này: chính sách mạng của môi trường chặn nso.gov.vn, ilo.org, weforum.org, oecd.org…; nghiên cứu chỉ dùng đoạn trích tìm kiếm. Khi mở được mạng, nên đối chiếu lại số liệu với văn bản gốc (danh sách trong research/).
 
 File nghiên cứu: `research/nghe-nghiep.md` (thị trường chung), `research/nghe-nghiep-ho-so.md` (hồ sơ từng nghề), `research/ky-nang.md`, `research/gia-tri-song.md`.
 
@@ -42,7 +44,7 @@ File nghiên cứu: `research/nghe-nghiep.md` (thị trường chung), `research
 | 3 | Cung hoàng đạo & con giáp | Xong |
 | 4 | Bản đồ tính cách | Xong |
 | 5 | Sở thích nghề nghiệp | Xong (bộ 48 hoạt động tự soạn; xem `CLAUDE.md`) |
-| 6 | Nghề nghiệp hôm nay & ngày mai | Chưa làm |
+| 6 | Nghề nghiệp hôm nay & ngày mai | Xong |
 | 7 | Kỹ năng nên đầu tư | Chưa làm |
 | 8 | Giá trị sống | Chưa làm |
 | 9 | Hồ sơ của bạn, trang chủ, quyền riêng tư | Chưa làm |

@@ -30,9 +30,11 @@ export function position(job) {
 
 /**
  * Rải các chấm trùng toạ độ thành một cụm nhỏ để không đè lên nhau.
- * Trả về Map id → { x, y } (0–1), giữ nguyên tâm cụm. Kết quả ổn định theo thứ tự trong mảng.
+ * Hai chấm: đặt hai bên; ba chấm: tam giác; từ bốn chấm: một chấm ở tâm, còn lại xếp vòng quanh.
+ * Bán kính nhỏ hơn nửa khoảng cách giữa hai mức liền nhau (0,125) để cụm không lấn sang ô bên cạnh.
+ * Trả về Map id → { x, y } (0–1). Kết quả ổn định theo thứ tự trong mảng.
  */
-export function spread(jobs, radius = 0.028) {
+export function spread(jobs) {
   const groups = new Map();
   for (const j of jobs) {
     const k = `${j.demand}|${j.ai}`;
@@ -42,13 +44,21 @@ export function spread(jobs, radius = 0.028) {
   const out = new Map();
   for (const g of groups.values()) {
     const { x, y } = position(g[0]);
-    if (g.length === 1) {
+    const n = g.length;
+    if (n === 1) {
       out.set(g[0].id, { x, y });
       continue;
     }
-    const r = radius * (g.length > 6 ? 1.6 : 1);
-    g.forEach((j, i) => {
-      const a = (i / g.length) * Math.PI * 2 - Math.PI / 2;
+    if (n === 2) {
+      out.set(g[0].id, { x: x - 0.028, y });
+      out.set(g[1].id, { x: x + 0.028, y });
+      continue;
+    }
+    const ring = n === 3 ? g : g.slice(1);
+    const r = n === 3 ? 0.034 : 0.055;
+    if (n > 3) out.set(g[0].id, { x, y });
+    ring.forEach((j, i) => {
+      const a = (i / ring.length) * Math.PI * 2 - Math.PI / 2;
       out.set(j.id, { x: x + r * Math.cos(a), y: y + r * Math.sin(a) });
     });
   }
@@ -97,10 +107,13 @@ export function validHolland(code) {
   return typeof code === 'string' && /^[RIASEC]{1,3}$/.test(code) && new Set(code).size === code.length;
 }
 
-/** Bốn ô của bản đồ, chia ở giữa thang (3). */
+/**
+ * Bốn ô của bản đồ. Nhu cầu "tăng" khi trên mức trung tính (> 3); mức 3 thuộc nhóm đi ngang hoặc giảm.
+ * Tiếp xúc "nhiều" khi chỉ số AI từ 3,5 trở lên; mức 3 là vừa.
+ */
 export function quadrant(job) {
-  const hiDemand = job.demand >= 3;
-  const hiAi = job.ai >= 3;
+  const hiDemand = job.demand > 3;
+  const hiAi = job.ai >= 3.5;
   if (hiDemand && !hiAi) return 'grow-safe';
   if (hiDemand && hiAi) return 'grow-change';
   if (!hiDemand && hiAi) return 'shrink-change';
@@ -114,9 +127,24 @@ export function quadrantCounts(jobs) {
   return c;
 }
 
-/** Tỷ lệ nhiệm vụ theo mức tự động hoá ('cao' | 'vua' | 'thap') trong hồ sơ một nghề. */
+/** Số nhiệm vụ theo mức tác động ('cao' | 'vua' | 'thap') trong hồ sơ một nghề. Mỗi nhiệm vụ là [tên, mức]. */
 export function taskMix(job) {
   const m = { cao: 0, vua: 0, thap: 0 };
-  for (const t of job.tasks || []) if (t.ai in m) m[t.ai]++;
+  for (const t of job.tasks || []) if (t && t[1] in m) m[t[1]]++;
   return m;
+}
+
+/** Trọng số của từng mức tác động khi tính chỉ số AI. */
+export const TASK_WEIGHT = { cao: 1, vua: 0.5, thap: 0 };
+
+/**
+ * Chỉ số tác động của AI (1–5) tính từ bảng nhiệm vụ:
+ *   1 + 4 × (số nhiệm vụ cao + 0,5 × số nhiệm vụ vừa) ÷ tổng số nhiệm vụ, làm tròn đến nửa bậc.
+ * @param {Array<[string, 'cao'|'vua'|'thap']>} tasks
+ */
+export function aiIndex(tasks) {
+  const list = (tasks || []).filter((t) => t && t[1] in TASK_WEIGHT);
+  if (!list.length) return null;
+  const share = list.reduce((s, t) => s + TASK_WEIGHT[t[1]], 0) / list.length;
+  return Math.round((1 + 4 * share) * 2) / 2;
 }

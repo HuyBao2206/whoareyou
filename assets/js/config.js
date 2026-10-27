@@ -87,8 +87,9 @@ export const config = {
       nameVi: 'Nghề nghiệp hôm nay & ngày mai',
       nameEn: 'Future of Work',
       desc: 'Những nghề đang đổi cách làm vì công nghệ và những nghề mới đang thành hình, kể bằng ví dụ gần gũi.',
-      status: 'soon',
+      status: 'active',
       glyph: 'future',
+      load: () => import('./modules/future/view.js'),
       soon: [
         'Phần này sẽ kể về những công việc đang thay đổi cách làm khi công cụ số và trí tuệ nhân tạo đi vào văn phòng, cửa hàng và nhà máy.',
         'Mỗi nghề có ví dụ cụ thể về phần việc dễ được máy làm thay và phần việc vẫn cần con người.',

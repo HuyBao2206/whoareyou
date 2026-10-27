@@ -314,3 +314,11 @@ Cùng giới hạn: chỉ có đoạn trích tìm kiếm, không mở được t
 | Recruitment Market Report 2025–2026 | TopCV | 2025 | https://insights.topcv.vn/recruitment-report-2025-2026-eng | trích tìm kiếm |
 | Navigos Group: Hơn 60% người lao động Việt Nam tăng thu nhập trong năm 2025 | Mekong ASEAN | 2026 | https://mekongasean.vn/navigos-group-hon-60-nguoi-lao-dong-viet-nam-tang-thu-nhap-trong-nam-2025-51995.html | qua trích dẫn |
 | Gen-AI: Artificial Intelligence and the Future of Work (SDN/2024/001) | IMF | 01/2024 | https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379 | trích tìm kiếm + báo dẫn |
+
+---
+
+## Ghi chú liên kết (27/10/2026)
+
+- Số liệu khảo sát BUV và Decision Lab (*Vietnam Employability Report 2026*, 375 doanh nghiệp, công bố 08/10/2026) và danh sách kỹ năng cốt lõi WEF 2025 được ghi trong `research/ky-nang.md` mục 1. Trang Nghề nghiệp dùng lại các số đó ở mục “Kỹ năng nhà tuyển dụng cần”, ghi rõ BUV là trường đại học tư và số được dẫn qua báo chí. Tỷ lệ 67% của kỹ năng thứ hai trong WEF chỉ có qua một nguồn thứ cấp nên không đưa lên trang.
+- Thẩm định độc lập lần 1: `review/tham-dinh-nghe-nghiep.md` (47 mục). Đã sửa toàn bộ nhóm “Phải sửa” và phần lớn nhóm “Nên sửa”; các mục “Cân nhắc” K1 (giữ tên “Bản tin dự báo” và ẩn dụ thời tiết theo yêu cầu thiết kế của HUB) không áp dụng.
+- Thang nhu cầu: áp đúng quy tắc “thiếu số liệu Việt Nam thì đặt mức 3”, kể cả khi tín hiệu quốc tế mạnh.

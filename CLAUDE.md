@@ -5,7 +5,7 @@
 “Thấu Hiểu & Phát Triển Bản Thân” của HUB, chạy trên GitHub Pages: https://huybao2206.github.io/whoareyou/
 
 - HTML/CSS/JS thuần (ES modules), **không có bước build**. Đẩy lên `main` là Pages cập nhật.
-- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp**, **Bản đồ tính cách** và **Sở thích nghề nghiệp**. 3 thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
+- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp**, **Bản đồ tính cách**, **Sở thích nghề nghiệp** và **Nghề nghiệp hôm nay & ngày mai**. 2 thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
 - Thẻ Bản đồ tính cách không hỏi tên hay ngày sinh; câu trả lời chỉ nằm trong bộ nhớ của tab, không lên URL.
 - Mọi phép tính chạy trên trình duyệt. Không lưu, không gửi tên hay ngày sinh đi đâu; URL kết quả chỉ chứa các con số. Riêng mã Holland (3 chữ cái) được giữ trong sessionStorage của tab để các thẻ khác dùng.
 
@@ -40,6 +40,12 @@ assets/js/modules/career/     thẻ Sở thích nghề nghiệp ("Tổ ong", mô
   types.js, pairs.js          6 nhóm, 15 cặp hai chữ đầu; content.js: chữ còn lại và nguồn tham khảo
   view.js                     chồng thẻ vuốt (phải Thích, trái Không thích, lên Phân vân; có nút và phím mũi tên),
                               tổ ong đổ mật theo điểm, lục giác Holland
+assets/js/modules/future/     thẻ Nghề nghiệp hôm nay & ngày mai ("Bản tin dự báo nghề nghiệp"), thẻ kiến thức
+  content.js                  tổng quan thị trường, AI, kỹ năng; phương pháp bản đồ; danh mục nguồn (khoá dùng chung)
+  jobs/*.js, jobs/index.js    41 hồ sơ nghề theo 8 lĩnh vực: nhiệm vụ gắn mức tiếp xúc AI, nhu cầu 1–5, nguồn
+  calc.js                     chỉ số AI tính từ bảng nhiệm vụ, mức thời tiết, toạ độ bản đồ, lọc theo mã Holland;
+                              calc.test.html kiểm cả dữ liệu (đủ trường, nguồn tồn tại, thang hợp lệ)
+  icons.js, view.js           biểu tượng nắng/mây/mưa và thước gió; bảng chỉ số, bản đồ, hồ sơ, so sánh, xuất ảnh
 tools/check-copy.mjs          quét văn phong mọi chữ hiển thị
 tools/check-messages.mjs      kiểm tra đủ mục, đủ trường cho thông điệp
 docs/, research/, review/     brief, ghi chú nghiên cứu, bản nháp biên tập (không hiển thị trên web)
@@ -53,7 +59,7 @@ docs/, research/, review/     brief, ghi chú nghiên cứu, bản nháp biên t
 | Ô nhập ngày sinh | `core/date-input.js` + `.di` trong `shared.css` | `dateInputHtml({ id })` rồi `bindDateInput(root)`; kiểm tra bằng `validateDate(value)` (hàm thuần). |
 | Ngăn “Nguồn tham khảo” | `core/sources.js` + `.srcs` | `sourcesHtml({ id, groups \| items, updated: 'MM/YYYY' })`. Mỗi nguồn: `{ title, by, year, url, note }`. Tên bài giữ nguyên cách viết gốc. |
 | Dòng “Cập nhật” | `core/sources.js` + `.upd` | `updatedHtml('10/2026')`, đã có sẵn ở cuối ngăn nguồn. |
-| Giá trị dùng chung trong phiên | `core/session.js` | `sessionGet(key)`, `sessionSet(key, value \| null)` (sessionStorage, có try/catch, tiền tố `hub.`). Đang dùng: `holland` (mã 3 chữ, vd `SAE`), `holland.scores`. Thẻ “Nghề nghiệp hôm nay & ngày mai” đọc `holland` để lọc nghề; thẻ Sở thích nghề nghiệp hiện nút “Xem nghề hợp với mã của bạn” (link `#/nghe-nghiep-tuong-lai?ma=SAE`) khi thẻ kia có `status: 'active'`. Không lưu tên, ngày sinh. |
+| Giá trị dùng chung trong phiên | `core/session.js` | `sessionGet(key)`, `sessionSet(key, value \| null)` (sessionStorage, có try/catch, tiền tố `hub.`). Đang dùng: `holland` (mã 3 chữ, vd `SAE`), `holland.scores`, `future.job` (id nghề đang xem ở thẻ Nghề nghiệp, để thẻ Kỹ năng lấy làm mục tiêu). Thẻ “Nghề nghiệp hôm nay & ngày mai” đọc `holland` để lọc nghề; thẻ Sở thích nghề nghiệp hiện nút “Xem nghề hợp với mã của bạn” (link `#/nghe-nghiep-tuong-lai?ma=SAE`) khi thẻ kia có `status: 'active'`. Không lưu tên, ngày sinh. |
 | Bộ xuất ảnh kết quả | `core/share-image.js` | `saveImage({ filename, width, height, fonts, draw(ctx, kit) })`. Vẽ thẳng lên canvas (không chụp DOM), `kit.brand()` vẽ chân trang có dấu HUB. Không vẽ tên hay ngày sinh. |
 
 Mỗi thẻ mới phải có: ngăn “Nguồn tham khảo” và dòng “Cập nhật: tháng MM/YYYY”; logic tính là hàm thuần có trang `calc.test.html`; nút lưu ảnh; chạy được khi thiếu GSAP và khi bật reduced-motion; thao tác kéo/vuốt có cách làm tương đương bằng nút và bàn phím.
@@ -96,6 +102,13 @@ Trình bày:
 - Hạn chế dấu chấm than và emoji.
 
 **Giữ nguyên giọng riêng của HUB:** đoạn “Lời của HUB”, câu có “ace”, tiêu đề “Khám phá bản thân qua những thông điệp từ vũ trụ :))))”, chữ ký “— HUB”. Muốn đổi thì hỏi HUB trước.
+
+## Ba thẻ kiến thức (Nghề nghiệp, Kỹ năng, Giá trị sống): lưu ý khi sửa
+
+- Giọng chuẩn mực như sách chuyên khảo, báo kinh tế; mỗi số liệu ghi năm, phạm vi, nguồn (khoá trong `SOURCES`). Không có nguồn thì ghi “chưa có số liệu đủ tin cậy”.
+- Căn cứ nằm trong `research/` (mỗi số có đánh dấu đọc trực tiếp hay qua trích dẫn); thẩm định độc lập trong `review/tham-dinh-<thẻ>.md`. Sửa nội dung thì sửa research trước.
+- Thẻ Nghề nghiệp: thang nhu cầu và công thức chỉ số AI viết trong `content.js` (METHOD). Nghề thiếu số liệu Việt Nam luôn ở mức 3 và vẽ chấm rỗng. Mỗi năm cập nhật theo mục “Cách cập nhật hằng năm” cuối `research/nghe-nghiep.md` và `research/nghe-nghiep-ho-so.md`.
+- `check-copy` cấm thêm các từ giật gân (“hot”, “hái ra tiền”, “cơ hội vàng”, “cướp việc”…); thuật ngữ “năng lượng tái tạo” được gỡ khỏi danh sách từ cấm “năng lượng”. Mảng các object có `summary` (vd danh sách nghề) được kiểm lặp khuôn như một nhóm.
 
 ## Thẻ Bản đồ tính cách: lưu ý khi sửa
 

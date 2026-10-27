@@ -34,6 +34,8 @@ const MODULES = [
   'assets/js/modules/career/items.js',
   'assets/js/modules/career/pairs.js',
   'assets/js/modules/career/content.js',
+  'assets/js/modules/future/content.js',
+  'assets/js/modules/future/jobs/index.js',
   'assets/js/config.js',
 ];
 
@@ -53,6 +55,7 @@ const FILES = [
   'assets/js/modules/personality/view.js',
   'assets/js/modules/personality/calc.js',
   'assets/js/modules/career/view.js',
+  'assets/js/modules/future/view.js',
   'assets/js/core/date-input.js',
   'assets/js/core/sources.js',
   'assets/js/core/share-image.js',
@@ -74,7 +77,11 @@ const BANNED = [
   'trong thế giới hiện đại', 'thế giới hiện đại ngày nay', 'hãy cùng', 'đừng bỏ lỡ', 'tóm lại', 'nói cách khác', 'hãy nhớ rằng',
   // khẳng định định mệnh (mục 3.2, 4.6)
   'định mệnh', 'số phận', 'chắc chắn sẽ', 'số xấu', 'xui xẻo', 'đổi đời',
+  // giật gân, tâm tình (chuẩn viết của ba thẻ kiến thức: Nghề nghiệp, Kỹ năng, Giá trị sống)
+  'hot', 'hái ra tiền', 'cơ hội vàng', 'xu hướng tất yếu', 'cướp việc', 'bạn ơi', 'đừng lo', 'siêu hot', 'khát nhân lực',
 ];
+// Thuật ngữ chuyên ngành chứa từ bị cấm: gỡ ra trước khi quét từ cấm.
+const TERMS = ['năng lượng tái tạo', 'kỹ thuật năng lượng', 'năng lượng gió', 'năng lượng mặt trời'];
 // Mục 3.5: hạn chế, tối đa 2 lần mỗi thẻ.
 const LIMITED = ['sâu sắc', 'tinh tế', 'trọn vẹn', 'chữa lành', 'giá trị', 'trải nghiệm', 'kết nối', 'chạm', 'thấu hiểu'];
 // Mục 3.2 và mục 2 của brief: cụm dịch hoặc kết hợp từ sai.
@@ -125,7 +132,8 @@ function checkString(text, where, key, unit) {
   if (text !== text.normalize('NFC')) add('lỗi', where, 'Chuỗi chưa chuẩn NFC', text);
   const l = low(text);
 
-  for (const b of BANNED) if (count(l, b)) { add('lỗi', where, `Từ cấm “${b}”`, text); break; }
+  const lt = TERMS.reduce((acc, t) => acc.split(t).join(' '), l);
+  for (const b of BANNED) if (count(lt, b)) { add('lỗi', where, `Từ cấm “${b}”`, text); break; }
   for (const [c, fix] of CALQUES) if (l.includes(c)) add('lỗi', where, `Cụm dịch “${c}” → ${fix}`, text);
   for (const b of BUREAUCRATIC) if (l.includes(b)) add('cảnh báo', where, `Cụm hành chính “${b}”`, text);
   for (const w of LIMITED) unit.limited[w] = (unit.limited[w] || 0) + count(l, w);
@@ -237,7 +245,20 @@ function walk(value, path, key, unit, file) {
     return;
   }
   if (typeof value === 'function' || value == null) return;
-  if (Array.isArray(value)) return value.forEach((v, i) => walk(v, `${path}[${i}]`, key, unit, file));
+  if (Array.isArray(value)) {
+    // Mảng các "thẻ" (object có summary, vd danh sách nghề): xét như một nhóm, mỗi thẻ một hạn mức riêng.
+    const isCard = (v) => v && typeof v === 'object' && !Array.isArray(v) && typeof v.summary === 'string';
+    if (value.length >= 2 && value.every(isCard)) {
+      checkGroup(`${file} ${path}`, value.map((v, i) => [v.id || String(i), v]));
+      return value.forEach((v, i) => {
+        const u = newUnit();
+        const p = `${path}[${v.id || i}]`;
+        walk(v, p, key, u, file);
+        closeUnit(u, `${file} ${p}`);
+      });
+    }
+    return value.forEach((v, i) => walk(v, `${path}[${i}]`, key, unit, file));
+  }
   if (typeof value !== 'object') return;
 
   const entries = Object.entries(value);
