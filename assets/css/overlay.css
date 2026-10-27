@@ -218,8 +218,27 @@
   .ov__toc {
     margin: 0;
     padding: 0 4px;
-    justify-content: flex-end;
     mask-image: none;
+  }
+  /* Căn phải bằng margin thay cho justify-content: flex-end, để phần tràn (nếu có) không bị đẩy ra sau tên thẻ */
+  .ov__toc > :first-child {
+    margin-left: auto;
+  }
+  /* Mục lục không vừa một hàng: tên thẻ + nút đóng ở hàng trên, mục lục xuống hàng dưới và được xuống dòng */
+  .ov__bar.is-stacked {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'heading close'
+      'toc toc';
+    row-gap: 10px;
+  }
+  .ov__bar.is-stacked .ov__toc {
+    flex-wrap: wrap;
+    overflow: visible;
+    padding: 0;
+  }
+  .ov__bar.is-stacked .ov__toc > :first-child {
+    margin-left: 0;
   }
   .ov__body {
     padding: var(--sp-7) clamp(28px, 5vw, 64px) var(--sp-8);

@@ -77,6 +77,11 @@ export function openOverlay({ origin, title, kicker = '', size = 'full', toc = [
   });
 
   document.getElementById('overlay-root').appendChild(root);
+  fitToc();
+  if ('ResizeObserver' in window) {
+    ov.ro = new ResizeObserver(() => fitToc());
+    ov.ro.observe(sheet);
+  }
   page.inert = true;
   lockScroll();
   bindKeys();
@@ -91,6 +96,18 @@ export function openOverlay({ origin, title, kicker = '', size = 'full', toc = [
 export function setToc(toc) {
   if (!ov) return;
   ov.bar.querySelector('.ov__toc').innerHTML = tocHtml(toc);
+  fitToc();
+}
+
+// Trên màn hình rộng, tên thẻ và mục lục nằm chung một hàng. Khi mục lục dài không vừa
+// (vd thẻ Cung hoàng đạo có 7 mục), thanh tiêu đề xuống hai hàng để thấy đủ mà không cần kéo ngang.
+const wide = window.matchMedia('(min-width: 720px)');
+function fitToc() {
+  if (!ov) return;
+  const { bar } = ov;
+  const toc = bar.querySelector('.ov__toc');
+  bar.classList.remove('is-stacked');
+  if (wide.matches && toc.scrollWidth > toc.clientWidth + 1) bar.classList.add('is-stacked');
 }
 
 export function setTitle(title, kicker) {
@@ -181,6 +198,7 @@ function destroy() {
   if (!ov) return;
   const { root, origin, page } = ov;
   document.removeEventListener('keydown', ov.onKey);
+  ov.ro?.disconnect();
   root.remove();
   page.inert = false;
   const gsap = G();
