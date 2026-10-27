@@ -48,8 +48,9 @@ export const config = {
       nameVi: 'Cung hoàng đạo & con giáp',
       nameEn: 'Zodiac',
       desc: 'Đặt cung hoàng đạo phương Tây cạnh con giáp phương Đông để xem hai cách nhìn nói gì về cùng một người.',
-      status: 'soon',
+      status: 'active',
       glyph: 'zodiac',
+      load: () => import('./modules/zodiac/view.js'),
       soon: [
         'Phần này sẽ đặt 12 cung hoàng đạo cạnh 12 con giáp, xem theo ngày và năm sinh của bạn.',
         'Mỗi bên sẽ nói về tính khí của bạn, lúc nóng giận ra sao và làm việc với người khác thế nào. Cả hai đều là nét văn hoá để tham khảo, không phải lời phán.',

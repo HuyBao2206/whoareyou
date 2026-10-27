@@ -2,7 +2,7 @@
 
 *Understand Yourself · Grow Yourself*
 
-Một trang web tĩnh giúp người đọc hiểu mình hơn qua các thẻ chủ đề. Đợt này đã hoàn thiện thẻ **Thần số học**: phần giới thiệu, hai bộ tính, trang kết quả 5 thẻ thông điệp và trang tra cứu. Các thẻ khác đang ở trạng thái "Sắp ra mắt".
+Một trang web tĩnh giúp người đọc hiểu mình hơn qua các thẻ chủ đề. Đã hoàn thiện thẻ **Thần số học** (giới thiệu, hai bộ tính, trang kết quả 5 thẻ thông điệp, trang tra cứu) và thẻ **Cung hoàng đạo & con giáp** (hai vòng trời, thẻ đôi Đông Tây, 12 cung, 12 con giáp, ngũ hành, bầu trời thật). Các thẻ khác đang ở trạng thái "Sắp ra mắt". Cấu trúc và thành phần dùng chung: xem `CLAUDE.md`.
 
 - Không có bước build: chỉ có HTML, CSS và JavaScript (ES modules).
 - Chạy được ở địa chỉ con như `username.github.io/ten-repo/` vì mọi đường dẫn đều là đường dẫn tương đối.
@@ -21,7 +21,7 @@ python3 -m http.server 8000
 # rồi mở http://localhost:8000/whoareyou/
 ```
 
-**Kiểm thử phần tính toán:** mở `http://localhost:8000/whoareyou/assets/js/modules/numerology/calc.test.html`. Trang hiện bảng kết quả, mọi dòng phải là "Đạt" (hiện có 71 trường hợp).
+**Kiểm thử phần tính toán:** mở `http://localhost:8000/whoareyou/assets/js/modules/numerology/calc.test.html` (71 trường hợp) và `.../modules/zodiac/calc.test.html` (59 trường hợp, gồm âm lịch, Can Chi, nạp âm, cung, chòm sao IAU). Mọi dòng phải là "Đạt".
 
 **Kiểm tra nội dung** (cần Node 18 trở lên):
 

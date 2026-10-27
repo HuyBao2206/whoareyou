@@ -1,0 +1,193 @@
+/* Thành phần dùng chung cho các thẻ mới: ô nhập ngày sinh (.di), ngăn nguồn tham khảo (.srcs), dòng cập nhật (.upd).
+   JS tương ứng: assets/js/core/date-input.js, assets/js/core/sources.js. */
+
+/* ---------- Ô nhập ngày sinh ---------- */
+
+.di {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+.di__legend {
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.di__row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.di__cell {
+  display: grid;
+  gap: 4px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.di__cell--year {
+  flex: 1.6 1 0;
+}
+.di__lbl {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.di__input {
+  width: 100%;
+  min-height: 52px;
+  padding: 10px 6px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  color: var(--ink);
+  text-align: center;
+  font-family: var(--f-display);
+  font-size: 1.375rem;
+  letter-spacing: 0.04em;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.di__input::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+.di__input:hover {
+  border-color: var(--ink-2);
+}
+.di__input:focus-visible {
+  outline: none;
+  border-color: var(--gold-ink);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 30%, transparent);
+}
+.di__input[aria-invalid='true'] {
+  border-color: var(--clay-ink);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--clay) 18%, transparent);
+}
+.di__sep {
+  padding-bottom: 12px;
+  font-family: var(--f-display);
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+.di__error {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--clay-ink);
+}
+.di__error:empty {
+  display: none;
+}
+
+/* ---------- Nguồn tham khảo ---------- */
+
+.srcs-wrap {
+  padding-block: var(--sp-6) var(--sp-5);
+  border-top: 1px solid var(--line-strong);
+  scroll-margin-top: 12px;
+}
+.srcs {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+}
+.srcs summary {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  min-height: 52px;
+  padding: var(--sp-3) var(--sp-5);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+}
+.srcs summary::-webkit-details-marker {
+  display: none;
+}
+.srcs summary::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  margin-left: auto;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.25s var(--ease-out);
+}
+.srcs[open] summary::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+.srcs summary:focus-visible {
+  outline: 2px solid var(--gold-ink);
+  outline-offset: 2px;
+  border-radius: var(--r-md);
+}
+.srcs__count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: var(--r-pill);
+  background: var(--paper-2);
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}
+.srcs__body {
+  display: grid;
+  gap: var(--sp-3);
+  padding: 0 var(--sp-5) var(--sp-5);
+}
+.srcs__intro {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+}
+.srcs__group {
+  margin-top: var(--sp-3);
+  font-family: var(--f-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+.srcs__list {
+  display: grid;
+  gap: var(--sp-3);
+  margin: 0;
+  padding-left: 1.4em;
+  font-size: var(--fs-sm);
+}
+.srcs__item {
+  padding-left: 4px;
+}
+.srcs__item a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.srcs__item a:hover {
+  text-decoration-color: var(--gold-ink);
+}
+.srcs__item cite {
+  font-style: italic;
+}
+.srcs__meta,
+.srcs__note {
+  display: block;
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+.srcs__meta {
+  margin-top: 2px;
+}
+
+.upd {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
