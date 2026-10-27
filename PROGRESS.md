@@ -28,7 +28,7 @@ Quy trình mỗi thẻ: nghiên cứu (ghi vào `research/`) → dàn ý → vi�
 |---|---|---|---|---|---|---|---|
 | Nghề nghiệp hôm nay & ngày mai | xong | xong | xong | xong (47 mục) | xong | xong | xong |
 | Kỹ năng nên đầu tư | xong | xong | xong | xong (40 mục) | xong | xong | xong |
-| Giá trị sống | xong | | | | | | |
+| Giá trị sống | xong | xong | xong | xong (34 mục) | xong | xong | xong |
 
 Giới hạn của đợt này: chính sách mạng của môi trường chặn nso.gov.vn, ilo.org, weforum.org, oecd.org…; nghiên cứu chỉ dùng đoạn trích tìm kiếm. Khi mở được mạng, nên đối chiếu lại số liệu với văn bản gốc (danh sách trong research/).
 
@@ -46,7 +46,7 @@ File nghiên cứu: `research/nghe-nghiep.md` (thị trường chung), `research
 | 5 | Sở thích nghề nghiệp | Xong (bộ 48 hoạt động tự soạn; xem `CLAUDE.md`) |
 | 6 | Nghề nghiệp hôm nay & ngày mai | Xong |
 | 7 | Kỹ năng nên đầu tư | Xong |
-| 8 | Giá trị sống | Chưa làm |
+| 8 | Giá trị sống | Xong |
 | 9 | Hồ sơ của bạn, trang chủ, quyền riêng tư | Chưa làm |
 | 10 | Rà soát cuối | Chưa làm |
 

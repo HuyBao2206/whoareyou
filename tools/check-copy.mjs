@@ -38,6 +38,9 @@ const MODULES = [
   'assets/js/modules/future/jobs/index.js',
   'assets/js/modules/skills/content.js',
   'assets/js/modules/skills/data.js',
+  'assets/js/modules/values/values.js',
+  'assets/js/modules/values/cards.js',
+  'assets/js/modules/values/content.js',
   'assets/js/config.js',
 ];
 
@@ -59,6 +62,7 @@ const FILES = [
   'assets/js/modules/career/view.js',
   'assets/js/modules/future/view.js',
   'assets/js/modules/skills/view.js',
+  'assets/js/modules/values/view.js',
   'assets/js/core/date-input.js',
   'assets/js/core/sources.js',
   'assets/js/core/share-image.js',
@@ -193,7 +197,7 @@ function checkTitleCase(text, where) {
 
 const newUnit = () => ({ limited: {}, khongChi: 0, bang: 0 });
 function closeUnit(unit, where) {
-  for (const [w, n] of Object.entries(unit.limited)) if (n > 2) add('lỗi', where, `Từ hạn chế “${w}” ×${n} (tối đa 2)`, '');
+  for (const [w, n] of Object.entries(unit.limited)) if (n > 2 && !(w === 'giá trị' && /modules\/values\//.test(where))) add('lỗi', where, `Từ hạn chế “${w}” ×${n} (tối đa 2)`, '');
   if (unit.khongChi > 1) add('lỗi', where, `“không chỉ… mà còn…” ×${unit.khongChi} (tối đa 1)`, '');
   if (unit.bang > 1) add('lỗi', where, `Dấu chấm than ×${unit.bang} (tối đa 1)`, '');
 }

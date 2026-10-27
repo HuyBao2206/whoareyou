@@ -1,14 +1,14 @@
 // Hàm tính thuần của thẻ Giá trị sống. Không đụng DOM, chạy được trong Node. Kiểm thử: calc.test.html.
 //
 // Mười giá trị cơ bản của Schwartz (2012), xếp theo thứ tự quanh vòng tròn động cơ.
-// Truyền thống (TR) và Tuân thủ (CO) nằm chung một nan quạt: Truyền thống ở vòng ngoài, Tuân thủ ở vòng trong.
+// Truyền thống (TR) và Khuôn phép (CO) nằm chung một nan quạt: Truyền thống ở vòng ngoài, Tuân thủ ở vòng trong.
 
 export const VALUES = ['SD', 'ST', 'HE', 'AC', 'PO', 'SE', 'CO', 'TR', 'BE', 'UN'];
 
 /** Góc (độ) của từng giá trị trên la bàn, 0° ở đỉnh, theo chiều kim đồng hồ. TR và CO cùng góc. */
 export const ANGLE = { SD: 0, ST: 40, HE: 80, AC: 120, PO: 160, SE: 200, CO: 240, TR: 240, BE: 280, UN: 320 };
 
-/** Bốn nhóm bậc cao. Hưởng thụ (HE) thuộc cả Cởi mở với thay đổi và Nâng cao bản thân. */
+/** Bốn nhóm bậc cao. Tận hưởng (HE) thuộc cả Cởi mở với thay đổi và Nâng cao bản thân. */
 export const HIGHER = {
   open: ['SD', 'ST', 'HE'],
   enhance: ['HE', 'AC', 'PO'],
@@ -94,6 +94,7 @@ export function needle(weights) {
   let nearest = null;
   let best = Infinity;
   for (const v of VALUES) {
+    if (!weights[v]) continue; // chỉ xét giá trị người dùng có chọn thẻ
     const d = Math.min(Math.abs(ANGLE[v] - angle), 360 - Math.abs(ANGLE[v] - angle));
     if (d < best - 1e-9 || (Math.abs(d - best) < 1e-9 && (weights[v] || 0) > (weights[nearest] || 0))) {
       best = d;
@@ -117,11 +118,15 @@ export const WEAK_NEEDLE = 0.25;
  *   Chỉ trả về số liệu để người dùng tự đọc, không kết luận phương án nào nên chọn.
  */
 export function compareOptions(criteria, a, b) {
-  const clamp = (n) => (Number.isFinite(n) ? Math.max(1, Math.min(5, Math.round(n))) : null);
+  const clamp = (x) => {
+    const n = x == null || x === '' ? NaN : Number(x);
+    return Number.isFinite(n) ? Math.max(1, Math.min(5, Math.round(n))) : null;
+  };
   let totalA = 0;
   let totalB = 0;
   let max = 0;
-  const rows = criteria.map(({ id, weight }) => {
+  const rows = criteria.map(({ id, weight: w0 }) => {
+    const weight = Number.isFinite(Number(w0)) && Number(w0) > 0 ? Number(w0) : 0;
     const sa = clamp(a[id]);
     const sb = clamp(b[id]);
     if (sa != null) totalA += sa * weight;
@@ -135,4 +140,45 @@ export function compareOptions(criteria, a, b) {
 /** Các giá trị mà hai phương án chênh nhau từ 2 điểm trở lên: chỗ đánh đổi rõ nhất. */
 export function tradeoffs(result) {
   return result.rows.filter((r) => r.diff != null && Math.abs(r.diff) >= 2);
+}
+
+/* ---------- Đọc hướng kim ---------- */
+
+/**
+ * Nhóm bậc cao mà kim chỉ vào, theo giá trị gần nhất. Tận hưởng (80°) nằm giữa hai nhóm:
+ * phía Mới mẻ (góc ≤ 80°) tính là Cởi mở, phía Thành tựu tính là Nâng cao bản thân.
+ */
+export function groupOf(angle) {
+  if (angle == null) return null;
+  const a = ((angle % 360) + 360) % 360;
+  let nearest = VALUES[0];
+  let best = Infinity;
+  for (const v of VALUES) {
+    const d = Math.min(Math.abs(ANGLE[v] - a), 360 - Math.abs(ANGLE[v] - a));
+    if (d < best) {
+      best = d;
+      nearest = v;
+    }
+  }
+  if (nearest === 'HE') return a <= 80 ? 'open' : 'enhance';
+  return Object.keys(HIGHER).find((g) => HIGHER[g].includes(nearest));
+}
+
+/** Trục của một cặp xung đột: 'open-conserve' hoặc 'enhance-transcend' (null nếu không xung đột). */
+export function axisOf(a, b) {
+  for (const [x, y] of AXES) {
+    if ((HIGHER[x].includes(a) && HIGHER[y].includes(b)) || (HIGHER[y].includes(a) && HIGHER[x].includes(b))) return `${x}-${y}`;
+  }
+  return null;
+}
+
+/**
+ * Chia lại các thẻ sau bước lọc: top là thẻ được giữ để xếp hạng (tối đa 5), rest là các thẻ còn lại của chồng
+ * "Rất quan trọng" (tính 0,5 mỗi thẻ vào la bàn).
+ * @param {string[]} hi  thẻ ở chồng Rất quan trọng
+ * @param {string[]} chosen  thẻ người dùng chọn giữ (từ hi, hoặc thêm từ chồng Quan trọng)
+ */
+export function splitChosen(hi, chosen) {
+  const top = chosen.slice(0, 5);
+  return { top, rest: hi.filter((id) => !top.includes(id)) };
 }

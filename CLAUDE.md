@@ -5,7 +5,7 @@
 “Thấu Hiểu & Phát Triển Bản Thân” của HUB, chạy trên GitHub Pages: https://huybao2206.github.io/whoareyou/
 
 - HTML/CSS/JS thuần (ES modules), **không có bước build**. Đẩy lên `main` là Pages cập nhật.
-- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp**, **Bản đồ tính cách**, **Sở thích nghề nghiệp**, **Nghề nghiệp hôm nay & ngày mai** và **Kỹ năng nên đầu tư**. Thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
+- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp**, **Bản đồ tính cách**, **Sở thích nghề nghiệp**, **Nghề nghiệp hôm nay & ngày mai**, **Kỹ năng nên đầu tư** và **Giá trị sống**: cả 7 thẻ đều đang chạy.
 - Thẻ Bản đồ tính cách không hỏi tên hay ngày sinh; câu trả lời chỉ nằm trong bộ nhớ của tab, không lên URL.
 - Mọi phép tính chạy trên trình duyệt. Không lưu, không gửi tên hay ngày sinh đi đâu; URL kết quả chỉ chứa các con số. Riêng mã Holland (3 chữ cái), nghề đang xem, mục tiêu và mức tự chấm kỹ năng được giữ trong sessionStorage của tab để các thẻ khác dùng.
 
@@ -53,6 +53,14 @@ assets/js/modules/skills/     thẻ Kỹ năng nên đầu tư ("Cây kỹ năng
                               (JOB_OVERRIDES), danh mục nguồn
   calc.js                     điểm ưu tiên = khoảng cách × mức đòi hỏi × bằng chứng ÷ chi phí; calc.test.html kiểm cả dữ liệu
   view.js                     cây 5 nhánh (lá sáng khi đạt, 3 kỹ năng ưu tiên nở hoa), thang tự chấm, bảng nhiệm vụ, hồ sơ, xuất ảnh
+assets/js/modules/values/     thẻ Giá trị sống ("Bàn xếp bài", lý thuyết giá trị cơ bản của Schwartz), thẻ kiến thức
+  values.js                   10 giá trị: định nghĩa, nhóm bậc cao, nghề nghiệp/tiền bạc/quan hệ (nhãn bc/gt/kn)
+  cards.js                    36 thẻ HUB tự soạn, mỗi thẻ gắn một giá trị (chỉ mượn cách làm của Personal Values Card Sort)
+  content.js                  ba mục kiến thức, chữ công cụ và kết quả, câu hỏi, lời kết, soi quyết định, giới hạn, nguồn
+  calc.js                     cặp xung đột, trọng số theo hạng, kim la bàn, nhóm theo hướng kim, so hai phương án;
+                              calc.test.html kiểm cả dữ liệu
+  view.js                     chia ba chồng (kéo có quán tính, nút, phím 1/2/3), lọc 5, xếp hạng (kéo hoặc nút),
+                              la bàn giá trị, soi một quyết định (không kết luận), xuất ảnh
 tools/check-copy.mjs          quét văn phong mọi chữ hiển thị
 tools/check-messages.mjs      kiểm tra đủ mục, đủ trường cho thông điệp
 docs/, research/, review/     brief, ghi chú nghiên cứu, bản nháp biên tập (không hiển thị trên web)
@@ -66,7 +74,7 @@ docs/, research/, review/     brief, ghi chú nghiên cứu, bản nháp biên t
 | Ô nhập ngày sinh | `core/date-input.js` + `.di` trong `shared.css` | `dateInputHtml({ id })` rồi `bindDateInput(root)`; kiểm tra bằng `validateDate(value)` (hàm thuần). |
 | Ngăn “Nguồn tham khảo” | `core/sources.js` + `.srcs` | `sourcesHtml({ id, groups \| items, updated: 'MM/YYYY' })`. Mỗi nguồn: `{ title, by, year, url, note }`. Tên bài giữ nguyên cách viết gốc. |
 | Dòng “Cập nhật” | `core/sources.js` + `.upd` | `updatedHtml('10/2026')`, đã có sẵn ở cuối ngăn nguồn. |
-| Giá trị dùng chung trong phiên | `core/session.js` | `sessionGet(key)`, `sessionSet(key, value \| null)` (sessionStorage, có try/catch, tiền tố `hub.`). Đang dùng: `holland` (mã 3 chữ, vd `SAE`), `holland.scores`, `future.job` (id nghề đang xem ở thẻ Nghề nghiệp, để thẻ Kỹ năng lấy làm mục tiêu), `skills.goal`, `skills.levels`, `skills.done` (mục tiêu, mức tự chấm, ô nhiệm vụ đã đánh dấu của thẻ Kỹ năng; JSON). Thẻ “Nghề nghiệp hôm nay & ngày mai” đọc `holland` để lọc nghề; thẻ Sở thích nghề nghiệp hiện nút “Xem nghề hợp với mã của bạn” (link `#/nghe-nghiep-tuong-lai?ma=SAE`) khi thẻ kia có `status: 'active'`. Không lưu tên, ngày sinh. |
+| Giá trị dùng chung trong phiên | `core/session.js` | `sessionGet(key)`, `sessionSet(key, value \| null)` (sessionStorage, có try/catch, tiền tố `hub.`). Đang dùng: `holland` (mã 3 chữ, vd `SAE`), `holland.scores`, `future.job` (id nghề đang xem ở thẻ Nghề nghiệp, để thẻ Kỹ năng lấy làm mục tiêu), `skills.goal`, `skills.levels`, `skills.done` (mục tiêu, mức tự chấm, ô nhiệm vụ đã đánh dấu của thẻ Kỹ năng; JSON), `values.state` (cách chia thẻ và thứ hạng của thẻ Giá trị sống; JSON). Thẻ “Nghề nghiệp hôm nay & ngày mai” đọc `holland` để lọc nghề; thẻ Sở thích nghề nghiệp hiện nút “Xem nghề hợp với mã của bạn” (link `#/nghe-nghiep-tuong-lai?ma=SAE`) khi thẻ kia có `status: 'active'`. Không lưu tên, ngày sinh. |
 | Bộ xuất ảnh kết quả | `core/share-image.js` | `saveImage({ filename, width, height, fonts, draw(ctx, kit) })`. Vẽ thẳng lên canvas (không chụp DOM), `kit.brand()` vẽ chân trang có dấu HUB. Không vẽ tên hay ngày sinh. |
 
 Mỗi thẻ mới phải có: ngăn “Nguồn tham khảo” và dòng “Cập nhật: tháng MM/YYYY”; logic tính là hàm thuần có trang `calc.test.html`; nút lưu ảnh; chạy được khi thiếu GSAP và khi bật reduced-motion; thao tác kéo/vuốt có cách làm tương đương bằng nút và bàn phím.
@@ -116,6 +124,7 @@ Trình bày:
 - Căn cứ nằm trong `research/` (mỗi số có đánh dấu đọc trực tiếp hay qua trích dẫn); thẩm định độc lập trong `review/tham-dinh-<thẻ>.md`. Sửa nội dung thì sửa research trước.
 - Thẻ Nghề nghiệp: thang nhu cầu và công thức chỉ số AI viết trong `content.js` (METHOD). Nghề thiếu số liệu Việt Nam luôn ở mức 3 và vẽ chấm rỗng. Mỗi năm cập nhật theo mục “Cách cập nhật hằng năm” cuối `research/nghe-nghiep.md` và `research/nghe-nghiep-ho-so.md`.
 - Thẻ Kỹ năng: công thức ưu tiên là quy tắc minh bạch của biên tập (không có nghiên cứu xác nhận), viết trong `content.js` (METHOD) và `research/ky-nang.md` mục 5. Mức cần theo lĩnh vực và bậc chi phí là ước lượng; chỉ tiếng Anh có số giờ từ nguồn (Cambridge). Chưa chấm kỹ năng nào thì không gợi ý. Đường link tài nguyên chưa kiểm được, cần kiểm lại khi mở được mạng.
+- Thẻ Giá trị sống: không viết “giá trị X làm bạn hạnh phúc/hợp nghề”; ý nào ở ba lĩnh vực cũng có nhãn có nghiên cứu, gián tiếp hay suy ra từ định nghĩa. Lời kết không phán đoán nhân quả về người dùng. Công cụ soi quyết định không bao giờ nói nên chọn bên nào. `check-copy` miễn giới hạn từ “giá trị” cho file của thẻ này.
 - `check-copy` cấm thêm các từ giật gân (“hot”, “hái ra tiền”, “cơ hội vàng”, “cướp việc”…); thuật ngữ “năng lượng tái tạo” được gỡ khỏi danh sách từ cấm “năng lượng”. Mảng các object có `summary` (vd danh sách nghề) được kiểm lặp khuôn như một nhóm.
 
 ## Thẻ Bản đồ tính cách: lưu ý khi sửa

@@ -268,6 +268,12 @@ Lưu ý chung: các tương quan trên là **xu hướng trung bình ở mức n
 
 ---
 
+## Ghi chú khi đưa lên web (27/10/2026)
+
+- Trang dùng tên “Phổ quát” cho Universalism (ghi chú này dùng “Bao quát”), “Nhân hậu” cho Benevolence.
+- Sau thẩm định (`review/tham-dinh-gia-tri-song.md`): đổi tên thẻ 34 thành “Tôn trọng khác biệt” (tránh lẫn với tha thứ thuộc Nhân hậu), thẻ 18 thành “An toàn bản thân”, thẻ 25 thành “Nếp nhà”, thẻ 24 thành “Kính trên”, thẻ 5 thành “Đổi thay”; sửa định nghĩa thẻ 6, 14, 22, 36. Thêm nhãn “bằng chứng gián tiếp” cho các ô dựa trên thang chủ nghĩa vật chất hoặc nguồn thứ cấp (Luo và Klohnen 2005).
+- Kim la bàn: cộng vectơ theo góc trên vòng tròn (hạng 1–5 được 5–1, thẻ còn lại trong chồng “Rất quan trọng” được 0,5); dưới 0,25 tổng trọng số coi là kim yếu. Đây là cách minh hoạ của HUB, không phải chỉ số của Schwartz.
+
 ## Bảng nguồn
 
 | Mã | Tác giả, năm | Tên bài (nguyên văn) | Nơi đăng | URL/DOI | Mức đọc |

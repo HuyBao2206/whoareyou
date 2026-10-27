@@ -115,7 +115,8 @@ export const config = {
       nameVi: 'Giá trị sống',
       nameEn: 'Core Values',
       desc: 'Chọn ra vài giá trị bạn thật sự sống theo, để những lúc phải đánh đổi bạn quyết định nhẹ nhàng hơn.',
-      status: 'soon',
+      status: 'active',
+      load: () => import('./modules/values/view.js'),
       glyph: 'values',
       soon: [
         'Phần này sẽ cho bạn một bộ thẻ giá trị như sự ổn định, tự do, gia đình hay sự công nhận, rồi mời bạn chọn và xếp hạng.',

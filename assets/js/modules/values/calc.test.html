@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kiểm thử calc.js · Giá trị sống</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #F5F1EA; color: #141A2E; font: 15px/1.6 system-ui, sans-serif; }
+    h1 { font: 500 22px/1.3 Georgia, serif; margin: 0 0 4px; }
+    #summary { margin: 0 0 20px; font-weight: 600; }
+    #summary.pass { color: #2f6b3a; }
+    #summary.fail { color: #a24a2a; }
+    table { width: 100%; border-collapse: collapse; background: #FBF8F3; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(20,26,46,.12); vertical-align: top; }
+    td.ok { color: #2f6b3a; }
+    td.bad { color: #a24a2a; font-weight: 600; }
+    code { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Kiểm thử: vòng giá trị, kim la bàn, soi quyết định, dữ liệu thẻ</h1>
+  <p id="summary">Đang chạy…</p>
+  <table>
+    <thead><tr><th>Kết quả</th><th>Trường hợp</th><th>Mong đợi</th><th>Thực tế</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script type="module">
+    import * as V from './calc.js';
+    import CARDS from './cards.js';
+    import VALS, { ORDER, GROUPS } from './values.js';
+    import { QUESTIONS, CONCLUSION, RECONCILE, SOURCES, HOLLAND_LINK } from './content.js';
+
+    const tests = [];
+    const t = (name, actual, expected) => tests.push({ name, actual, expected });
+    const valueOf = Object.fromEntries(CARDS.map((c) => [c.id, c.value]));
+    const zero = () => Object.fromEntries(V.VALUES.map((v) => [v, 0]));
+
+    /* --- Cấu trúc vòng tròn --- */
+    t('Mười giá trị, đúng thứ tự vòng tròn', V.VALUES, ORDER);
+    t('Đối diện xung đột: Tự chủ–Khuôn phép, Thành tựu–Phổ quát', [V.conflicts('SD', 'CO'), V.conflicts('AC', 'UN')], [true, true]);
+    t('Kề nhau không xung đột: Tự chủ–Mới mẻ, An toàn–Khuôn phép, Nhân hậu–Phổ quát', [V.conflicts('SD', 'ST'), V.conflicts('SE', 'CO'), V.conflicts('BE', 'UN')], [false, false, false]);
+    t('Tận hưởng xung đột với cả Bảo tồn và Vượt lên bản thân', [V.conflicts('HE', 'TR'), V.conflicts('HE', 'BE'), V.conflicts('HE', 'AC')], [true, true, false]);
+    t('Cặp xung đột không trùng', V.conflictPairs(['SD', 'TR', 'CO', 'SD']), [['SD', 'TR'], ['SD', 'CO']]);
+    t('Trục của cặp', [V.axisOf('ST', 'SE'), V.axisOf('BE', 'PO'), V.axisOf('SD', 'ST')], ['open-conserve', 'enhance-transcend', null]);
+
+    /* --- Trọng số và kim --- */
+    const w1 = V.valueWeights(['tu-do', 'sang-tao', 'dam-thu', 'giup-do', 'on-dinh'], valueOf, ['cong-bang']);
+    t('Hạng 1–5 được 5, 4, 3, 2, 1; thẻ còn lại trong chồng đầu được 0,5', [w1.SD, w1.ST, w1.BE, w1.SE, w1.UN], [9, 3, 2, 1, 0.5]);
+    t('Không có trọng số → kim không hướng', V.needle(zero()), { angle: null, strength: 0, nearest: null });
+    t('Chỉ Tự chủ → kim 0°, mạnh 1', V.needle({ ...zero(), SD: 5 }), { angle: 0, strength: 1, nearest: 'SD' });
+    t('Mới mẻ và An toàn (gần đối diện) bằng nhau → kim rất yếu', V.needle({ ...zero(), ST: 4, SE: 4 }).strength < 0.2, true);
+    const n2 = V.needle({ ...zero(), BE: 5, UN: 4 });
+    t('Nhân hậu 5, Phổ quát 4 → kim giữa 280° và 320°, gần Nhân hậu', [n2.angle > 280 && n2.angle < 300, n2.nearest], [true, 'BE']);
+    t('Kim chỉ báo giá trị có thẻ: Tự chủ và Tận hưởng bằng nhau → không báo Mới mẻ', V.needle({ ...zero(), SD: 4, HE: 4 }).nearest !== 'ST', true);
+    t('Điểm dạng chuỗi vẫn được cộng', V.compareOptions([{ id: 'SD', weight: '2' }], { SD: '3' }, { SD: 1 }).totalA, 6);
+    t('Truyền thống và Khuôn phép cùng góc: chọn giá trị nặng hơn', V.needle({ ...zero(), TR: 5, CO: 2 }).nearest, 'TR');
+    t('Kim trải đều → yếu (dưới 0,25)', V.needle({ ...zero(), SD: 2, AC: 2, SE: 2, BE: 2 }).strength < V.WEAK_NEEDLE, true);
+
+    /* --- Nhóm theo hướng kim --- */
+    t('Nhóm theo góc', [0, 40, 70, 95, 160, 200, 240, 290, 330].map(V.groupOf), ['open', 'open', 'open', 'enhance', 'enhance', 'conserve', 'conserve', 'transcend', 'transcend']);
+    t('Góc âm và trên 360 vẫn đúng', [V.groupOf(-30), V.groupOf(370)], ['transcend', 'open']);
+    t('Tách thẻ đã chọn', V.splitChosen(['a', 'b', 'c', 'd', 'e', 'f', 'g'], ['c', 'a', 'g', 'b', 'e']), { top: ['c', 'a', 'g', 'b', 'e'], rest: ['d', 'f'] });
+
+    /* --- Soi quyết định --- */
+    const crit = [{ id: 'SD', weight: 5 }, { id: 'SE', weight: 4 }, { id: 'BE', weight: 3 }];
+    const r = V.compareOptions(crit, { SD: 5, SE: 2, BE: 4 }, { SD: 2, SE: 5, BE: 4 });
+    t('Cộng có trọng số: A = 25+8+12, B = 10+20+12, tối đa 60', [r.totalA, r.totalB, r.max], [45, 42, 60]);
+    t('Chỗ đánh đổi: chênh từ 2 điểm', V.tradeoffs(r).map((x) => [x.id, x.diff]), [['SD', 3], ['SE', -3]]);
+    t('Điểm ngoài thang bị chặn 1–5; ô trống không cộng', V.compareOptions([{ id: 'SD', weight: 1 }], { SD: 9 }, {}).rows[0], { id: 'SD', weight: 1, a: 5, b: null, diff: null });
+
+    /* --- Dữ liệu --- */
+    t('36 thẻ, id không trùng, nằm trong 30–40', [CARDS.length, new Set(CARDS.map((c) => c.id)).size], [36, 36]);
+    t('Mỗi giá trị có 3–4 thẻ', ORDER.map((v) => CARDS.filter((c) => c.value === v).length).every((n) => n >= 3 && n <= 4), true);
+    t('Thẻ có tên, định nghĩa một câu', CARDS.filter((c) => !c.name || !/^[^.]+\.$/.test(c.def)).map((c) => c.id), []);
+    t('Tên thẻ không trùng tên giá trị', CARDS.filter((c) => ORDER.some((v) => VALS[v].name === c.name)).map((c) => c.id), []);
+    t('Mỗi giá trị đủ ba lĩnh vực, nhãn bc có nguồn', ORDER.filter((v) => !['career', 'money', 'relation'].every((k) => VALS[v][k] && VALS[v][k].t && (VALS[v][k].ev === 'kn' || (VALS[v][k].src || []).length))).map((v) => v), []);
+    t('Nguồn của mỗi ý có trong SOURCES', ORDER.flatMap((v) => ['career', 'money', 'relation'].flatMap((k) => (VALS[v][k].src || []).filter((s) => !SOURCES[s]))), []);
+    t('Câu hỏi cho đủ 10 giá trị; lời kết cho 4 nhóm và trường hợp trải đều', [ORDER.every((v) => QUESTIONS[v]), Object.keys(GROUPS).every((g) => CONCLUSION[g]) && !!CONCLUSION.mixed], [true, true]);
+    t('Cách dung hoà cho hai trục', [RECONCILE['open-conserve'].length, RECONCILE['enhance-transcend'].length], [3, 3]);
+    t('Liên hệ Holland cho sáu nhóm', 'RIASEC'.split('').every((k) => HOLLAND_LINK[k]), true);
+
+    /* --- Hiển thị --- */
+    const rows = document.getElementById('rows');
+    let passed = 0;
+    for (const x of tests) {
+      const ok = JSON.stringify(x.actual) === JSON.stringify(x.expected);
+      if (ok) passed++;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td class="${ok ? 'ok' : 'bad'}">${ok ? 'Đạt' : 'Trượt'}</td><td></td><td><code></code></td><td><code></code></td>`;
+      tr.children[1].textContent = x.name;
+      tr.children[2].firstChild.textContent = JSON.stringify(x.expected);
+      tr.children[3].firstChild.textContent = JSON.stringify(x.actual);
+      rows.appendChild(tr);
+    }
+    const summary = document.getElementById('summary');
+    summary.textContent = `${passed}/${tests.length} trường hợp đạt.`;
+    summary.className = passed === tests.length ? 'pass' : 'fail';
+    window.__TEST_RESULT__ = { passed, total: tests.length, failed: tests.filter((x) => JSON.stringify(x.actual) !== JSON.stringify(x.expected)).map((x) => `${x.name} | mong ${JSON.stringify(x.expected)} | ra ${JSON.stringify(x.actual)}`) };
+  </script>
+</body>
+</html>
