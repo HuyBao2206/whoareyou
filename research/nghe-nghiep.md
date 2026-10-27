@@ -266,3 +266,51 @@ Truy cập 10/2026. Không nguồn nào đọc trực tiếp (WebFetch lỗi); c
 | EF English Proficiency Index | khoảng tháng 11 | Hạng Việt Nam |
 | ManpowerGroup Employment Outlook Survey Việt Nam | mỗi quý | Xu hướng tuyển dụng |
 | Báo cáo lương (TopCV, VietnamWorks/Navigos, Robert Walters, Michael Page, Adecco, Talentnet–Mercer) | phần lớn quý IV hoặc quý I | Ghi cỡ mẫu, thành phố, cấp bậc trước khi dùng |
+
+---
+
+## Bổ sung lượt tìm thứ hai (27/10/2026, phiên chính)
+
+Cùng giới hạn: chỉ có đoạn trích tìm kiếm, không mở được tài liệu gốc.
+
+**Tiếng Anh: EF EPI 2025** (công bố 11/2025; bản 2026 chưa ra tính tới ngày ghi chú)
+- Việt Nam 500 điểm, hạng 64/123 nước và vùng lãnh thổ, nhóm “trung bình” (500–549). Trung bình thế giới 488. Năm 2024: 498 điểm, nhóm “thấp”; 2023: 505.
+- Theo kỹ năng: đọc 522, viết 508, nghe 470, nói 461. Hạng 7/25 ở châu Á (Malaysia 581, Philippines 569 dẫn đầu).
+- Nguồn: EF EPI Fact Sheet Vietnam 2025 (ef.com, PDF) [trích tìm kiếm: ef.com]; Tuổi Trẻ News 20/11/2025 [qua trích dẫn].
+- Giới hạn: EF EPI dựa trên người tự làm bài kiểm tra trực tuyến của EF, mẫu không đại diện dân số; chỉ dùng như chỉ báo xu hướng.
+
+**Kỳ vọng tuyển dụng: ManpowerGroup Employment Outlook Survey, Việt Nam, quý IV/2026** (khảo sát tháng 7/2026, công bố 8–10/9/2026)
+- 285 nhà tuyển dụng tại Việt Nam. Triển vọng việc làm ròng (NEO) 36%, tăng 8 điểm so với quý III (28%). 52% dự định tăng người, 16% giảm, 32% giữ nguyên.
+- Cao hơn trung bình châu Á – Thái Bình Dương và Trung Đông (33%) và toàn cầu (29%); hạng 3 khu vực, 11/42 thị trường.
+- Ngành thông tin (information) NEO 64%. Lý do chính để tăng người: mở rộng kinh doanh; lý do chính để giảm: tự động hoá.
+- Nguồn: VnEconomy, Vietnam News, VietnamPlus, Tuổi Trẻ News (09–10/9/2026), đều dẫn ManpowerGroup [qua trích dẫn].
+- Giới hạn: mẫu nhỏ (285), là ý định tuyển dụng một quý, không phải số việc làm thực tế.
+
+**Thiếu hụt nhân tài: ManpowerGroup Talent Shortage Survey 2026 (toàn cầu)**
+- Khoảng 39.000 nhà tuyển dụng ở 41 nước; 72% gặp khó khi tuyển (2025: 74%). Kỹ năng AI lần đầu đứng đầu danh sách khó tuyển. [qua trích dẫn: barchart.com, dẫn thông cáo ManpowerGroup]
+- Số riêng của Việt Nam năm 2026: **chưa có số liệu đủ tin cậy**.
+
+**Doanh nghiệp Việt Nam dùng AI**
+- Strand Partners (do AWS đặt hàng), “Khai phá tiềm năng AI Việt Nam 2026”: khảo sát 1.000 lãnh đạo doanh nghiệp và 1.000 người dân; 26% doanh nghiệp đã dùng AI (khoảng 245.000 doanh nghiệp), năm trước 18%; 61% doanh nghiệp dùng AI vẫn ở giai đoạn thử nghiệm; tài chính 41%, y tế 23%. [qua trích dẫn: vcci.com.vn, vietnamnews.vn, techrepublic.com]
+- Giới hạn: nghiên cứu do nhà cung cấp dịch vụ đám mây đặt hàng, có lợi ích trong việc cho thấy mức dùng AI cao; định nghĩa “dùng AI” rộng. Con số 18% năm 2025 cũng từ cùng loạt khảo sát.
+- TopCV, Báo cáo thị trường tuyển dụng 2025–2026: khảo sát khoảng 3.000 doanh nghiệp và người lao động cùng hơn 300.000 tin tuyển dụng trên TopCV; 61,2% doanh nghiệp khảo sát “đã và đang ứng dụng AI ở các mức độ khác nhau”; 93,49% người lao động IT – phần mềm dùng AI trong công việc. [trích tìm kiếm: insights.topcv.vn]. Một báo ghi 62,1%: lệch, dùng số trên trang TopCV. Mẫu là khách hàng, người dùng nền tảng (tự chọn), nghiêng về văn phòng, đô thị.
+- Hai bộ số (26% và 61,2%) khác định nghĩa và mẫu: không so với nhau.
+
+**Nhu cầu tuyển dụng theo nhóm nghề (TopCV 2025–2026)**: kinh doanh – bán hàng khoảng 47,5% nhu cầu tuyển, IT – phần mềm 8,64%, marketing – truyền thông 8,22%; 55% doanh nghiệp IT thiếu ứng viên kỹ năng cao. [qua trích dẫn: vnbusiness.vn; một nguồn khác ghi 48%]. Đây là tỷ lệ tin đăng trên một nền tảng, không phải cơ cấu việc làm.
+
+**Navigos Group, Báo cáo Lương và Thị trường lao động 2026**: khoảng 62% người lao động (người trả lời) có thu nhập tăng năm 2025, phần lớn dưới 10%; 26,57% không đổi; 8,57% giảm; 76,8% doanh nghiệp coi khả năng hiểu và ứng dụng công nghệ là tiêu chí ưu tiên hàng đầu. [qua trích dẫn: mekongasean.vn]. Bảng lương chi tiết theo vị trí: **chưa lấy được** (báo cáo phải đăng ký mới tải).
+
+**IMF (2024), SDN/2024/001, Cazzaniga và cộng sự**: gần 40% việc làm thế giới “tiếp xúc” với AI; khoảng 60% ở nền kinh tế phát triển, 40% ở thị trường mới nổi, 26% ở nước thu nhập thấp; khoảng một nửa việc tiếp xúc ở nước phát triển có thể được AI bổ trợ, nửa còn lại có thể bị giảm nhu cầu hoặc lương. [qua trích dẫn: nhiều báo dẫn blog của Tổng Giám đốc IMF ngày 14/1/2024; trang IMF xác nhận tiêu đề, tác giả, DOI 10.5089/9798400262548.006]. Định nghĩa “tiếp xúc” của IMF rộng hơn ILO.
+
+| Tên | Đơn vị | Năm | URL | Cách lấy |
+|---|---|---|---|---|
+| EF EPI Fact Sheet: Vietnam (2025) | EF Education First | 11/2025 | https://www.ef.com/assetscdn/WIBIwq6RdJvcD9bc8RMd/cefcom-epi-site/fact-sheets/2025/ef-epi-fact-sheet-vietnam-english.pdf | trích tìm kiếm |
+| Vietnam returns to global moderate English proficiency group: EF | Tuổi Trẻ News | 11/2025 | https://news.tuoitre.vn/vietnam-returns-to-global-moderate-english-proficiency-group-ef-103251120163417603.htm | qua trích dẫn |
+| Vietnam’s hiring demand accelerates in Q4 2026 | VnEconomy | 09/2026 | https://en.vneconomy.vn/vietnams-hiring-demand-accelerates-in-q4-2026-driven-by-tech-ai-focus.htm | qua trích dẫn |
+| Hiring outlook strengthens in Q4 as skills shortages persist | Vietnam News | 09/2026 | https://vietnamnews.vn/economy/1799357/hiring-outlook-strengthens-in-q4-as-skills-shortages-persist.html | qua trích dẫn |
+| Global talent shortage reaches turning point as AI skills claim top spot | ManpowerGroup (qua Barchart) | 2026 | https://www.barchart.com/story/news/443770/global-talent-shortage-reaches-turning-point-as-ai-skills-claim-top-spot | qua trích dẫn |
+| Việt Nam có 245.000 doanh nghiệp đang ứng dụng AI | VCCI | 2026 | https://vcci.com.vn/tin-tuc/viet-nam-co-245000-doanh-nghiep-dang-ung-dung-ai | qua trích dẫn |
+| Vietnam’s AI Adoption Jumps to 26%, but Most Adopters Are Still Experimenting | TechRepublic | 2026 | https://www.techrepublic.com/article/news-ai-adoption-2026-apac-vietnam/ | qua trích dẫn |
+| Recruitment Market Report 2025–2026 | TopCV | 2025 | https://insights.topcv.vn/recruitment-report-2025-2026-eng | trích tìm kiếm |
+| Navigos Group: Hơn 60% người lao động Việt Nam tăng thu nhập trong năm 2025 | Mekong ASEAN | 2026 | https://mekongasean.vn/navigos-group-hon-60-nguoi-lao-dong-viet-nam-tang-thu-nhap-trong-nam-2025-51995.html | qua trích dẫn |
+| Gen-AI: Artificial Intelligence and the Future of Work (SDN/2024/001) | IMF | 01/2024 | https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379 | trích tìm kiếm + báo dẫn |
