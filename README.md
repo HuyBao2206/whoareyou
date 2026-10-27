@@ -2,7 +2,19 @@
 
 *Understand Yourself · Grow Yourself*
 
-Một trang web tĩnh giúp người đọc hiểu mình hơn qua các thẻ chủ đề. Đã hoàn thiện thẻ **Thần số học** (giới thiệu, hai bộ tính, trang kết quả 5 thẻ thông điệp, trang tra cứu) và thẻ **Cung hoàng đạo & con giáp** (hai vòng trời, thẻ đôi Đông Tây, 12 cung, 12 con giáp, ngũ hành, bầu trời thật). Các thẻ khác đang ở trạng thái "Sắp ra mắt". Cấu trúc và thành phần dùng chung: xem `CLAUDE.md`.
+Một trang web tĩnh giúp người đọc hiểu mình hơn qua 7 thẻ chủ đề, tất cả đều đã chạy:
+
+| Thẻ | Nội dung chính |
+|---|---|
+| Thần số học | giới thiệu, hai bộ tính, 5 thẻ thông điệp, tra cứu |
+| Cung hoàng đạo & con giáp | hai vòng trời, 12 cung, 12 con giáp, ngũ hành, chòm sao thật |
+| Bản đồ tính cách | 50 câu IPIP Big Five, chòm sao năm ngôi sao |
+| Sở thích nghề nghiệp | 48 hoạt động, mã Holland 3 chữ, tổ ong |
+| Nghề nghiệp hôm nay & ngày mai | thị trường lao động, AI, bản đồ 41 nghề (nhu cầu × mức tiếp xúc AI), hồ sơ, so sánh |
+| Kỹ năng nên đầu tư | 15 kỹ năng, 5 nhánh, tự chấm, ba kỹ năng ưu tiên theo công thức công khai, lộ trình 30/90 ngày |
+| Giá trị sống | 36 thẻ theo 10 giá trị của Schwartz, bàn xếp bài, la bàn giá trị, soi một quyết định |
+
+Ba thẻ cuối là thẻ kiến thức: mỗi số liệu ghi năm, phạm vi và nguồn; căn cứ nằm trong `research/`, thẩm định độc lập trong `review/`. Cấu trúc và thành phần dùng chung: xem `CLAUDE.md`.
 
 - Không có bước build: chỉ có HTML, CSS và JavaScript (ES modules).
 - Chạy được ở địa chỉ con như `username.github.io/ten-repo/` vì mọi đường dẫn đều là đường dẫn tương đối.
@@ -21,7 +33,7 @@ python3 -m http.server 8000
 # rồi mở http://localhost:8000/whoareyou/
 ```
 
-**Kiểm thử phần tính toán:** mở `http://localhost:8000/whoareyou/assets/js/modules/numerology/calc.test.html` và `.../modules/zodiac/calc.test.html` (gồm âm lịch, Can Chi, nạp âm, cung, chòm sao IAU). Mọi dòng phải là "Đạt".
+**Kiểm thử phần tính toán:** mở `http://localhost:8000/whoareyou/assets/js/modules/<thẻ>/calc.test.html` với `<thẻ>` là `numerology`, `zodiac`, `personality`, `career`, `future`, `skills`, `values`. Mọi dòng phải là "Đạt". Trang của ba thẻ kiến thức kiểm cả dữ liệu (đủ trường, nguồn tồn tại, thang hợp lệ).
 
 **Kiểm tra nội dung** (cần Node 18 trở lên):
 
@@ -40,6 +52,31 @@ node tools/check-messages.mjs   # đủ mọi cặp chỉ số × con số, khô
 3. Sau một hai phút, web có ở `https://huybao2206.github.io/whoareyou/`.
 
 File `.nojekyll` giúp GitHub Pages phục vụ nguyên trạng các file. `404.html` tự tìm thư mục gốc của web nên nút "Về trang chủ" luôn đúng.
+
+## Cập nhật dữ liệu hằng năm (thẻ Nghề nghiệp và Kỹ năng)
+
+Số liệu của hai thẻ này cũ đi theo năm. Nên làm mỗi năm một lần, khoảng tháng 2–3, sau khi các báo cáo đầu năm ra. Nguyên tắc chung: **sửa `research/` trước, rồi mới sửa chữ trên web**; không có nguồn có phương pháp thì ghi “chưa có số liệu đủ tin cậy”, không điền số ước đoán.
+
+**Thẻ Nghề nghiệp hôm nay & ngày mai** (chi tiết: cuối `research/nghe-nghiep.md` và mục 5 của `research/nghe-nghiep-ho-so.md`):
+
+1. Thống kê Việt Nam: thông cáo lao động việc làm quý IV và cả năm của Cục Thống kê (khoảng đầu tháng 1); thu nhập theo ngành, thất nghiệp thanh niên. Sửa `KPIS`, `MARKET` trong `assets/js/modules/future/content.js`.
+2. Lương pháp định: lương cơ sở (thường áp dụng 1/7), lương tối thiểu vùng (thường 1/1). Tính lại các ví dụ trong `jobs/*.js`.
+3. Báo cáo quốc tế: WEF Future of Jobs (khoảng 2 năm một lần, bản tiếp theo dự kiến 01/2027), chỉ số tiếp xúc AI của ILO, BLS Employment Projections. Sửa `GLOBAL`, `AI`.
+4. Báo cáo tuyển dụng, lương có phương pháp (ITviec, TopDev, Navigos, TopCV, ManpowerGroup): ghi cỡ mẫu, thành phố, cấp bậc trước khi dùng.
+5. Rà từng hồ sơ nghề trong `jobs/*.js`: `demand` (thang 1–5 viết ở `METHOD`), bảng nhiệm vụ và mức tiếp xúc AI, `income`, `src`. Chỉ số AI tự tính lại từ bảng nhiệm vụ.
+6. Thêm khoá nguồn mới vào `SOURCES`; đổi `UPDATED`.
+
+**Thẻ Kỹ năng nên đầu tư** (chi tiết: mục 8 của `research/ky-nang.md`):
+
+1. WEF Future of Jobs (kỹ năng cốt lõi, kỹ năng tăng nhanh, tỷ lệ xáo trộn), ManpowerGroup Talent Shortage (tháng 1–2), báo cáo BUV và khảo sát doanh nghiệp Việt Nam (tháng 10), EF EPI (tháng 11). Sửa `WHY` trong `assets/js/modules/skills/content.js` và trường `why` trong `data.js`.
+2. Văn bản Bộ GD&ĐT (khung năng lực số, khung ngoại ngữ) và DigComp: đối chiếu thang 5 mức.
+3. Kiểm lại toàn bộ đường link tài nguyên học (`resources` trong `data.js`) và thời hạn chứng chỉ (IELTS, TOEIC 2 năm; Security+, AWS 3 năm).
+4. Xem lại mức cần theo lĩnh vực (`PROFILES`, `JOB_OVERRIDES`) và hệ số bằng chứng `ev`; công thức viết ở `METHOD` và mục 5 của `research/ky-nang.md`. Thêm hoặc bỏ một kỹ năng chỉ khi ít nhất hai nguồn chính cùng đổi.
+5. Đổi `UPDATED`.
+
+Thẻ Giá trị sống ít phụ thuộc thời gian; khi có nghiên cứu mới về giá trị ở Việt Nam hoặc bản cập nhật Cochrane về công cụ hỗ trợ quyết định, làm theo mục “Cách cập nhật” cuối `research/gia-tri-song.md`.
+
+Sau mỗi lần sửa: mở `calc.test.html` của thẻ, chạy `node tools/check-copy.mjs`, xem trang ở 390px và 1440px.
 
 ## Đổi tên web
 
@@ -123,8 +160,9 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 
 ## Quyền riêng tư
 
-- Thứ duy nhất lưu trong trình duyệt là lựa chọn giao diện sáng/tối (`localStorage['hub-theme']`).
-- Không cookie, không `sessionStorage`, không analytics, không script bên thứ ba đọc form. Tài nguyên bên ngoài chỉ có Google Fonts và GSAP từ jsDelivr, và cả hai đều tải trước khi người dùng nhập gì.
+- Thứ duy nhất lưu lâu trong trình duyệt là lựa chọn giao diện sáng/tối (`localStorage['hub-theme']`).
+- `sessionStorage` (mất khi đóng tab) giữ vài kết quả không mang thông tin cá nhân để các thẻ dùng lại: mã Holland 3 chữ và điểm sáu nhóm, nghề đang xem, mục tiêu và mức tự chấm kỹ năng, cách xếp thẻ giá trị. Không bao giờ lưu tên hay ngày sinh. Danh sách khoá: `assets/js/core/session.js`.
+- Không cookie, không analytics, không script bên thứ ba đọc form. Tài nguyên bên ngoài chỉ có Google Fonts và GSAP từ jsDelivr, và cả hai đều tải trước khi người dùng nhập gì.
 - Dữ liệu nhập chỉ nằm trong bộ nhớ của tab. Nút "Tính cho người khác" xoá sạch, tải lại trang cũng xoá sạch.
 
 ## Đã kiểm tra
@@ -143,7 +181,8 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 - [ ] Quyết định các điểm quy ước tính số ở trên (giữ 33 hay không, có viết 11/2 hay không).
 - [ ] Đọc lại 58 thông điệp bằng giọng của mình và chỉnh những chỗ chưa giống cách HUB nói.
 - [ ] Sau khi deploy, dán link vào Facebook hoặc Zalo để xem ảnh chia sẻ hiện đúng chưa.
-- [ ] Viết dần các thẻ còn lại: Nghề nghiệp hôm nay & ngày mai, Kỹ năng nên đầu tư, Giá trị sống.
+- [ ] Khi máy có mạng đầy đủ: đối chiếu số liệu của ba thẻ kiến thức với văn bản gốc (lúc biên soạn, môi trường chặn nso.gov.vn, ilo.org, weforum.org, oecd.org…, nên số liệu được tra qua đoạn trích tìm kiếm và báo chí; mức tin cậy ghi trong `research/`), và bấm thử từng đường link tài nguyên học ở thẻ Kỹ năng.
+- [ ] Đọc lại câu giới thiệu ở mục “Các thẻ chủ đề” trên trang chủ: câu cũ nói Thần số học mới mở, đã được sửa thành “Cả bảy thẻ đã mở…” (giữ chữ “ace”). Nếu muốn viết lại theo giọng mình thì sửa trong `index.html`.
 
 ## Cấu trúc thư mục
 
@@ -151,11 +190,13 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 /
 ├── index.html, 404.html, .nojekyll, package.json, README.md
 ├── assets/
-│   ├── css/            tokens, base, components, overlay, modules/numerology
+│   ├── css/            tokens, base, components, overlay, shared, modules/<thẻ>.css
 │   ├── js/
 │   │   ├── config.js   tên web, liên kết, danh sách thẻ, cách tính số
 │   │   ├── main.js     khởi động, điều phối route ↔ overlay
-│   │   ├── core/       router, overlay, motion, theme, toast, glyphs, utils
+│   │   ├── core/       router, overlay, motion, theme, toast, glyphs, utils, lunar, date-input,
+│   │   │               sources, session, share-image
+│   │   ├── modules/zodiac, personality, career, future, skills, values/   (xem CLAUDE.md)
 │   │   └── modules/numerology/
 │   │       ├── calc.js           logic tính toán (hàm thuần)
 │   │       ├── calc.test.html    unit test chạy trên trình duyệt
@@ -165,6 +206,7 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 │   │       ├── results.js        trang kết quả + tra cứu
 │   │       └── anim.js           chuyển động phép tính rút gọn
 │   └── images/         favicon, apple-touch-icon, og-image
+├── research/, review/, docs/   ghi chú nghiên cứu, thẩm định, brief (không hiển thị trên web)
 └── tools/
     ├── check-copy.mjs, check-messages.mjs
     ├── og-template.html, render-images.cjs

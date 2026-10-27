@@ -21,7 +21,7 @@ HUB cần đọc `review/hieu-chinh.md`: 11 đoạn mẫu và danh sách câu ma
 
 ## Đợt 3 thẻ kiến thức (bắt đầu 27/10/2026)
 
-Thứ tự: Nghề nghiệp hôm nay & ngày mai → Kỹ năng nên đầu tư → Giá trị sống. Xong thẻ nào đưa lên `main` thẻ đó.
+Thứ tự: Nghề nghiệp hôm nay & ngày mai → Kỹ năng nên đầu tư → Giá trị sống. Xong thẻ nào đưa lên `main` thẻ đó. **Đã xong cả ba (27/10/2026)**; trang chủ hiện đủ 7 thẻ; đã kiểm tra link nội bộ, console, nút Back/đóng ở cả 7 thẻ (390px, 1440px); README có mục cập nhật dữ liệu hằng năm.
 Quy trình mỗi thẻ: nghiên cứu (ghi vào `research/`) → dàn ý → viết → thẩm định độc lập (`review/tham-dinh-<the>.md`) → sửa → dựng giao diện → kiểm tra → lên `main`.
 
 | Thẻ | Nghiên cứu | Dàn ý | Viết | Thẩm định | Sửa | Giao diện | Lên web |
