@@ -5,8 +5,8 @@
 “Thấu Hiểu & Phát Triển Bản Thân” của HUB, chạy trên GitHub Pages: https://huybao2206.github.io/whoareyou/
 
 - HTML/CSS/JS thuần (ES modules), **không có bước build**. Đẩy lên `main` là Pages cập nhật.
-- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code) và **Cung hoàng đạo & con giáp**. 5 thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
-- Mọi phép tính chạy trên trình duyệt. Không lưu, không gửi tên hay ngày sinh đi đâu; URL kết quả chỉ chứa các con số.
+- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp** và **Sở thích nghề nghiệp**. 4 thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
+- Mọi phép tính chạy trên trình duyệt. Không lưu, không gửi tên hay ngày sinh đi đâu; URL kết quả chỉ chứa các con số. Riêng mã Holland (3 chữ cái) được giữ trong sessionStorage của tab để các thẻ khác dùng.
 
 ## Cấu trúc thư mục
 
@@ -27,6 +27,13 @@ assets/js/modules/zodiac/     thẻ Cung hoàng đạo & con giáp ("Hai bầu t
                               chòm sao thật theo ranh giới IAU; calc.test.html là trang kiểm thử
   signs.js, animals.js        12 cung, 12 con giáp; content.js: chữ còn lại và nguồn tham khảo
   rings.js, glyphs.js, view.js  hai vòng trời (SVG) quay rồi khoá, ký hiệu cung, giao diện
+assets/js/modules/career/     thẻ Sở thích nghề nghiệp ("Tổ ong", mô hình Holland RIASEC)
+  calc.js                     chấm điểm, mã 3 chữ (điểm bằng nhau thì ra mọi mã có thể), tính nhất quán;
+                              calc.test.html là trang kiểm thử
+  items.js                    48 hoạt động (8 mỗi nhóm) HUB tự soạn, chưa chuẩn hoá; không dùng câu hỏi của O*NET
+  types.js, pairs.js          6 nhóm, 15 cặp hai chữ đầu; content.js: chữ còn lại và nguồn tham khảo
+  view.js                     chồng thẻ vuốt (phải Thích, trái Không thích, lên Phân vân; có nút và phím mũi tên),
+                              tổ ong đổ mật theo điểm, lục giác Holland
 tools/check-copy.mjs          quét văn phong mọi chữ hiển thị
 tools/check-messages.mjs      kiểm tra đủ mục, đủ trường cho thông điệp
 docs/, research/, review/     brief, ghi chú nghiên cứu, bản nháp biên tập (không hiển thị trên web)
@@ -40,6 +47,7 @@ docs/, research/, review/     brief, ghi chú nghiên cứu, bản nháp biên t
 | Ô nhập ngày sinh | `core/date-input.js` + `.di` trong `shared.css` | `dateInputHtml({ id })` rồi `bindDateInput(root)`; kiểm tra bằng `validateDate(value)` (hàm thuần). |
 | Ngăn “Nguồn tham khảo” | `core/sources.js` + `.srcs` | `sourcesHtml({ id, groups \| items, updated: 'MM/YYYY' })`. Mỗi nguồn: `{ title, by, year, url, note }`. Tên bài giữ nguyên cách viết gốc. |
 | Dòng “Cập nhật” | `core/sources.js` + `.upd` | `updatedHtml('10/2026')`, đã có sẵn ở cuối ngăn nguồn. |
+| Giá trị dùng chung trong phiên | `core/session.js` | `sessionGet(key)`, `sessionSet(key, value \| null)` (sessionStorage, có try/catch, tiền tố `hub.`). Đang dùng: `holland` (mã 3 chữ, vd `SAE`), `holland.scores`. Thẻ “Nghề nghiệp hôm nay & ngày mai” đọc `holland` để lọc nghề; thẻ Sở thích nghề nghiệp hiện nút “Xem nghề hợp với mã của bạn” (link `#/nghe-nghiep-tuong-lai?ma=SAE`) khi thẻ kia có `status: 'active'`. Không lưu tên, ngày sinh. |
 | Bộ xuất ảnh kết quả | `core/share-image.js` | `saveImage({ filename, width, height, fonts, draw(ctx, kit) })`. Vẽ thẳng lên canvas (không chụp DOM), `kit.brand()` vẽ chân trang có dấu HUB. Không vẽ tên hay ngày sinh. |
 
 Mỗi thẻ mới phải có: ngăn “Nguồn tham khảo” và dòng “Cập nhật: tháng MM/YYYY”; logic tính là hàm thuần có trang `calc.test.html`; nút lưu ảnh; chạy được khi thiếu GSAP và khi bật reduced-motion; thao tác kéo/vuốt có cách làm tương đương bằng nút và bàn phím.

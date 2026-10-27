@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kiểm thử calc.js · Sở thích nghề nghiệp</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #F5F1EA; color: #141A2E; font: 15px/1.6 system-ui, sans-serif; }
+    h1 { font: 500 22px/1.3 Georgia, serif; margin: 0 0 4px; }
+    #summary { margin: 0 0 20px; font-weight: 600; }
+    #summary.pass { color: #2f6b3a; }
+    #summary.fail { color: #a24a2a; }
+    table { width: 100%; border-collapse: collapse; background: #FBF8F3; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(20,26,46,.12); vertical-align: top; }
+    td.ok { color: #2f6b3a; }
+    td.bad { color: #a24a2a; font-weight: 600; }
+    code { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Kiểm thử: chấm điểm Holland, mã 3 chữ, tính nhất quán</h1>
+  <p id="summary">Đang chạy…</p>
+  <table>
+    <thead><tr><th>Kết quả</th><th>Trường hợp</th><th>Mong đợi</th><th>Thực tế</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script type="module">
+    import * as H from './calc.js';
+    import ITEMS from './items.js';
+    import TYPES from './types.js';
+    import PAIRS from './pairs.js';
+
+    const tests = [];
+    const t = (name, actual, expected) => tests.push({ name, actual, expected });
+    const S = (R, I, A, S_, E, C) => ({ R, I, A, S: S_, E, C });
+    // Trả lời toàn bộ 48 câu theo một hàm (type) => answer.
+    const answerAll = (fn) => H.deckOrder().map((d) => ({ type: d.type, answer: fn(d.type, d.i) }));
+
+    /* --- Bộ hoạt động --- */
+    const order = H.deckOrder();
+    t('48 hoạt động, 8 mỗi nhóm', H.TYPES.map((x) => ITEMS[x].length), [8, 8, 8, 8, 8, 8]);
+    t('Thứ tự hiện có đủ 48 câu, không trùng', new Set(order.map((d) => d.type + d.i)).size, 48);
+    t('Không có hai câu cùng nhóm đứng liền nhau', order.every((d, k) => k === 0 || order[k - 1].type !== d.type), true);
+    t('Mỗi vòng 6 câu có đủ sáu nhóm', [0, 1, 2, 3, 4, 5, 6, 7].every((r) => new Set(order.slice(r * 6, r * 6 + 6).map((d) => d.type)).size === 6), true);
+    t('Đủ nội dung sáu nhóm', H.TYPES.every((x) => TYPES[x].summary && TYPES[x].note && TYPES[x].likes.length && TYPES[x].jobs.length && TYPES[x].envFit && TYPES[x].envStifle), true);
+    t('Đủ 15 cặp, khoá khớp allPairs()', [Object.keys(PAIRS).length, H.allPairs().every((k) => PAIRS[k])], [15, true]);
+
+    /* --- Chấm điểm --- */
+    t('Thích = 2, Phân vân = 1, Không thích = 0', H.score([{ type: 'R', answer: 'like' }, { type: 'R', answer: 'unsure' }, { type: 'I', answer: 'dislike' }]), S(3, 0, 0, 0, 0, 0));
+    t('Thích hết → mỗi nhóm 16', H.score(answerAll(() => 'like')), S(16, 16, 16, 16, 16, 16));
+    t('Không thích hết → mỗi nhóm 0', H.score(answerAll(() => 'dislike')), S(0, 0, 0, 0, 0, 0));
+    t('Bỏ qua câu trả lời lạ', H.score([{ type: 'X', answer: 'like' }, { type: 'R', answer: 'yes' }, null]), S(0, 0, 0, 0, 0, 0));
+    const mix = H.score(answerAll((ty, i) => (ty === 'S' ? 'like' : ty === 'A' && i < 6 ? 'like' : ty === 'E' && i < 4 ? 'like' : ty === 'C' ? 'unsure' : 'dislike')));
+    t('Bài làm mẫu → S16 A12 E8 C8', mix, S(0, 0, 12, 16, 8, 8));
+
+    /* --- Mã Holland --- */
+    t('Không bằng điểm → một mã', H.hollandCode(S(3, 5, 12, 16, 9, 2)), { code: 'SAE', codes: ['SAE'], more: false, count: 1, tied: [] });
+    const tie3 = H.hollandCode(mix);
+    t('Bằng điểm ở chữ thứ ba (E = C = 8) → SAE và SAC', [tie3.code, tie3.codes, tie3.tied], ['SAE', ['SAE', 'SAC'], [['E', 'C']]]);
+    const tie12 = H.hollandCode(S(14, 14, 3, 2, 9, 5));
+    t('Bằng điểm ở hai chữ đầu (R = I) → RIE và IRE', [tie12.code, tie12.codes], ['RIE', ['RIE', 'IRE']]);
+    const tie23 = H.hollandCode(S(4, 10, 10, 16, 10, 0));
+    t('Ba nhóm cùng điểm tranh hai chỗ → 6 mã', [tie23.code, tie23.codes.length, tie23.codes.includes('SEA'), tie23.more], ['SIA', 6, true, false]);
+    const flat = H.hollandCode(S(8, 8, 8, 8, 8, 8));
+    t('Sáu nhóm bằng nhau → 120 cách ghép, báo còn nữa', [flat.code, flat.count, flat.more, flat.codes.length], ['RIA', 120, true, 6]);
+    t('Thứ hạng: điểm bằng nhau thì theo thứ tự lục giác', H.ranked(S(5, 9, 9, 1, 5, 0)), ['I', 'A', 'R', 'E', 'S', 'C']);
+
+    /* --- Lục giác và tính nhất quán --- */
+    t('Khoảng cách: R–I 1, R–A 2, R–S 3, C–R 1', [H.distance('R', 'I'), H.distance('R', 'A'), H.distance('R', 'S'), H.distance('C', 'R')], [1, 2, 3, 1]);
+    t('Nhất quán: SA cao, SC vừa, RS thấp', [H.consistency('SAE'), H.consistency('SCE'), H.consistency('RSI')], ['high', 'mid', 'low']);
+    t('Cặp đối diện: R–S, I–E, A–C', H.allPairs().filter((k) => H.distance(k[0], k[1]) === 3), ['RS', 'IE', 'AC']);
+    t('Khoá cặp không phụ thuộc thứ tự: SA → AS, CR → RC', [H.pairKey('S', 'A'), H.pairKey('C', 'R')], ['AS', 'RC']);
+    t('Hồ sơ phẳng khi chênh lệch ≤ 3', [H.differentiation(S(8, 9, 10, 11, 8, 9)).flat, H.differentiation(mix).flat], [true, false]);
+
+    /* --- Mã điểm lưu trong phiên --- */
+    t('Mã điểm đi và về', H.decodeScores(H.encodeScores(mix)), mix);
+    t('Mã điểm sai định dạng → null', [H.decodeScores('R1I2'), H.decodeScores('R99I0A0S0E0C0'), H.decodeScores(null)], [null, null, null]);
+    t('Độ đầy: 8/16 = 0,5; chặn trong 0–1', [H.fill(8), H.fill(20), H.fill(-1)], [0.5, 1, 0]);
+
+    /* --- Hiển thị --- */
+    const rows = document.getElementById('rows');
+    let passed = 0;
+    for (const x of tests) {
+      const ok = JSON.stringify(x.actual) === JSON.stringify(x.expected);
+      if (ok) passed++;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td class="${ok ? 'ok' : 'bad'}">${ok ? 'Đạt' : 'Trượt'}</td><td></td><td><code></code></td><td><code></code></td>`;
+      tr.children[1].textContent = x.name;
+      tr.children[2].firstChild.textContent = JSON.stringify(x.expected);
+      tr.children[3].firstChild.textContent = JSON.stringify(x.actual);
+      rows.appendChild(tr);
+    }
+    const summary = document.getElementById('summary');
+    summary.textContent = `${passed}/${tests.length} trường hợp đạt.`;
+    summary.className = passed === tests.length ? 'pass' : 'fail';
+    window.__TEST_RESULT__ = { passed, total: tests.length, failed: tests.filter((x) => JSON.stringify(x.actual) !== JSON.stringify(x.expected)).map((x) => `${x.name} | mong ${JSON.stringify(x.expected)} | ra ${JSON.stringify(x.actual)}`) };
+  </script>
+</body>
+</html>

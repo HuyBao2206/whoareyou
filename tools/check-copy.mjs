@@ -27,6 +27,10 @@ const MODULES = [
   'assets/js/modules/zodiac/signs.js',
   'assets/js/modules/zodiac/animals.js',
   'assets/js/modules/zodiac/content.js',
+  'assets/js/modules/career/types.js',
+  'assets/js/modules/career/items.js',
+  'assets/js/modules/career/pairs.js',
+  'assets/js/modules/career/content.js',
   'assets/js/config.js',
 ];
 
@@ -43,6 +47,7 @@ const FILES = [
   'assets/js/modules/numerology/calc.js',
   'assets/js/modules/zodiac/view.js',
   'assets/js/modules/zodiac/calc.js',
+  'assets/js/modules/career/view.js',
   'assets/js/core/date-input.js',
   'assets/js/core/sources.js',
   'assets/js/core/share-image.js',

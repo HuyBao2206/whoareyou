@@ -72,8 +72,9 @@ export const config = {
       nameVi: 'Sở thích nghề nghiệp',
       nameEn: 'Career Interests',
       desc: 'Giúp bạn gọi tên kiểu việc mình thấy vui khi làm, dù là với đồ vật, con số, con người hay ý tưởng.',
-      status: 'soon',
+      status: 'active',
       glyph: 'career',
+      load: () => import('./modules/career/view.js'),
       soon: [
         'Phần này sẽ dựa trên mô hình sở thích nghề nghiệp Holland, thường được gọi là RIASEC, chia sở thích thành sáu nhóm.',
         'Bạn trả lời vài câu về những việc mình thấy vui khi làm, rồi xem nhóm nào nổi bật và những ngành nghề thường gặp trong nhóm đó.',
