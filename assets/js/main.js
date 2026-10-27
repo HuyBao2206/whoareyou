@@ -97,7 +97,7 @@ async function handleRoute(route) {
   if (!topic) {
     if (isOpen()) await closeOverlay();
     navigate('/', { replace: true });
-    toast('Không tìm thấy trang bạn cần, mình đưa bạn về trang chủ nhé.');
+    toast('Không tìm thấy trang này nên mình đưa bạn về trang chủ.');
     return;
   }
 
@@ -133,7 +133,7 @@ async function handleRoute(route) {
   } catch (err) {
     console.error(err);
     if (my !== token) return;
-    api.body.innerHTML = `<p class="ov__loading" role="alert">Chưa tải được nội dung. Bạn kiểm tra kết nối mạng rồi thử mở lại nhé.</p>`;
+    api.body.innerHTML = `<p class="ov__loading" role="alert">Chưa tải được nội dung. Kiểm tra kết nối mạng rồi thử mở lại nhé.</p>`;
   }
 }
 

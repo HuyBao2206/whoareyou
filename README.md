@@ -21,7 +21,7 @@ python3 -m http.server 8000
 # rồi mở http://localhost:8000/whoareyou/
 ```
 
-**Kiểm thử phần tính toán:** mở `http://localhost:8000/whoareyou/assets/js/modules/numerology/calc.test.html`. Trang hiện bảng kết quả, mọi dòng phải là "Đạt" (hiện có 52 trường hợp).
+**Kiểm thử phần tính toán:** mở `http://localhost:8000/whoareyou/assets/js/modules/numerology/calc.test.html`. Trang hiện bảng kết quả, mọi dòng phải là "Đạt" (hiện có 71 trường hợp).
 
 **Kiểm tra nội dung** (cần Node 18 trở lên):
 
@@ -54,11 +54,11 @@ Trong `assets/js/config.js`:
 ```js
 numerology: {
   lifePathMethod: 'vn',   // hoặc 'western'
-  yIsVowel: true,
+  yMode: 'vowel',         // 'foreign' nếu muốn mặc định bật chế độ tên nước ngoài
 }
 ```
 
-- `'vn'` (mặc định): cộng mọi chữ số của ngày, tháng, năm sinh; rút gọn tới khi kết quả ≤ 11; giữ 22 (hiện là 22/4) và 33 (hiện là 33/6). Kết quả nằm trong 2–11, 22/4, 33/6.
+- `'vn'` (mặc định): cộng mọi chữ số của ngày, tháng, năm sinh; rút gọn tới khi kết quả ≤ 11; giữ 22 (hiện là 22/4); tổng 33 rút tiếp về 6. Kết quả nằm trong 2–11 và 22/4.
 - `'western'`: rút gọn về 1–9, giữ 11, 22, 33 nếu gặp ở bất kỳ bước nào.
 
 Phần giải thích "Cách tính" trong overlay tự đổi theo lựa chọn này. Trang tra cứu luôn có đủ các số 1–11, 22, 33.
@@ -104,7 +104,7 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
   - Có nơi **rút gọn riêng ngày, tháng, năm trước rồi mới cộng**. Với một số ngày sinh, cách này cho ra số khác. Trang cộng thẳng mọi chữ số. Mục "ⓘ Vì sao nơi khác có thể ra số khác?" trong overlay đã giải thích chuyện này cho người đọc.
 - **Năm cá nhân:** tính theo năm dương lịch (đổi số vào 1/1), rút gọn về 1–9, không giữ 11/22/33. Có nơi tính theo ngày sinh nhật, tức đổi số vào đúng sinh nhật mỗi năm.
 - **Ba số từ họ tên:** cộng giá trị cả tên rồi mới rút gọn. Có nơi rút gọn từng từ (họ, đệm, tên) trước rồi mới cộng. Hai cách đôi khi ra số khác nhau.
-- **Chữ Y:** mặc định là nguyên âm, đúng với tên tiếng Việt. Ai cần thì đổi trong mục "Tuỳ chọn cho tên nước ngoài" ở phần Cách tính. Lựa chọn chỉ có tác dụng trong lần mở trang đó.
+- **Chữ Y:** mặc định là nguyên âm, đúng với tên tiếng Việt. Bật công tắc "Tên nước ngoài" cạnh ô nhập tên thì Y đứng ngay trước một nguyên âm (Yolanda, Maya) được tính là phụ âm, còn lại vẫn là nguyên âm (Lynn). Lựa chọn chỉ có tác dụng trong lần mở trang đó.
 - Tên không có nguyên âm (hoặc không có phụ âm) sẽ không có Số linh hồn (hoặc Số nhân cách). Trang báo rõ điều này thay vì đưa ra một con số vô nghĩa.
 
 **Giao diện và kỹ thuật:**
@@ -129,7 +129,7 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 
 ## Đã kiểm tra
 
-- `calc.test.html`: 52/52 trường hợp đạt, gồm đủ các ca bắt buộc trong brief.
+- `calc.test.html`: 71/71 trường hợp đạt, gồm đủ các ca bắt buộc trong brief.
 - `check-copy`: không lỗi. `check-messages`: đủ 58 mục (Số chủ đạo 13, Năm cá nhân 9, mỗi chỉ số theo tên 12).
 - Lighthouse mobile (đo trên server local có gzip, GSAP phục vụ từ máy): Performance 100, Accessibility 100, Best Practices 100, SEO 100. Kết quả thật trên GitHub Pages có thể chênh một chút tuỳ mạng.
 - axe-core (WCAG 2 A/AA): không lỗi ở trang chủ, overlay giới thiệu, kết quả, tra cứu và thẻ "Sắp ra mắt".
