@@ -27,7 +27,7 @@ HUB cần đọc `review/hieu-chinh.md`: 11 đoạn mẫu và danh sách câu ma
 | 1 | Viết mới toàn bộ Thần số học và chữ của web; nâng cấp `check-copy`; biên tập độc lập | Chưa làm |
 | 2 | Thành phần dùng chung, thư viện âm lịch | Xong (xem `CLAUDE.md`) |
 | 3 | Cung hoàng đạo & con giáp | Xong |
-| 4 | Bản đồ tính cách | Chưa làm |
+| 4 | Bản đồ tính cách | Xong |
 | 5 | Sở thích nghề nghiệp | Chưa làm |
 | 6 | Nghề nghiệp hôm nay & ngày mai | Chưa làm |
 | 7 | Kỹ năng nên đầu tư | Chưa làm |
