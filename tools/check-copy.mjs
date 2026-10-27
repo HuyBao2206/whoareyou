@@ -30,6 +30,9 @@ const MODULES = [
   'assets/js/modules/numerology/messages/personality.js',
   'assets/js/modules/numerology/messages/origins.js',
   'assets/js/modules/numerology/content.js',
+  'assets/js/modules/zodiac/signs.js',
+  'assets/js/modules/zodiac/animals.js',
+  'assets/js/modules/zodiac/content.js',
   'assets/js/config.js',
 ];
 
@@ -44,6 +47,11 @@ const FILES = [
   'assets/js/modules/numerology/view.js',
   'assets/js/modules/numerology/results.js',
   'assets/js/modules/numerology/calc.js',
+  'assets/js/modules/zodiac/view.js',
+  'assets/js/modules/zodiac/calc.js',
+  'assets/js/core/date-input.js',
+  'assets/js/core/sources.js',
+  'assets/js/core/share-image.js',
 ];
 
 // Câu được HUB cho phép giữ nguyên (mục 3.9, H2). So khớp sau khi chuẩn hoá khoảng trắng.
@@ -111,7 +119,8 @@ const isAllowed = (t) => ALLOW_LINES.some((a) => t.replace(/\s+/g, ' ').trim().s
 function checkString(text, where, key, unit) {
   if (!text || isAllowed(text)) return;
   if (text !== text.normalize('NFC')) add('lỗi', where, 'Chuỗi chưa chuẩn NFC', text);
-  const l = low(text);
+  // Tên web là tên riêng, không tính vào hạn mức từ.
+  const l = low(text).replace(/thấu hiểu (&|&amp;) phát triển bản thân/g, '');
 
   for (const b of BANNED) if (count(l, b)) { add('lỗi', where, `Từ cấm “${b}”`, text); break; }
   for (const [c, fix] of CALQUES) if (l.includes(c)) add('lỗi', where, `Cụm dịch “${c}” → ${fix}`, text);
@@ -220,7 +229,8 @@ function walk(value, path, key, unit, file) {
     // Chỉ xét chuỗi trông như chữ tiếng Việt.
     if (!/[\p{L}]{2,}/u.test(value) || (!/\s/.test(value) && value.length < 3)) return;
     checkString(value, `${file} ${path}`, key, unit);
-    if (key === 'title' || key === 'nameVi') checkTitleCase(value, `${file} ${path}`);
+    // Tên bài trong nguồn tham khảo giữ nguyên cách viết gốc (tiếng Anh hay viết hoa mọi chữ).
+    if ((key === 'title' || key === 'nameVi') && !/SOURCES/.test(path)) checkTitleCase(value, `${file} ${path}`);
     return;
   }
   if (typeof value === 'function' || value == null) return;

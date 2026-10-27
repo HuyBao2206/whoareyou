@@ -182,17 +182,15 @@ const PURE_VOWELS = 'AEIOU';
 
 /**
  * Cách coi chữ Y:
- *   'position' (mặc định): Y đứng sát một nguyên âm khác trong cùng từ là phụ âm (HUY, DUY, NGUYEN),
- *                          còn lại là nguyên âm (VY, MY, LY).
- *   'vowel': Y luôn là nguyên âm.
- *   'consonant': Y luôn là phụ âm.
- * Tuỳ chọn cũ { yIsVowel: false } tương đương 'consonant'.
+ *   'vowel' (mặc định): Y luôn là nguyên âm, đúng với tên tiếng Việt (Huy, Vy, Thủy, Yến).
+ *   'foreign': tuỳ chọn "Tên nước ngoài". Y đứng ngay trước một nguyên âm trong cùng từ là phụ âm
+ *              (YOLANDA, MAYA), còn lại vẫn là nguyên âm (LYNN).
+ *   'consonant': Y luôn là phụ âm. Tuỳ chọn cũ { yIsVowel: false } tương đương.
  */
 export function yModeOf(opts = {}) {
   if (opts.yMode) return opts.yMode;
   if (opts.yIsVowel === false) return 'consonant';
-  if (opts.yIsVowel === true) return 'vowel';
-  return 'position';
+  return 'vowel';
 }
 
 /**
@@ -204,13 +202,12 @@ export function isVowelAt(s, i, opts = {}) {
   if (PURE_VOWELS.includes(ch)) return true;
   if (ch !== 'Y') return false;
   const mode = yModeOf(opts);
-  if (mode === 'vowel') return true;
   if (mode === 'consonant') return false;
-  const pure = (c) => !!c && PURE_VOWELS.includes(c);
-  return !(pure(s[i - 1]) || pure(s[i + 1]));
+  if (mode === 'foreign') return !(s[i + 1] && PURE_VOWELS.includes(s[i + 1]));
+  return true;
 }
 
-/** Kiểm tra một chữ đứng riêng (không có ngữ cảnh). Y theo vị trí thì đứng riêng được coi là nguyên âm. */
+/** Kiểm tra một chữ đứng riêng (không có ngữ cảnh). Ở chế độ tên nước ngoài, Y đứng riêng vẫn là nguyên âm. */
 export const isVowel = (ch, opts = {}) => isVowelAt(ch, 0, opts);
 
 /** Danh sách chữ cái của tên đã chuẩn hoá, kèm giá trị và loại nguyên âm/phụ âm. Khoảng trắng giữ lại làm dấu ngắt từ. */
@@ -232,7 +229,7 @@ function sumLetters(letters) {
 /**
  * Ba số từ họ tên: sứ mệnh (mọi chữ), linh hồn (nguyên âm), nhân cách (phụ âm).
  * @param {string} name
- * @param {{yMode?: 'position'|'vowel'|'consonant', yIsVowel?: boolean}} opts
+ * @param {{yMode?: 'vowel'|'foreign'|'consonant', yIsVowel?: boolean}} opts
  */
 export function nameNumbers(name, opts = {}) {
   const normalized = normalizeName(name);

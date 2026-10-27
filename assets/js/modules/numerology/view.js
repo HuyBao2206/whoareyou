@@ -24,7 +24,7 @@ const blankState = () => ({
 });
 
 let state = blankState();
-let yMode = config.numerology.yMode === 'vowel' ? 'vowel' : 'position';
+let yMode = config.numerology.yMode === 'foreign' ? 'foreign' : 'vowel';
 let api = null;
 let ctx = null;
 let pendingJump = null;
@@ -68,7 +68,7 @@ function alphabetTable() {
           .map((c) => {
             const ch = c[r];
             if (!ch) return '<td></td>';
-            const cls = ch === 'Y' && yMode === 'position' ? 'is-ypos' : C.isVowel(ch, { yMode }) ? 'is-vowel' : 'is-cons';
+            const cls = ch === 'Y' && yMode === 'foreign' ? 'is-ypos' : C.isVowel(ch, { yMode }) ? 'is-vowel' : 'is-cons';
             return `<td><span class="alpha__ch ${cls}" data-ch="${ch}">${ch}</span></td>`;
           })
           .join('')}</tr>`
@@ -83,7 +83,7 @@ function alphabetTable() {
       </table>
     </div>
     <p class="legend" aria-hidden="true"><span class="legend__v">${e(NAME_METHOD.legendVowel)}</span><span class="legend__c">${e(NAME_METHOD.legendConsonant)}</span>${
-      yMode === 'position' ? `<span class="legend__y">${e(NAME_METHOD.legendY)}</span>` : ''
+      yMode === 'foreign' ? `<span class="legend__y">${e(NAME_METHOD.legendY)}</span>` : ''
     }</p>`;
 }
 
@@ -213,6 +213,7 @@ function introHtml() {
         <div class="nm-method__grid">
           <div>
             <p>${e(NAME_METHOD.vowels)}</p>
+            <p>${e(NAME_METHOD.yNote)}</p>
             <ul class="nm-formulas" role="list">
               ${NAME_METHOD.formulas.map((x) => `<li><strong>${e(INDEX_META[x.index].name)}</strong>: ${e(x.text)}</li>`).join('')}
             </ul>
@@ -223,17 +224,6 @@ function introHtml() {
             <div id="name-example">${nameExampleHtml()}</div>
           </figure>
         </div>
-        <details class="nm-details" id="y-option">
-          <summary><span class="nm-details__i" aria-hidden="true">ⓘ</span>${e(NAME_METHOD.yOption.summary)}</summary>
-          <div class="nm-details__body">
-            <p>${e(NAME_METHOD.yOption.text)}</p>
-            <label class="switch">
-              <input type="checkbox" id="y-vowel" ${yMode === 'vowel' ? 'checked' : ''}>
-              <span class="switch__track" aria-hidden="true"><span></span></span>
-              <span>${e(NAME_METHOD.yOption.label)}</span>
-            </label>
-          </div>
-        </details>
       </div>
     </section>
 
@@ -294,6 +284,14 @@ function introHtml() {
             <p class="field__hint" id="name-hint">${e(CALCULATORS.name.hint)}</p>
             <div class="field__error" id="name-err"></div>
           </div>
+          <div class="field y-option">
+            <label class="switch">
+              <input type="checkbox" id="y-foreign" aria-describedby="y-foreign-hint" ${yMode === 'foreign' ? 'checked' : ''}>
+              <span class="switch__track" aria-hidden="true"><span></span></span>
+              <span>${e(NAME_METHOD.yOption.label)}</span>
+            </label>
+            <p class="field__hint" id="y-foreign-hint">${e(NAME_METHOD.yOption.hint)}</p>
+          </div>
           <div class="name-preview">
             <p class="name-preview__label">${e(CALCULATORS.name.previewLabel)}: <strong id="name-norm" class="name-preview__text">${e(C.normalizeName(state.name)) || '…'}</strong></p>
             <div class="letters" id="name-letters" aria-hidden="true">${lettersHtml(state.name)}</div>
@@ -347,7 +345,7 @@ function renderDateOut(animate) {
       ${resItem(INDEX_META.lifePath.name, state.lp)}
       ${resItem(`${INDEX_META.personalYear.name} ${state.py.year}`, state.py)}
     </div>
-    ${ctaHtml(state.names ? '' : 'Bạn có thể tính thêm theo họ tên để có đủ năm con số.')}`;
+    ${ctaHtml(state.names ? '' : 'Tính thêm theo họ tên để có đủ năm con số.')}`;
   if (animate) animateOut(out);
 }
 
@@ -367,7 +365,7 @@ function renderNameOut(animate) {
       ${resItem(INDEX_META.soul.name, n.soul, { labels: true, note: CALCULATORS.name.noSoul })}
       ${resItem(INDEX_META.personality.name, n.personality, { labels: true, note: CALCULATORS.name.noPersonality })}
     </div>
-    ${ctaHtml(state.lp ? '' : 'Bạn có thể tính thêm theo ngày sinh để có đủ năm con số.')}`;
+    ${ctaHtml(state.lp ? '' : 'Tính thêm theo ngày sinh để có đủ năm con số.')}`;
   if (animate) animateOut(out);
 }
 
@@ -551,9 +549,9 @@ function bindNameForm(form) {
 }
 
 function bindYOption(root) {
-  const cb = root.querySelector('#y-vowel');
+  const cb = root.querySelector('#y-foreign');
   cb?.addEventListener('change', () => {
-    yMode = cb.checked ? 'vowel' : 'position';
+    yMode = cb.checked ? 'foreign' : 'vowel';
     root.querySelector('#alpha-host').innerHTML = alphabetTable();
     root.querySelector('#name-example').innerHTML = nameExampleHtml();
     const input = root.querySelector('#full-name');
@@ -563,7 +561,7 @@ function bindYOption(root) {
       renderNameOut(false);
       syncCtas();
     }
-    ctx.toast(yMode === 'vowel' ? NAME_METHOD.yOption.toastVowel : NAME_METHOD.yOption.toastPosition);
+    ctx.toast(yMode === 'foreign' ? NAME_METHOD.yOption.toastOn : NAME_METHOD.yOption.toastOff);
   });
 }
 
@@ -640,7 +638,7 @@ const helpers = {
     state = blankState();
     pendingJump = 'bo-tinh';
     ctx.navigate(BASE);
-    ctx.toast('Đã xoá các con số cũ. Bạn nhập thông tin của người khác nhé.');
+    ctx.toast('Đã xoá các con số cũ. Giờ nhập thông tin của người khác được rồi.');
   },
 };
 
