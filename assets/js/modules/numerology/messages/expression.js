@@ -1,254 +1,254 @@
-// Số sứ mệnh. Quy tắc văn phong: CLAUDE.md (mục “Văn phong”).
+// Số sứ mệnh: BẢN CŨ, chờ viết lại ở Phase 1. Xem review/huong-dan-viet-than-so-hoc.md.
 
 export default {
   1: {
-    title: 'Đứng ra nhận việc',
+    title: 'Người đứng ra nhận việc',
     keywords: ['Chủ động', 'Dẫn dắt', 'Độc lập'],
     summary:
-      'Năng lực của số sứ mệnh 1 lộ rõ nhất khi được đứng ra dẫn dắt. Trong nhóm, bạn hay là người đề xuất hướng đi và chịu trách nhiệm cho nó. Người ta nhớ tới bạn như một người quyết đoán, làm được việc mà không cần ai nhắc. Cái khó là biết lúc nào nên dẫn, lúc nào nên lùi lại để người khác thử.',
+      'Số sứ mệnh 1 cho thấy bạn thể hiện năng lực rõ nhất khi được đứng ra dẫn dắt. Trong nhóm, bạn hay là người đề xuất hướng đi và chịu trách nhiệm cho nó. Người khác nhớ tới bạn như một người quyết đoán, làm được việc mà không cần nhắc. Thử thách của bạn là biết lúc nào nên dẫn và lúc nào nên lùi lại cho người khác thử.',
     strengths: [
-      'Nghĩ xong là bắt tay làm ngay. Họp xong chưa bao lâu, bạn đã gửi bảng phân công cho cả nhóm.',
-      'Chịu được áp lực khi phải chọn một hướng đi mà chưa chắc chắn.',
-      'Tự học tốt, không ngại một mình mày mò công cụ mới.',
+      'Bạn biến ý định thành hành động nhanh. Họp xong chưa lâu, bạn đã gửi bảng phân công cho cả nhóm.',
+      'Bạn chịu được áp lực khi phải chọn một hướng đi mà chưa chắc chắn.',
+      'Bạn tự học tốt và không ngại một mình mày mò công cụ mới.',
     ],
     watchOut: [
-      'Làm dưới quyền một người chậm hơn mình là thấy khó chịu.',
-      'Mải nhìn sang việc tiếp theo nên hay quên khen người khác.',
+      'Bạn có thể thấy khó làm việc dưới quyền một người chậm hơn mình.',
+      'Bạn hay quên khen người khác vì mải nhìn sang việc tiếp theo.',
     ],
     advice: [
-      'Ở dự án tới, thử giao phần dẫn dắt cho người khác, còn mình đứng ở vai hỗ trợ.',
-      'Cuối mỗi tuần, gửi một lời ghi nhận cụ thể tới một người trong nhóm.',
+      'Ở dự án tới, bạn giao một phần việc dẫn dắt cho người khác và đóng vai hỗ trợ.',
+      'Cuối mỗi tuần, bạn gửi một lời ghi nhận cụ thể tới một người trong nhóm.',
     ],
     fields: ['Quản lý, trưởng nhóm', 'Khởi nghiệp', 'Bán hàng', 'Nghề tự do', 'Quản lý sản phẩm'],
   },
 
   2: {
-    title: 'Làm cầu nối',
+    title: 'Người nối người',
     keywords: ['Hợp tác', 'Khéo léo', 'Chu đáo'],
     summary:
-      'Làm cùng người khác là lúc số sứ mệnh 2 phát huy tốt nhất. Bạn có tài làm cầu nối, giúp hai bên hiểu nhau và đi tới thoả thuận. Những điều người khác bỏ sót, như ai đang bị lép vế trong cuộc họp, bạn đều để ý. Chỗ cần tập là dám nhận phần ghi nhận xứng với công sức mình bỏ ra.',
+      'Số sứ mệnh 2 cho thấy bạn phát huy năng lực tốt nhất khi làm cùng người khác. Bạn có tài làm cầu nối, giúp hai bên hiểu nhau và đi tới một thoả thuận. Bạn để ý tới những điều người khác bỏ sót, như ai đang bị lép vế trong cuộc họp. Thử thách của bạn là dám nhận phần ghi nhận xứng với đóng góp của mình.',
     strengths: [
-      'Nói chuyện mềm mà chắc. Gặp khách khó tính, bạn vẫn giữ được không khí mà không để bên mình thiệt.',
-      'Làm việc nhóm tốt, giúp người mới hoà nhập nhanh.',
-      'Cẩn thận với chi tiết, từ con số trong báo cáo tới câu chữ trong email.',
+      'Bạn trao đổi mềm mà chắc. Gặp khách khó tính, bạn giữ được không khí mà vẫn bảo vệ được quyền lợi của bên mình.',
+      'Bạn làm việc nhóm tốt và giúp người mới hoà nhập nhanh.',
+      'Bạn cẩn thận với chi tiết, từ con số trong báo cáo tới câu chữ trong email.',
     ],
     watchOut: [
-      'Hay đứng sau hậu trường, nên công sức dễ bị người khác nhận mất.',
-      'Né những cuộc tranh luận cần có, để rồi chuyện nhỏ thành chuyện lớn.',
+      'Bạn hay đứng ở hậu trường nên công sức dễ bị người khác nhận phần.',
+      'Bạn có thể né những cuộc tranh luận cần thiết, để chuyện nhỏ thành chuyện lớn.',
     ],
     advice: [
-      'Ghi lại những gì mình đã đóng góp trong tháng, để khi cần thì nói ra được rõ ràng.',
-      'Thấy vấn đề trong nhóm thì nên nêu sớm, nói nhẹ nhàng thôi, đừng đợi nó tự hết.',
+      'Ghi lại những gì bạn đã đóng góp trong tháng, để khi cần bạn có thể nói ra rõ ràng.',
+      'Khi thấy một vấn đề trong nhóm, bạn nêu nó sớm bằng giọng nhẹ nhàng thay vì đợi nó tự hết.',
     ],
     fields: ['Nhân sự', 'Chăm sóc khách hàng', 'Trợ lý điều hành', 'Hoà giải, tư vấn', 'Quan hệ đối tác'],
   },
 
   3: {
-    title: 'Giỏi nói, giỏi viết',
+    title: 'Người làm chữ và làm vui',
     keywords: ['Diễn đạt', 'Sáng tạo', 'Truyền cảm hứng'],
     summary:
-      'Ở số sứ mệnh 3, năng lực lộ ra qua lời nói, chữ viết hoặc hình ảnh. Bạn biết trình bày một ý tưởng sao cho người nghe thấy hứng thú. Được làm điều mình thích thì bạn vui, và người xung quanh cũng hăng hái theo. Có tài rồi, việc còn lại là giữ tập trung đủ lâu để làm ra sản phẩm.',
+      'Số sứ mệnh 3 cho thấy năng lực của bạn lộ ra rõ nhất qua lời nói, chữ viết hoặc hình ảnh. Bạn biết cách trình bày một ý tưởng sao cho người nghe thấy hứng thú. Khi bạn làm điều mình thích, người xung quanh cũng có thêm năng lượng. Thử thách của bạn là giữ tập trung đủ lâu để biến tài năng thành sản phẩm.',
     strengths: [
-      'Thuyết trình tốt, biết mở đầu bằng một câu chuyện để kéo người nghe vào.',
-      'Lắm ý tưởng cho những việc tưởng đã nhàm, như một cách giới thiệu sản phẩm khác hẳn mọi khi.',
-      'Dễ kết thân và giữ được không khí vui vẻ trong nhóm.',
+      'Bạn thuyết trình tốt, biết mở đầu bằng một câu chuyện để kéo người nghe vào.',
+      'Bạn có nhiều ý tưởng mới cho những việc tưởng đã nhàm, như một cách giới thiệu sản phẩm khác hẳn mọi khi.',
+      'Bạn dễ kết thân và giữ được không khí vui vẻ trong nhóm.',
     ],
     watchOut: [
-      'Ôm nhiều dự án sáng tạo cùng lúc rồi bỏ dở.',
-      'Bị chê sản phẩm là buồn lâu hơn mức cần.',
+      'Bạn dễ ôm nhiều dự án sáng tạo cùng lúc rồi bỏ dở.',
+      'Bạn có thể nhạy cảm với lời chê về sản phẩm của mình hơn mức cần.',
     ],
     advice: [
-      'Chọn một sản phẩm và đưa tới tay người dùng, dù nó chưa hoàn hảo.',
-      'Lúc nhận góp ý, nhớ rằng người ta nhận xét sản phẩm chứ không nhận xét con người bạn. Nghĩ vậy sẽ dễ nghe hơn.',
+      'Chọn một sản phẩm và đưa nó tới tay người dùng, dù nó chưa hoàn hảo.',
+      'Khi nhận góp ý, bạn tách riêng ý tưởng của mình với con người mình để nghe cho khách quan.',
     ],
     fields: ['Truyền thông, quảng cáo', 'Viết, biên tập', 'Thiết kế', 'Giảng dạy', 'Nghệ thuật biểu diễn'],
   },
 
   4: {
-    title: 'Chắc tay, có lề lối',
+    title: 'Người làm cho chắc',
     keywords: ['Tổ chức', 'Tỉ mỉ', 'Bền bỉ'],
     summary:
-      'Chắc chắn và có hệ thống là cách số sứ mệnh 4 góp sức cho tập thể. Bạn là người dựng quy trình, lập bảng theo dõi và giữ cho mọi thứ không bị sót. Việc bạn đã nhận thì người khác ít phải lo. Chỉ cần đừng vội gạt một ý tưởng mới đi chỉ vì trước giờ chưa ai làm.',
+      'Số sứ mệnh 4 cho thấy bạn đóng góp tốt nhất qua sự chắc chắn và có hệ thống. Bạn là người dựng quy trình, làm bảng theo dõi và giữ cho mọi thứ không bị sót. Khi bạn đã nhận việc, người khác ít phải lo. Thử thách của bạn là đón nhận ý tưởng mới mà không vội gạt đi chỉ vì nó chưa có tiền lệ.',
     strengths: [
-      'Biến việc lộn xộn thành quy trình rõ ràng, như sắp xếp lại cả thư mục tài liệu chung của nhóm.',
-      'Chất lượng đều tay, ngày bận hay ngày rảnh cũng làm kỹ như nhau.',
-      'Bền sức với những việc dài hơi và lặp lại.',
+      'Bạn biến việc lộn xộn thành quy trình rõ ràng, như sắp lại cả thư mục tài liệu chung của nhóm.',
+      'Bạn giữ chất lượng đều tay, ngày bận hay ngày rảnh đều làm kỹ như nhau.',
+      'Bạn có sức bền với những việc dài hơi và lặp lại.',
     ],
     watchOut: [
-      'Cẩn thận tới mức chậm, trong khi tình huống cần quyết nhanh.',
-      'Có lúc vẫn bám quy trình cũ dù nó không còn hợp.',
+      'Bạn có thể cẩn thận tới mức chậm trễ, trong khi tình huống cần quyết nhanh.',
+      'Bạn đôi khi bám quy trình cũ dù nó không còn hợp.',
     ],
     advice: [
-      'Mỗi quý chọn một quy trình đang dùng và tự hỏi: nếu làm lại từ đầu, mình có làm y như vậy không.',
-      'Thử đặt hạn thật ngắn cho một việc nhỏ để tập quyết nhanh.',
+      'Mỗi quý, bạn chọn một quy trình đang dùng và tự hỏi nếu làm lại từ đầu, mình có thiết kế nó như thế này không.',
+      'Thử đặt cho mình một hạn chót ngắn với một việc nhỏ để luyện cách quyết nhanh.',
     ],
     fields: ['Kế toán, kiểm toán', 'Kỹ thuật', 'Quản lý vận hành', 'Phát triển phần mềm', 'Hành chính, pháp chế'],
   },
 
   5: {
-    title: 'Xoay xở giỏi',
+    title: 'Người xoay xở giỏi',
     keywords: ['Linh hoạt', 'Đa năng', 'Thuyết phục'],
     summary:
-      'Số sứ mệnh 5 làm tốt nhất ở những nơi nhiều thay đổi. Cái mới bạn học nhanh, gặp chuyện bất ngờ thì ứng biến được, kiểu người nào cũng nói chuyện được. Một công việc giậm chân tại chỗ dễ làm bạn héo dần. Thay vì biết một chút về mọi thứ, bạn nên chọn vài thế mạnh để đi sâu.',
+      'Số sứ mệnh 5 cho thấy bạn thể hiện năng lực tốt nhất ở những nơi có nhiều thay đổi. Bạn học cái mới nhanh, ứng biến tốt và nói chuyện được với nhiều kiểu người. Một công việc đứng yên một chỗ dễ khiến bạn héo dần. Thử thách của bạn là chọn ra vài thế mạnh để đi sâu, thay vì biết một chút về mọi thứ.',
     strengths: [
-      'Ứng biến tốt khi kế hoạch đổ vỡ, như sự kiện mất điện mà vẫn xoay được chương trình.',
-      'Có sức thuyết phục tự nhiên, nhất là khi nói về điều mình thật sự thích.',
-      'Quen biết rộng, nối được người ở nhiều lĩnh vực khác nhau.',
+      'Bạn ứng biến tốt khi kế hoạch đổ vỡ, như sự kiện bị mất điện mà bạn vẫn xoay được chương trình.',
+      'Bạn có sức thuyết phục tự nhiên, nhất là khi nói về điều mình thật sự thích.',
+      'Bạn kết nối được người ở nhiều lĩnh vực khác nhau.',
     ],
     watchOut: [
-      'Việc vừa bước vào giai đoạn lặp lại là bắt đầu chán và ngó sang việc khác.',
-      'Lúc đầu hăng quá nên hứa nhiều hơn sức mình làm.',
+      'Bạn dễ chán khi việc bước vào giai đoạn lặp lại và bắt đầu nhìn sang việc khác.',
+      'Bạn có thể hứa nhiều hơn khả năng làm vì quá hào hứng lúc đầu.',
     ],
     advice: [
-      'Chọn hai kỹ năng cốt lõi và dồn sức cho chúng trong một năm.',
-      'Trước khi nhận việc mới, mở lịch ra xem mình còn chỗ trống thật không.',
+      'Chọn hai kỹ năng cốt lõi và đầu tư cho chúng trong một năm.',
+      'Trước khi nhận việc mới, bạn mở lịch ra xem mình còn chỗ trống thật không.',
     ],
     fields: ['Bán hàng, kinh doanh', 'Du lịch, sự kiện', 'Báo chí', 'Marketing', 'Tư vấn độc lập'],
   },
 
   6: {
-    title: 'Chăm cho nơi mình ở',
+    title: 'Người chăm cho nơi mình ở',
     keywords: ['Trách nhiệm', 'Tận tâm', 'Thẩm mỹ'],
     summary:
-      'Chăm lo cho người khác hay làm đẹp một không gian, đó là những việc số sứ mệnh 6 làm tốt nhất. Bạn nghĩ tới cảm giác của người dùng, người học hay người được phục vụ. Người ta tin bạn vì bạn coi việc của họ như việc của mình. Tận tâm là tốt, nhưng cần có giới hạn để khỏi kiệt sức.',
+      'Số sứ mệnh 6 cho thấy bạn đóng góp tốt nhất khi được chăm lo cho người khác hoặc làm đẹp cho một không gian. Bạn nghĩ tới cảm giác của người dùng, người học hay người được phục vụ. Người ta tin bạn vì bạn coi việc của họ như việc của mình. Thử thách của bạn là đặt giới hạn để sự tận tâm không biến thành kiệt sức.',
     strengths: [
-      'Để ý tới cảm giác của người khác, như khách bước vào cửa hàng có thấy dễ chịu không.',
-      'Giữ lời, nên hay được giao những việc quan trọng.',
-      'Có gu thẩm mỹ hài hoà trong cách sắp xếp và trình bày.',
+      'Bạn để ý tới trải nghiệm của người khác, như khách có thấy dễ chịu khi bước vào cửa hàng hay không.',
+      'Bạn giữ lời, nên hay được giao những việc quan trọng.',
+      'Bạn có gu thẩm mỹ hài hoà trong cách sắp xếp và trình bày.',
     ],
     watchOut: [
-      'Thương đồng nghiệp bận nên hay nhận thêm việc của họ.',
-      'Chăm chút bao nhiêu mà không ai nhắc tới là dễ phật lòng.',
+      'Bạn hay nhận thêm việc của đồng nghiệp vì thương họ bận.',
+      'Bạn dễ phật lòng khi sự chăm chút của mình không được ai nhắc tới.',
     ],
     advice: [
-      'Đặt giờ kết thúc công việc mỗi ngày và giữ đúng ít nhất bốn ngày trong tuần.',
-      'Muốn được ghi nhận thì nói ra nhẹ nhàng, đừng chờ người khác tự thấy.',
+      'Đặt một giờ kết thúc công việc mỗi ngày và giữ đúng ít nhất bốn ngày trong tuần.',
+      'Khi muốn được ghi nhận, bạn nói ra nhẹ nhàng thay vì chờ người khác tự thấy.',
     ],
     fields: ['Giáo dục', 'Y tế, điều dưỡng', 'Thiết kế nội thất, thời trang', 'Nhà hàng, khách sạn', 'Công tác xã hội'],
   },
 
   7: {
-    title: 'Đào sâu tới cùng',
+    title: 'Người đào sâu',
     keywords: ['Phân tích', 'Chuyên môn', 'Tư duy độc lập'],
     summary:
-      'Một câu hỏi khó là thứ số sứ mệnh 7 thích nhất. Bạn muốn biết bản chất, cứ hỏi vì sao cho tới khi hiểu thật. Vì thế người khác hay mang những câu hỏi hóc búa tới tìm bạn. Hiểu rồi thì nên chia sẻ ra ngoài, đừng giữ mãi trong đầu.',
+      'Số sứ mệnh 7 cho thấy năng lực của bạn lộ rõ nhất khi được đi sâu vào một vấn đề. Bạn thích tìm hiểu bản chất, hỏi vì sao cho tới khi thật hiểu. Người khác hay tìm tới bạn với những câu hỏi khó. Thử thách của bạn là chia sẻ hiểu biết của mình ra ngoài thay vì giữ nó trong đầu.',
     strengths: [
-      'Phân tích kỹ, hiếm khi kết luận vội, nên lời bạn nói có trọng lượng.',
-      'Làm độc lập tốt trong những dự án cần tập trung lâu.',
-      'Bắt được lỗi người khác bỏ qua, như một con số lệch trong bảng tính.',
+      'Bạn phân tích kỹ và hiếm khi kết luận vội, nên lời bạn nói có trọng lượng.',
+      'Bạn làm việc độc lập tốt trong những dự án cần tập trung lâu.',
+      'Bạn phát hiện ra lỗi mà người khác bỏ qua, như một con số bị lệch trong bảng tính.',
     ],
     watchOut: [
-      'Khó giải thích ý mình cho người không cùng chuyên môn.',
-      'Cứ muốn chắc thêm chút nữa nên chậm công bố kết quả.',
+      'Bạn có thể thấy khó giải thích ý mình cho người không cùng chuyên môn.',
+      'Bạn dễ trì hoãn việc công bố kết quả vì muốn chắc thêm chút nữa.',
     ],
     advice: [
-      'Tập giải thích việc mình làm cho một người ngoài ngành trong ba câu.',
-      'Đặt hạn cho phần tìm hiểu, rồi gửi bản nháp sớm để nhận góp ý.',
+      'Tập giải thích công việc của bạn cho một người ngoài ngành trong ba câu.',
+      'Đặt hạn chót cho phần tìm hiểu và gửi bản nháp sớm để nhận góp ý.',
     ],
     fields: ['Nghiên cứu', 'Phân tích dữ liệu', 'Kỹ thuật phần mềm', 'Y học, dược học', 'Biên tập chuyên môn'],
   },
 
   8: {
-    title: 'Cầm trịch',
+    title: 'Người điều hành',
     keywords: ['Quản lý', 'Kết quả', 'Tầm vóc'],
     summary:
-      'Quản lý nguồn lực, con người hay tiền bạc là sở trường của số sứ mệnh 8. Bạn nhìn ra một việc có thể lớn tới đâu và biết sắp xếp để nó chạy. Ở bạn, người ta thấy sự tự tin của người cầm trịch. Nắm quyền rồi thì điều khó là giữ được công bằng và tình người.',
+      'Số sứ mệnh 8 cho thấy bạn thể hiện năng lực rõ nhất khi được quản lý nguồn lực, con người hay tiền bạc. Bạn nhìn ra cách một việc có thể lớn lên và biết sắp xếp để nó chạy. Người khác thấy ở bạn sự tự tin của một người cầm trịch. Thử thách của bạn là giữ được sự công bằng và tình người khi nắm quyền.',
     strengths: [
-      'Đặt mục tiêu rõ ràng và theo dõi tiến độ bằng con số cụ thể.',
-      'Đứng vững trước áp lực, kể cả khi phải nói “không” với một khách hàng lớn.',
-      'Biết định giá đúng sản phẩm và công sức, không bán rẻ mình.',
+      'Bạn đặt mục tiêu rõ ràng và theo dõi tiến độ bằng con số cụ thể.',
+      'Bạn đứng vững trước áp lực, kể cả khi phải nói “không” với một khách hàng lớn.',
+      'Bạn biết định giá đúng sản phẩm và công sức, không bán rẻ mình.',
     ],
     watchOut: [
-      'Đặt hiệu quả lên trên cảm xúc của người làm cùng.',
-      'Dễ lấy chức danh và thu nhập để đo giá trị bản thân.',
+      'Bạn có thể đặt hiệu quả lên trên cảm xúc của người làm cùng.',
+      'Bạn dễ gắn giá trị bản thân với chức danh và thu nhập.',
     ],
     advice: [
-      'Trước mỗi quyết định lớn, hỏi thêm một câu: quyết định này ảnh hưởng thế nào tới người trong nhóm.',
-      'Thử kèm một người trẻ hơn. Bạn sẽ thấy mình có sức ảnh hưởng theo một cách khác.',
+      'Với mỗi quyết định lớn, bạn hỏi thêm một câu: quyết định này ảnh hưởng thế nào tới người trong nhóm.',
+      'Dành thời gian kèm một người trẻ hơn. Bạn sẽ thấy sức ảnh hưởng của mình theo một cách khác.',
     ],
     fields: ['Quản trị kinh doanh', 'Tài chính, ngân hàng', 'Bất động sản', 'Luật', 'Điều hành dự án'],
   },
 
   9: {
-    title: 'Vì nhiều người',
+    title: 'Người làm vì nhiều người',
     keywords: ['Nhân văn', 'Nhìn xa', 'Cống hiến'],
     summary:
-      'Biết việc mình làm có ích cho nhiều người, số sứ mệnh 9 mới thật sự dốc sức. Bạn nhìn vấn đề rộng và dễ đồng cảm với những hoàn cảnh khác mình. Người ta thấy ở bạn một người tử tế và có lý tưởng. Việc cần làm là biến lý tưởng ấy thành những việc cụ thể, có điểm kết thúc rõ ràng.',
+      'Số sứ mệnh 9 cho thấy bạn phát huy năng lực tốt nhất khi công việc có ích cho nhiều người. Bạn nhìn vấn đề rộng và dễ đồng cảm với những hoàn cảnh khác mình. Người ta thấy ở bạn một người tử tế và có lý tưởng. Thử thách của bạn là biến lý tưởng thành việc làm cụ thể, có điểm kết thúc rõ ràng.',
     strengths: [
-      'Nói được ý nghĩa của công việc, giúp người khác thấy mình đang góp vào điều gì.',
-      'Làm việc tốt với người từ nhiều vùng miền và hoàn cảnh.',
-      'Cảm xúc tinh tế, hợp với những công việc cần nói trúng lòng người.',
+      'Bạn nói được ý nghĩa của công việc, giúp người khác thấy mình đang góp vào điều gì.',
+      'Bạn làm việc tốt với người đến từ nhiều vùng miền và hoàn cảnh.',
+      'Bạn có cảm xúc tinh tế, hợp với những công việc chạm tới lòng người.',
     ],
     watchOut: [
-      'Ôm mục tiêu quá lớn rồi thấy mình nhỏ bé.',
-      'Tin việc mình làm là tốt nên quên tính tới tiền bạc, chi phí.',
+      'Bạn dễ ôm những mục tiêu quá lớn rồi thấy mình nhỏ bé.',
+      'Bạn có thể bỏ qua chuyện tiền bạc và chi phí khi làm một việc mình tin là tốt.',
     ],
     advice: [
-      'Với mỗi lý tưởng, viết ra một việc nhỏ làm được ngay trong tháng này.',
-      'Tham gia dự án cộng đồng thì hỏi rõ ngân sách và vai trò, để khỏi gánh quá sức.',
+      'Với mỗi lý tưởng, bạn viết ra một việc nhỏ làm được ngay trong tháng này.',
+      'Khi tham gia dự án cộng đồng, bạn hỏi rõ ngân sách và vai trò để không gánh quá sức.',
     ],
     fields: ['Phi lợi nhuận, phát triển cộng đồng', 'Giáo dục', 'Nghệ thuật', 'Y tế cộng đồng', 'Quan hệ quốc tế'],
   },
 
   11: {
-    title: 'Truyền cảm hứng',
+    title: 'Người truyền cảm hứng',
     keywords: ['Cảm hứng', 'Trực giác', 'Nhìn trước'],
     summary:
-      'Số sứ mệnh 11 đóng góp nhiều nhất qua ý tưởng, và qua cách khiến người khác tin vào ý tưởng đó. Bạn hay thấy một hướng đi trước khi mọi người kịp nhận ra. Nghe bạn nói về điều mình tin, người ta dễ bị cuốn theo. Có cảm hứng rồi thì cần thêm một kế hoạch rõ ràng để mọi thứ thực tế hơn.',
+      'Số sứ mệnh 11 cho thấy bạn đóng góp mạnh nhất qua ý tưởng và khả năng khiến người khác tin vào nó. Bạn hay thấy một hướng đi trước khi mọi người kịp nhận ra. Khi bạn nói về điều mình tin, người nghe thường bị cuốn theo. Thử thách của bạn là đặt chân xuống đất, ghép cảm hứng với một kế hoạch rõ ràng.',
     strengths: [
-      'Bắt xu hướng sớm, như nhận ra một thói quen mới của khách hàng trước khi số liệu kịp cho thấy.',
-      'Nói chuyện khiến người nghe xúc động, hợp với những vai trò cần thuyết phục hay động viên người khác.',
-      'Nhạy với chuyện tinh thần của những người làm cùng.',
+      'Bạn nắm bắt xu hướng sớm, như nhận ra một thói quen mới của khách hàng trước khi số liệu kịp cho thấy.',
+      'Bạn nói chuyện chạm tới cảm xúc, hợp với những vai trò cần thuyết phục hay động viên người khác.',
+      'Bạn nhạy với nhu cầu tinh thần của những người làm cùng.',
     ],
     watchOut: [
-      'Phải lo quá nhiều việc vụn vặt là căng thẳng.',
-      'Mê ý tưởng quá mà quên kiểm tra xem có làm được không.',
+      'Bạn dễ căng thẳng khi phải xử lý quá nhiều việc vụn vặt.',
+      'Bạn có thể bị cuốn vào ý tưởng mà quên kiểm tra xem nó có làm được không.',
     ],
     advice: [
-      'Bắt cặp với một người giỏi triển khai để biến ý tưởng thành sản phẩm.',
-      'Trước khi trình bày một ý tưởng, chuẩn bị sẵn ba bước làm đầu tiên.',
+      'Bắt cặp với một người giỏi thực thi để biến ý tưởng của bạn thành sản phẩm.',
+      'Trước khi trình bày một ý tưởng, bạn chuẩn bị sẵn ba bước làm đầu tiên.',
     ],
     fields: ['Diễn giả, đào tạo', 'Sáng tạo nội dung', 'Tư vấn', 'Nghệ thuật', 'Hoạt động xã hội'],
   },
 
   22: {
-    title: 'Dựng cả hệ thống',
+    title: 'Người dựng hệ thống',
     keywords: ['Nhìn xa', 'Thực thi', 'Tổ chức'],
     summary:
-      'Những việc quy mô lớn, cần cả tầm nhìn lẫn sự tỉ mỉ, là chỗ số sứ mệnh 22 (viết là 22/4) đóng góp được nhiều nhất. Bạn hình dung được cả hệ thống và biết từng viên gạch phải đặt ở đâu. Việc phức tạp, người ta yên tâm giao cho bạn. Tiến độ thực tế bao giờ cũng chậm hơn mong muốn, và bạn cần chấp nhận rằng mọi thứ không thể hoàn hảo ngay.',
+      'Số sứ mệnh 22, viết là 22/4, cho thấy bạn có thể đóng góp ở quy mô lớn, nơi cần cả tầm nhìn lẫn sự tỉ mỉ. Bạn hình dung được cả một hệ thống và biết từng viên gạch cần đặt ở đâu. Người khác tin tưởng giao cho bạn những việc phức tạp. Thử thách của bạn là chấp nhận tiến độ thực tế và không đòi mọi thứ phải hoàn hảo ngay.',
     strengths: [
-      'Thiết kế được quy trình cho cả tổ chức, không chỉ cho riêng mình.',
-      'Bền bỉ với những dự án kéo dài nhiều năm.',
-      'Ghép được người có ý tưởng với người làm thực tế.',
+      'Bạn thiết kế được quy trình cho cả tổ chức, không chỉ cho riêng mình.',
+      'Bạn bền bỉ với những dự án kéo dài nhiều năm.',
+      'Bạn ghép được người có ý tưởng với người làm thực tế.',
     ],
     watchOut: [
-      'Muốn làm việc lớn nên tự tạo áp lực quá sức.',
-      'Sợ người khác làm sai nên ôm hết phần quan trọng.',
+      'Bạn có thể tự tạo áp lực quá lớn vì muốn làm việc to tát.',
+      'Bạn dễ ôm hết phần quan trọng vì sợ người khác làm không đúng.',
     ],
     advice: [
-      'Viết hướng dẫn cho những việc mình đang làm, để người khác nhận lại được.',
-      'Chia dự án thành từng giai đoạn, và chấp nhận mỗi giai đoạn có vài lỗi nhỏ.',
+      'Viết tài liệu hướng dẫn cho những việc bạn đang làm, để người khác có thể tiếp nhận.',
+      'Chia dự án thành từng giai đoạn và cho phép mỗi giai đoạn có vài sai sót nhỏ.',
     ],
     fields: ['Kiến trúc, quy hoạch', 'Kỹ thuật hệ thống', 'Quản lý chương trình lớn', 'Khởi nghiệp công nghệ', 'Hành chính công'],
   },
 
   33: {
-    title: 'Nâng đỡ người sau',
+    title: 'Người dẫn dắt bằng tấm gương',
     keywords: ['Tận tuỵ', 'Dạy dỗ', 'Nâng đỡ'],
     summary:
-      'Viết là 33/6, số sứ mệnh này thể hiện rõ nhất khi bạn nâng đỡ người khác lớn lên. Bạn có thể là người thầy, người hướng dẫn hay người quản lý mà ai cũng muốn làm cùng. Thấy bạn tận tuỵ, người khác cũng muốn cố gắng hơn. Chăm cho người khác bao nhiêu thì cũng phải chừa sức cho mình bấy nhiêu.',
+      'Số sứ mệnh 33, viết là 33/6, cho thấy bạn thể hiện năng lực rõ nhất khi nâng đỡ người khác lớn lên. Bạn có thể là người thầy, người hướng dẫn hay người quản lý mà ai cũng muốn làm cùng. Sự tận tuỵ của bạn khiến người khác muốn cố gắng hơn. Thử thách của bạn là chăm cho người khác mà vẫn giữ được sức cho mình.',
     strengths: [
-      'Kèm người mới rất có tâm, biết khen đúng lúc, sửa đúng chỗ.',
-      'Ở cạnh bạn, người khác dám hỏi, dám sai mà không sợ bị chê.',
-      'Sống theo những nguyên tắc rõ ràng, nên lời khuyên của bạn có trọng lượng.',
+      'Bạn kèm người mới rất có tâm, biết khen đúng lúc và sửa đúng chỗ.',
+      'Bạn tạo ra một môi trường an toàn để người khác dám hỏi và dám sai.',
+      'Bạn sống theo những giá trị rõ ràng, nên lời khuyên của bạn có trọng lượng.',
     ],
     watchOut: [
-      'Nhận giúp quá nhiều người cùng một lúc.',
-      'Mỗi lần đặt nhu cầu của mình lên trước là thấy có lỗi.',
+      'Bạn dễ nhận giúp quá nhiều người cùng một lúc.',
+      'Bạn có thể thấy có lỗi mỗi khi đặt nhu cầu của mình lên trước.',
     ],
     advice: [
-      'Giới hạn số người mình trực tiếp hướng dẫn, và chọn những người phù hợp nhất.',
-      'Ghi giờ nghỉ vào lịch như một cuộc hẹn, và giữ đúng hẹn đó.',
+      'Giới hạn số người bạn trực tiếp hướng dẫn, và chọn những người phù hợp nhất.',
+      'Lên lịch nghỉ ngơi giống như lên lịch họp, và giữ nó như một lời hẹn.',
     ],
     fields: ['Giáo dục, đào tạo', 'Tư vấn tâm lý', 'Y tế', 'Quản lý con người', 'Công tác xã hội'],
   },

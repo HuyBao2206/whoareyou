@@ -1,243 +1,243 @@
-// Số linh hồn. Quy tắc văn phong: CLAUDE.md (mục “Văn phong”).
+// Số linh hồn: BẢN CŨ, chờ viết lại ở Phase 1. Xem review/huong-dan-viet-than-so-hoc.md.
 
 export default {
   1: {
-    title: 'Tự cầm lái đời mình',
+    title: 'Muốn tự cầm lái',
     keywords: ['Tự chủ', 'Được là mình', 'Khẳng định'],
     summary:
-      'Sâu bên trong, người có số linh hồn 1 mong được làm chủ cuộc đời mình. Người khác quyết thay, dù với ý tốt, bạn vẫn thấy ngột ngạt. Tự tay làm nên một điều gì đó là niềm vui rất lớn của bạn. Có thể bạn không nói ra, nhưng bạn muốn được nhìn nhận là người có bản lĩnh riêng.',
+      'Số linh hồn 1 cho thấy sâu bên trong, bạn mong được làm chủ cuộc đời mình. Bạn thấy ngột ngạt khi người khác quyết định thay, dù họ có ý tốt. Cảm giác tự tay làm nên một điều gì đó mang lại cho bạn niềm vui rất lớn. Bạn có thể không nói ra, nhưng bạn muốn được nhìn nhận là một người có bản lĩnh riêng.',
     strengths: [
-      'Có động lực tự thân, chẳng cần ai thúc vẫn muốn tiến lên.',
-      'Biết mình muốn gì, ít bị đám đông kéo đi.',
-      'Đủ can đảm chọn con đường khác với gia đình hay bạn bè nếu thấy cần.',
+      'Bạn có động lực tự thân, không cần ai thúc vẫn muốn tiến lên.',
+      'Bạn biết mình muốn gì và ít bị đám đông kéo đi.',
+      'Bạn đủ can đảm để chọn con đường khác với gia đình hay bạn bè nếu thấy cần.',
     ],
     watchOut: [
-      'Ngại nhờ giúp vì sợ bị coi là yếu.',
-      'Không được tự quyết thì bực trong lòng mà không nói ra.',
+      'Bạn có thể ngại nhờ giúp vì sợ bị xem là yếu.',
+      'Khi không được tự quyết, bạn dễ bực bội ngầm mà không nói ra.',
     ],
     advice: [
-      'Giữ cho mình một góc hoàn toàn tự quyết, như một dự án riêng hay một sở thích.',
-      'Ngay trong tuần này, tập nói câu “mình cần giúp một chút” với một người tin cậy.',
+      'Tìm một góc trong cuộc sống mà bạn hoàn toàn tự quyết, như một dự án riêng hay một sở thích.',
+      'Trong tuần này, bạn tập nói câu “mình cần giúp một chút” với một người tin cậy.',
     ],
   },
 
   2: {
-    title: 'Được ở bên nhau',
+    title: 'Muốn được ở bên',
     keywords: ['Gắn bó', 'Bình yên', 'Được thấu hiểu'],
     summary:
-      'Điều số linh hồn 2 mong nhất là sự gắn bó và hoà thuận. Chỉ cần có một người để kể chuyện trong ngày, dù là vài tin nhắn trước khi ngủ, bạn đã thấy bình yên. Cãi vã, kể cả chuyện chẳng dính gì tới bạn, cũng làm bạn bất an. Trong lòng, bạn muốn được hiểu mà không phải giải thích nhiều.',
+      'Số linh hồn 2 cho thấy điều bạn mong nhất là sự gắn bó và hoà thuận. Bạn thấy bình yên khi có một người để kể chuyện trong ngày, dù chỉ là vài tin nhắn trước khi ngủ. Những cuộc cãi vã, kể cả không liên quan tới bạn, cũng làm bạn bất an. Sâu trong lòng, bạn muốn được hiểu mà không phải giải thích quá nhiều.',
     strengths: [
-      'Quý các mối quan hệ, giữ liên lạc với người thân rất đều.',
-      'Cảm được người khác đang cần gì, nên là một người bạn, người thương chu đáo.',
-      'Tìm được niềm vui trong những điều nhỏ, như một bữa cơm đủ mặt cả nhà.',
+      'Bạn quý các mối quan hệ và giữ liên lạc với người thân rất đều đặn.',
+      'Bạn cảm được nhu cầu của người khác, nên là một người bạn, người thương chu đáo.',
+      'Bạn tìm được niềm vui trong những điều nhỏ, như một bữa cơm có đủ mặt cả nhà.',
     ],
     watchOut: [
-      'Gác mong muốn của mình lại để giữ hoà khí.',
-      'Phải ở một mình lâu là thấy trống trải.',
+      'Bạn có thể gác mong muốn của mình lại để giữ hoà khí.',
+      'Bạn dễ thấy trống trải khi phải ở một mình lâu.',
     ],
     advice: [
-      'Viết ra ba điều bạn muốn cho riêng mình, không dính dáng tới ai khác.',
-      'Thử ở một mình một buổi mà vẫn thấy dễ chịu, như đi uống cà phê hay xem phim một mình.',
+      'Viết ra ba điều bạn muốn cho riêng mình, không liên quan tới ai khác.',
+      'Tập ở một mình một buổi mà vẫn thấy dễ chịu, như đi uống cà phê hay xem phim một mình.',
     ],
   },
 
   3: {
-    title: 'Được vui, được nói',
+    title: 'Muốn được vui và được nói',
     keywords: ['Niềm vui', 'Tự do biểu đạt', 'Được lắng nghe'],
     summary:
-      'Số linh hồn 3 mang trong lòng mong muốn được sống vui và được nói ra điều mình nghĩ. Lúc sáng tạo, kể chuyện hay làm người khác bật cười là lúc bạn thấy hăng hái nhất. Một cuộc sống chỉ có việc và việc, nghiêm túc từ sáng tới tối, làm bạn héo dần. Bạn mong có người chịu nghe cả những ý tưởng nhỏ nhặt của mình mà không phán xét.',
+      'Số linh hồn 3 cho thấy bên trong bạn là mong muốn được sống vui và được nói ra điều mình nghĩ. Bạn thấy mình sống động nhất khi được sáng tạo, kể chuyện hay làm người khác bật cười. Một cuộc sống quá nghiêm túc, chỉ có việc và việc, làm bạn héo đi. Bạn mong có người lắng nghe cả những ý tưởng nhỏ nhặt của mình mà không phán xét.',
     strengths: [
-      'Biết tìm niềm vui ngay trong những ngày bình thường.',
-      'Giàu trí tưởng tượng, thích làm ra những thứ mới.',
-      'Lạc quan, khiến người xung quanh nhẹ lòng hơn.',
+      'Bạn biết tìm niềm vui ngay trong những ngày bình thường.',
+      'Bạn giàu trí tưởng tượng và thích làm ra những thứ mới.',
+      'Bạn lạc quan, giúp người xung quanh nhẹ lòng hơn.',
     ],
     watchOut: [
-      'Lúc nào cũng tỏ ra vui để khỏi phải đối diện với cảm xúc nặng nề.',
-      'Ý tưởng bị gạt đi là buồn.',
+      'Bạn có thể né những cảm xúc nặng nề bằng cách lúc nào cũng tỏ ra vui vẻ.',
+      'Bạn dễ buồn khi ý tưởng của mình bị gạt đi.',
     ],
     advice: [
-      'Mỗi tuần chừa chỗ cho một việc sáng tạo, như vẽ, hát hay viết.',
-      'Lần tới thấy buồn, thử nói thật với một người bạn thay vì đùa cho qua.',
+      'Dành chỗ cho một hoạt động sáng tạo mỗi tuần, như vẽ, hát hay viết.',
+      'Khi buồn, bạn thử nói thật với một người bạn thay vì đùa cho qua.',
     ],
   },
 
   4: {
-    title: 'Có chỗ dựa vững',
+    title: 'Muốn có chỗ dựa vững',
     keywords: ['Ổn định', 'An toàn', 'Rõ ràng'],
     summary:
-      'Một cuộc sống ổn định, có trật tự là thứ số linh hồn 4 cần để yên lòng. Biết tháng sau đủ tiền tiêu, nhà cửa gọn gàng, kế hoạch rõ ràng là bạn thấy yên tâm. Thay đổi đột ngột dễ làm bạn mất ngủ hơn người khác. Sâu trong lòng, bạn muốn dựng một nền nhà vững cho mình và người thân.',
+      'Số linh hồn 4 cho thấy bạn mong một cuộc sống ổn định và có trật tự. Bạn thấy yên tâm khi biết tháng sau đủ tiền tiêu, nhà cửa gọn gàng và kế hoạch rõ ràng. Những thay đổi đột ngột làm bạn mất ngủ hơn người khác. Sâu bên trong, bạn muốn xây một nền nhà vững cho mình và người thân.',
     strengths: [
-      'Biết giữ gìn những gì mình có, từ đồ đạc tới các mối quan hệ lâu năm.',
-      'Có kế hoạch cho tương lai, kể cả những khoản để dành nhỏ.',
-      'Trung thực, muốn mọi thứ minh bạch.',
+      'Bạn biết giữ gìn những gì mình có, từ đồ đạc tới các mối quan hệ lâu năm.',
+      'Bạn có kế hoạch cho tương lai, kể cả những khoản để dành nhỏ.',
+      'Bạn trung thực và muốn mọi thứ minh bạch.',
     ],
     watchOut: [
-      'Bỏ qua cơ hội tốt chỉ vì nó có rủi ro.',
-      'Hay lo xa, lo cả những chuyện chưa chắc đã xảy ra.',
+      'Bạn có thể bỏ qua cơ hội tốt vì nó đi kèm rủi ro.',
+      'Bạn dễ lo xa, lo cả những chuyện chưa chắc sẽ xảy ra.',
     ],
     advice: [
-      'Để riêng một khoản dự phòng nhỏ. Có nó rồi thì yên tâm mà vẫn dám thử điều mới.',
-      'Mỗi lần lo lắng, viết ra điều tệ nhất có thể xảy ra và cách mình sẽ xử lý. Viết ra rồi, nỗi lo thường bớt đáng sợ.',
+      'Lập một khoản dự phòng nhỏ để bạn thấy an toàn mà vẫn dám thử điều mới.',
+      'Mỗi khi lo lắng, bạn viết ra điều tệ nhất có thể xảy ra và cách mình sẽ xử lý. Nỗi lo sẽ có hình dạng rõ hơn và bớt đáng sợ.',
     ],
   },
 
   5: {
-    title: 'Khao khát tự do',
+    title: 'Muốn được tự do',
     keywords: ['Tự do', 'Trải nghiệm', 'Không bị gò bó'],
     summary:
-      'Tự do là điều số linh hồn 5 khao khát nhất. Bạn muốn đi đây đi đó, tự chọn cách sống, không bị trói vào một khuôn khổ cố định. Lịch kín mít từ sáng tới tối là bạn thấy ngộp. Trong bạn lúc nào cũng có một phần muốn biết bên kia ngọn đồi có gì.',
+      'Số linh hồn 5 cho thấy điều bạn khao khát nhất là tự do. Bạn muốn được đi đây đi đó và tự chọn cách sống của mình, không bị trói vào một khuôn khổ cố định. Một lịch trình kín mít từ sáng tới tối có thể làm bạn thấy ngộp. Bên trong bạn luôn có một phần muốn biết bên kia ngọn đồi có gì.',
     strengths: [
-      'Cởi mở với cái mới, không ngại thay đổi.',
-      'Một chuyến đi ngắn cũng biến được thành kỷ niệm đáng nhớ.',
-      'Hiểu và tôn trọng nhiều lối sống khác nhau.',
+      'Bạn cởi mở với cái mới và không ngại thay đổi.',
+      'Bạn biến những chuyến đi ngắn thành kỷ niệm đáng nhớ.',
+      'Bạn hiểu và tôn trọng nhiều lối sống khác nhau.',
     ],
     watchOut: [
-      'Ngại cam kết lâu dài vì sợ mất tự do.',
-      'Tìm tới cái mới để khỏi phải đối diện với cảm giác chán.',
+      'Bạn có thể ngại cam kết lâu dài vì sợ mất tự do.',
+      'Bạn dễ tìm tới cảm giác mới để khỏi phải đối diện với cảm giác chán.',
     ],
     advice: [
-      'Tìm tự do ngay trong khuôn khổ, như xin làm việc linh hoạt thay vì bỏ hẳn công việc.',
-      'Lúc muốn bỏ đi, tự hỏi mình đang tránh điều gì.',
+      'Tìm tự do ngay trong khuôn khổ, như xin cách làm việc linh hoạt thay vì bỏ hẳn công việc.',
+      'Khi thấy muốn bỏ đi, bạn tự hỏi mình đang tránh điều gì.',
     ],
   },
 
   6: {
-    title: 'Một mái nhà ấm',
+    title: 'Muốn một mái nhà ấm',
     keywords: ['Yêu thương', 'Gia đình', 'Được cần đến'],
     summary:
-      'Ước mong lớn nhất của số linh hồn 6 là một mái nhà ấm, có những người thân yêu ở quanh mình. Được chăm sóc người khác và được họ cần đến là bạn thấy hạnh phúc. Một bữa cơm đông đủ có khi làm bạn vui hơn cả món quà đắt tiền. Bạn chỉ mong những người mình thương đều được bình an.',
+      'Số linh hồn 6 cho thấy bạn mong có một mái nhà ấm áp và những người thân yêu ở quanh mình. Bạn thấy hạnh phúc khi được chăm sóc người khác và được họ cần đến. Một bữa cơm đông đủ có thể làm bạn vui hơn cả một món quà đắt tiền. Sâu bên trong, bạn muốn những người mình thương đều được bình an.',
     strengths: [
-      'Thương ai là thương thật lòng, và thể hiện bằng việc làm cụ thể.',
-      'Ở cạnh bạn, người khác thấy mình có chỗ thuộc về.',
-      'Rất có trách nhiệm với gia đình.',
+      'Bạn yêu thương thật lòng và thể hiện bằng việc làm cụ thể.',
+      'Bạn khiến người khác thấy mình thuộc về một nơi nào đó.',
+      'Bạn có tinh thần trách nhiệm cao với gia đình.',
     ],
     watchOut: [
-      'Người khác có ổn thì mình mới vui, nên niềm vui của bạn cứ phụ thuộc vào họ.',
-      'Dành thời gian cho riêng mình là thấy có lỗi.',
+      'Bạn có thể để niềm vui của mình phụ thuộc vào việc người khác có ổn không.',
+      'Bạn dễ thấy có lỗi khi dành thời gian cho riêng mình.',
     ],
     advice: [
       'Nhắc mình rằng chăm cho bản thân cũng là một cách chăm cho gia đình.',
-      'Tập để người thân tự lo chuyện của họ, khi nào được nhờ hãy giúp.',
+      'Tập để người thân tự giải quyết chuyện của họ, và chỉ giúp khi được nhờ.',
     ],
   },
 
   7: {
-    title: 'Hiểu cho tận cùng',
+    title: 'Muốn hiểu cho tận cùng',
     keywords: ['Hiểu biết', 'Yên tĩnh', 'Sự thật'],
     summary:
-      'Bên trong số linh hồn 7 là mong muốn hiểu thấu mọi chuyện, kể cả chính mình. Bạn cần những khoảng lặng để nghĩ, và một ngày không có phút nào yên tĩnh làm bạn rất mệt. Với bạn, sự thật quý hơn những lời nói cho dễ nghe. Có vài người thật sự hiểu mình là đủ, bạn không cần quen thật nhiều người.',
+      'Số linh hồn 7 cho thấy bên trong bạn là mong muốn được hiểu thấu mọi chuyện, kể cả chính mình. Bạn cần những khoảng lặng để nghĩ, và một ngày không có phút nào yên tĩnh làm bạn rất mệt. Bạn coi trọng sự thật hơn những lời nói cho dễ nghe. Bạn mong có vài người thật sự hiểu mình, hơn là có thật nhiều người quen.',
     strengths: [
-      'Ở một mình vẫn không thấy chán, vì trong đầu lúc nào cũng có chuyện để nghĩ.',
-      'Tìm ý nghĩa sâu xa chứ không dừng ở bề ngoài.',
-      'Trung thực với cảm nhận của mình.',
+      'Bạn có đời sống bên trong phong phú và biết tự làm mình vui.',
+      'Bạn tìm ý nghĩa sâu xa thay vì dừng ở bề ngoài.',
+      'Bạn trung thực với cảm nhận của mình.',
     ],
     watchOut: [
-      'Gặp chuyện buồn là thu mình lại.',
-      'Dễ nghi ngờ lòng tốt của người khác.',
+      'Bạn có thể tự thu mình lại mỗi khi gặp chuyện buồn.',
+      'Bạn dễ nghi ngờ lòng tốt của người khác.',
     ],
     advice: [
-      'Giữ một góc riêng trong nhà, dù nhỏ, để có chỗ yên tĩnh.',
-      'Mỗi tuần ít nhất một lần, kể điều mình đang nghĩ cho một người bạn tin.',
+      'Giữ một góc riêng trong nhà, dù nhỏ, để bạn có chỗ yên tĩnh.',
+      'Mỗi tuần, chia sẻ điều mình đang nghĩ với một người bạn tin ít nhất một lần.',
     ],
   },
 
   8: {
-    title: 'Làm nên chuyện',
+    title: 'Muốn làm nên chuyện',
     keywords: ['Thành tựu', 'Tự chủ tài chính', 'Được tôn trọng'],
     summary:
-      'Số linh hồn 8 ôm trong lòng mong muốn làm nên thành tựu và được người khác tôn trọng. Bạn muốn tự đứng vững về tiền bạc, không phải trông vào ai. Thấy kết quả cụ thể từ công sức mình bỏ ra là bạn thoả mãn. Ngoài miệng có thể không nói, nhưng bạn muốn chứng minh rằng mình làm được.',
+      'Số linh hồn 8 cho thấy sâu bên trong, bạn mong đạt được thành tựu và được người khác tôn trọng. Bạn muốn tự đứng vững về tiền bạc, không phải trông vào ai. Nhìn thấy kết quả cụ thể từ công sức của mình khiến bạn thấy thoả mãn. Bạn có thể không nói ra, nhưng bạn muốn chứng minh rằng mình làm được.',
     strengths: [
-      'Có động lực mạnh để vượt qua khó khăn.',
-      'Hiểu giá trị của đồng tiền và của công sức.',
-      'Muốn gây dựng một cơ ngơi bền vững cho bản thân và gia đình.',
+      'Bạn có động lực mạnh để vượt qua khó khăn.',
+      'Bạn hiểu giá trị của đồng tiền và của công sức.',
+      'Bạn muốn xây một điều gì đó bền vững cho bản thân và gia đình.',
     ],
     watchOut: [
-      'Thu nhập chững lại là thấy bất an.',
-      'Hay so mình với những người đi nhanh hơn.',
+      'Bạn có thể thấy bất an mỗi khi thu nhập chững lại.',
+      'Bạn dễ so sánh mình với những người đi nhanh hơn.',
     ],
     advice: [
-      'Viết ra thành công nghĩa là gì theo cách của riêng bạn, không mượn của ai.',
-      'Cuối mỗi tháng ghi lại vài việc nhỏ đã làm được. Đâu cần đợi tới thành tựu lớn mới được vui.',
+      'Viết ra định nghĩa thành công theo cách riêng của bạn, không mượn của ai.',
+      'Ghi lại những thành tựu nhỏ mỗi tháng, đừng đợi tới thành tựu lớn mới cho phép mình vui.',
     ],
   },
 
   9: {
-    title: 'Sống cho có ý nghĩa',
+    title: 'Muốn đời có ý nghĩa',
     keywords: ['Ý nghĩa', 'Cho đi', 'Lòng trắc ẩn'],
     summary:
-      'Sống sao cho có ý nghĩa với người khác là điều số linh hồn 9 mong hơn cả. Đi làm chỉ để kiếm tiền mà không thấy mình giúp được ai, bạn thấy trống trải. Nỗi khổ của cả những người không quen cũng làm bạn động lòng. Bạn mong sau này nhìn lại, mình đã để lại được điều gì đó tốt đẹp.',
+      'Số linh hồn 9 cho thấy điều bạn mong nhất là sống một cuộc đời có ý nghĩa với người khác. Bạn thấy trống trải nếu chỉ làm việc để kiếm tiền mà không thấy mình giúp được ai. Bạn dễ rung động trước nỗi khổ của cả những người không quen. Sâu bên trong, bạn muốn để lại một điều tốt đẹp sau mình.',
     strengths: [
-      'Giàu lòng trắc ẩn, lúc nào cũng sẵn lòng giúp.',
-      'Biết tha thứ, không giữ thù lâu.',
-      'Nhìn đời bằng con mắt rộng lượng.',
+      'Bạn có lòng trắc ẩn và luôn sẵn lòng giúp đỡ.',
+      'Bạn biết tha thứ và không giữ thù lâu.',
+      'Bạn nhìn cuộc sống bằng con mắt rộng lượng.',
     ],
     watchOut: [
-      'Cho đi tới mức quên mất mình cũng có nhu cầu.',
-      'Thế giới không như mình mong là thất vọng.',
+      'Bạn có thể cho đi tới mức quên mất nhu cầu của mình.',
+      'Bạn dễ thất vọng khi thế giới không như bạn mong.',
     ],
     advice: [
-      'Tìm một cách giúp người vừa sức mình và làm đều đặn.',
-      'Ai cảm ơn hay muốn giúp lại thì cứ nhận, đừng ngại.',
+      'Tìm một cách giúp người vừa với sức mình và làm đều đặn.',
+      'Cho phép mình nhận lại, dù là một lời cảm ơn hay một sự giúp đỡ.',
     ],
   },
 
   11: {
-    title: 'Tìm điều sâu xa',
+    title: 'Muốn chạm tới điều sâu xa',
     keywords: ['Trực giác', 'Đời sống tinh thần', 'Cảm hứng'],
     summary:
-      'Cái đẹp, âm nhạc hay một khoảnh khắc lặng yên đều dễ làm số linh hồn 11 xúc động. Trong bạn có nhu cầu tìm một ý nghĩa tinh thần sâu xa. Bạn mong cuộc sống của mình đem lại điều gì đó tốt đẹp cho người khác. Có lúc chính sự nhạy cảm ấy khiến bạn mệt giữa những nơi ồn ào.',
+      'Số linh hồn 11 cho thấy bên trong bạn có nhu cầu tìm kiếm ý nghĩa tinh thần sâu sắc. Bạn nhạy cảm với cái đẹp, với âm nhạc hay một khoảnh khắc lặng yên. Bạn mong cuộc sống của mình truyền được điều gì đó tốt đẹp cho người khác. Đôi khi chính sự nhạy cảm ấy khiến bạn thấy mệt giữa những nơi ồn ào.',
     strengths: [
-      'Trực giác mạnh về con người và tình huống.',
-      'Dễ thấy cái đẹp và ý nghĩa trong những điều bình thường.',
-      'Chỉ cần sống thật với mình là đã truyền được cảm hứng cho người khác.',
+      'Bạn có trực giác mạnh về con người và tình huống.',
+      'Bạn dễ thấy được cái đẹp và ý nghĩa trong những điều bình thường.',
+      'Bạn truyền cảm hứng cho người khác chỉ bằng cách sống thật với mình.',
     ],
     watchOut: [
-      'Ở nơi căng thẳng là cảm xúc dễ quá tải.',
-      'Đặt kỳ vọng rất cao cho bản thân.',
+      'Bạn dễ quá tải cảm xúc khi ở trong môi trường căng thẳng.',
+      'Bạn có thể đặt kỳ vọng rất cao cho bản thân.',
     ],
     advice: [
-      'Tìm một việc giúp mình tĩnh lại, như ngồi yên mười phút mỗi sáng hay đi dạo công viên.',
-      'Viết hoặc vẽ ra những gì mình cảm thấy, đừng để dồn nén trong lòng.',
+      'Tìm một hoạt động giúp bạn tĩnh lại, như ngồi yên mười phút mỗi sáng hay đi dạo trong công viên.',
+      'Viết hoặc vẽ ra những gì bạn cảm nhận, để nó có chỗ đi thay vì dồn lại trong lòng.',
     ],
   },
 
   22: {
-    title: 'Để lại điều lâu bền',
+    title: 'Muốn để lại điều lâu bền',
     keywords: ['Để lại dấu ấn', 'Xây dựng', 'Có ích thật'],
     summary:
-      'Viết là 22/4, số linh hồn này mong tạo ra điều gì đó lâu bền, có ích cho nhiều người. Vài thành công lẻ tẻ không làm bạn thoả mãn, bạn muốn thấy công sức của mình góp vào một thứ lớn hơn. Bạn cần ổn định để xây, nhưng thứ bạn nhắm tới rộng hơn bốn bức tường nhà mình. Vì áp lực tự đặt ra, có lúc bạn khó mà thả lỏng.',
+      'Số linh hồn 22, viết là 22/4, cho thấy bạn mong tạo ra điều gì đó lâu bền và có ích cho nhiều người. Bạn không thoả mãn với những thành công lẻ tẻ mà muốn thấy công sức của mình góp vào một thứ lớn hơn. Bạn cần sự ổn định để xây, nhưng điều bạn nhắm tới rộng hơn bốn bức tường nhà mình. Áp lực tự đặt ra có lúc khiến bạn khó thả lỏng.',
     strengths: [
-      'Lý tưởng lớn mà vẫn thực tế.',
-      'Kiên trì với những gì mình tin là đáng làm.',
-      'Muốn công việc của mình giúp được cộng đồng.',
+      'Bạn có lý tưởng lớn mà vẫn thực tế.',
+      'Bạn kiên trì với những gì mình tin là đáng làm.',
+      'Bạn muốn công việc của mình giúp được cộng đồng.',
     ],
     watchOut: [
-      'Lúc nào cũng thấy những gì mình làm là chưa đủ.',
-      'Mải nhìn về tương lai nên quên tận hưởng hiện tại.',
+      'Bạn dễ thấy những gì mình đang làm là chưa đủ.',
+      'Bạn có thể quên tận hưởng hiện tại vì mải nhìn về tương lai.',
     ],
     advice: [
       'Viết ra điều bạn muốn để lại sau mười năm, rồi chọn một bước làm được ngay trong năm nay.',
-      'Xong một việc nhỏ thì dừng lại vui với nó một chút, rồi hãy lao vào việc tiếp theo.',
+      'Dành thời gian tận hưởng những thành quả nhỏ trước khi lao vào việc tiếp theo.',
     ],
   },
 
   33: {
-    title: 'Thương người trọn vẹn',
+    title: 'Muốn thương người trọn vẹn',
     keywords: ['Lòng trắc ẩn', 'Che chở', 'Phụng sự'],
     summary:
-      'Với số linh hồn 33 (viết là 33/6), mong muốn sâu nhất là được yêu thương và che chở người khác hết lòng. Giúp được ai đó qua lúc khó khăn là bạn thấy đời mình có ý nghĩa. Nỗi buồn của người khác làm bạn mủi lòng rất nhanh. Điều cần học là giữ lại một phần sức cho chính mình.',
+      'Số linh hồn 33, viết là 33/6, cho thấy sâu bên trong, bạn mong được yêu thương và che chở cho người khác một cách trọn vẹn. Bạn thấy đời mình có ý nghĩa khi giúp được ai đó vượt qua khó khăn. Nỗi buồn của người khác chạm tới bạn rất nhanh. Bạn cần học cách giữ lại một phần sức cho chính mình.',
     strengths: [
-      'Lòng trắc ẩn sâu và chân thành.',
-      'Ở cạnh bạn, người khác thấy yên tâm.',
-      'Sẵn lòng hy sinh cho điều mình tin là đúng.',
+      'Bạn có lòng trắc ẩn sâu và chân thành.',
+      'Bạn khiến người khác thấy an toàn khi ở cạnh.',
+      'Bạn sẵn lòng hy sinh cho điều mình tin là đúng.',
     ],
     watchOut: [
-      'Mang cả nỗi buồn của người khác về nhà.',
-      'Quên rằng mình cũng đáng được chăm sóc.',
+      'Bạn dễ mang nỗi buồn của người khác về nhà.',
+      'Bạn có thể quên rằng mình cũng xứng đáng được chăm sóc.',
     ],
     advice: [
-      'Tập một thói quen nhỏ để xả bớt cảm xúc sau một ngày dài, như tắm nước ấm hay viết nhật ký.',
-      'Lúc giúp người, nhắc mình rằng bạn đi cùng họ chứ không gánh thay họ.',
+      'Tạo một thói quen nhỏ để trút bỏ cảm xúc sau một ngày dài, như tắm nước ấm hay viết nhật ký.',
+      'Khi giúp người, bạn nhắc mình rằng bạn đi cùng họ chứ không gánh thay họ.',
     ],
   },
 };
