@@ -50,13 +50,13 @@
     t('"Bảo Huy" → chuẩn hoá', bh.name, 'BAO HUY');
     t('"Bảo Huy" → Sứ mệnh 9', bh.expression.value, 9);
     t('"Bảo Huy" → Sứ mệnh, phép tính', stepsToString(bh.expression.steps), '2+1+6+8+3+7 = 27 → 2+7 = 9');
-    // Mặc định: Y luôn là nguyên âm (tên tiếng Việt).
-    t('"Bảo Huy" → Linh hồn 8 (A1+O6+U3+Y7 = 17)', stepsToString(bh.soul.steps), '1+6+3+7 = 17 → 1+7 = 8');
-    t('"Bảo Huy" → Linh hồn 8', bh.soul.value, 8);
-    t('"Bảo Huy" → Nhân cách 1 (B2+H8 = 10)', stepsToString(bh.personality.steps), '2+8 = 10 → 1+0 = 1');
-    t('"Bảo Huy" → Nhân cách 1', bh.personality.value, 1);
-    const bhf = nn('Bảo Huy', { yMode: 'foreign' });
-    t('"Bảo Huy", chế độ tên nước ngoài → không đổi (Y đứng cuối từ)', [bhf.expression.value, bhf.soul.value, bhf.personality.value], [9, 8, 1]);
+    // Mặc định: Y theo vị trí. Trong HUY, Y đứng sát U nên là phụ âm.
+    t('"Bảo Huy" → Linh hồn 1 (A1+O6+U3 = 10)', stepsToString(bh.soul.steps), '1+6+3 = 10 → 1+0 = 1');
+    t('"Bảo Huy" → Linh hồn 1', bh.soul.value, 1);
+    t('"Bảo Huy" → Nhân cách 8 (B2+H8+Y7 = 17)', stepsToString(bh.personality.steps), '2+8+7 = 17 → 1+7 = 8');
+    t('"Bảo Huy" → Nhân cách 8', bh.personality.value, 8);
+    const bhv = nn('Bảo Huy', { yMode: 'vowel' });
+    t('"Bảo Huy", Y luôn là nguyên âm → Linh hồn 8, Nhân cách 1, Sứ mệnh 9', [bhv.soul.value, bhv.personality.value, bhv.expression.value], [8, 1, 9]);
 
     const hub = nn('HUB');
     t('"HUB" → Sứ mệnh 4 (13 → 4)', stepsToString(hub.expression.steps), '8+3+2 = 13 → 1+3 = 4');
@@ -117,31 +117,21 @@
     t('Chuỗi tổ hợp NFD vẫn chuẩn hoá đúng', normalizeName('Bảo Huy'), 'BAO HUY');
     t('Khoảng trắng thừa: "  Bảo   Huy  " → BAO HUY', normalizeName('  Bảo   Huy  '), 'BAO HUY');
     const spaced = nn('  Bảo   Huy  ');
-    t('Khoảng trắng thừa không đổi kết quả', [spaced.expression.value, spaced.soul.value, spaced.personality.value], [9, 8, 1]);
+    t('Khoảng trắng thừa không đổi kết quả', [spaced.expression.value, spaced.soul.value, spaced.personality.value], [9, 1, 8]);
     t('Ký tự lạ bị bỏ: "Huy-2 (Bảo)!" → HUY BAO', normalizeName('Huy-2 (Bảo)!'), 'HUY BAO');
     t('Tên gõ dở vẫn giữ khoảng trắng cuối khi đang gõ', normalizeName('Bảo ', { trim: false }), 'BAO ');
     const chips = (s, o) => nameLetters(s, o).map((l) => (l.space ? '_' : l.ch + l.value + (l.vowel ? 'v' : 'c'))).join(' ');
-    t('Chip chữ cái "Bảo Huy" (mặc định)', chips('Bảo Huy'), 'B2c A1v O6v _ H8c U3v Y7v');
+    t('Chip chữ cái "Bảo Huy" (Y theo vị trí)', chips('Bảo Huy'), 'B2c A1v O6v _ H8c U3v Y7c');
+    t('Chip chữ cái "Bảo Huy" (Y luôn là nguyên âm)', chips('Bảo Huy', { yMode: 'vowel' }), 'B2c A1v O6v _ H8c U3v Y7v');
 
-    /* --- Chữ Y --- */
-    const yOf = (s, o) => nameLetters(s, o).filter((l) => l.ch === 'Y').map((l) => (l.vowel ? 'v' : 'c')).join('');
-    const F = { yMode: 'foreign' };
-    t('Mặc định: Y luôn là nguyên âm (Huy, Vy, Thủy, Yến, Nguyễn)',
-      [yOf('Huy'), yOf('Vy'), yOf('Thủy'), yOf('Yến'), yOf('Nguyễn')], ['v', 'v', 'v', 'v', 'v']);
-    t('Mặc định: YOLANDA, Y vẫn là nguyên âm', yOf('YOLANDA'), 'v');
-    t('Tên nước ngoài: chip YOLANDA', chips('YOLANDA', F), 'Y7c O6v L3c A1v N5c D4c A1v');
-    const yol = nn('YOLANDA', F);
-    t('Tên nước ngoài: YOLANDA → Linh hồn 8 (O6+A1+A1)', stepsToString(yol.soul.steps), '6+1+1 = 8');
-    t('Tên nước ngoài: YOLANDA → Nhân cách 1 (Y7+L3+N5+D4 = 19)', stepsToString(yol.personality.steps), '7+3+5+4 = 19 → 1+9 = 10 → 1+0 = 1');
-    t('Tên nước ngoài: YOLANDA → Sứ mệnh 9', yol.expression.value, 9);
-    const yolV = nn('YOLANDA');
-    t('Mặc định: YOLANDA → Linh hồn 6, Nhân cách 3', [yolV.soul.value, yolV.personality.value], [6, 3]);
-    t('Tên nước ngoài: chip LYNN (Y trước phụ âm vẫn là nguyên âm)', chips('LYNN', F), 'L3c Y7v N5c N5c');
-    const lynn = nn('LYNN', F);
-    t('Tên nước ngoài: LYNN → Linh hồn 7, Nhân cách 4, Sứ mệnh 2',
-      [lynn.soul.value, lynn.personality.value, lynn.expression.value], [7, 4, 2]);
-    t('Tên nước ngoài: MAYA → Y là phụ âm, Nhân cách 11 (M4+Y7)', [yOf('MAYA', F), nn('MAYA', F).personality.value], ['c', 11]);
-    t('Tên nước ngoài: Y cuối từ trước khoảng trắng vẫn là nguyên âm ("Ny An")', yOf('Ny An', F), 'v');
+    /* --- Chữ Y theo vị trí --- */
+    const yOf = (s) => nameLetters(s).filter((l) => l.ch === 'Y').map((l) => (l.vowel ? 'v' : 'c')).join('');
+    t('Y theo vị trí: Vy → nguyên âm', yOf('Vy'), 'v');
+    t('Y theo vị trí: My, Ly, Thy → nguyên âm', [yOf('My'), yOf('Ly'), yOf('Thy')], ['v', 'v', 'v']);
+    t('Y theo vị trí: Huy, Duy, Thùy → phụ âm', [yOf('Huy'), yOf('Duy'), yOf('Thùy')], ['c', 'c', 'c']);
+    t('Y theo vị trí: Nguyễn, Quyên, Yến → phụ âm', [yOf('Nguyễn'), yOf('Quyên'), yOf('Yến')], ['c', 'c', 'c']);
+    t('Y theo vị trí: chỉ xét trong cùng một từ ("Vy An")', yOf('Vy An'), 'v');
+    t('Y luôn là nguyên âm: Huy → nguyên âm', nameLetters('Huy', { yMode: 'vowel' }).find((l) => l.ch === 'Y').vowel, true);
     const yCons = nn('Bảo Huy', { yIsVowel: false });
     t('Tuỳ chọn cũ yIsVowel: false vẫn chạy (Y là phụ âm)', [yCons.soul.value, yCons.personality.value, yCons.expression.value], [1, 8, 9]);
 

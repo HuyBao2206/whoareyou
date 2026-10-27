@@ -119,8 +119,7 @@ const isAllowed = (t) => ALLOW_LINES.some((a) => t.replace(/\s+/g, ' ').trim().s
 function checkString(text, where, key, unit) {
   if (!text || isAllowed(text)) return;
   if (text !== text.normalize('NFC')) add('lỗi', where, 'Chuỗi chưa chuẩn NFC', text);
-  // Tên web là tên riêng, không tính vào hạn mức từ.
-  const l = low(text).replace(/thấu hiểu (&|&amp;) phát triển bản thân/g, '');
+  const l = low(text);
 
   for (const b of BANNED) if (count(l, b)) { add('lỗi', where, `Từ cấm “${b}”`, text); break; }
   for (const [c, fix] of CALQUES) if (l.includes(c)) add('lỗi', where, `Cụm dịch “${c}” → ${fix}`, text);

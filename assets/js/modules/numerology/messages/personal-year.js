@@ -1,21 +1,20 @@
-// Năm cá nhân. Quy tắc văn phong: CLAUDE.md (mục “Văn phong”).
-// theme và byQuarter hiện chưa hiển thị trên web.
+// Năm cá nhân: BẢN CŨ, chờ viết lại ở Phase 1. Xem review/huong-dan-viet-than-so-hoc.md.
 
 export default {
   1: {
-    title: 'Gieo hạt',
+    title: 'Năm gieo hạt',
     keywords: ['Bắt đầu', 'Chủ động', 'Mục tiêu mới'],
     summary:
-      'Năm cá nhân số 1 mở đầu một vòng chín năm mới. Việc gì đã ấp ủ lâu, từ một khoá học tới một thói quen mới, năm nay nên bắt tay vào làm. Những gì gieo trong năm này có thể theo bạn vài năm tới, nên chọn kỹ một chút. Năm nay bạn cũng thấy mình đủ sức tự quyết hơn mọi năm.',
+      'Năm cá nhân số 1 mở đầu một vòng chín năm mới. Đây là lúc hợp để bắt tay vào những gì bạn đã ấp ủ, từ một khoá học tới một thói quen mới. Những gì bạn gieo trong năm nay có thể theo bạn vài năm tới, nên bạn chọn kỹ một chút. Bạn sẽ thấy mình có nhiều sức để tự quyết hơn mọi năm.',
     theme: 'Chủ đề của năm là tự khởi động. Bạn không cần đợi ai cho phép hay đợi mọi thứ hoàn hảo, chỉ cần bước bước đầu tiên.',
     doMore: [
-      'Viết ra hai, ba mục tiêu cho năm và dán ở chỗ ngày nào cũng nhìn thấy.',
-      'Đăng ký luôn một việc mới đã chần chừ lâu, như lớp học buổi tối hay một dự án riêng.',
-      'Tập tự quyết những chuyện nhỏ mà không đi hỏi quá nhiều người.',
+      'Viết ra hai hoặc ba mục tiêu cho năm và dán ở chỗ bạn nhìn thấy hằng ngày.',
+      'Đăng ký một việc mới mà bạn đã chần chừ lâu, như lớp học buổi tối hay một dự án riêng.',
+      'Tập tự ra những quyết định nhỏ mà không hỏi quá nhiều người.',
     ],
     doLess: [
-      'Chờ tới lúc “thật sự sẵn sàng”, vì lúc đó hiếm khi tới.',
-      'So điểm xuất phát của mình với người đã đi trước nhiều năm.',
+      'Bớt chờ tới lúc “thật sự sẵn sàng”, vì lúc đó hiếm khi tới.',
+      'Bớt so điểm xuất phát của mình với người đã đi trước nhiều năm.',
     ],
     byQuarter: [
       'Ngồi xuống xem năm cũ đã dạy bạn điều gì, rồi chọn hướng đi chính cho năm nay.',
@@ -26,20 +25,20 @@ export default {
   },
 
   2: {
-    title: 'Vun gốc',
+    title: 'Năm vun gốc',
     keywords: ['Kiên nhẫn', 'Hợp tác', 'Kết nối'],
     summary:
-      'Sau năm số 1, năm cá nhân số 2 đi chậm hơn, và chuyện đó chẳng có gì lạ. Những hạt gieo năm ngoái đang cần thời gian bén rễ. Năm nay hợp để làm cùng người khác, chăm các mối quan hệ và để ý tới chi tiết. Bạn cũng dễ chạnh lòng hơn mọi khi, nên hãy nhẹ tay với chính mình.',
+      'Năm cá nhân số 2 chậm hơn năm trước, và đó là chuyện bình thường. Những hạt bạn gieo năm ngoái đang cần thời gian bén rễ. Năm nay hợp để làm việc cùng người khác, chăm các mối quan hệ và để ý tới chi tiết. Bạn có thể thấy mình nhạy cảm hơn thường lệ, nên hãy nhẹ tay với chính mình.',
     theme: 'Chủ đề của năm là kiên nhẫn và cộng tác. Nhiều việc sẽ đi xa hơn nếu bạn có người đồng hành.',
     doMore: [
-      'Chủ động hẹn gặp những người bạn lâu rồi không liên lạc.',
-      'Nhận làm chung một việc với người giỏi ở mảng bạn còn yếu.',
-      'Chăm chút những chi tiết nhỏ trong công việc, vì năm nay chính chúng làm nên khác biệt.',
+      'Chủ động hẹn gặp những người bạn đã lâu không liên lạc.',
+      'Nhận làm chung một việc với người có thế mạnh khác bạn.',
+      'Để ý tới những chi tiết nhỏ trong công việc, vì năm nay chúng tạo ra khác biệt.',
     ],
     doLess: [
-      'Nóng ruột khi kết quả chưa tới ngay.',
-      'Gật đầu với mọi thứ chỉ để giữ hoà khí.',
-      'Đọc ra quá nhiều ẩn ý từ một tin nhắn hay một ánh mắt.',
+      'Bớt nóng ruột khi kết quả chưa tới ngay.',
+      'Bớt nhận lời mọi thứ chỉ để giữ hoà khí.',
+      'Bớt đọc quá nhiều ý nghĩa vào một tin nhắn hay một ánh mắt.',
     ],
     byQuarter: [
       'Xem lại những việc đã bắt đầu năm ngoái và chọn việc nào đáng chăm tiếp.',
@@ -50,20 +49,20 @@ export default {
   },
 
   3: {
-    title: 'Lên tiếng',
+    title: 'Năm lên tiếng',
     keywords: ['Biểu đạt', 'Sáng tạo', 'Giao lưu'],
     summary:
-      'Không khí năm cá nhân số 3 nhẹ và vui hơn hẳn. Có gì muốn nói, muốn viết, muốn chia sẻ thì đây là năm hợp nhất. Bạn sẽ được rủ đi chơi, đi sự kiện nhiều hơn và quen thêm người mới. Chỉ cần giữ sao cho vui mà không bị kéo đi theo quá nhiều hướng cùng lúc.',
+      'Năm cá nhân số 3 mang không khí nhẹ và vui hơn. Đây là năm hợp để nói ra, viết ra và chia sẻ những gì bạn nghĩ. Bạn có thể được rủ đi chơi, đi sự kiện nhiều hơn và gặp thêm người mới. Điều cần giữ là đừng để niềm vui kéo bạn đi theo quá nhiều hướng cùng lúc.',
     theme: 'Chủ đề của năm là thể hiện bản thân. Ý tưởng của bạn cần được đưa ra ngoài thay vì nằm yên trong sổ.',
     doMore: [
-      'Đưa cho người khác xem một thứ do chính bạn làm, như bài viết, bức ảnh hay một món đồ tự tay làm.',
+      'Chia sẻ một sản phẩm của riêng bạn, như bài viết, bức ảnh hay một món đồ tự làm.',
       'Nhận lời những buổi gặp gỡ giúp bạn quen thêm người hay.',
-      'Thử một việc sáng tạo chưa từng làm.',
+      'Thử một hoạt động sáng tạo bạn chưa từng làm.',
     ],
     doLess: [
-      'Mở thêm dự án mới khi dự án cũ còn dang dở.',
-      'Tiêu tiền theo hứng sau những cuộc vui.',
-      'Buột miệng những câu mà lúc bực nói ra, lúc nguôi lại hối hận.',
+      'Bớt mở thêm dự án khi các dự án cũ còn dang dở.',
+      'Bớt tiêu tiền theo hứng sau những buổi vui.',
+      'Bớt nói những câu bạn biết mình sẽ hối hận khi đang bực.',
     ],
     byQuarter: [
       'Chọn một nơi để thể hiện mình, như một cuốn sổ, một trang cá nhân hay một nhóm cùng sở thích.',
@@ -74,20 +73,20 @@ export default {
   },
 
   4: {
-    title: 'Đặt gạch',
+    title: 'Năm đặt gạch',
     keywords: ['Kỷ luật', 'Xây nền', 'Ổn định'],
     summary:
-      'Bước vào năm cá nhân số 4 là bước vào một năm làm việc thật sự. Bạn sẽ thấy mình bận hơn, phải sắp xếp lại giấy tờ, tiền bạc hay nếp sinh hoạt. Năm này không có gì hào nhoáng, nhưng những gì xây được bây giờ sẽ đỡ cho bạn nhiều năm sau. Cứ chậm mà chắc là được.',
+      'Năm cá nhân số 4 là năm của công việc thật. Bạn có thể thấy mình bận rộn hơn, phải sắp xếp lại giấy tờ, tiền bạc hay nếp sinh hoạt. Năm này không lấp lánh, nhưng những gì bạn xây bây giờ sẽ đỡ bạn trong nhiều năm sau. Bạn cứ đi chậm mà chắc là được.',
     theme: 'Chủ đề của năm là xây nền móng. Những thói quen tốt và kỹ năng bạn rèn trong năm nay là thứ đáng đầu tư nhất.',
     doMore: [
       'Lập một ngân sách đơn giản và theo nó suốt năm.',
-      'Học sâu một kỹ năng giúp ích cho công việc chính.',
+      'Học sâu một kỹ năng giúp ích cho công việc chính của bạn.',
       'Dọn dẹp, sắp xếp lại nhà cửa và các giấy tờ quan trọng.',
     ],
     doLess: [
-      'Tìm đường tắt cho những việc cần thời gian.',
-      'Than mệt mà không chịu đổi cách làm.',
-      'Bỏ bữa, bỏ giấc vì công việc.',
+      'Bớt tìm đường tắt cho những việc cần thời gian.',
+      'Bớt than mệt mà không đổi cách làm.',
+      'Bớt bỏ bữa, bỏ giấc vì công việc.',
     ],
     byQuarter: [
       'Lập kế hoạch cụ thể cho năm, có mốc thời gian và con số rõ ràng.',
@@ -98,20 +97,20 @@ export default {
   },
 
   5: {
-    title: 'Đổi gió',
+    title: 'Năm đổi gió',
     keywords: ['Thay đổi', 'Tự do', 'Trải nghiệm'],
     summary:
-      'Nằm giữa vòng chín năm, năm cá nhân số 5 hay đi kèm nhiều thay đổi. Bạn có thể muốn đi xa, đổi việc, đổi chỗ ở, hay chỉ đơn giản là bỏ một thói quen cũ. Sau một năm làm việc chăm chỉ, giờ là lúc được nới lỏng một chút. Muốn đổi thì nên đổi có chủ đích, đừng đổi chỉ vì chán.',
+      'Năm cá nhân số 5 nằm giữa vòng chín năm và thường mang theo nhiều thay đổi. Bạn có thể muốn đi xa, đổi việc, đổi chỗ ở hay đơn giản là bỏ một thói quen cũ. Sau một năm làm việc chăm chỉ, đây là lúc bạn được nới lỏng một chút. Điều cần giữ là chọn thay đổi có chủ đích, đừng đổi chỉ vì chán.',
     theme: 'Chủ đề của năm là trải nghiệm. Bạn học được nhiều nhất khi bước ra khỏi chỗ quen thuộc.',
     doMore: [
-      'Đi tới một nơi chưa từng tới, dù chỉ là một thị trấn gần nhà.',
-      'Thử một cách làm việc mới, hoặc nhận một nhiệm vụ khác hẳn mọi ngày.',
-      'Gặp gỡ những người sống khác mình.',
+      'Đi tới một nơi bạn chưa từng tới, dù chỉ là một thị trấn gần nhà.',
+      'Thử một cách làm việc mới hoặc nhận một nhiệm vụ khác hẳn thường ngày.',
+      'Gặp gỡ những người có lối sống khác bạn.',
     ],
     doLess: [
-      'Quyết chuyện lớn chỉ sau một buổi tối.',
-      'Chi quá tay cho những thú vui chóng qua.',
-      'Bỏ dở những việc đã hứa với người khác.',
+      'Bớt ra quyết định lớn chỉ trong một buổi tối.',
+      'Bớt chi quá tay cho những trải nghiệm chóng qua.',
+      'Bớt bỏ dở những cam kết đã hứa với người khác.',
     ],
     byQuarter: [
       'Liệt kê những thay đổi bạn muốn và xếp theo mức độ quan trọng.',
@@ -122,20 +121,20 @@ export default {
   },
 
   6: {
-    title: 'Về nhà',
+    title: 'Năm về nhà',
     keywords: ['Gia đình', 'Trách nhiệm', 'Chăm sóc'],
     summary:
-      'Năm cá nhân số 6 kéo bạn về với nhà cửa và những người thân thiết. Năm nay bạn sẽ phải lo nhiều hơn cho bố mẹ, con cái hay một người bạn đang cần giúp. Sửa sang chỗ ở hay hàn gắn một mối quan hệ quan trọng cũng hợp làm vào lúc này. Chăm cho người khác là tốt, miễn đừng bỏ quên bản thân.',
+      'Năm cá nhân số 6 kéo sự chú ý của bạn về nhà và về những người thân thiết. Bạn có thể phải lo nhiều hơn cho bố mẹ, con cái hay một người bạn đang cần giúp. Năm này cũng hợp để sửa sang chỗ ở hoặc vun lại một mối quan hệ quan trọng. Điều cần giữ là chăm cho người khác mà không bỏ quên bản thân.',
     theme: 'Chủ đề của năm là trách nhiệm và tình thương. Những việc nhỏ bạn làm cho người thân sẽ có ý nghĩa hơn bạn nghĩ.',
     doMore: [
-      'Giữ một khoảng thời gian cố định cho gia đình mỗi tuần, như một bữa cơm chung.',
-      'Sửa lại góc nhà hay dùng nhất cho dễ chịu hơn.',
-      'Cần cảm ơn hay xin lỗi thì nói ngay, đừng để dồn lại.',
+      'Dành thời gian cố định cho gia đình mỗi tuần, như một bữa cơm chung.',
+      'Sửa lại góc nhà bạn hay dùng nhất cho dễ chịu hơn.',
+      'Nói lời cảm ơn và lời xin lỗi khi cần, đừng để dồn lại.',
     ],
     doLess: [
-      'Gánh việc của người khác chỉ vì ngại từ chối.',
-      'Đòi mọi thứ trong nhà phải hoàn hảo.',
-      'Ôm hết buồn vui của người thân vào mình.',
+      'Bớt gánh việc của người khác chỉ vì ngại từ chối.',
+      'Bớt đòi hỏi mọi thứ trong nhà phải hoàn hảo.',
+      'Bớt ôm hết cảm xúc của người thân vào mình.',
     ],
     byQuarter: [
       'Xem lại các mối quan hệ quan trọng và chọn một mối quan hệ cần vun vén.',
@@ -146,20 +145,20 @@ export default {
   },
 
   7: {
-    title: 'Lắng lại',
+    title: 'Năm lắng lại',
     keywords: ['Suy ngẫm', 'Học hỏi', 'Nội tâm'],
     summary:
-      'Số 7 mang tới một năm chậm rãi, nghĩ nhiều hơn làm. Bạn sẽ muốn ở một mình nhiều hơn, đọc nhiều hơn và tự hỏi những gì mình đang làm có đúng không. Đó không phải là đi lùi mà là lúc hiểu mình kỹ hơn. Câu trả lời tìm được năm nay sẽ giúp bạn chọn hướng cho năm sau.',
+      'Năm cá nhân số 7 là một năm chậm và hướng vào bên trong. Bạn có thể muốn ở một mình nhiều hơn, đọc nhiều hơn và đặt câu hỏi về những gì mình đang làm. Đó không phải dấu hiệu bạn đi lùi, đó là lúc bạn hiểu mình sâu hơn. Những câu trả lời tìm được năm nay sẽ giúp bạn chọn hướng cho năm sau.',
     theme: 'Chủ đề của năm là học và hiểu. Năm này hợp để đi sâu vào một lĩnh vực, hoặc ngồi lại với chính mình.',
     doMore: [
-      'Chọn một chủ đề và học cho sâu, như một khoá học dài hay vài cuốn sách cùng mảng.',
-      'Mỗi ngày dành một lúc để đi bộ, viết nhật ký hoặc ngồi yên.',
-      'Nghĩ lại vì sao mình chọn công việc, những mối quan hệ và nơi ở hiện tại.',
+      'Chọn một chủ đề và học sâu, như một khoá học dài hay vài cuốn sách cùng mảng.',
+      'Dành thời gian đi bộ, viết nhật ký hoặc ngồi yên một lúc mỗi ngày.',
+      'Xem lại lý do bạn chọn công việc, các mối quan hệ và nơi ở hiện tại.',
     ],
     doLess: [
-      'Ép mình phải có kết quả nhanh.',
-      'Nhận lời những cuộc vui chỉ vì ngại từ chối.',
-      'Thu mình tới mức người thân phải lo.',
+      'Bớt ép mình phải có kết quả nhanh trong năm này.',
+      'Bớt nhận lời những cuộc vui chỉ vì ngại từ chối.',
+      'Bớt thu mình tới mức người thân phải lo lắng.',
     ],
     byQuarter: [
       'Viết ra những câu hỏi lớn bạn đang có về cuộc sống và công việc.',
@@ -170,20 +169,20 @@ export default {
   },
 
   8: {
-    title: 'Cầm lái',
+    title: 'Năm cầm lái',
     keywords: ['Sự nghiệp', 'Thành quả', 'Quản lý tiền bạc'],
     summary:
-      'Công việc và tiền bạc được đẩy lên hàng đầu trong năm cá nhân số 8. Những gì chuẩn bị mấy năm qua có cơ hội được ghi nhận, nếu bạn chủ động đưa chúng ra. Có khi bạn được giao thêm trách nhiệm, có khi chính bạn muốn đòi nhiều hơn cho công sức của mình. Năm này hợp để quản lý tiền chặt hơn và mạnh dạn nói về những gì mình làm được.',
+      'Năm cá nhân số 8 thường đưa công việc và tiền bạc lên hàng đầu. Những gì bạn chuẩn bị trong mấy năm qua có cơ hội được nhìn nhận, nếu bạn chủ động đưa nó ra. Bạn có thể được giao thêm trách nhiệm, hoặc muốn đòi hỏi nhiều hơn cho công sức của mình. Năm này hợp để quản lý tiền chặt hơn và mạnh dạn nói về giá trị của bạn.',
     theme: 'Chủ đề của năm là tin vào năng lực của mình. Bạn nên cầm lái những việc quan trọng thay vì đợi người khác giao.',
     doMore: [
-      'Chuẩn bị số liệu về những gì đã làm được, để có cơ sở khi nói chuyện tăng lương hay xin dự án mới.',
-      'Rà lại các khoản chi, khoản để dành và khoản nợ, rồi lập kế hoạch rõ ràng.',
-      'Nhận những trách nhiệm giúp mình học cách quản lý.',
+      'Chuẩn bị số liệu về những gì bạn đã làm được để nói chuyện tăng lương hay xin dự án mới.',
+      'Rà lại các khoản chi, khoản để dành và khoản nợ, rồi đặt kế hoạch rõ ràng.',
+      'Nhận những trách nhiệm giúp bạn học cách quản lý.',
     ],
     doLess: [
-      'Chi tiêu để chứng tỏ với người khác.',
-      'Hy sinh giấc ngủ và bữa ăn cho công việc.',
-      'Cứng rắn quá mức với người làm cùng.',
+      'Bớt chi tiêu để chứng tỏ với người khác.',
+      'Bớt hy sinh giấc ngủ và bữa ăn cho công việc.',
+      'Bớt cứng rắn quá mức với người làm cùng.',
     ],
     byQuarter: [
       'Đặt mục tiêu công việc và tài chính cụ thể, có con số.',
@@ -194,20 +193,20 @@ export default {
   },
 
   9: {
-    title: 'Khép vòng',
+    title: 'Năm khép vòng',
     keywords: ['Hoàn tất', 'Buông bỏ', 'Bao dung'],
     summary:
-      'Là năm cuối của vòng chín năm, năm cá nhân số 9 dành cho việc dọn dẹp, làm nốt những việc còn dở và buông những gì không còn hợp với bạn. Vài mối quan hệ hay công việc có thể tự đi tới hồi kết. Khoảng trống đó là chỗ để những điều mới bước vào khi năm số 1 tới.',
+      'Năm cá nhân số 9 là năm cuối của vòng chín năm. Đây là lúc dọn dẹp, làm nốt những việc còn dở và buông những gì không còn hợp với bạn. Bạn có thể thấy vài mối quan hệ hay công việc tự nhiên đi tới hồi kết. Khoảng trống đó là chỗ cho những điều mới khi năm số 1 tới.',
     theme: 'Chủ đề của năm là hoàn tất và buông. Việc nào đáng xong thì làm cho xong, việc nào đã hết thì để nó đi.',
     doMore: [
       'Làm nốt những việc dang dở, từ một khoá học tới một món nợ nhỏ với bạn bè.',
-      'Dọn đồ đạc, dọn danh bạ, dọn cả lịch làm việc.',
-      'Đem kinh nghiệm mình có ra giúp người khác.',
+      'Dọn đồ đạc, dọn danh bạ và dọn lịch làm việc.',
+      'Giúp người khác bằng những kinh nghiệm bạn đã có.',
     ],
     doLess: [
-      'Khởi động dự án lớn mới, nên để dành cho năm sau.',
-      'Níu giữ những gì đã rõ là không hợp.',
-      'Ôm giận chuyện cũ.',
+      'Bớt khởi động dự án lớn mới, nên để dành cho năm sau.',
+      'Bớt níu giữ những gì đã rõ là không hợp.',
+      'Bớt ôm giận với chuyện cũ.',
     ],
     byQuarter: [
       'Lập danh sách những việc còn dở và chọn ra việc cần làm xong trước.',

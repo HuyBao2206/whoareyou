@@ -55,12 +55,13 @@ Mỗi thẻ mới phải có: ngăn “Nguồn tham khảo” và dòng “Cập
 
 - `python3 -m http.server` rồi mở `calc.test.html` của từng thẻ (`assets/js/modules/<the>/calc.test.html`): mọi dòng phải “Đạt”.
 - `node tools/check-copy.mjs`: không còn lỗi. Cảnh báo thì đọc lại bằng mắt.
-- `node tools/check-messages.mjs` hiện vẫn báo thiếu `note`, `ORIGINS`, `PERSONAL_MONTH` và thừa `theme`, `byQuarter` ở Năm cá nhân: dữ liệu chưa chuyển sang cấu trúc mới trong `review/huong-dan-viet-than-so-hoc.md`, không phải lỗi do sửa câu chữ.
+- `node tools/check-messages.mjs` hiện vẫn báo thiếu `note`, `ORIGINS`, `PERSONAL_MONTH` và thừa `theme`, `byQuarter` ở Năm cá nhân: dữ liệu Thần số học chưa chuyển sang cấu trúc mới trong `review/huong-dan-viet-than-so-hoc.md`.
+- `check-copy` hiện còn báo lỗi ở chữ của thẻ Thần số học (bản gốc, HUB chưa duyệt bản sửa). Thẻ mới thì phải sạch lỗi.
 - Mở web, xem console không có lỗi (ngoài lỗi tải font/GSAP nếu máy không ra được mạng).
 
 ## Văn phong (mọi chữ người dùng nhìn thấy)
 
-Sửa cách nói, không sửa nội dung: giữ ý, số lượng ý, cấu trúc dữ liệu, tên trường.
+Áp dụng cho chữ viết mới. Chữ của thẻ Thần số học đang giữ bản gốc: HUB chưa ưng bản sửa câu chữ (đã hoàn tác), muốn sửa lại thì hỏi HUB trước.
 
 1. **Không lặp khuôn.** Mỗi đoạn tóm tắt mở và kết một kiểu. Không mở bằng “Người mang số X thường…”, “Số … X cho thấy…”; không kết bằng “Bài học của số X là…”, “Thử thách của bạn là…”. Đọc liền các số trong một nhóm phải không thấy cùng khuôn. Tên gọi (`title`) cũng không đồng loạt “Người…”, “Muốn…”, “Dáng vẻ…”.
 2. **Không câu nào cũng mở bằng “Bạn”.** Đưa trạng ngữ lên đầu, lược chủ ngữ khi đã rõ (“Dễ nghe góp ý thành chê.”).
@@ -81,10 +82,3 @@ Trình bày:
 - Hạn chế dấu chấm than và emoji.
 
 **Giữ nguyên giọng riêng của HUB:** đoạn “Lời của HUB”, câu có “ace”, tiêu đề “Khám phá bản thân qua những thông điệp từ vũ trụ :))))”, chữ ký “— HUB”. Muốn đổi thì hỏi HUB trước.
-
-## Quy tắc chữ Y (bộ tính theo tên)
-
-- **Mặc định:** Y luôn là nguyên âm, đúng với tên tiếng Việt (Huy, Vy, Thủy, Yến). `yMode: 'vowel'`.
-- **Công tắc “Tên nước ngoài”** ngay dưới ô nhập tên (`yMode: 'foreign'`): Y đứng **ngay trước một nguyên âm** trong cùng từ là phụ âm (YOLANDA, MAYA); các trường hợp khác vẫn là nguyên âm (LYNN, HUY).
-- Chip chữ cái, bảng chữ cái và kết quả đổi theo đúng cách tính. Phần “Cách tính” có một câu giải thích công tắc.
-- Code: `yModeOf` và `isVowelAt` trong `calc.js`. Test bắt buộc: “Bảo Huy” mặc định ra Sứ mệnh 9, Linh hồn 8, Nhân cách 1.
