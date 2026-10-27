@@ -22,13 +22,7 @@ const ONLY_ERRORS = process.argv.includes('--errors');
 
 // File nội dung có cấu trúc. Thêm file nội dung của thẻ mới vào đây.
 const MODULES = [
-  'assets/js/modules/numerology/messages/life-path.js',
-  'assets/js/modules/numerology/messages/personal-year.js',
-  'assets/js/modules/numerology/messages/personal-month.js',
-  'assets/js/modules/numerology/messages/expression.js',
-  'assets/js/modules/numerology/messages/soul.js',
-  'assets/js/modules/numerology/messages/personality.js',
-  'assets/js/modules/numerology/messages/origins.js',
+  'assets/js/modules/numerology/messages.js',
   'assets/js/modules/numerology/content.js',
   'assets/js/modules/zodiac/signs.js',
   'assets/js/modules/zodiac/animals.js',

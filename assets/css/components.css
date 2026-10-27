@@ -222,32 +222,41 @@
     var(--surface);
   border-color: color-mix(in srgb, var(--gold) 35%, var(--line));
 }
-.topic--active .topic__glyph {
+.topic--active .topic__cta {
+  justify-self: start;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line));
+  border-radius: var(--r-pill);
+}
+
+/* Kiểu nổi bật (glyph lớn, tên cỡ lớn, nút đặc) chỉ dành cho ô rộng của bento.
+   Thẻ đã mở nằm ở ô thường giữ cỡ chữ và glyph như các thẻ bên cạnh. */
+.topics__item--wide .topic__glyph {
   width: clamp(96px, 14vw, 168px);
   height: clamp(96px, 14vw, 168px);
   justify-self: end;
   margin-top: calc(var(--sp-4) * -1);
 }
-.topic--active .topic__name {
+.topics__item--wide .topic__name {
   font-size: var(--fs-2xl);
   font-weight: 350;
 }
-.topic--active .topic__desc {
+.topics__item--wide .topic__desc {
   font-size: var(--fs-base);
 }
-.topic--active .topic__cta {
-  justify-self: start;
+.topics__item--wide .topic--active .topic__cta {
   min-height: 44px;
   padding: 0 20px;
-  border-radius: var(--r-pill);
+  border: 0;
   background: var(--ink);
   color: var(--paper);
 }
 @media (min-width: 1080px) {
-  .topic--active {
+  .topics__item--wide .topic {
     min-height: 100%;
   }
-  .topic--active .topic__glyph {
+  .topics__item--wide .topic__glyph {
     width: clamp(180px, 17vw, 240px);
     height: clamp(180px, 17vw, 240px);
     justify-self: center;

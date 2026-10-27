@@ -373,13 +373,6 @@
   background: color-mix(in srgb, var(--vowel) 12%, transparent);
   font-weight: 600;
 }
-/* Y tính theo vị trí: lúc là nguyên âm, lúc là phụ âm */
-.alpha__ch.is-ypos {
-  color: var(--vowel);
-  font-weight: 600;
-  outline: 1.5px dashed var(--vowel);
-  outline-offset: -4px;
-}
 
 .legend {
   display: flex;
@@ -405,9 +398,6 @@
 }
 .legend__c::before {
   border: 1.5px solid var(--consonant);
-}
-.legend__y::before {
-  border: 1.5px dashed var(--vowel);
 }
 
 /* Mục thu gọn */
@@ -1010,20 +1000,6 @@
 .msg__summary {
   color: var(--ink-2);
 }
-.msg__note {
-  margin: 0;
-  padding: var(--sp-1) 0 var(--sp-1) var(--sp-4);
-  border-left: 2px solid color-mix(in srgb, var(--c, var(--gold)) 70%, var(--line));
-  font-family: var(--f-display);
-  font-style: italic;
-  font-size: var(--fs-md);
-  font-weight: 350;
-  line-height: 1.55;
-  color: var(--ink);
-}
-.msg__note p {
-  margin: 0;
-}
 .msg__more {
   display: grid;
   gap: var(--sp-5);
@@ -1085,17 +1061,6 @@
 .msg__quarters span {
   font-family: var(--f-display);
   font-style: italic;
-  color: var(--muted);
-}
-.msg__months p {
-  margin: 0;
-}
-.msg__months b {
-  font-weight: 600;
-  color: var(--ink);
-}
-.msg__months i {
-  font-style: normal;
   color: var(--muted);
 }
 .msg__fields {

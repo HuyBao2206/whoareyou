@@ -20,7 +20,7 @@ assets/js/core/               router (hash), overlay, theme, toast, glyphs, moti
 assets/js/modules/numerology/
   calc.js                     hàm tính thuần (dùng được cả trong Node); calc.test.html là trang kiểm thử
   content.js                  chữ phần giới thiệu, cách tính, bộ tính
-  messages.js                 gom thông điệp từ messages/*.js (life-path, personal-year, expression, soul, personality)
+  messages.js                 58 thông điệp của 5 chỉ số, chung một file (bản gốc HUB giữ lại)
   view.js, results.js         giao diện bộ tính, trang kết quả và tra cứu
 assets/js/modules/zodiac/     thẻ Cung hoàng đạo & con giáp ("Hai bầu trời")
   calc.js                     cung theo bảng ngày (±1 ngày là ranh giới), con giáp, nạp âm, tam hợp, ngũ hành,
@@ -55,7 +55,7 @@ Mỗi thẻ mới phải có: ngăn “Nguồn tham khảo” và dòng “Cập
 
 - `python3 -m http.server` rồi mở `calc.test.html` của từng thẻ (`assets/js/modules/<the>/calc.test.html`): mọi dòng phải “Đạt”.
 - `node tools/check-copy.mjs`: không còn lỗi. Cảnh báo thì đọc lại bằng mắt.
-- `node tools/check-messages.mjs` hiện vẫn báo thiếu `note`, `ORIGINS`, `PERSONAL_MONTH` và thừa `theme`, `byQuarter` ở Năm cá nhân: dữ liệu Thần số học chưa chuyển sang cấu trúc mới trong `review/huong-dan-viet-than-so-hoc.md`.
+- `node tools/check-messages.mjs`: phải báo đủ 58 mục. Thẻ Thần số học đang ở bản gốc (cấu trúc `strengths/watchOut/advice`, Năm cá nhân có `theme/doMore/doLess/byQuarter`); bản viết lại theo `review/huong-dan-viet-than-so-hoc.md` đã bị HUB hoàn tác, đừng áp lại nếu HUB chưa yêu cầu.
 - `check-copy` hiện còn báo lỗi ở chữ của thẻ Thần số học (bản gốc, HUB chưa duyệt bản sửa). Thẻ mới thì phải sạch lỗi.
 - Mở web, xem console không có lỗi (ngoài lỗi tải font/GSAP nếu máy không ra được mạng).
 
