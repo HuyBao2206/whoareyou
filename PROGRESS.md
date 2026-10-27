@@ -19,6 +19,19 @@ HUB cần đọc `review/hieu-chinh.md`: 11 đoạn mẫu và danh sách câu ma
 - [x] Danh sách câu mang giọng riêng của HUB cần hỏi: cuối `review/hieu-chinh.md`.
 - [x] Biên tập độc lập cho 11 đoạn mẫu: `review/bien-tap-mau.md` (lượt 1), sửa theo góp ý, chấm lại ở `review/bien-tap-mau-lan-2.md`.
 
+## Đợt 3 thẻ kiến thức (bắt đầu 27/10/2026)
+
+Thứ tự: Nghề nghiệp hôm nay & ngày mai → Kỹ năng nên đầu tư → Giá trị sống. Xong thẻ nào đưa lên `main` thẻ đó.
+Quy trình mỗi thẻ: nghiên cứu (ghi vào `research/`) → dàn ý → viết → thẩm định độc lập (`review/tham-dinh-<the>.md`) → sửa → dựng giao diện → kiểm tra → lên `main`.
+
+| Thẻ | Nghiên cứu | Dàn ý | Viết | Thẩm định | Sửa | Giao diện | Lên web |
+|---|---|---|---|---|---|---|---|
+| Nghề nghiệp hôm nay & ngày mai | đang chạy | | | | | | |
+| Kỹ năng nên đầu tư | đang chạy | | | | | | |
+| Giá trị sống | đang chạy | | | | | | |
+
+File nghiên cứu: `research/nghe-nghiep.md` (thị trường chung), `research/nghe-nghiep-ho-so.md` (hồ sơ từng nghề), `research/ky-nang.md`, `research/gia-tri-song.md`.
+
 ## Việc còn lại
 
 | Phase | Việc | Trạng thái |
