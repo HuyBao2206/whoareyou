@@ -58,9 +58,10 @@ export const config = {
       slug: 'ban-do-tinh-cach',
       nameVi: 'Bản đồ tính cách',
       nameEn: 'Personality Map',
-      desc: 'Một bộ câu hỏi ngắn cho bạn thấy mình nạp năng lượng thế nào, ra quyết định ra sao và hợp kiểu làm việc nào.',
-      status: 'soon',
+      desc: 'Năm mươi câu hỏi theo mô hình Năm yếu tố (Big Five), trả lời xong thành một chòm sao năm ngôi sao về tính cách của bạn.',
+      status: 'active',
       glyph: 'personality',
+      load: () => import('./modules/personality/view.js'),
       soon: [
         'Phần này sẽ là một bộ câu hỏi ngắn về những tình huống rất thường ngày, như cách bạn nghỉ cuối tuần hay cách bạn chia việc trong nhóm.',
         'Kết quả là một tấm bản đồ đơn giản về thói quen của bạn, kèm vài gợi ý để làm việc và giao tiếp dễ chịu hơn.',

@@ -143,7 +143,7 @@ Router, overlay (Flip mở và đóng, vuốt xuống để đóng, nút Back, f
 - [ ] Quyết định các điểm quy ước tính số ở trên (giữ 33 hay không, có viết 11/2 hay không).
 - [ ] Đọc lại 58 thông điệp bằng giọng của mình và chỉnh những chỗ chưa giống cách HUB nói.
 - [ ] Sau khi deploy, dán link vào Facebook hoặc Zalo để xem ảnh chia sẻ hiện đúng chưa.
-- [ ] Viết dần các thẻ còn lại: Cung hoàng đạo & Con giáp, Bản đồ tính cách, Sở thích nghề nghiệp, Nghề nghiệp hôm nay & ngày mai, Kỹ năng nên đầu tư, Giá trị sống.
+- [ ] Viết dần các thẻ còn lại: Nghề nghiệp hôm nay & ngày mai, Kỹ năng nên đầu tư, Giá trị sống.
 
 ## Cấu trúc thư mục
 

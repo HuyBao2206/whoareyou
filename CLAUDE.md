@@ -5,7 +5,8 @@
 “Thấu Hiểu & Phát Triển Bản Thân” của HUB, chạy trên GitHub Pages: https://huybao2206.github.io/whoareyou/
 
 - HTML/CSS/JS thuần (ES modules), **không có bước build**. Đẩy lên `main` là Pages cập nhật.
-- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp** và **Sở thích nghề nghiệp**. 4 thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
+- Đã xong thẻ **Thần số học** (chuẩn mẫu về thiết kế và tổ chức code), **Cung hoàng đạo & con giáp**, **Bản đồ tính cách** và **Sở thích nghề nghiệp**. 3 thẻ còn lại đang “Sắp ra mắt” (chỉ có mô tả trong `config.js`).
+- Thẻ Bản đồ tính cách không hỏi tên hay ngày sinh; câu trả lời chỉ nằm trong bộ nhớ của tab, không lên URL.
 - Mọi phép tính chạy trên trình duyệt. Không lưu, không gửi tên hay ngày sinh đi đâu; URL kết quả chỉ chứa các con số. Riêng mã Holland (3 chữ cái) được giữ trong sessionStorage của tab để các thẻ khác dùng.
 
 ## Cấu trúc thư mục
@@ -27,6 +28,11 @@ assets/js/modules/zodiac/     thẻ Cung hoàng đạo & con giáp ("Hai bầu t
                               chòm sao thật theo ranh giới IAU; calc.test.html là trang kiểm thử
   signs.js, animals.js        12 cung, 12 con giáp; content.js: chữ còn lại và nguồn tham khảo
   rings.js, glyphs.js, view.js  hai vòng trời (SVG) quay rồi khoá, ký hiệu cung, giao diện
+assets/js/modules/personality/ thẻ Bản đồ tính cách ("Chòm sao tính cách", Big Five)
+  items.js                    50 câu IPIP Big-Five Factor Markers: câu gốc tiếng Anh, bản dịch, chiều, khoá thuận/nghịch
+  calc.js                     chấm điểm (đảo câu nghịch, trung bình 1–5, ba mức), tổ hợp, vị trí sao; calc.test.html
+  traits.js                   5 chiều × 3 mức; content.js: chữ còn lại, tổ hợp, hiểu lầm, nguồn
+  view.js                     bài làm từng câu (chấm sáng bay lên trời), chòm sao kết quả, xuất ảnh
 assets/js/modules/career/     thẻ Sở thích nghề nghiệp ("Tổ ong", mô hình Holland RIASEC)
   calc.js                     chấm điểm, mã 3 chữ (điểm bằng nhau thì ra mọi mã có thể), tính nhất quán;
                               calc.test.html là trang kiểm thử
@@ -90,3 +96,9 @@ Trình bày:
 - Hạn chế dấu chấm than và emoji.
 
 **Giữ nguyên giọng riêng của HUB:** đoạn “Lời của HUB”, câu có “ace”, tiêu đề “Khám phá bản thân qua những thông điệp từ vũ trụ :))))”, chữ ký “— HUB”. Muốn đổi thì hỏi HUB trước.
+
+## Thẻ Bản đồ tính cách: lưu ý khi sửa
+
+- Bộ câu và khoá chấm lấy từ IPIP (ipip.ori.org), đã đối chiếu từng câu. Đừng sửa câu tiếng Anh hay dấu `key` trong `items.js`; `calc.test.html` có bản khoá IPIP chép riêng để bắt lỗi.
+- IPIP chấm chiều thứ tư theo “Ổn định cảm xúc”; thẻ đảo thành “Bất ổn cảm xúc”, nên dấu khoá của 10 câu chiều N ngược với trang IPIP.
+- Ngưỡng ba mức (dưới 2,5 / 2,5–3,5 / trên 3,5) chỉ chia trên thang đo, chưa có chuẩn cho người Việt. Trang phải luôn nói rõ điều này.

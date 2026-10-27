@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kiểm thử calc.js · Bản đồ tính cách</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #F5F1EA; color: #141A2E; font: 15px/1.6 system-ui, sans-serif; }
+    h1 { font: 500 22px/1.3 Georgia, serif; margin: 0 0 4px; }
+    #summary { margin: 0 0 20px; font-weight: 600; }
+    #summary.pass { color: #2f6b3a; }
+    #summary.fail { color: #a24a2a; }
+    table { width: 100%; border-collapse: collapse; background: #FBF8F3; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(20,26,46,.12); vertical-align: top; }
+    td.ok { color: #2f6b3a; }
+    td.bad { color: #a24a2a; font-weight: 600; }
+    code { font-size: 13px; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <h1>Kiểm thử: bộ câu IPIP 50 câu, khoá chấm, điểm và mức</h1>
+  <p id="summary">Đang chạy…</p>
+  <table>
+    <thead><tr><th>Kết quả</th><th>Trường hợp</th><th>Mong đợi</th><th>Thực tế</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script type="module">
+    import * as P from './calc.js';
+    import TRAITS from './traits.js';
+    import { COMBOS } from './content.js';
+
+    const tests = [];
+    const t = (name, actual, expected) => tests.push({ name, actual, expected });
+    const I = P.ITEMS;
+
+    /* --- Khoá chấm gốc, chép tay từ trang IPIP (newBigFive5broadKey.htm), độc lập với items.js ---
+       Mỗi dòng: chữ cái chiều theo IPIP (1 Extraversion, 2 Agreeableness, 3 Conscientiousness,
+       4 Emotional Stability, 5 Intellect/Imagination) và dấu khoá trên trang IPIP.
+       Thứ tự 1–50 là thứ tự của bảng hỏi 50 câu (new_ipip-50-item-scale.htm). */
+    const IPIP = [
+      '1+', '2-', '3+', '4-', '5+', '1-', '2+', '3-', '4+', '5-',
+      '1+', '2-', '3+', '4-', '5+', '1-', '2+', '3-', '4+', '5-',
+      '1+', '2-', '3+', '4-', '5+', '1-', '2+', '3-', '4-', '5-',
+      '1+', '2-', '3+', '4-', '5+', '1-', '2+', '3-', '4-', '5+',
+      '1+', '2+', '3+', '4-', '5+', '1-', '2+', '3+', '4-', '5+',
+    ];
+    const DIM = { 1: 'E', 2: 'A', 3: 'C', 4: 'N', 5: 'O' };
+    // Chiều 4 của IPIP là Ổn định cảm xúc; thẻ đọc theo Bất ổn cảm xúc nên dấu đảo lại.
+    const expectKey = (code) => {
+      const s = code[1] === '+' ? 1 : -1;
+      return code[0] === '4' ? -s : s;
+    };
+    t('Có đúng 50 câu, đánh số 1–50 liên tục', I.map((x) => x.n), Array.from({ length: 50 }, (_, i) => i + 1));
+    t('Chiều của từng câu khớp khoá IPIP', I.map((x) => x.d), IPIP.map((c) => DIM[c[0]]));
+    t('Dấu khoá của từng câu khớp khoá IPIP', I.map((x) => x.key), IPIP.map(expectKey));
+    const count = (d, k) => I.filter((x) => x.d === d && x.key === k).length;
+    t('Mỗi chiều có 10 câu', P.DIM_IDS.map((d) => I.filter((x) => x.d === d).length), [10, 10, 10, 10, 10]);
+    t('Số câu nghịch: Cởi mở 3, Tận tâm 4, Hướng ngoại 5, Dễ chịu 4, Bất ổn cảm xúc 2', P.DIM_IDS.map((d) => count(d, -1)), [3, 4, 5, 4, 2]);
+    t('Câu 1 “Am the life of the party.” là Hướng ngoại, thuận', [I[0].en, I[0].d, I[0].key], ['Am the life of the party.', 'E', 1]);
+    t('Câu 4 “Get stressed out easily.” là Bất ổn cảm xúc, thuận (IPIP: Ổn định cảm xúc, nghịch)', [I[3].en, I[3].d, I[3].key], ['Get stressed out easily.', 'N', 1]);
+    t('Câu 9 “Am relaxed most of the time.” là Bất ổn cảm xúc, nghịch', [I[8].en, I[8].d, I[8].key], ['Am relaxed most of the time.', 'N', -1]);
+    t('Câu 2 “Feel little concern for others.” là Dễ chịu, nghịch', [I[1].en, I[1].d, I[1].key], ['Feel little concern for others.', 'A', -1]);
+    t('Câu 50 “Am full of ideas.” là Cởi mở, thuận', [I[49].en, I[49].d, I[49].key], ['Am full of ideas.', 'O', 1]);
+    t('Câu nào cũng có bản dịch tiếng Việt', I.every((x) => typeof x.vi === 'string' && x.vi.length > 8), true);
+    t('Không có câu tiếng Anh trùng nhau', new Set(I.map((x) => x.en)).size, 50);
+
+    /* --- Đảo điểm --- */
+    t('Câu thuận giữ nguyên điểm', [1, 2, 3, 4, 5].map((v) => P.itemScore(v, 1)), [1, 2, 3, 4, 5]);
+    t('Câu nghịch: 6 − câu trả lời', [1, 2, 3, 4, 5].map((v) => P.itemScore(v, -1)), [5, 4, 3, 2, 1]);
+    t('Chưa trả lời hoặc ngoài thang thì không tính', [P.itemScore(null, 1), P.itemScore(0, 1), P.itemScore(6, -1)], [null, null, null]);
+
+    /* --- Điểm trung bình và mức --- */
+    const all = (v) => Array(50).fill(v);
+    const S3 = P.scoreAll(all(3));
+    t('Chọn toàn 3: mọi chiều 3,0, mức trung bình', P.DIM_IDS.map((d) => [S3[d].mean, S3[d].level]), P.DIM_IDS.map(() => [3, 'mid']));
+    const S5 = P.scoreAll(all(5));
+    // Toàn 5: chiều có k câu nghịch được (10 − k)·5 + k·1 = 50 − 4k điểm.
+    t('Chọn toàn 5: điểm = (50 − 4 × số câu nghịch) / 10', P.DIM_IDS.map((d) => S5[d].mean), [3.8, 3.4, 3, 3.4, 4.2]);
+    const S1 = P.scoreAll(all(1));
+    t('Chọn toàn 1: điểm = (10 + 4 × số câu nghịch) / 10', P.DIM_IDS.map((d) => S1[d].mean), [2.2, 2.6, 3, 2.6, 1.8]);
+
+    // Trả lời "đúng chiều" tối đa: câu thuận 5, câu nghịch 1 → mọi chiều 5,0.
+    const maxA = I.map((x) => (x.key === 1 ? 5 : 1));
+    const minA = I.map((x) => (x.key === 1 ? 1 : 5));
+    t('Đồng ý hết câu thuận, phủ nhận hết câu nghịch: mọi chiều 5,0, mức cao', P.DIM_IDS.map((d) => [P.scoreAll(maxA)[d].mean, P.scoreAll(maxA)[d].level]), P.DIM_IDS.map(() => [5, 'high']));
+    t('Ngược lại: mọi chiều 1,0, mức thấp', P.DIM_IDS.map((d) => [P.scoreAll(minA)[d].mean, P.scoreAll(minA)[d].level]), P.DIM_IDS.map(() => [1, 'low']));
+
+    // Một hồ sơ cụ thể, tính tay: Hướng ngoại 10 câu lần lượt 4,2,5,1,4,2,3,2,4,3.
+    // Câu nghịch là câu 2,4,6,8,10 của chiều (6, 16, 26, 36, 46): đảo thành 4,5,4,4,3.
+    // Tổng = 4+4+5+5+4+4+3+4+4+3 = 40 → 4,0, mức cao.
+    const prof = all(3);
+    const eIdx = I.map((x, i) => (x.d === 'E' ? i : -1)).filter((i) => i >= 0);
+    [4, 2, 5, 1, 4, 2, 3, 2, 4, 3].forEach((v, k) => (prof[eIdx[k]] = v));
+    const SP = P.scoreAll(prof);
+    t('Hồ sơ tính tay: Hướng ngoại tổng 40, trung bình 4,0, mức cao', [SP.E.sum, SP.E.mean, SP.E.level], [40, 4, 'high']);
+
+    /* --- Ngưỡng ba mức (theo tổng 10 câu) --- */
+    t('Ngưỡng: 2,4 thấp; 2,5 trung bình; 3,5 trung bình; 3,6 cao', [2.4, 2.5, 3.5, 3.6].map(P.levelOf), ['low', 'mid', 'mid', 'high']);
+    t('Hai đầu thang: 1,0 thấp; 5,0 cao', [P.levelOf(1), P.levelOf(5)], ['low', 'high']);
+    t('Sai số số thực không đổi mức (24/10, 35/10, 36/10)', [P.levelOf(24 / 10), P.levelOf(35 / 10), P.levelOf(36 / 10)], ['low', 'mid', 'high']);
+
+    /* --- Trạng thái bài làm --- */
+    const half = Array(50).fill(null);
+    for (let i = 0; i < 20; i++) half[i] = 4;
+    t('Đếm câu đã trả lời và câu chưa trả lời đầu tiên', [P.answeredCount(half), P.firstUnanswered(half), P.isComplete(half)], [20, 20, false]);
+    t('Bài đủ 50 câu', [P.isComplete(all(2)), P.firstUnanswered(all(2))], [true, -1]);
+
+    /* --- Tổ hợp --- */
+    const lv = (o) => Object.fromEntries(P.DIM_IDS.map((d) => [d, { level: o[d] || 'mid' }]));
+    t('Tận tâm cao + bất ổn cảm xúc cao → “Lo mà làm”', P.combosOf(lv({ C: 'high', N: 'high' })), ['lo-ma-lam']);
+    t('Cởi mở cao + tận tâm thấp → “Nhiều ý, ít đích”', P.combosOf(lv({ O: 'high', C: 'low' })), ['nhieu-y-it-dich']);
+    t('Dễ chịu cao, tận tâm cao, bất ổn thấp → “ổn định”', P.combosOf(lv({ A: 'high', C: 'high', N: 'low' })), ['on-dinh']);
+    t('Hướng ngoại cao + cởi mở cao → “mềm dẻo”', P.combosOf(lv({ E: 'high', O: 'high' })), ['mem-deo']);
+    t('Hướng nội + nhạy cảm → góc “ưu tư”', P.combosOf(lv({ E: 'low', N: 'high' })), ['goc-noi-nhay']);
+    t('Toàn mức trung bình → không tổ hợp nào', P.combosOf(lv({})), []);
+    const ids = new Set(COMBOS.items.map((c) => c.id));
+    const corners = Object.keys(COMBOS.items.find((c) => c.id === 'goc').corners);
+    t('Mọi tổ hợp tính được đều có chữ trong content.js', ['lo-ma-lam', 'nhieu-y-it-dich', 'on-dinh', 'mem-deo'].every((x) => ids.has(x)) && corners.length === 4, true);
+
+    /* --- Nội dung đủ 5 chiều × 3 mức --- */
+    const fields = ['title', 'summary', 'study', 'work', 'conflict', 'note'];
+    const okLevel = (x) => fields.every((f) => typeof x[f] === 'string' && x[f].length > 10) && x.strengths.length >= 2 && x.watchOut.length >= 2;
+    t('Đủ 5 chiều × 3 mức, mỗi mức đủ trường', P.DIM_IDS.every((d) => P.LEVELS.every((l) => okLevel(TRAITS[d].levels[l]))), true);
+    const noteSentences = P.DIM_IDS.flatMap((d) => P.LEVELS.map((l) => TRAITS[d].levels[l].note.split(/(?<=[.?!])\s+/).length));
+    t('Lời nhắn mỗi kết quả có 2–3 câu', noteSentences.every((n) => n >= 2 && n <= 3), true);
+
+    /* --- Chòm sao --- */
+    const L5 = P.starLayout(P.scoreAll(maxA));
+    const L1 = P.starLayout(P.scoreAll(minA));
+    t('Điểm 5,0 xa tâm và sáng hơn điểm 1,0', P.DIM_IDS.every((d) => Math.hypot(L5[d].x - 200, L5[d].y - 200) > Math.hypot(L1[d].x - 200, L1[d].y - 200) && L5[d].glow > L1[d].glow), true);
+    t('Sao Cởi mở ở đỉnh (12 giờ)', [L5.O.x, L5.O.y < 200], [200, true]);
+    t('Sao nền giả ngẫu nhiên cố định, nằm trong khung', [JSON.stringify(P.skyDot(7)) === JSON.stringify(P.skyDot(7)), I.every((x) => { const p = P.skyDot(x.n); return p.x > 0 && p.x < 1 && p.y > 0 && p.y < 0.7; })], [true, true]);
+
+    /* --- Hiển thị --- */
+    const rows = document.getElementById('rows');
+    let passed = 0;
+    for (const x of tests) {
+      const ok = JSON.stringify(x.actual) === JSON.stringify(x.expected);
+      if (ok) passed++;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td class="${ok ? 'ok' : 'bad'}">${ok ? 'Đạt' : 'Trượt'}</td><td></td><td><code></code></td><td><code></code></td>`;
+      tr.children[1].textContent = x.name;
+      tr.children[2].firstChild.textContent = JSON.stringify(x.expected);
+      tr.children[3].firstChild.textContent = JSON.stringify(x.actual);
+      rows.appendChild(tr);
+    }
+    const summary = document.getElementById('summary');
+    summary.textContent = `${passed}/${tests.length} trường hợp đạt.`;
+    summary.className = passed === tests.length ? 'pass' : 'fail';
+    window.__TEST_RESULT__ = { passed, total: tests.length, failed: tests.filter((x) => JSON.stringify(x.actual) !== JSON.stringify(x.expected)).map((x) => `${x.name} | mong ${JSON.stringify(x.expected)} | ra ${JSON.stringify(x.actual)}`) };
+  </script>
+</body>
+</html>

@@ -27,6 +27,9 @@ const MODULES = [
   'assets/js/modules/zodiac/signs.js',
   'assets/js/modules/zodiac/animals.js',
   'assets/js/modules/zodiac/content.js',
+  'assets/js/modules/personality/traits.js',
+  'assets/js/modules/personality/content.js',
+  'assets/js/modules/personality/items.js',
   'assets/js/modules/career/types.js',
   'assets/js/modules/career/items.js',
   'assets/js/modules/career/pairs.js',
@@ -47,6 +50,8 @@ const FILES = [
   'assets/js/modules/numerology/calc.js',
   'assets/js/modules/zodiac/view.js',
   'assets/js/modules/zodiac/calc.js',
+  'assets/js/modules/personality/view.js',
+  'assets/js/modules/personality/calc.js',
   'assets/js/modules/career/view.js',
   'assets/js/core/date-input.js',
   'assets/js/core/sources.js',
@@ -57,7 +62,7 @@ const FILES = [
 const ALLOW_LINES = ['Khám phá bản thân qua những thông điệp từ vũ trụ :))))'];
 
 // Chuỗi kỹ thuật, không phải câu chữ (bỏ qua hẳn).
-const SKIP_KEYS = new Set(['slug', 'glyph', 'size', 'status', 'id', 'key', 'calc', 'url', 'email', 'bio', 'facebook', 'tiktok', 'lifePathMethod', 'yMode']);
+const SKIP_KEYS = new Set(['en', 'scaleEn', 'slug', 'glyph', 'size', 'status', 'id', 'key', 'calc', 'url', 'email', 'bio', 'facebook', 'tiktok', 'lifePathMethod', 'yMode']);
 
 /* ---------- Quy tắc ---------- */
 
