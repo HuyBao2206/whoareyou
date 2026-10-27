@@ -291,15 +291,15 @@ function profileHtml(j) {
       <div class="fw-actions">
         <button type="button" class="btn" data-act="save">${ICON_IMG}${e(ACTIONS.save)}</button>
         <button type="button" class="btn btn--ghost" data-act="compare">${e(PROFILE.compareWith)}</button>
-        ${skillsLink()}
+        ${skillsLink(j)}
         <p class="fw-actions__note">${e(ACTIONS.imageNote)}</p>
       </div>
     </article>`;
 }
 
-function skillsLink() {
+function skillsLink(j) {
   const t = ctx.config.topics.find((x) => x.id === 'skills');
-  return t && t.status === 'active' ? `<a class="btn btn--ghost" href="#/${e(t.slug)}" data-act="skills">${e(ACTIONS.toSkills)}</a>` : '';
+  return t && t.status === 'active' ? `<a class="btn btn--ghost" href="#/${e(t.slug)}?nghe=${e(j.id)}" data-act="skills">${e(ACTIONS.toSkills)}</a>` : '';
 }
 
 function profileSec() {
@@ -660,7 +660,10 @@ function applyRoute(route) {
       state.hollandFrom = fromSession;
     }
   }
-  if (job && byId.has(job)) state.job = job;
+  if (job && byId.has(job)) {
+    state.job = job;
+    sessionSet('future.job', job);
+  }
   return { jump: F.validHolland(ma) ? 'fw-ban-do' : job && byId.has(job) ? 'fw-ho-so' : null };
 }
 

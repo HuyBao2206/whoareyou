@@ -101,7 +101,8 @@ export const config = {
       nameVi: 'Kỹ năng nên đầu tư',
       nameEn: 'Skills to Build',
       desc: 'Những kỹ năng dùng được ở nhiều nghề và cách luyện từng chút một mỗi tuần.',
-      status: 'soon',
+      status: 'active',
+      load: () => import('./modules/skills/view.js'),
       glyph: 'skills',
       soon: [
         'Phần này sẽ gom những kỹ năng dùng được ở nhiều nghề, như viết rõ ý, trình bày trước người lạ hay tự quản lý thời gian.',

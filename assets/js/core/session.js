@@ -4,6 +4,8 @@
 // Khoá đang dùng:
 //   holland         mã Holland 3 chữ của thẻ Sở thích nghề nghiệp, vd "SAE"
 //   holland.scores  điểm sáu nhóm, dạng "R12I8A16S10E4C6"
+//   future.job      id nghề đang xem ở thẻ Nghề nghiệp hôm nay & ngày mai
+//   skills.goal, skills.levels, skills.done   mục tiêu, mức tự chấm, nhiệm vụ đã xong của thẻ Kỹ năng (JSON)
 
 const PREFIX = 'hub.';
 

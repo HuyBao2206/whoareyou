@@ -344,6 +344,16 @@ Về chi phí học: **ngoài tiếng Anh (Cambridge) và giờ học ghi trên 
 
 ---
 
+### Bản dùng trên web (sau thẩm định, 27/10/2026)
+
+- `điểm = khoảng_cách × mức_đòi_hỏi × bằng_chứng ÷ chi_phí`.
+- `mức_đòi_hỏi` theo mức cần: 5 → 1,5; 4 → 1,25; ≤3 → 1 (kỹ năng mục tiêu đòi cao được đẩy lên).
+- `bằng_chứng` (hệ số `ev` trong data.js): 1,25 cho tư duy phân tích và thích ứng (WEF 2025 hạng 1–2, đồng thời trong 7 năng lực BUV 2026 có khoảng trống), quản lý thời gian (khoảng trống lớn nhất BUV 2026); còn lại 1. Thay cho trọng số 1–3 đề xuất ở trên, để không lấn át khoảng cách do người dùng tự chấm.
+- `chi_phí`: thấp 1, vừa 1,5, cao 2 (thay 1/2/3 ở trên) để tiếng Anh, lập trình không bị đẩy quá xa; trang khuyên coi tiếng Anh là kỹ năng thứ tư nếu mục tiêu bắt buộc chứng chỉ.
+- Chưa chấm kỹ năng nào thì không gợi ý (tránh xếp hạng chỉ theo thứ tự danh sách).
+- Mức cần theo 8 lĩnh vực của thẻ Nghề nghiệp và một hồ sơ chung (ước lượng của biên tập), cộng điều chỉnh theo nghề có kỹ năng cốt lõi rõ (giáo viên tiếng Anh, biên phiên dịch, phân tích dữ liệu, an ninh mạng, lập trình viên, kỹ sư AI, nhà báo, du lịch).
+- Giờ mỗi tuần của từng lộ trình là ước lượng của biên tập; trang cộng giờ ba kỹ năng và khuyên làm lần lượt nếu quá 8 giờ.
+
 ## 6. Bảng nguồn
 
 | Mã | Nguồn | Đơn vị | Năm | URL | Cách tiếp cận |

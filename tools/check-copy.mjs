@@ -36,6 +36,8 @@ const MODULES = [
   'assets/js/modules/career/content.js',
   'assets/js/modules/future/content.js',
   'assets/js/modules/future/jobs/index.js',
+  'assets/js/modules/skills/content.js',
+  'assets/js/modules/skills/data.js',
   'assets/js/config.js',
 ];
 
@@ -56,6 +58,7 @@ const FILES = [
   'assets/js/modules/personality/calc.js',
   'assets/js/modules/career/view.js',
   'assets/js/modules/future/view.js',
+  'assets/js/modules/skills/view.js',
   'assets/js/core/date-input.js',
   'assets/js/core/sources.js',
   'assets/js/core/share-image.js',
@@ -237,6 +240,8 @@ function checkGroup(groupPath, cards) {
 function walk(value, path, key, unit, file) {
   if (typeof value === 'string') {
     if (SKIP_KEYS.has(key)) return;
+    // Tên bài trong ngăn nguồn giữ nguyên cách viết gốc, không xét văn phong.
+    if (key === 'title' && /SOURCES/.test(path)) return;
     // Chỉ xét chuỗi trông như chữ tiếng Việt.
     if (!/[\p{L}]{2,}/u.test(value) || (!/\s/.test(value) && value.length < 3)) return;
     checkString(value, `${file} ${path}`, key, unit);

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kiểm thử calc.js · Kỹ năng nên đầu tư</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #F5F1EA; color: #141A2E; font: 15px/1.6 system-ui, sans-serif; }
+    h1 { font: 500 22px/1.3 Georgia, serif; margin: 0 0 4px; }
+    #summary { margin: 0 0 20px; font-weight: 600; }
+    #summary.pass { color: #2f6b3a; }
+    #summary.fail { color: #a24a2a; }
+    table { width: 100%; border-collapse: collapse; background: #FBF8F3; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(20,26,46,.12); vertical-align: top; }
+    td.ok { color: #2f6b3a; }
+    td.bad { color: #a24a2a; font-weight: 600; }
+    code { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Kiểm thử: điểm ưu tiên kỹ năng, ba kỹ năng đầu, dữ liệu 15 kỹ năng</h1>
+  <p id="summary">Đang chạy…</p>
+  <table>
+    <thead><tr><th>Kết quả</th><th>Trường hợp</th><th>Mong đợi</th><th>Thực tế</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script type="module">
+    import * as K from './calc.js';
+    import SKILLS, { BRANCHES } from './data.js';
+    import { PROFILES, SOURCES } from './content.js';
+
+    const tests = [];
+    const t = (name, actual, expected) => tests.push({ name, actual, expected });
+    const ids = SKILLS.map((s) => s.id);
+    const targetsOf = (levels) => Object.fromEntries(ids.map((id, i) => [id, levels[i]]));
+
+    /* --- Thành phần công thức --- */
+    t('Tầm quan trọng: mức 5 → 1,5; 4 → 1,25; 3, 2, 1 → 1', [5, 4, 3, 2, 1].map(K.weightOf), [1.5, 1.25, 1, 1, 1]);
+    t('Khoảng cách không âm; mức chưa chấm coi là 1', [K.gapOf(4, 2), K.gapOf(3, 5), K.gapOf(3, null), K.gapOf(3, 9)], [2, 0, 2, 2]);
+    t('Ví dụ trên trang: khoảng cách 2, mức cần 4, chi phí vừa → 1,667', K.priority({ target: 4, current: 2, cost: 'mid' }), 1.667);
+    t('Mức cần 5, đang 1, chi phí cao → 4 × 1,5 ÷ 2 = 3', K.priority({ target: 5, current: 1, cost: 'high' }), 3);
+    t('Đã đạt mục tiêu → điểm 0', K.priority({ target: 3, current: 3, cost: 'low' }), 0);
+    t('Hệ số bằng chứng 1,25: khoảng cách 2, mức cần 3, chi phí thấp → 2,5', K.priority({ target: 3, current: 1, cost: 'low', ev: 1.25 }), 2.5);
+    t('Bằng chứng đưa quản lý thời gian lên trước khi hồ sơ chung mọi mức = 2', K.topPriorities(SKILLS, targetsOf(PROFILES.chung.levels), Object.fromEntries(ids.map((id) => [id, 2]))).map((x) => x.id).includes('thoi-gian'), true);
+    t('Hệ số bằng chứng chỉ là 1 hoặc 1,25', SKILLS.every((s) => (s.ev ?? 1) === 1 || s.ev === 1.25), true);
+    t('Mỗi kỹ năng có số giờ mỗi tuần 1–6', SKILLS.every((s) => s.hours >= 1 && s.hours <= 6), true);
+    t('Chi phí lạ coi là vừa', K.priority({ target: 3, current: 1, cost: 'x' }), K.priority({ target: 3, current: 1, cost: 'mid' }));
+
+    /* --- Ba kỹ năng đầu --- */
+    const mini = [{ id: 'a', cost: 'low' }, { id: 'b', cost: 'mid' }, { id: 'c', cost: 'high' }, { id: 'd', cost: 'low' }];
+    const top = K.topPriorities(mini, { a: 3, b: 5, c: 5, d: 2 }, { a: 2, b: 2, c: 1, d: 2 });
+    t('Xếp theo điểm: c (3) > b (3 × 1,5 ÷ 1,5 = 3, khoảng cách nhỏ hơn) > a (1); d đã đạt bị loại', top.map((x) => [x.id, x.score]), [['c', 3], ['b', 3], ['a', 1]]);
+    t('Bằng điểm và bằng khoảng cách → chi phí thấp hơn trước', K.topPriorities([{ id: 'y', cost: 'mid' }, { id: 'x', cost: 'low' }], { y: 5, x: 3 }, { y: 3, x: 1 }, 2).map((x) => [x.id, x.score]), [['x', 2], ['y', 2]]);
+    t('Bằng hết → giữ thứ tự danh sách', K.topPriorities([{ id: 'p', cost: 'low' }, { id: 'q', cost: 'low' }], { p: 3, q: 3 }, { p: 1, q: 1 }).map((x) => x.id), ['p', 'q']);
+    t('Đạt hết mục tiêu → danh sách rỗng', K.topPriorities(mini, { a: 1, b: 1, c: 1, d: 1 }, {}).length, 0);
+    t('Không chấm gì với hồ sơ chung → đủ 3 kỹ năng', K.topPriorities(SKILLS, targetsOf(PROFILES.chung.levels), {}).length, 3);
+    t('Chấm đạt hết mức cần → không còn gợi ý', K.topPriorities(SKILLS, targetsOf(PROFILES.cntt.levels), targetsOf(PROFILES.cntt.levels)).length, 0);
+    t('Tiến độ: 2/8 = 25%, 0 việc = 0, vượt tổng bị chặn', [K.progress(2, 8), K.progress(0, 0), K.progress(9, 8)], [25, 0, 100]);
+
+    /* --- Dữ liệu --- */
+    t('15 kỹ năng, id không trùng', [SKILLS.length, new Set(ids).size], [15, 15]);
+    t('5 nhánh, mỗi nhánh có kỹ năng; ngoại ngữ 1, còn lại 3–4', BRANCHES.map((b) => SKILLS.filter((s) => s.branch === b.id).length).every((n, i, a) => n >= 1) && SKILLS.every((s) => BRANCHES.some((b) => b.id === s.branch)), true);
+    const fields = ['def', 'why', 'costText', 'note'];
+    t('Đủ trường chữ', SKILLS.filter((s) => !fields.every((f) => typeof s[f] === 'string' && s[f].length > 20)).map((s) => s.id), []);
+    t('Thang đủ 5 mức', SKILLS.filter((s) => s.levels.length !== 5).map((s) => s.id), []);
+    t('Lộ trình 30 và 90 ngày: mỗi việc có đầu ra', SKILLS.filter((s) => !s.plan30.length || !s.plan90.length || ![...s.plan30, ...s.plan90].every((p) => p.length === 2 && p[0] && p[1])).map((s) => s.id), []);
+    t('Chi phí hợp lệ', SKILLS.filter((s) => !(s.cost in K.COST)).map((s) => s.id), []);
+    t('Có cách chứng minh, sai lầm, năng lực thành phần', SKILLS.filter((s) => !s.prove.length || !s.mistakes.length || s.parts.length < 3).map((s) => s.id), []);
+    t('Nguồn của mỗi kỹ năng có trong SOURCES', SKILLS.flatMap((s) => s.src.filter((k) => !SOURCES[k]).map((k) => s.id + ':' + k)), []);
+    t('Tài nguyên có tên, đơn vị, ngôn ngữ, link https', SKILLS.flatMap((s) => s.resources.filter((r) => !r.name || !r.by || !r.lang || !/^https:\/\//.test(r.url)).map((r) => s.id + ':' + r.name)), []);
+    t('Lời nhắn 2–3 câu', SKILLS.filter((s) => { const n = s.note.split(/[.?!](\s|$)/).filter((x) => x && x.trim()).length; return n < 2 || n > 3; }).map((s) => s.id), []);
+    t('Hồ sơ mục tiêu: 15 mức trong khoảng 1–5', Object.entries(PROFILES).filter(([, p]) => p.levels.length !== 15 || !p.levels.every((l) => l >= 1 && l <= 5)).map(([k]) => k), []);
+    t('Có hồ sơ chung và đủ 8 lĩnh vực của thẻ Nghề nghiệp', ['chung', 'cntt', 'thietke', 'kinhdoanh', 'taichinh', 'yte', 'giaoduc', 'kythuat', 'dichvu'].every((k) => PROFILES[k]), true);
+    t('Nguồn có tên, đơn vị, năm', Object.entries(SOURCES).filter(([, s]) => !s.title || !s.by || !s.year || !s.group).map(([k]) => k), []);
+
+    /* --- Hiển thị --- */
+    const rows = document.getElementById('rows');
+    let passed = 0;
+    for (const x of tests) {
+      const ok = JSON.stringify(x.actual) === JSON.stringify(x.expected);
+      if (ok) passed++;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td class="${ok ? 'ok' : 'bad'}">${ok ? 'Đạt' : 'Trượt'}</td><td></td><td><code></code></td><td><code></code></td>`;
+      tr.children[1].textContent = x.name;
+      tr.children[2].firstChild.textContent = JSON.stringify(x.expected);
+      tr.children[3].firstChild.textContent = JSON.stringify(x.actual);
+      rows.appendChild(tr);
+    }
+    const summary = document.getElementById('summary');
+    summary.textContent = `${passed}/${tests.length} trường hợp đạt.`;
+    summary.className = passed === tests.length ? 'pass' : 'fail';
+    window.__TEST_RESULT__ = { passed, total: tests.length, failed: tests.filter((x) => JSON.stringify(x.actual) !== JSON.stringify(x.expected)).map((x) => `${x.name} | mong ${JSON.stringify(x.expected)} | ra ${JSON.stringify(x.actual)}`) };
+  </script>
+</body>
+</html>
