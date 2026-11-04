@@ -32,23 +32,23 @@ function list(items, ordered = false) {
 function moreHtml(k, m) {
   if (k === 'personalYear') {
     return `
-      <div class="msg__block"><h5 class="msg__h">Chủ đề của năm</h5><p>${e(m.theme)}</p></div>
-      <div class="msg__block"><h5 class="msg__h">Nên làm nhiều hơn</h5>${list(m.doMore)}</div>
-      <div class="msg__block"><h5 class="msg__h">Nên bớt lại</h5>${list(m.doLess)}</div>
-      <div class="msg__block"><h5 class="msg__h">Gợi ý theo từng quý</h5>
+      <div class="msg__block"><h5 class="msg__h">Trọng tâm của năm</h5><p>${e(m.theme)}</p></div>
+      <div class="msg__block"><h5 class="msg__h">Việc nên ưu tiên</h5>${list(m.doMore)}</div>
+      <div class="msg__block"><h5 class="msg__h">Việc nên tiết chế</h5>${list(m.doLess)}</div>
+      <div class="msg__block"><h5 class="msg__h">Nhịp hành động theo từng quý</h5>
         <ol class="msg__quarters">${m.byQuarter.map((q, i) => `<li><span>Quý ${i + 1}</span><p>${e(q)}</p></li>`).join('')}</ol>
       </div>`;
   }
   const fields = m.fields
-    ? `<div class="msg__block"><h5 class="msg__h">Lĩnh vực có thể hợp</h5>
+    ? `<div class="msg__block"><h5 class="msg__h">Môi trường và lĩnh vực phù hợp</h5>
          <ul class="msg__fields" role="list">${m.fields.map((f) => `<li class="chip">${e(f)}</li>`).join('')}</ul>
-         <p class="msg__fine">Đây chỉ là gợi ý để bạn tham khảo. Người mang số nào cũng có thể giỏi bất kỳ nghề gì nếu đủ quan tâm và chịu luyện.</p>
+         <p class="msg__fine">Gợi ý dựa trên xu hướng tự nhiên của chỉ số. Thực tế, bạn hoàn toàn có thể làm tốt bất kỳ lĩnh vực nào nếu có phương pháp rèn luyện nghiêm túc.</p>
        </div>`
     : '';
   return `
-    <div class="msg__block"><h5 class="msg__h">Điểm mạnh</h5>${list(m.strengths)}</div>
-    <div class="msg__block"><h5 class="msg__h">Điều cần để ý</h5>${list(m.watchOut)}</div>
-    <div class="msg__block"><h5 class="msg__h">Gợi ý làm được ngay</h5>${list(m.advice)}</div>
+    <div class="msg__block"><h5 class="msg__h">Điểm mạnh tự nhiên</h5>${list(m.strengths)}</div>
+    <div class="msg__block"><h5 class="msg__h">Điểm mù cần lưu ý</h5>${list(m.watchOut)}</div>
+    <div class="msg__block"><h5 class="msg__h">Gợi ý điều chỉnh thực tế</h5>${list(m.advice)}</div>
     ${fields}`;
 }
 
@@ -68,9 +68,9 @@ export function cardHtml(k, n, i, { expanded = false, prefix = 'msg' } = {}) {
       <article class="msg msg--empty" id="${id}" style="--o:${i}" aria-labelledby="${id}-t">
         ${head}
         <p class="msg__num" aria-hidden="true"><span class="msg__digit">?</span></p>
-        <h4 class="msg__title" id="${id}-t">Chưa tính</h4>
-        <p class="msg__summary">Bạn chưa tính chỉ số này. Chỉ cần nhập ${what} là có ngay.</p>
-        <button type="button" class="btn btn--ghost" data-go-calc="${meta.calc}">Quay lại tính</button>
+        <h4 class="msg__title" id="${id}-t">Chưa có dữ liệu</h4>
+        <p class="msg__summary">Chỉ số này chưa được tính. Bạn chỉ cần bổ sung thêm ${what} ở bước trước để xem phân tích.</p>
+        <button type="button" class="btn btn--ghost" data-go-calc="${meta.calc}">Quay lại nhập ${what}</button>
       </article>`;
   }
 
@@ -183,8 +183,8 @@ export function renderResults(body, params, h) {
   const count = Object.keys(nums).length;
   h.setToc([
     { id: 'rs-top', label: 'Tóm tắt' },
-    { id: 'rs-cards', label: 'Thông điệp' },
-    { id: 'rs-next', label: 'Làm gì tiếp' },
+    { id: 'rs-cards', label: 'Phân tích' },
+    { id: 'rs-next', label: 'Bước tiếp theo' },
   ]);
 
   // Chuỗi query chuẩn hoá: chỉ các con số hợp lệ, theo thứ tự cố định.
@@ -212,11 +212,11 @@ export function renderResults(body, params, h) {
     <div class="rs">
       <header class="rs-head" id="rs-top">
         <p class="eyebrow">Kết quả · Thần số học</p>
-        <h3 class="rs-title">Thông điệp từ những con số của bạn</h3>
+        <h3 class="rs-title">Hồ sơ 5 chỉ số của bạn</h3>
         <p class="rs-lead">${
           count
-            ? 'Mỗi thẻ có một đoạn đọc nhanh. Đoạn nào chạm tới bạn thì bấm “Đọc đầy đủ” để xem điểm mạnh, điều cần để ý và vài gợi ý làm được ngay.'
-            : 'Liên kết này chưa có con số nào. Bạn quay lại phần bộ tính để nhập ngày sinh hoặc họ tên nhé.'
+            ? 'Mỗi thẻ dưới đây tóm lược một khía cạnh trong tính cách và nhịp vận hành của bạn. Bấm “Đọc đầy đủ” ở từng thẻ để xem chi tiết điểm mạnh, điểm mù cần tránh và những gợi ý điều chỉnh thực tế.'
+            : 'Đường dẫn này chưa có dữ liệu chỉ số nào. Bạn vui lòng quay lại bảng tính để nhập ngày sinh hoặc họ tên nhé.'
         }</p>
         <ol class="rs-summary" role="list" aria-label="Năm con số của bạn">${summary}</ol>
       </header>
@@ -227,15 +227,15 @@ export function renderResults(body, params, h) {
       </div>
 
       <section class="rs-actions" id="rs-next" aria-labelledby="rs-next-t">
-        <h3 class="rs-actions__title" id="rs-next-t">Làm gì tiếp</h3>
+        <h3 class="rs-actions__title" id="rs-next-t">Bước tiếp theo</h3>
         <div class="rs-actions__row">
-          <button type="button" class="btn btn--ghost" data-act="recalc">Tính lại</button>
+          <button type="button" class="btn btn--ghost" data-act="recalc">Chỉnh sửa thông tin</button>
           <button type="button" class="btn btn--ghost" data-act="reset">Tính cho người khác</button>
           <button type="button" class="btn" data-act="copy"${count ? '' : ' disabled'}>${ICON_LINK}Sao chép liên kết kết quả</button>
         </div>
-        <p class="rs-actions__note">Liên kết chỉ chứa các con số, không có tên hay ngày sinh của bạn.</p>
+        <p class="rs-actions__note">Liên kết chia sẻ chỉ chứa các con số kết quả, hoàn toàn không kèm theo họ tên hay ngày sinh của bạn.</p>
         <a class="rs-lookup" href="#${h.base}/tra-cuu">
-          <span><span class="rs-lookup__k">Tra cứu</span>Đọc thông điệp cho bất kỳ chỉ số và con số nào, ví dụ để đọc giúp người thân.</span>
+          <span><span class="rs-lookup__k">Tra cứu toàn bộ</span>Đọc toàn bộ phân tích của bất kỳ chỉ số và con số nào để đối chiếu thêm cho bạn bè, người thân.</span>
           ${ICON_ARROW}
         </a>
       </section>
@@ -248,7 +248,7 @@ export function renderResults(body, params, h) {
   body.querySelector('[data-act="reset"]').addEventListener('click', () => h.resetAll());
   body.querySelector('[data-act="copy"]').addEventListener('click', async () => {
     const ok = await copyText(shareUrl);
-    h.toast(ok ? 'Đã sao chép liên kết. Link chỉ có các con số, không có tên hay ngày sinh.' : 'Chưa sao chép được. Bạn thử chép tay đường link trên thanh địa chỉ nhé.');
+    h.toast(ok ? 'Đã sao chép liên kết. Đường dẫn chỉ lưu các con số, không lộ tên hay ngày sinh.' : 'Chưa sao chép tự động được. Bạn vui lòng chép trực tiếp đường dẫn trên thanh địa chỉ nhé.');
   });
 
   const cardEls = [...body.querySelectorAll('.rs-grid .msg')].sort((a, b) => a.style.getPropertyValue('--o') - b.style.getPropertyValue('--o'));
@@ -282,8 +282,8 @@ export function renderLookup(body, params, h) {
     <div class="lk">
       <header class="rs-head">
         <p class="eyebrow">Tra cứu · Thần số học</p>
-        <h3 class="rs-title">Tra cứu thông điệp</h3>
-        <p class="rs-lead">Phần này dành cho bạn nào đã biết số của mình từ trước, hoặc muốn đọc giúp người thân. Bạn chọn chỉ số, rồi chọn con số để đọc thông điệp đầy đủ.</p>
+        <h3 class="rs-title">Thư viện tra cứu các chỉ số</h3>
+        <p class="rs-lead">Dành cho trường hợp bạn đã biết sẵn các con số của mình hoặc muốn tìm hiểu thêm về tính cách của người thân, đồng nghiệp. Hãy chọn nhóm chỉ số phía trên, sau đó bấm vào từng con số để đọc bản phân tích đầy đủ.</p>
       </header>
       <div class="lk-tabs" role="tablist" aria-label="Chỉ số">
         ${INDEX_ORDER.map(
@@ -292,7 +292,7 @@ export function renderLookup(body, params, h) {
         ).join('')}
       </div>
       <div class="lk-panel" id="lk-panel" role="tabpanel" aria-labelledby="lk-tab-${lookup.k}"></div>
-      <p class="lk-back"><a class="link-btn" href="#${h.base}">← Về phần giới thiệu và bộ tính</a></p>
+      <p class="lk-back"><a class="link-btn" href="#${h.base}">← Quay về phần giới thiệu và bảng tính</a></p>
     </div>`;
 
   const panel = body.querySelector('#lk-panel');
@@ -314,7 +314,7 @@ export function renderLookup(body, params, h) {
     const nums = lookupNums(k);
     const note =
       k === 'lifePath'
-        ? '<p class="lk-note">Số 1 chỉ xuất hiện khi tính theo cách phương Tây, còn số 10 chỉ xuất hiện khi tính theo cách phổ biến ở Việt Nam.</p>'
+        ? '<p class="lk-note">Lưu ý: Số chủ đạo 1 chỉ xuất hiện khi rút gọn theo chuẩn phương Tây, trong khi Số chủ đạo 10 là cách giữ nguyên tổng 10 phổ biến tại Việt Nam.</p>'
         : '';
     panel.setAttribute('aria-labelledby', `lk-tab-${k}`);
     panel.innerHTML = `
