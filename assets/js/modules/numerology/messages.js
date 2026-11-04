@@ -12,301 +12,301 @@
 
 const lifePath = {
   1: {
-    title: 'Người mở lối đi riêng',
-    keywords: ['Tự lập', 'Dám bắt đầu', 'Quyết đoán', 'Cá tính'],
+    title: 'Người mở lối độc lập',
+    keywords: ['Tự chủ', 'Quyết đoán', 'Dám khởi xướng', 'Thẳng thắn'],
     summary:
-      'Người mang số chủ đạo 1 thường thấy dễ chịu nhất khi được tự quyết việc của mình. Từ nhỏ bạn có thể đã thích làm theo cách riêng, kể cả khi cách đó chậm hơn cách người lớn chỉ. Khi cả nhóm còn bàn tới bàn lui, bạn hay là người nói “thôi mình làm thử đi”. Bài học lớn của số 1 là đứng vững trên đôi chân của mình mà không đẩy người khác ra xa.',
+      'Phản xạ tự nhiên của bạn trước một vấn đề khó là tự mình tìm cách giải quyết chứ không ngồi chờ người khác chỉ đường. Ngay từ sớm, bạn đã thích tự quyết định theo góc nhìn riêng, kể cả khi phải tự thử và tự chịu phần thiệt. Trong một tập thể đang phân vân bàn bạc, bạn thường là người chốt phương án để công việc bắt đầu chuyển động. Bài học xuyên suốt của bạn là giữ vững bản lĩnh độc lập đó nhưng biết lắng nghe và phối hợp để không biến mình thành ốc đảo.',
     strengths: [
-      'Bạn dám bắt đầu. Một dự án nhóm còn nằm trên giấy, bạn đã lập xong file chung và chia việc cho từng người.',
-      'Bạn chịu trách nhiệm cho lựa chọn của mình. Khi quyết sai, bạn ít đổ lỗi mà tự tìm cách sửa.',
-      'Bạn làm việc độc lập tốt. Giao cho bạn một đầu việc rõ ràng rồi để bạn yên, kết quả thường tốt hơn khi có người đứng sau nhắc từng bước.',
+      'Khả năng khởi động công việc rất nhanh: khi một kế hoạch còn đang nằm trên giấy, bạn đã chủ động dựng khung thực hiện và bắt tay vào bước đầu tiên.',
+      'Dám làm dám chịu: một khi đã tự đưa ra lựa chọn, nếu kết quả chệch hướng, bạn tập trung tìm phương án gỡ rối thay vì đổ lỗi cho hoàn cảnh.',
+      'Hiệu suất cao nhất khi được trao quyền tự chủ: giao rõ mục tiêu và thời hạn rồi để bạn tự xoay xở luôn mang lại kết quả tốt hơn việc giám sát từng chi tiết.',
     ],
     watchOut: [
-      'Bạn dễ nghe góp ý thành chê bai. Một câu “chỗ này hơi rối” từ đồng nghiệp có thể khiến bạn khó chịu cả buổi chiều.',
-      'Vì quen tự làm, bạn hay ôm hết việc rồi mệt một mình, trong khi chỉ cần mở lời là có người giúp.',
-      'Lúc nóng vội, bạn có thể quyết thay người khác mà quên hỏi ý họ.',
+      'Dễ nhầm lẫn giữa góp ý chuyên môn và sự công kích cá nhân, khiến một câu nhận xét thẳng từ đồng nghiệp cũng làm bạn khó chịu cả ngày.',
+      'Thói quen ôm đồm vì nghĩ tự mình làm sẽ nhanh hơn, dẫn đến tình trạng quá tải một mình trong khi người xung quanh sẵn sàng hỗ trợ.',
+      'Những lúc cần đẩy nhanh tiến độ, bạn dễ áp đặt quyết định của mình lên người khác mà quên hỏi ý kiến của họ.',
     ],
     advice: [
-      'Tuần này, bạn chọn một việc mình hay tự làm và nhờ một người làm cùng. Để ý xem kết quả có tệ như bạn lo không.',
-      'Khi nhận góp ý, bạn đợi qua một đêm rồi hãy trả lời. Sáng hôm sau đọc lại, câu đó thường nhẹ hơn nhiều.',
-      'Viết ra một mục tiêu cho năm nay mà bạn muốn đạt vì chính mình, không phải để hơn ai.',
+      'Trong tuần này, hãy chọn một đầu việc bạn vốn quen tự ôm và chuyển giao hẳn cho một cộng sự phụ trách để tập tin tưởng vào cách làm của người khác.',
+      'Khi nhận được một lời phê bình trái ý, hãy tạm hoãn phản hồi vài tiếng để tách cảm xúc tự ái ra khỏi nội dung công việc.',
+      'Đặt ra một mục tiêu dài hạn xuất phát từ nhu cầu phát triển thực chất của chính bạn, thay vì chạy theo tâm lý muốn chứng tỏ mình hơn người.',
     ],
-    fields: ['Khởi nghiệp, kinh doanh nhỏ', 'Quản lý dự án', 'Nghề tự do', 'Phát triển thị trường', 'Thiết kế sản phẩm'],
+    fields: ['Khởi nghiệp, kinh doanh độc lập', 'Quản lý dự án', 'Nghề tự do chuyên môn', 'Phát triển thị trường', 'Thiết kế sản phẩm'],
   },
 
   2: {
-    title: 'Người giữ nhịp cho cả nhóm',
-    keywords: ['Tinh tế', 'Hợp tác', 'Kiên nhẫn', 'Lắng nghe'],
+    title: 'Người kết nối và điều hoà',
+    keywords: ['Tinh tế', 'Hợp tác', 'Kiên nhẫn', 'Biết lắng nghe'],
     summary:
-      'Người mang số chủ đạo 2 rất nhạy với cảm xúc của người xung quanh. Bạn nhận ra một người bạn đang buồn chỉ qua cách họ trả lời tin nhắn cụt hơn mọi ngày. Bạn làm tốt nhất khi có người đồng hành, và thường là người giúp cả nhóm hiểu nhau hơn. Bài học của số 2 là giữ được tiếng nói của mình trong lúc vẫn chăm lo cho sự hoà thuận.',
+      'Khả năng quan sát sắc thái tâm lý giúp bạn nhận ra sự thay đổi của người đối diện chỉ qua một câu trả lời ngắn hoặc cái nhíu mày thoáng qua. Thay vì chọn cách đối đầu gay gắt, bạn phát huy năng lực tốt nhất khi đóng vai trò gắn kết, tìm điểm chung và giữ nhịp ổn định cho tập thể. Sự có mặt của bạn thường làm dịu đi những cái đầu nóng trong các cuộc thảo luận căng thẳng. Bài học lớn nhất dành cho bạn là bảo vệ được tiếng nói và ranh giới cá nhân trong lúc vẫn duy trì sự hài hoà chung.',
     strengths: [
-      'Bạn lắng nghe thật lòng. Người khác hay tìm bạn để kể chuyện vì bạn không vội chen vào khuyên.',
-      'Bạn giỏi hoà giải. Khi hai người trong nhóm căng với nhau, bạn biết nói câu nào để cả hai cùng xuống nước.',
-      'Bạn kiên nhẫn với những việc cần thời gian, như kèm một bạn mới vào làm hay vun một mối quan hệ lâu dài.',
+      'Lắng nghe có chiều sâu: người xung quanh dễ mở lòng chia sẻ với bạn vì bạn thực sự đặt mình vào vị trí của họ thay vì vội vàng phán xét.',
+      'Khéo léo tháo gỡ mâu thuẫn: khi hai bên đang căng thẳng, bạn luôn biết cách chọn từ ngữ vừa đủ mềm mỏng để mở đường cho cả hai cùng ngồi lại.',
+      'Sự bền bỉ và chu đáo: những công việc đòi hỏi sự kiên nhẫn tích luỹ từng ngày hay chăm sóc mối quan hệ đường dài đều là thế mạnh tự nhiên của bạn.',
     ],
     watchOut: [
-      'Bạn hay nói “sao cũng được” dù trong lòng có ý riêng, rồi về nhà lại tiếc vì không nói ra.',
-      'Bạn dễ để lời nói của người khác ảnh hưởng tới tâm trạng cả ngày, nhất là một tin nhắn đã xem mà không trả lời.',
-      'Khi phải chọn giữa hai bên, bạn có thể chần chừ quá lâu vì sợ làm ai đó buồn.',
+      'Thói quen chiều lòng người khác bằng câu “sao cũng được” dù trong bụng đã có ý riêng, để rồi sau đó lại ấm ức một mình.',
+      'Tâm trạng dễ bị cuốn theo thái độ của người ngoài, chẳng hạn cứ bận tâm mãi về một tin nhắn đã xem nhưng chưa thấy đối phương hồi âm.',
+      'Khi đứng trước tình huống buộc phải lựa chọn dứt khoát giữa hai phương án, bạn hay chần chừ quá lâu vì sợ làm mất lòng một bên.',
     ],
     advice: [
-      'Lần tới khi được hỏi ăn gì hay đi đâu, bạn thử nói hẳn một lựa chọn thay vì “tuỳ bạn”.',
-      'Mỗi tối, bạn viết vài dòng về điều mình cảm thấy trong ngày. Việc này giúp bạn tách cảm xúc của mình khỏi cảm xúc của người khác.',
-      'Khi cần từ chối, bạn có thể nói ngắn và tử tế: “Lần này mình không giúp được, mong bạn thông cảm.” Bạn không cần giải thích dài.',
+      'Tập nói rõ lựa chọn cụ thể của bạn ngay từ những việc nhỏ hằng ngày như chọn quán ăn, chọn khung giờ họp thay vì nhường hết cho người khác.',
+      'Khi cảm thấy tâm trạng trùng xuống, hãy tự hỏi cảm xúc này là của chính bạn hay bạn đang vô thức gánh hộ sự căng thẳng của người bên cạnh.',
+      'Luyện cách từ chối ngắn gọn, lịch sự mà không cần viện cớ dài dòng: chỉ cần báo rõ hiện tại bạn chưa thu xếp được thời gian là đủ.',
     ],
-    fields: ['Hỗ trợ khách hàng', 'Nhân sự', 'Điều phối dự án', 'Giáo dục mầm non, tiểu học', 'Quan hệ đối tác'],
+    fields: ['Chăm sóc khách hàng', 'Quản trị nhân sự', 'Điều phối dự án', 'Giáo dục, đào tạo', 'Quan hệ đối tác, ngoại giao'],
   },
 
   3: {
-    title: 'Người kể chuyện',
-    keywords: ['Biểu đạt', 'Sáng tạo', 'Vui vẻ', 'Giao tiếp'],
+    title: 'Người truyền đạt và sáng tạo',
+    keywords: ['Hoạt ngôn', 'Linh hoạt', 'Giàu ý tưởng', 'Truyền cảm hứng'],
     summary:
-      'Người mang số chủ đạo 3 cần được nói ra, viết ra hay vẽ ra những gì mình nghĩ. Bạn có thể biến một chuyện bình thường ở chỗ làm thành câu chuyện khiến cả bàn ăn bật cười. Niềm vui của bạn lan sang người khác khá tự nhiên. Bài học của số 3 là đi tới cùng với một ý tưởng, thay vì để nó dừng ở mức “nghe hay đấy”.',
+      'Năng lượng của bạn bộc lộ mạnh mẽ nhất qua ngôn từ, cách kể chuyện và tư duy giàu hình ảnh. Một vấn đề khô khan hay buổi họp căng thẳng khi qua cách diễn đạt của bạn thường trở nên sáng sủa, dễ hiểu và cuốn hút hơn hẳn. Bạn nhạy bén với cái mới và luôn tìm ra những góc tiếp cận thú vị mà lối mòn cũ bỏ sót. Bài học trọng tâm của bạn là rèn tính kỷ luật để đi tới tận cùng với một ý tưởng, thay vì dừng lại ở sự hào hứng lúc ban đầu.',
     strengths: [
-      'Bạn diễn đạt tốt. Gặp một ý khó, bạn biết nói lại cho người khác hiểu bằng ví dụ gần gũi.',
-      'Bạn đem lại không khí dễ chịu. Buổi họp có bạn thường bớt căng hơn hẳn.',
-      'Bạn nghĩ ra nhiều ý mới, từ cách trang trí góc học tập tới tên gọi cho một sản phẩm.',
+      'Diễn đạt слож phức tạp thành đơn giản: bạn biết dùng ví dụ đời thường để thuyết phục và giúp người nghe nắm bắt nhanh cốt lõi vấn đề.',
+      'Tạo sinh khí cho tập thể: sự hài hước, cởi mở tự nhiên của bạn giúp phá vỡ bầu không khí ngượng ngập và kích thích cả nhóm cùng đóng góp ý kiến.',
+      'Tư duy linh hoạt, nảy số nhanh: bạn hiếm khi chịu bó tay trước một bài toán khó mà luôn xoay ra được hai, ba phương án thay thế.',
     ],
     watchOut: [
-      'Bạn dễ bắt đầu nhiều việc cùng lúc, nên trong máy có cả chục bản nháp chưa bao giờ xong.',
-      'Khi buồn, bạn hay giấu sau những câu đùa, khiến người thân không biết bạn đang cần được hỏi han.',
-      'Bạn có thể tiêu tiền theo hứng, nhất là cho những món đẹp mà sau đó ít dùng.',
+      'Hào hứng mở ra nhiều kế hoạch cùng lúc nhưng dễ chán và bỏ dở khi công việc bước vào giai đoạn xử lý chi tiết lặp đi lặp lại.',
+      'Khi gặp chuyện buồn hoặc áp lực, bạn hay lấy sự vui vẻ, bông đùa ra che chắn khiến người thân không nhận ra lúc nào bạn thực sự cần sẻ chia.',
+      'Quản lý chi tiêu hoặc thời gian dễ cảm tính, đôi khi quyết định mua sắm hay nhận lời chỉ vì cảm xúc bốc đồng ngay lúc đó.',
     ],
     advice: [
-      'Bạn chọn một ý tưởng mình thích nhất và đặt hạn hoàn thành trong hai tuần. Nói hạn đó với một người bạn để có người nhắc.',
-      'Mỗi ngày dành mười lăm phút để viết, vẽ hoặc ghi âm. Bạn làm vì mình, không cần đăng lên đâu cả.',
-      'Trước khi mua một món không cần gấp, bạn để nó trong giỏ hàng ba ngày rồi hãy quyết.',
+      'Áp dụng nguyên tắc chỉ giữ tối đa hai dự án cá nhân cùng lúc: phải hoàn tất hoặc đóng hẳn việc cũ mới được phép bắt đầu ý tưởng mới.',
+      'Khi có một ý tưởng tâm đắc, hãy lập tức chia nhỏ nó thành ba đầu việc cụ thể có hạn chót trong hai tuần đầu tiên để giữ đà thực thi.',
+      'Tạo khoảng dừng ba ngày trước các khoản chi tiêu không thiết yếu để phân biệt đâu là nhu cầu thật, đâu là hứng thú nhất thời.',
     ],
-    fields: ['Viết, biên tập nội dung', 'Truyền thông, marketing', 'Thiết kế, minh hoạ', 'Giảng dạy, đào tạo', 'Biểu diễn, dẫn chương trình'],
+    fields: ['Sáng tạo nội dung, biên tập', 'Truyền thông, marketing', 'Thiết kế, nghệ thuật', 'Giảng dạy, đào tạo', 'Dẫn chương trình, thuyết trình'],
   },
 
   4: {
-    title: 'Người xây móng',
-    keywords: ['Chắc chắn', 'Chăm chỉ', 'Có trật tự', 'Đáng tin'],
+    title: 'Người xây dựng nền tảng',
+    keywords: ['Thực tế', 'Kỷ luật', 'Có hệ thống', 'Đáng tin cậy'],
     summary:
-      'Người mang số chủ đạo 4 thích mọi thứ có kế hoạch và làm tới đâu chắc tới đó. Bạn là kiểu người ghi chi tiêu từng khoản, hoặc ít nhất luôn biết tiền của mình đang nằm ở đâu. Người khác yên tâm khi giao việc cho bạn vì bạn hiếm khi bỏ dở. Bài học của số 4 là mềm lại một chút khi kế hoạch phải đổi, vì đời ít khi đi đúng như bảng tính.',
+      'Sự rõ ràng, trật tự và tính thực tế là kim chỉ nam trong cách bạn vận hành cuộc sống. Bạn không dễ bị thuyết phục bởi những lời hứa hẹn màu hồng nếu thiếu số liệu cụ thể và kế hoạch triển khai từng bước. Khi một công việc đã giao vào tay bạn, người xung quanh hoàn toàn yên tâm vì bạn luôn làm đến nơi đến chốn với chất lượng ổn định. Bài học cần thiết của bạn là rèn sự linh hoạt trước những biến số bất ngờ, bởi thực tế hiếm khi vận hành khớp tuyệt đối với bản kế hoạch.',
     strengths: [
-      'Bạn đáng tin. Hẹn nộp thứ Sáu thì tới thứ Năm bạn đã gần xong.',
-      'Bạn biết chia việc lớn thành từng bước nhỏ và đi lần lượt, nên việc khó mấy cũng tìm được lối ra.',
-      'Bạn giữ được kỷ luật với những thói quen dài hơi như tập thể dục, học ngoại ngữ hay để dành tiền.',
+      'Tác phong chuẩn chỉnh và giữ chữ tín: bạn luôn chủ động tính toán thời gian dự phòng để hoàn thành cam kết đúng hoặc trước hạn.',
+      'Tư duy hệ thống mạch lạc: đứng trước một khối lượng việc ngổn ngang, bạn biết cách phân loại, sắp xếp thứ tự ưu tiên để giải quyết gọn gàng.',
+      'Sức bền kỷ luật cao: bạn duy trì được những thói quen tích luỹ dài hạn về chuyên môn, sức khoẻ và quản lý tài chính cá nhân.',
     ],
     watchOut: [
-      'Bạn dễ khó chịu khi người khác làm theo cách khác mình, dù cách đó vẫn ra kết quả.',
-      'Bạn có thể làm việc tới quên nghỉ, rồi coi việc nghỉ ngơi là lười.',
-      'Khi có thay đổi bất ngờ, bạn hay phản ứng bằng cách cứng lại thay vì tìm phương án mới.',
+      'Dễ nảy sinh tâm lý khắt khe, khó chịu khi thấy người khác làm việc không theo đúng quy trình quen thuộc của bạn dù họ vẫn đạt kết quả tốt.',
+      'Quá cầu toàn vào các chi tiết kỹ thuật nhỏ, đôi khi làm chậm tốc độ ra quyết định ở những thời điểm cần chớp cơ hội nhanh.',
+      'Xu hướng tự ép bản thân làm việc quá tải và dễ cảm thấy áy náy vô lý mỗi khi dành thời gian nghỉ ngơi hoàn toàn.',
     ],
     advice: [
-      'Trong lịch tuần này, bạn chừa ra một buổi không có kế hoạch gì cả và xem mình thấy thế nào.',
-      'Khi đồng nghiệp làm khác cách bạn, bạn hỏi lý do trước khi góp ý. Đôi khi bạn sẽ học được một mẹo mới.',
-      'Với mỗi kế hoạch lớn, bạn viết sẵn một phương án dự phòng. Có nó rồi, thay đổi sẽ đỡ làm bạn chao đảo.',
+      'Trong công việc nhóm, hãy thống nhất kỹ tiêu chuẩn đầu ra cuối cùng rồi cho phép đồng nghiệp tự do chọn cách làm phù hợp với họ.',
+      'Đưa thời gian nghỉ ngơi, tái tạo sức lao động vào lịch trình cố định trong tuần và coi đó là một hạng mục bắt buộc phải hoàn thành.',
+      'Với mỗi kế hoạch quan trọng, hãy chuẩn bị sẵn một phương án dự phòng linh hoạt để tâm lý không bị căng cứng khi hoàn cảnh thay đổi.',
     ],
-    fields: ['Kế toán, tài chính', 'Kỹ thuật, xây dựng', 'Vận hành, hậu cần', 'Lập trình, kiểm thử phần mềm', 'Quản lý chất lượng'],
+    fields: ['Tài chính, kế toán, kiểm toán', 'Kỹ thuật, xây dựng', 'Quản lý vận hành, hậu cần', 'Phát triển và kiểm thử phần mềm', 'Quản lý chất lượng, pháp chế'],
   },
 
   5: {
-    title: 'Người thích đường mới',
-    keywords: ['Tự do', 'Thích nghi', 'Tò mò', 'Đổi mới'],
+    title: 'Người thích nghi và cải tiến',
+    keywords: ['Linh hoạt', 'Tự do', 'Thực chiến', 'Ưa đổi mới'],
     summary:
-      'Người mang số chủ đạo 5 thường thấy bứt rứt khi một ngày trôi qua y hệt ngày hôm trước. Bạn học nhanh nhất khi được làm thật, đi thật, thử thật. Điểm cần để ý là bạn dễ bỏ ngang lúc mọi thứ bắt đầu nhàm, dù chỉ còn một chút nữa là xong. Bài học của số 5 là dùng sự tự do của mình có chủ đích, để mỗi lần đổi hướng đều đưa bạn tới gần điều mình muốn hơn.',
+      'Một lịch trình rập khuôn lặp đi lặp lại ngày này qua tháng khác rất dễ làm bạn cảm thấy ngột ngạt và tụt năng lượng. Bạn tiếp thu nhanh nhất khi được trực tiếp va chạm thực tế, thử nghiệm cái mới và tự mình rút kinh nghiệm. Khi hoàn cảnh xung quanh biến động, trong lúc nhiều người còn lúng túng thì bạn đã nhanh chóng xoay xở và tìm ra lối đi mới. Bài học quan trọng nhất của bạn là gắn sự tự do với một mục tiêu có chiều sâu, để mỗi lần dịch chuyển đều giúp bạn nâng tầm năng lực thay vì chỉ đổi chỗ cho đỡ chán.',
     strengths: [
-      'Bạn thích nghi nhanh. Chuyển tới thành phố mới hay đổi sang nhóm mới, bạn thường quen việc chỉ sau vài tuần.',
-      'Bạn dám thử. Món ăn lạ, công cụ mới hay một lối khác để về nhà, bạn đều muốn thử một lần cho biết.',
-      'Bạn nói chuyện được với nhiều kiểu người, nên hay là cầu nối giữa những nhóm vốn không quen nhau.',
+      'Khả năng thích ứng cực nhanh: dù chuyển sang môi trường mới, công cụ mới hay lĩnh vực chưa từng làm, bạn chỉ mất thời gian rất ngắn để bắt nhịp.',
+      'Dám thử nghiệm và cải tiến: bạn không ngại phá bỏ những quy trình rườm rà để tìm ra cách làm ngắn gọn, hiệu quả hơn.',
+      'Giao tiếp cởi mở, đa dạng: bạn dễ dàng bắt chuyện và làm việc ăn ý với nhiều kiểu người thuộc các ngành nghề, hoàn cảnh khác nhau.',
     ],
     watchOut: [
-      'Bạn dễ bỏ ngang khi việc hết mới mẻ, kể cả những việc chỉ còn chút nữa là thấy kết quả.',
-      'Bạn hay quyết nhanh theo cảm hứng, như đặt vé đi chơi trước rồi mới tính chuyện tiền.',
-      'Khi bị gò vào quy định chặt, bạn có thể bực bội ra mặt và khiến người khác hiểu lầm là bạn coi thường họ.',
+      'Dễ bỏ ngang công việc ngay ở giai đoạn hoàn thiện cuối cùng chỉ vì cảm giác háo hức ban đầu đã qua đi.',
+      'Đôi khi đưa ra các quyết định thay đổi lớn như nghỉ việc, chuyển hướng hay chi tiêu chỉ dựa trên sự bốc đồng nhất thời.',
+      'Phản ứng gay gắt hoặc mất hết động lực khi phải làm việc dưới sự quản lý vi mô, gò bó từng giờ giấc.',
     ],
     advice: [
-      'Trước khi bỏ một việc, bạn tự hỏi mình chán việc này hay chỉ chán giai đoạn này. Hai câu trả lời dẫn tới hai lựa chọn rất khác nhau.',
-      'Giữ một khoản tiền riêng cho những chuyến đi và trải nghiệm. Có sẵn khoản đó, bạn vừa được tự do vừa không lo hụt tháng.',
-      'Biến việc lặp lại thành thử thách nhỏ, ví dụ làm xong báo cáo tuần nhanh hơn tuần trước mười phút.',
+      'Trước khi quyết định từ bỏ một công việc hay dự án, hãy tự vấn xem bạn thực sự hết cơ hội phát triển ở đó hay chỉ đang né tránh giai đoạn khó khăn.',
+      'Thiết lập một quỹ tài chính dự phòng riêng cho các kế hoạch trải nghiệm để sự tự do của bạn luôn có điểm tựa an toàn.',
+      'Chọn một lĩnh vực chuyên môn cốt lõi để đào sâu liên tục ít nhất hai năm, thay vì biết mỗi thứ một chút nhưng thiếu hẳn một thế mạnh sắc bén.',
     ],
-    fields: ['Du lịch, sự kiện', 'Bán hàng, kinh doanh', 'Báo chí, sáng tạo nội dung', 'Công việc hay đi lại', 'Khởi nghiệp'],
+    fields: ['Phát triển kinh doanh, bán hàng', 'Du lịch, tổ chức sự kiện', 'Báo chí, truyền thông đa phương tiện', 'Thương mại, xuất nhập khẩu', 'Khởi nghiệp đổi mới'],
   },
 
   6: {
-    title: 'Người giữ lửa',
-    keywords: ['Trách nhiệm', 'Chăm sóc', 'Gia đình', 'Hài hoà'],
+    title: 'Người giữ trách nhiệm và gắn kết',
+    keywords: ['Trách nhiệm', 'Chu đáo', 'Trọng chữ tín', 'Hướng về tập thể'],
     summary:
-      'Người mang số chủ đạo 6 thấy mình có ích nhất khi chăm lo được cho người khác. Bạn là người nhớ sinh nhật cả nhóm, hay mang thêm hộp cơm cho bạn cùng phòng đang bận. Nhà cửa, gia đình và những người thân thiết chiếm chỗ rất lớn trong lòng bạn. Bài học của số 6 là chăm cho người khác mà không quên chăm cho chính mình.',
+      'Bạn tìm thấy ý nghĩa lớn nhất khi chăm lo được cho sự ổn định của gia đình, đội nhóm và những người mình yêu quý. Trong công việc cũng như đời sống, bạn là người tinh ý nhận ra ai đang gặp khó khăn và sẵn sàng xắn tay áo vào gánh vác mà không tính toán thiệt hơn. Bên cạnh tinh thần trách nhiệm, bạn còn có mắt thẩm mỹ tốt và luôn muốn giữ cho không gian xung quanh chỉn chu, hài hoà. Bài học cốt lõi của bạn là học cách giúp đỡ đúng mực để người khác tự trưởng thành, đồng thời không bỏ quên nhu cầu của chính mình.',
     strengths: [
-      'Bạn có trách nhiệm. Việc đã nhận, bạn lo cho tới nơi, kể cả khi không ai kiểm tra.',
-      'Bạn tạo được không gian ấm áp. Bạn bè hay thích tụ tập ở chỗ bạn vì ở đó thấy dễ chịu.',
-      'Bạn có mắt thẩm mỹ cho những thứ thường ngày, như cách bày bàn ăn hay sắp lại góc làm việc.',
+      'Tinh thần trách nhiệm rất cao: một khi đã nhận lời, bạn luôn theo sát công việc đến cùng dù có người giám sát hay không.',
+      'Khả năng chăm sóc và gắn kết: bạn tạo ra bầu không khí ấm áp, tin cậy, khiến các thành viên trong gia đình hay đội nhóm dễ xích lại gần nhau.',
+      'Gu thẩm mỹ thực tế: bạn có năng khiếu tự nhiên trong việc sắp xếp không gian sống, trình bày sản phẩm và chăm chút trải nghiệm cho người khác.',
     ],
     watchOut: [
-      'Bạn dễ ôm việc của người khác vào mình, rồi mệt mà không dám kêu.',
-      'Đôi lúc sự quan tâm của bạn thành ra kiểm soát, như nhắc đi nhắc lại một người nên làm gì.',
-      'Bạn đặt chuẩn cao cho mình và người thân, nên dễ thất vọng khi mọi thứ không trọn vẹn.',
+      'Thói quen lo thay, làm thay phần việc của người khác rồi tự rơi vào trạng thái kiệt sức và tủi thân vì không ai hiểu cho mình.',
+      'Sự quan tâm quá mức đôi khi biến thành áp đặt ngầm, muốn người thân phải làm theo đúng cách bạn cho là tốt nhất.',
+      'Đặt tiêu chuẩn hoàn hảo quá cao cho các mối quan hệ, dễ thất vọng nặng nề khi sự nhiệt tình của mình không được đáp lại tương xứng.',
     ],
     advice: [
-      'Trước khi nhận lời giúp ai, bạn hỏi mình tuần này còn sức không. Nếu không, bạn có quyền hẹn dịp khác.',
-      'Khi muốn khuyên người thân, bạn hỏi trước “bạn có muốn nghe ý kiến của mình không” rồi mới nói.',
-      'Mỗi tuần dành một buổi cho việc chỉ mình thích, không phải làm vì ai cả.',
+      'Trước khi gật đầu nhận thêm việc giúp người khác, hãy kiểm tra lại quỹ thời gian và sức khoẻ của chính bạn trong tuần đó trước.',
+      'Khi muốn góp ý hay can thiệp vào chuyện của người thân, hãy tập hỏi xem họ cần bạn lắng nghe hay cần giải pháp trước khi đưa ra lời khuyên.',
+      'Dành riêng những khoảng thời gian cố định trong tuần để chăm sóc sức khoẻ và sở thích cá nhân mà không cảm thấy có lỗi với ai.',
     ],
-    fields: ['Y tế, chăm sóc', 'Giáo dục', 'Thiết kế nội thất', 'Nhà hàng, khách sạn', 'Công tác xã hội'],
+    fields: ['Y tế, chăm sóc sức khoẻ', 'Giáo dục, đào tạo', 'Thiết kế nội thất, không gian', 'Quản trị dịch vụ, khách sạn', 'Quản trị nhân sự, văn hoá nội bộ'],
   },
 
   7: {
-    title: 'Người đi tìm lẽ',
-    keywords: ['Suy ngẫm', 'Phân tích', 'Hiểu sâu', 'Độc lập'],
+    title: 'Người phân tích và đào sâu bản chất',
+    keywords: ['Tư duy logic', 'Độc lập', 'Quan sát sâu', 'Chuyên môn cao'],
     summary:
-      'Người mang số chủ đạo 7 không dễ tin ngay điều người khác nói. Bạn muốn tự tìm hiểu, đọc thêm, so sánh vài nguồn rồi mới gật đầu. Bạn cần những khoảng yên tĩnh để lấy lại sức, và một buổi tối đọc sách một mình có thể quý hơn một bữa tiệc đông người. Bài học của số 7 là tin người khác đủ để mở lòng, dù chưa có câu trả lời chắc chắn cho mọi thứ.',
+      'Bạn hiếm khi tin ngay những lời giải thích hời hợt trên bề mặt mà luôn muốn tự mình tìm hiểu tận gốc rễ vấn đề. Đứng trước một thông tin mới, phản xạ của bạn là đặt câu hỏi ngược lại, đối chiếu nhiều nguồn dữ liệu và quan sát thực tế rồi mới đưa ra kết luận. Những khoảng không gian yên tĩnh, độc lập là điều kiện bắt buộc để bạn suy ngẫm và tái tạo năng lượng. Bài học lớn của bạn là bước qua rào cản hoài nghi để mở lòng kết nối với mọi người và biến kiến thức trong đầu thành hành động thực tế.',
     strengths: [
-      'Bạn phân tích giỏi. Trước khi mua một món đồ đắt tiền, bạn đã đọc kỹ đánh giá và biết rõ điểm yếu của nó.',
-      'Bạn tập trung sâu được. Khi đã mê một chủ đề, bạn có thể tìm hiểu nhiều giờ liền mà không thấy chán.',
-      'Bạn có trực giác tốt về con người, thường nhận ra điều không ổn trước khi người khác để ý.',
+      'Năng lực phân tích sắc sảo: bạn dễ dàng phát hiện ra những điểm bất hợp lý trong lập luận hoặc lỗi ẩn sâu trong quy trình mà người khác lướt qua.',
+      'Khả năng tự học và tập trung sâu: khi đã quan tâm tới một lĩnh vực, bạn có thể kiên trì nghiên cứu hàng giờ liền để nắm vững bản chất.',
+      'Góc nhìn điềm tĩnh, khách quan: giữa những tình huống hỗn loạn, bạn ít bị tâm lý đám đông cuốn đi mà giữ được cái đầu lạnh.',
     ],
     watchOut: [
-      'Bạn có thể trông xa cách, khiến người mới quen nghĩ bạn khó gần hay đang chê họ.',
-      'Bạn dễ nghĩ quá nhiều. Một tin nhắn mơ hồ có thể khiến bạn đoán già đoán non cả buổi.',
-      'Khi bị tổn thương, bạn hay rút vào trong và im lặng thay vì nói cho người kia biết.',
+      'Dễ mắc kẹt trong việc phân tích quá mức, cứ muốn thu thập thêm thông tin mãi mà chần chừ không chịu bắt tay vào thử nghiệm.',
+      'Phong thái khép kín, kiệm lời đôi khi khiến người xung quanh hiểu lầm là bạn lạnh lùng, xa cách hoặc đang ngầm đánh giá họ.',
+      'Khi gặp chuyện tổn thương tâm lý, bạn có xu hướng tự rút vào vỏ bọc im lặng thay vì thẳng thắn trao đổi để tháo gỡ khúc mắc.',
     ],
     advice: [
-      'Khi đã tìm hiểu kha khá, bạn đặt một hạn để ra quyết định, vì thông tin không bao giờ đủ trăm phần trăm.',
-      'Chọn một người tin cậy và kể cho họ nghe một điều bạn đang nghĩ. Nói ra thường nhẹ hơn bạn tưởng.',
-      'Giữ một khoảng yên tĩnh cố định mỗi ngày, ví dụ nửa tiếng trước khi ngủ, để bạn không phải chật vật tìm nó.',
+      'Áp dụng quy tắc ra quyết định khi đã nắm được khoảng 70 đến 80 phần trăm dữ kiện, vì những thông tin còn lại chỉ lộ ra khi bạn bắt đầu làm thật.',
+      'Chủ động chia sẻ ngắn gọn tiến độ hoặc suy nghĩ của bạn với đồng nghiệp, người thân để họ hiểu bạn đang tập trung chứ không phải thờ ơ.',
+      'Thiết lập một khung giờ yên tĩnh cố định mỗi ngày cho việc đọc và suy ngẫm, giúp tâm trí được nạp lại năng lượng một cách chủ động.',
     ],
-    fields: ['Nghiên cứu khoa học', 'Phân tích dữ liệu', 'Lập trình', 'Tâm lý học', 'Viết chuyên sâu, biên khảo'],
+    fields: ['Nghiên cứu và phát triển', 'Phân tích dữ liệu, tài chính', 'Kỹ thuật phần mềm, hệ thống', 'Tâm lý học, tư vấn chuyên sâu', 'Biên khảo, học thuật'],
   },
 
   8: {
-    title: 'Người cầm lái',
-    keywords: ['Tham vọng', 'Quản lý', 'Thực tế', 'Bản lĩnh'],
+    title: 'Người điều hành và tối ưu nguồn lực',
+    keywords: ['Thực tế', 'Tư duy quản trị', 'Bản lĩnh', 'Định hướng kết quả'],
     summary:
-      'Người mang số chủ đạo 8 thường nghĩ tới kết quả và cách để đạt được nó. Bạn để ý tới chuyện tiền bạc, vị trí và sự ổn định từ khá sớm, và điều đó không có gì xấu. Khi có việc lớn cần người đứng ra lo, mọi người hay nhìn về phía bạn. Bài học của số 8 là dùng sức mạnh của mình cho công bằng, và nhớ rằng thành công không đo hết được bằng con số.',
+      'Bạn nhìn nhận công việc và cuộc sống qua lăng kính rất thực tế của hiệu suất, nguồn lực và kết quả đo đếm được. Ngay từ sớm, bạn đã ý thức rõ tầm quan trọng của sự tự chủ tài chính cũng như vị thế cá nhân để làm chủ các lựa chọn của mình. Khi tập thể đứng trước bài toán lớn cần người cầm trịch và chịu trách nhiệm, bạn có đủ sự quyết đoán để đứng mũi chịu sào. Bài học xuyên suốt của bạn là cân bằng giữa mục tiêu lợi ích với sự thấu cảm con người, bởi thành tựu bền vững không bao giờ chỉ đo bằng con số.',
     strengths: [
-      'Bạn có đầu óc tổ chức. Chuyến đi chơi của cả nhóm, bạn tính được ngân sách, chia chi phí và đặt chỗ gọn gàng.',
-      'Bạn bền bỉ khi theo đuổi mục tiêu. Hỏng một lần, bạn thường rút kinh nghiệm rồi làm lại.',
-      'Bạn dám ra những quyết định khó và chịu trách nhiệm về chúng.',
+      'Tư duy tổ chức và phân bổ nguồn lực: bạn biết cách sắp xếp con người, ngân sách và thời gian sao cho tạo ra giá trị thực tế cao nhất.',
+      'Bản lĩnh vững vàng trước áp lực: những va vấp hay thất bại tạm thời ít khi làm bạn nản lòng mà thường kích thích bạn tìm cách làm lại bài bản hơn.',
+      'Rõ ràng, sòng phẳng và quyết đoán: bạn dám đưa ra những quyết định cắt bỏ hoặc đầu tư khó khăn ở thời điểm then chốt.',
     ],
     watchOut: [
-      'Bạn dễ đo giá trị bản thân bằng thu nhập hay thành tích, nên những giai đoạn chững lại làm bạn rất bứt rứt.',
-      'Trong nhóm, bạn có thể vô tình lấn át người khác vì muốn mọi thứ chạy theo ý mình cho nhanh.',
-      'Bạn hay làm tới khuya và hứa “xong đợt này sẽ nghỉ”, nhưng rồi đợt sau lại tới.',
+      'Dễ đánh đồng giá trị bản thân với thu nhập hoặc chức vụ, khiến bạn rơi vào trạng thái căng thẳng nặng nề mỗi khi sự nghiệp chững lại.',
+      'Trong quá trình làm việc, đôi khi vì quá sốt ruột với tiến độ mà bạn vô tình lấn át hoặc bỏ qua cảm xúc của những người đồng hành.',
+      'Thói quen cuốn vào guồng công việc liên miên không có điểm dừng, luôn tự nhủ xong dự án này sẽ nghỉ nhưng rồi lại ôm tiếp mục tiêu mới.',
     ],
     advice: [
-      'Bên cạnh mục tiêu về tiền, bạn đặt thêm một mục tiêu không đo bằng tiền, như học đàn hay về thăm ông bà đều đặn.',
-      'Trong buổi họp tới, bạn để người khác nói trước rồi mới nêu ý của mình.',
-      'Ghi lại các khoản chi lớn trong tháng và xem khoản nào thật sự làm bạn vui, khoản nào chỉ để chứng tỏ.',
+      'Song song với các chỉ tiêu về tài chính và công việc, hãy đặt ra những mục tiêu cụ thể về sức khoẻ và thời gian chất lượng bên gia đình.',
+      'Trong các buổi thảo luận nhóm, hãy rèn thói quen lắng nghe hết góc nhìn của các thành viên trước khi bạn đưa ra quyết định chốt cuối cùng.',
+      'Định kỳ rà soát lại các khoản chi tiêu và mục tiêu lớn để chắc chắn rằng bạn đang đầu tư cho giá trị thực chất chứ không phải vì sĩ diện bề ngoài.',
     ],
-    fields: ['Quản trị doanh nghiệp', 'Tài chính, ngân hàng', 'Bất động sản', 'Luật', 'Quản lý vận hành'],
+    fields: ['Quản trị doanh nghiệp, điều hành', 'Tài chính, đầu tư, ngân hàng', 'Kinh doanh bất động sản, thương mại', 'Luật, tư vấn chiến lược', 'Quản lý vận hành quy mô lớn'],
   },
 
   9: {
-    title: 'Người rộng lòng',
-    keywords: ['Bao dung', 'Lý tưởng', 'Cho đi', 'Biết buông'],
+    title: 'Người định hướng giá trị cộng đồng',
+    keywords: ['Bao dung', 'Tầm nhìn rộng', 'Trách nhiệm xã hội', 'Truyền cảm hứng'],
     summary:
-      'Người mang số chủ đạo 9 thường quan tâm tới những chuyện lớn hơn bản thân mình. Bạn dễ xúc động trước một bản tin về người gặp nạn và hay là người chuyển khoản ủng hộ đầu tiên. Bạn hiểu được nhiều kiểu người vì nhìn mọi chuyện bằng tấm lòng rộng. Bài học của số 9 là biết buông những gì đã hết, từ một mối quan hệ cũ tới một nỗi giận đã lâu.',
+      'Bạn luôn có xu hướng nhìn vượt ra khỏi lợi ích cá nhân để quan tâm tới tác động chung đối với tập thể và xã hội. Nhờ góc nhìn cởi mở và sự đồng cảm tự nhiên, bạn dễ dàng thấu hiểu những con người có xuất thân, quan điểm hoàn toàn khác biệt với mình. Một công việc chỉ đơn thuần mang lại thu nhập nhưng thiếu đi giá trị nhân văn rất khó giữ chân bạn lâu dài. Bài học lớn của bạn là giữ đôi chân thực tế khi theo đuổi lý tưởng và học cách buông bỏ những chuyện cũ đã không còn phù hợp.',
     strengths: [
-      'Bạn cảm thông với người khác, kể cả những người rất khác mình về tuổi tác hay hoàn cảnh.',
-      'Bạn nhìn được bức tranh lớn, nên hay giúp nhóm nhớ lại vì sao mọi người làm việc này.',
-      'Bạn rộng rãi thời gian và công sức cho những việc có ích cho người khác.',
+      'Tầm nhìn bao quát và nhân văn: bạn giúp đội nhóm hiểu rõ ý nghĩa lớn hơn của công việc đang làm để cùng giữ lửa đường dài.',
+      'Sự bao dung và khả năng thu phục: cách ứng xử rộng lượng, không chấp nhặt tiểu tiết giúp bạn nhận được sự nể trọng tự nhiên từ mọi người.',
+      'Sẵn sàng sẻ chia kiến thức, kinh nghiệm và nguồn lực để nâng đỡ những người xung quanh cùng tiến bộ.',
     ],
     watchOut: [
-      'Bạn dễ cho đi quá sức rồi thấy tủi khi không ai để ý.',
-      'Bạn hay giữ lại kỷ niệm, đồ cũ và cả những mối quan hệ đã làm mình mệt.',
-      'Khi người khác không sống đúng như lý tưởng của bạn, bạn có thể thất vọng một cách lặng lẽ.',
+      'Dễ cho đi quá mức hoặc nhận phần thiệt về mình mà không nói rõ, đến khi mệt mỏi lại âm thầm thất vọng vì người khác vô tâm.',
+      'Hay nặng lòng với quá khứ, khó dứt khoát khép lại những mối quan hệ hoặc dự án đã không còn mang lại giá trị tích cực.',
+      'Đôi khi lý tưởng hoá vấn đề mà thiếu sự tính toán chặt chẽ về bài toán chi phí, nguồn lực và tính khả thi thực tế.',
     ],
     advice: [
-      'Trong tuần này, bạn dọn một góc tủ và cho đi những món đã không dùng tới trong một năm.',
-      'Chọn một việc thiện nguyện vừa sức và làm đều đặn, thay vì đáp lại mọi lời kêu gọi rồi kiệt sức.',
-      'Khi thấy tủi vì cho nhiều mà nhận ít, bạn nói thẳng với người kia điều mình cần.',
+      'Mọi kế hoạch hỗ trợ cộng đồng hay tập thể đều cần được gắn với ngân sách, quy trình thực tế để duy trì được lâu dài mà không làm bạn kiệt sức.',
+      'Tập thói quen dọn dẹp định kỳ từ không gian sống đến các cam kết công việc, chủ động khép lại những thứ đã hoàn thành vai trò của nó.',
+      'Khi cần sự hỗ trợ hoặc ghi nhận từ người khác, hãy thẳng thắn trao đổi thay vì im lặng chịu đựng rồi tự buồn một mình.',
     ],
-    fields: ['Phi lợi nhuận, công tác xã hội', 'Giáo dục', 'Nghệ thuật', 'Y tế, chăm sóc', 'Quan hệ quốc tế'],
+    fields: ['Tổ chức xã hội, phát triển cộng đồng', 'Giáo dục, đào tạo con người', 'Nghệ thuật, văn hoá, truyền thông', 'Y tế, chăm sóc sức khoẻ cộng đồng', 'Ngoại giao, quan hệ quốc tế'],
   },
 
   10: {
-    title: 'Người biết làm lại',
-    keywords: ['Tự lập', 'Linh hoạt', 'Bền chí', 'Khởi đầu'],
+    title: 'Người linh hoạt và bền sức bật',
+    keywords: ['Tự lập', 'Thích ứng nhanh', 'Bền chí', 'Dám làm lại'],
     summary:
-      'Ở cách tính phổ biến tại Việt Nam, tổng bằng 10 được giữ lại thay vì rút về 1. Người mang số này có sự tự lập của số 1, cộng thêm khả năng xoay xở khi hoàn cảnh đổi khác. Bạn có thể đã đổi trường, đổi việc hay đổi chỗ ở vài lần, và lần nào cũng gượng dậy được. Bài học của số 10 là tin vào khả năng làm lại của mình, đồng thời học cách đi đường dài với một lựa chọn.',
+      'Trong cách tính phổ biến tại Việt Nam, tổng ngày sinh bằng 10 được giữ riêng để nhấn mạnh sự kết hợp giữa tính tự chủ của số 1 và độ linh hoạt xoay chuyển của số 0. Bạn vừa có khả năng độc lập tự lo cho mình, vừa có sức bật rất nhanh mỗi khi hoàn cảnh sống hoặc công việc thay đổi đột ngột. Thực tế cho thấy dù phải chuyển hướng hay bắt đầu lại ở một môi trường hoàn toàn mới, bạn vẫn nhanh chóng tìm được chỗ đứng. Bài học trọng tâm của bạn là kết hợp khả năng ứng biến đó với sự kiên trì theo đuổi mục tiêu đến cùng.',
     strengths: [
-      'Bạn đứng dậy nhanh sau vấp ngã. Trượt một kỳ thi hay lỡ một cơ hội, bạn buồn vài hôm rồi tính bước tiếp theo.',
-      'Bạn vừa tự làm được vừa chịu học hỏi, nên hợp với những môi trường hay thay đổi.',
-      'Bạn hay là người thử cách mới đầu tiên, rồi quay lại chỉ cho người khác.',
+      'Khả năng phục hồi tâm lý rất nhanh: sau một thất bại hay biến cố, bạn không mất quá nhiều thời gian than vãn mà sớm bắt tay vào phương án mới.',
+      'Tư duy cởi mở, ít định kiến: bạn vừa tự làm việc độc lập tốt, vừa sẵn sàng học hỏi cách làm mới từ những người xung quanh.',
+      'Dám bước vào những lĩnh vực mới mẻ và nhanh chóng đúc kết thành kinh nghiệm thực tế để hướng dẫn lại cho người đi sau.',
     ],
     watchOut: [
-      'Vì quen làm lại từ đầu, bạn có thể bỏ một hướng đi hơi sớm, trước khi nó kịp cho kết quả.',
-      'Bạn đôi khi tin quá vào khả năng xoay xở của mình, nên chuẩn bị ít hơn mức cần.',
+      'Vì quá quen với việc có thể bắt đầu lại từ đầu, đôi khi bạn buông bỏ một hướng đi hơi sớm ngay trước lúc nó kịp mang lại thành quả.',
+      'Đôi lúc chủ quan, ỷ lại vào khả năng ứng biến tại chỗ của bản thân nên khâu chuẩn bị nền tảng chưa đủ kỹ lưỡng.',
     ],
     advice: [
-      'Với mục tiêu quan trọng nhất lúc này, bạn cam kết theo nó ít nhất sáu tháng rồi mới đánh giá lại.',
-      'Ghi lại những lần bạn đã làm lại từ đầu và điều học được sau mỗi lần. Danh sách đó sẽ nhắc bạn mỗi khi chùn bước.',
-      'Trước một thay đổi lớn, bạn hỏi ý một người đi trước để có thêm góc nhìn.',
+      'Với mục tiêu quan trọng nhất hiện tại, hãy đặt cam kết theo đuổi liên tục ít nhất sáu tháng đến một năm trước khi nghĩ tới chuyện đổi hướng.',
+      'Ghi chép lại những bài học xương máu sau mỗi lần chuyển đổi công việc để không lặp lại cùng một kiểu sai lầm ở môi trường mới.',
+      'Trước các quyết định rẽ nhánh lớn, hãy tham khảo góc nhìn phản biện từ một người có chuyên môn sâu để bổ sung những rủi ro bạn chưa tính tới.',
     ],
-    fields: ['Khởi nghiệp', 'Quản lý dự án', 'Phát triển kinh doanh', 'Tư vấn', 'Nghề tự do'],
+    fields: ['Khởi nghiệp, phát triển kinh doanh', 'Quản lý dự án', 'Tư vấn giải pháp', 'Thương mại, dịch vụ', 'Nghề tự do đa lĩnh vực'],
   },
 
   11: {
-    title: 'Người nhạy với tín hiệu nhỏ',
-    keywords: ['Trực giác', 'Truyền cảm hứng', 'Nhạy cảm', 'Lý tưởng'],
+    title: 'Người nhạy bén trực giác và truyền cảm hứng',
+    keywords: ['Trực giác sắc bén', 'Thấu cảm sâu', 'Truyền cảm hứng', 'Tinh tế'],
     summary:
-      'Số 11 được xem là một số đặc biệt nên không bị rút gọn tiếp. Người mang số chủ đạo 11 cảm nhận rất rõ những thứ người khác hay bỏ qua, như sự gượng gạo trong một cuộc gọi hay một ý tưởng còn mơ hồ. Bạn hay có những lúc tự dưng biết, và về sau thấy mình đúng. Bài học của số 11 là sống với độ nhạy đó mà không để nó làm mình căng thẳng.',
+      'Mang nền tảng kết nối của số 2 nhưng ở cường độ nhạy bén cao hơn, bạn thường nhận ra bản chất của một tình huống hoặc tâm trạng ẩn giấu của người đối diện trước cả khi họ lên tiếng. Bạn không thích những cuộc trò chuyện xã giao hời hợt mà luôn tìm kiếm chiều sâu ý nghĩa trong công việc lẫn các mối quan hệ. Khi bạn chia sẻ về một điều mình thực sự tâm huyết, sự chân thành và góc nhìn sắc sảo của bạn có sức thuyết phục người nghe rất tự nhiên. Bài học lớn của bạn là giữ cho tâm trí vững vàng, thực tế để độ nhạy cảm cao không trở thành gánh nặng gây căng thẳng.',
     strengths: [
-      'Bạn có trực giác tốt, nhất là trong chuyện đọc người và đoán xem một ý tưởng có chạm được tới người khác không.',
-      'Bạn truyền được cảm hứng. Khi bạn kể về điều mình tin, người nghe dễ muốn làm cùng.',
-      'Bạn để ý tới phần ý nghĩa của mọi việc, nên hay giúp người khác thấy điều họ đang làm có giá trị ra sao.',
+      'Trực giác đọc tình huống và con người rất nhạy: bạn sớm nhận ra những điểm bất ổn ngầm hoặc cơ hội mới mà số liệu bề nổi chưa phản ánh hết.',
+      'Khả năng truyền đạt chạm tới cảm xúc: lời nói và bài viết của bạn dễ khơi dậy động lực cũng như sự đồng cảm sâu sắc nơi người khác.',
+      'Tư duy giàu chiều sâu: bạn luôn biết cách kết nối những sự việc rời rạc để nhìn ra ý nghĩa và giá trị cốt lõi phía sau.',
     ],
     watchOut: [
-      'Bạn dễ căng thẳng và khó ngủ khi có nhiều chuyện chưa rõ ràng.',
-      'Bạn hay nghi ngờ bản thân, dù người khác thấy bạn đang làm tốt.',
-      'Vì kỳ vọng cao, bạn có thể hụt hẫng khi thực tế không đẹp như mình hình dung.',
+      'Hệ thần kinh dễ bị quá tải, mất ngủ hoặc kiệt sức khi phải làm việc lâu trong môi trường ồn ào, nhiều sự cạnh tranh thiếu lành mạnh.',
+      'Tâm lý dễ dao động giữa hai thái cực: có lúc rất tin vào tầm nhìn của mình, có lúc lại tự nghi ngờ bản thân gay gắt.',
+      'Đặt kỳ vọng lý tưởng quá cao vào thực tế hoặc con người, dẫn đến cảm giác hẫng hụt khi mọi thứ diễn ra trần trụi hơn mình nghĩ.',
     ],
     advice: [
-      'Ghi lại các linh cảm của bạn kèm ngày tháng. Sau vài tháng, bạn sẽ biết lúc nào nên tin chúng, lúc nào nên kiểm tra thêm.',
-      'Tạo một thói quen giúp mình chậm lại mỗi tối, như đi bộ ngắn hay tắt điện thoại sớm.',
-      'Biến ý tưởng thành việc nhỏ có hạn chót, để cảm hứng có chỗ đứng trong đời thực.',
+      'Rèn thói quen kiểm chứng trực giác bằng dữ kiện thực tế: hãy ghi lại những phán đoán của bạn và đối chiếu với kết quả để tăng độ chuẩn xác.',
+      'Duy trì các thói quen giúp cân bằng thể chất hằng ngày như vận động ngoài trời, ngủ đủ giấc và giới hạn thời gian tiếp nhận thông tin tiêu cực.',
+      'Mỗi khi có một ý tưởng tâm huyết, hãy bắt tay ngay vào những bước thực thi nhỏ, cụ thể để neo nguồn cảm hứng của bạn vào đời sống thực.',
     ],
-    fields: ['Tư vấn', 'Nghệ thuật, âm nhạc', 'Giảng dạy, diễn thuyết', 'Viết lách', 'Hoạt động cộng đồng'],
+    fields: ['Tư vấn tâm lý, định hướng', 'Giảng dạy, đào tạo, diễn thuyết', 'Sáng tạo nghệ thuật, biên kịch', 'Viết lách, truyền thông chiều sâu', 'Phát triển văn hoá, cộng đồng'],
   },
 
   22: {
-    title: 'Người dựng việc lớn',
-    keywords: ['Tầm nhìn', 'Thực tế', 'Bền bỉ', 'Xây dựng'],
+    title: 'Người kiến tạo hệ thống quy mô lớn',
+    keywords: ['Tầm nhìn xa', 'Thực thi bài bản', 'Tổ chức quy mô', 'Bền bỉ'],
     summary:
-      'Số 22 được viết là 22/4 vì nó mang nền của số 4 nhưng với tầm nhìn rộng hơn. Người mang số chủ đạo này có thể nghĩ tới những việc lớn, như một tổ chức hay một sản phẩm cho nhiều người dùng, và cũng đủ chắc chắn để làm ra nó từng bước. Áp lực đi kèm là bạn hay thấy mình chưa làm đủ. Bài học của số 22 là kiên nhẫn với tiến độ và chấp nhận rằng việc lớn cần nhiều năm.',
+      'Được ký hiệu là 22/4, chỉ số này kết hợp trực giác tầm nhìn của số 11 với kỷ luật thực thi chặt chẽ của số 4. Bạn không dừng lại ở việc nghĩ ra những ý tưởng lớn mà có khả năng hiếm có trong việc bóc tách chúng thành quy trình, nguồn lực và từng bước xây dựng cụ thể. Những bài toán phức tạp, dài hơi đòi hỏi sự phối hợp của nhiều bộ phận chính là nơi năng lực của bạn bộc lộ rõ nhất. Bài học cốt lõi của bạn là vượt qua áp lực cầu toàn, biết phân quyền cho đội ngũ và kiên nhẫn với tiến độ phát triển tự nhiên của công việc.',
     strengths: [
-      'Bạn biến ý tưởng thành kế hoạch làm được. Người khác còn đang mơ, bạn đã ngồi xuống chia nó thành từng giai đoạn.',
-      'Bạn chịu được việc khó và dài hơi, như theo một ngành học nhiều năm hay dựng một dự án từ con số không.',
-      'Bạn biết kết nối người và nguồn lực để cùng làm một việc chung.',
+      'Năng lực chuyển hoá tầm nhìn thành kế hoạch: bạn nhìn thấy cả bức tranh tổng thể sau nhiều năm lẫn những viên gạch đầu tiên cần đặt xuống hôm nay.',
+      'Sức bền trước các dự án phức tạp: những công việc đòi hỏi thời gian tích luỹ dài hạn và áp lực cao không làm bạn chùn bước.',
+      'Khả năng tổ chức và điều phối: bạn biết cách kết nối những con người có chuyên môn khác nhau vào chung một guồng máy vận hành trơn tru.',
     ],
     watchOut: [
-      'Bạn đặt áp lực lên mình rất nặng, có lúc tới mức không cho phép mình nghỉ.',
-      'Bạn có thể khó tính với người làm chậm hơn hay kém cẩn thận hơn mình.',
-      'Khi tầm nhìn quá xa so với hiện tại, bạn dễ nản và nghĩ mình kém.',
+      'Tự đặt lên vai áp lực nặng nề rằng mình phải tạo ra thành tựu thật lớn, dẫn đến làm việc quá sức và không cho phép bản thân ngơi nghỉ.',
+      'Xu hướng kiểm soát chặt và thiếu kiên nhẫn với những cộng sự có tốc độ xử lý chậm hoặc ít kinh nghiệm hơn mình.',
+      'Khi thực tế hiện tại còn cách quá xa mục tiêu lớn, bạn dễ rơi vào tâm lý nản lòng rồi tự thu mình lại trong vùng an toàn cứng nhắc.',
     ],
     advice: [
-      'Chia mục tiêu lớn thành từng mốc ba tháng, và ăn mừng mỗi mốc dù nhỏ.',
-      'Tìm một người đi trước từng làm việc tương tự để học hỏi, thay vì tự mò mọi thứ.',
-      'Cho mình một ngày nghỉ thật sự mỗi tuần, không email, không kế hoạch.',
+      'Chia nhỏ mọi mục tiêu dài hạn thành các cột mốc theo từng quý và ghi nhận đàng hoàng từng kết quả thực tế đã hoàn thành.',
+      'Đầu tư thời gian xây dựng quy trình chuẩn và đào tạo người kế cận, vì không một hệ thống lớn nào có thể vận hành mãi trên vai một cá nhân.',
+      'Duy trì nguyên tắc tách bạch thời gian làm việc và nghỉ ngơi để bảo vệ sự minh mẫn cho những quyết định chiến lược đường dài.',
     ],
-    fields: ['Kiến trúc, xây dựng', 'Quản lý dự án lớn', 'Kỹ thuật hệ thống', 'Khởi nghiệp quy mô lớn', 'Chính sách công'],
+    fields: ['Kiến trúc, quy hoạch, xây dựng', 'Quản trị dự án và chương trình lớn', 'Kỹ thuật hệ thống, công nghệ', 'Khởi nghiệp và điều hành doanh nghiệp', 'Hoạch định chính sách, vận hành chuỗi'],
   },
 
   33: {
-    title: 'Người dạy bằng sự tử tế',
-    keywords: ['Yêu thương', 'Phụng sự', 'Kiên nhẫn', 'Dẫn dắt'],
+    title: 'Người dẫn dắt bằng sự thấu cảm và gương mẫu',
+    keywords: ['Nâng đỡ con người', 'Trách nhiệm lớn', 'Bao dung', 'Chữa lành'],
     summary:
-      'Số 33 được viết là 33/6 vì nó mang nền của số 6, với mức quan tâm tới người khác còn cao hơn nữa. Người mang số chủ đạo này hay được tìm tới khi ai đó gặp chuyện, và bạn thường biết nói điều khiến người kia thấy được an ủi. Bạn dạy người khác bằng cách mình sống nhiều hơn bằng lời. Bài học của số 33 là giúp người mà không gánh luôn phần đời của họ.',
+      'Được ký hiệu là 33/6, chỉ số này hội tụ khả năng truyền đạt của số 3 và tinh thần trách nhiệm chăm sóc của số 6 ở mức độ rộng lớn hơn. Bạn có xu hướng tự nhiên trong việc lắng nghe, nâng đỡ tinh thần và hướng dẫn người khác vượt qua những giai đoạn bế tắc. Sự thuyết phục của bạn không đến từ quyền lực áp đặt mà đến từ chính sự nhất quán, tử tế trong cách bạn sống và làm việc mỗi ngày. Bài học quan trọng nhất của bạn là phân định rõ ranh giới giữa việc đồng hành hỗ trợ với việc gánh vác thay phần đời của người khác.',
     strengths: [
-      'Bạn có sức an ủi. Người đang buồn ngồi với bạn một lúc thường thấy nhẹ lòng hơn.',
-      'Bạn kiên nhẫn khi dạy, như giảng lại một bài toán lần thứ ba cho em mà không bực.',
-      'Bạn sống tử tế cả lúc không ai nhìn, và điều đó khiến người xung quanh tin bạn.',
+      'Khả năng điểm tựa tinh thần vững chãi: sự điềm đạm và thấu cảm của bạn giúp người đang khủng hoảng nhanh chóng lấy lại sự bình tĩnh.',
+      'Năng khiếu đào tạo và kèm cặp: bạn đủ kiên nhẫn để hướng dẫn từng bước và khơi dậy sự tự tin ở những người mới bắt đầu.',
+      'Uy tín từ sự chính trực: bạn nói đi đôi với làm, giữ chuẩn mực đạo đức rõ ràng nên dễ dàng tạo dựng niềm tin bền vững trong tập thể.',
     ],
     watchOut: [
-      'Bạn dễ nhận phần trách nhiệm không phải của mình, rồi kiệt sức.',
-      'Bạn có thể đặt chuẩn đạo đức rất cao cho bản thân và tự trách nặng nề khi lỡ sai.',
-      'Đôi khi bạn quên rằng người khác cũng cần tự học từ sai lầm của họ.',
+      'Dễ ôm đồm nỗi buồn và rắc rối của quá nhiều người xung quanh vào lòng, dẫn đến kiệt quệ cả về thời gian lẫn năng lượng tinh thần.',
+      'Đôi khi tự áp đặt tiêu chuẩn hy sinh quá cao cho bản thân rồi tự trách móc nặng nề khi mình không giúp được trọn vẹn.',
+      'Vô tình làm người khác ỷ lại vì lúc nào bạn cũng sẵn sàng đứng ra giải quyết hậu quả thay cho họ.',
     ],
     advice: [
-      'Mỗi khi muốn giúp, bạn hỏi người kia họ cần gì, thay vì làm theo điều bạn nghĩ là tốt cho họ.',
-      'Viết ra ba việc bạn sẽ không nhận thêm trong tháng này, và giữ đúng như vậy.',
-      'Tìm một nơi bạn được chăm sóc lại, như một người bạn để tâm sự hay một sở thích riêng.',
+      'Mỗi khi hỗ trợ ai đó, hãy tập trung hướng dẫn phương pháp để họ tự đứng dậy xử lý vấn đề thay vì làm hộ từ đầu đến cuối.',
+      'Thiết lập giới hạn rõ ràng về những việc bạn có thể giúp và những việc vượt quá khả năng hoặc trách nhiệm của mình trong từng giai đoạn.',
+      'Chủ động xây dựng cho mình một không gian riêng để nạp lại năng lượng, bởi bạn chỉ có thể nâng đỡ người khác khi chính bạn đang vững vàng.',
     ],
-    fields: ['Giáo dục', 'Tư vấn tâm lý', 'Y tế, điều dưỡng', 'Công tác xã hội', 'Nghệ thuật cộng đồng'],
+    fields: ['Giáo dục, đào tạo và phát triển con người', 'Tâm lý trị liệu, tham vấn', 'Y tế, điều dưỡng, chăm sóc sức khoẻ', 'Hoạt động xã hội, cộng đồng', 'Xây dựng văn hoá tổ chức'],
   },
 };
 
@@ -314,217 +314,217 @@ const lifePath = {
 
 const personalYear = {
   1: {
-    title: 'Năm gieo hạt',
-    keywords: ['Bắt đầu', 'Chủ động', 'Mục tiêu mới'],
+    title: 'Năm khởi động chu kỳ mới',
+    keywords: ['Bắt đầu', 'Chủ động', 'Định hướng mới'],
     summary:
-      'Năm cá nhân số 1 mở đầu một vòng chín năm mới. Đây là lúc hợp để bắt tay vào những gì bạn đã ấp ủ, từ một khoá học tới một thói quen mới. Những gì bạn gieo trong năm nay có thể theo bạn vài năm tới, nên bạn chọn kỹ một chút. Bạn sẽ thấy mình có nhiều sức để tự quyết hơn mọi năm.',
-    theme: 'Chủ đề của năm là tự khởi động. Bạn không cần đợi ai cho phép hay đợi mọi thứ hoàn hảo, chỉ cần bước bước đầu tiên.',
+      'Năm cá nhân số 1 mở ra một chu kỳ chín năm hoàn toàn mới với trọng tâm là sự chủ động và tính tự quyết. Đây là thời điểm phù hợp nhất để bạn bắt tay triển khai những dự án riêng, học một kỹ năng mới hoặc thay đổi những thói quen cũ đã trì trệ. Những lựa chọn và nền móng bạn đặt xuống trong năm nay sẽ định hình hướng phát triển của bạn trong suốt nhiều năm tiếp theo. Thay vì chờ đợi mọi điều kiện hoàn hảo, sự dứt khoát bước đi bước đầu tiên sẽ mang lại lợi thế lớn nhất cho bạn.',
+    theme: 'Trọng tâm của năm là tự mình khởi xướng và mở đường. Hãy dồn năng lượng vào việc bắt đầu những kế hoạch thực chất của riêng bạn.',
     doMore: [
-      'Viết ra hai hoặc ba mục tiêu cho năm và dán ở chỗ bạn nhìn thấy hằng ngày.',
-      'Đăng ký một việc mới mà bạn đã chần chừ lâu, như lớp học buổi tối hay một dự án riêng.',
-      'Tập tự ra những quyết định nhỏ mà không hỏi quá nhiều người.',
+      'Xác lập từ hai đến ba mục tiêu cốt lõi nhất của năm kèm theo lộ trình hành động cụ thể từng tháng.',
+      'Bắt tay thực hiện ngay một dự định bạn đã trì hoãn từ lâu như học nâng cao chuyên môn, chuyển hướng công việc hoặc làm dự án độc lập.',
+      'Rèn thói quen tự đưa ra quyết định dựa trên đánh giá của bản thân thay vì phụ thuộc quá nhiều vào sự đồng thuận của người xung quanh.',
     ],
     doLess: [
-      'Bớt chờ tới lúc “thật sự sẵn sàng”, vì lúc đó hiếm khi tới.',
-      'Bớt so điểm xuất phát của mình với người đã đi trước nhiều năm.',
+      'Bớt tâm lý chờ đợi tới lúc thật sự sẵn sàng, vì sự tự tin chỉ xuất hiện sau khi bạn đã bắt đầu làm thật.',
+      'Bớt đem vạch xuất phát mới của mình ra so sánh với thành quả của những người đã đi trước nhiều năm.',
     ],
     byQuarter: [
-      'Ngồi xuống xem năm cũ đã dạy bạn điều gì, rồi chọn hướng đi chính cho năm nay.',
-      'Bắt tay vào việc. Kết quả còn nhỏ cũng không sao, quan trọng là bạn đã bắt đầu.',
-      'Rà lại tiến độ và bỏ bớt những thứ bạn nhận ra mình không thật sự muốn.',
-      'Củng cố những gì đang chạy ổn để mang sang năm sau, một năm cần nhiều kiên nhẫn.',
+      'Đánh giá lại toàn bộ bài học từ năm cũ, lọc bỏ những mục tiêu không còn phù hợp và chốt định hướng trọng tâm cho năm mới.',
+      'Tập trung nguồn lực để khởi chạy các kế hoạch đã chọn, ưu tiên tạo ra đà chuyển động thực tế dù kết quả ban đầu còn nhỏ.',
+      'Rà soát lại tiến độ giữa năm, mạnh dạn cắt bỏ những việc làm phân tán thời gian để dồn sức cho mục tiêu chính.',
+      'Chuẩn bị tinh thần và củng cố những phần việc đang vận hành tốt để sẵn sàng bước sang năm số 2 thiên về sự kiên nhẫn và kết nối.',
     ],
   },
 
   2: {
-    title: 'Năm vun gốc',
-    keywords: ['Kiên nhẫn', 'Hợp tác', 'Kết nối'],
+    title: 'Năm củng cố và kết nối',
+    keywords: ['Kiên nhẫn', 'Hợp tác', 'Bồi đắp chiều sâu'],
     summary:
-      'Năm cá nhân số 2 chậm hơn năm trước, và đó là chuyện bình thường. Những hạt bạn gieo năm ngoái đang cần thời gian bén rễ. Năm nay hợp để làm việc cùng người khác, chăm các mối quan hệ và để ý tới chi tiết. Bạn có thể thấy mình nhạy cảm hơn thường lệ, nên hãy nhẹ tay với chính mình.',
-    theme: 'Chủ đề của năm là kiên nhẫn và cộng tác. Nhiều việc sẽ đi xa hơn nếu bạn có người đồng hành.',
+      'Bước sang năm cá nhân số 2, nhịp độ mọi việc thường chậm lại so với năm trước để những kế hoạch bạn vừa khởi động có thời gian bén rễ. Đây không phải là lúc nóng vội ép tiến độ một mình, mà là giai đoạn vàng để xây dựng quan hệ đối tác, lắng nghe phản hồi và hoàn thiện các chi tiết còn thiếu sót. Sự tinh tế trong giao tiếp và khả năng phối hợp nhịp nhàng với người xung quanh sẽ mở ra những cánh cửa mà sức cá nhân khó tự làm được. Bạn chỉ cần giữ sự kiên trì và tránh để những cảm xúc nhạy cảm nhất thời làm xao nhãng.',
+    theme: 'Trọng tâm của năm là sự kiên nhẫn và hợp tác. Đi cùng những người đồng hành phù hợp sẽ giúp công việc của bạn tiến vững chắc hơn.',
     doMore: [
-      'Chủ động hẹn gặp những người bạn đã lâu không liên lạc.',
-      'Nhận làm chung một việc với người có thế mạnh khác bạn.',
-      'Để ý tới những chi tiết nhỏ trong công việc, vì năm nay chúng tạo ra khác biệt.',
+      'Chủ động hâm nóng các mối quan hệ chất lượng và tìm kiếm những người có thế mạnh bổ khuyết cho điểm yếu của bạn.',
+      'Dành thời gian rà soát, nâng cấp chất lượng từng khâu nhỏ trong công việc hoặc quy trình đang vận hành.',
+      'Rèn kỹ năng lắng nghe và đàm phán win-win trong cả công việc lẫn đời sống cá nhân.',
     ],
     doLess: [
-      'Bớt nóng ruột khi kết quả chưa tới ngay.',
-      'Bớt nhận lời mọi thứ chỉ để giữ hoà khí.',
-      'Bớt đọc quá nhiều ý nghĩa vào một tin nhắn hay một ánh mắt.',
+      'Bớt tâm lý sốt ruột muốn thấy kết quả đột phá ngay tức thì khi nền tảng chưa đủ độ chín.',
+      'Bớt gật đầu nhận lời mọi yêu cầu vô lý chỉ vì ngại va chạm hoặc sợ làm mất lòng người khác.',
+      'Bớt suy diễn quá mức trước những thái độ hoặc lời nói vô tình của người xung quanh.',
     ],
     byQuarter: [
-      'Xem lại những việc đã bắt đầu năm ngoái và chọn việc nào đáng chăm tiếp.',
-      'Tìm người cùng làm, hỏi ý kiến và lắng nghe nhiều hơn nói.',
-      'Chăm chút chi tiết, sửa những chỗ nhỏ mà trước đây bạn bỏ qua.',
-      'Cảm ơn những người đã đồng hành với bạn trong năm.',
+      'Rà soát lại những dự án đã gieo từ năm trước để phân loại rõ việc nào cần tiếp tục đầu tư chăm sóc.',
+      'Đẩy mạnh việc kết nối, trao đổi với cộng sự, khách hàng và lắng nghe kỹ các góp ý thực tế.',
+      'Đi sâu vào tinh chỉnh chất lượng chuyên môn, vá lại những lỗ hổng nhỏ mà giai đoạn khởi động nhanh từng bỏ sót.',
+      'Củng cố sự gắn kết với đội ngũ và người thân, chuẩn bị nền tảng vững vàng trước khi bước sang năm số 3 năng động hơn.',
     ],
   },
 
   3: {
-    title: 'Năm lên tiếng',
-    keywords: ['Biểu đạt', 'Sáng tạo', 'Giao lưu'],
+    title: 'Năm mở rộng giao tiếp và sáng tạo',
+    keywords: ['Biểu đạt', 'Sáng tạo', 'Mở rộng mạng lưới'],
     summary:
-      'Năm cá nhân số 3 mang không khí nhẹ và vui hơn. Đây là năm hợp để nói ra, viết ra và chia sẻ những gì bạn nghĩ. Bạn có thể được rủ đi chơi, đi sự kiện nhiều hơn và gặp thêm người mới. Điều cần giữ là đừng để niềm vui kéo bạn đi theo quá nhiều hướng cùng lúc.',
-    theme: 'Chủ đề của năm là thể hiện bản thân. Ý tưởng của bạn cần được đưa ra ngoài thay vì nằm yên trong sổ.',
+      'Năm cá nhân số 3 mang tới luồng sinh khí cởi mở, thúc đẩy bạn bước ra ngoài giao lưu và thể hiện năng lực bản thân rõ nét hơn. Những ý tưởng từng ấp ủ trong thời gian qua nay đã có cơ hội thuận lợi để trình bày, thử nghiệm và đưa tới tay nhiều người. Việc tích cực học hỏi, chia sẻ kiến thức hoặc mở rộng mạng lưới quan hệ xã hội trong năm nay thường mang lại những cơ hội hợp tác rất bất ngờ. Điểm duy nhất bạn cần lưu tâm là giữ sự tập trung, tránh để sự hào hứng kéo mình chạy theo quá nhiều hướng cùng lúc.',
+    theme: 'Trọng tâm của năm là phát triển ý tưởng và mở rộng kết nối. Hãy mạnh dạn đưa tiếng nói cũng như sản phẩm của bạn ra thực tế.',
     doMore: [
-      'Chia sẻ một sản phẩm của riêng bạn, như bài viết, bức ảnh hay một món đồ tự làm.',
-      'Nhận lời những buổi gặp gỡ giúp bạn quen thêm người hay.',
-      'Thử một hoạt động sáng tạo bạn chưa từng làm.',
+      'Đầu tư xây dựng hình ảnh cá nhân hoặc công bố những sản phẩm, bài viết, dự án mang dấu ấn sáng tạo của riêng bạn.',
+      'Tham gia các hội thảo chuyên môn, khoá học kỹ năng giao tiếp hoặc các cộng đồng có cùng mục tiêu phát triển.',
+      'Thử nghiệm những phương pháp tiếp cận mới mẻ cho các bài toán công việc vốn đang đi vào lối mòn.',
     ],
     doLess: [
-      'Bớt mở thêm dự án khi các dự án cũ còn dang dở.',
-      'Bớt tiêu tiền theo hứng sau những buổi vui.',
-      'Bớt nói những câu bạn biết mình sẽ hối hận khi đang bực.',
+      'Bớt ôm đồm mở mới thêm hàng loạt kế hoạch trong khi các đầu việc hiện tại vẫn chưa đi đến đâu.',
+      'Bớt chi tiêu cảm tính cho những cuộc vui xã giao hoặc những món đồ mua theo hứng nhất thời.',
+      'Bớt phát ngôn vội vàng khi cảm xúc đang bốc đồng để tránh những hiểu lầm không đáng có.',
     ],
     byQuarter: [
-      'Chọn một nơi để thể hiện mình, như một cuốn sổ, một trang cá nhân hay một nhóm cùng sở thích.',
-      'Ra ngoài nhiều hơn và trò chuyện với những người mới quen.',
-      'Gom ý tưởng lại và hoàn thành trọn vẹn ít nhất một việc.',
-      'Nhìn lại những niềm vui của năm và chuẩn bị tinh thần cho một năm làm việc chăm chỉ.',
+      'Chọn lọc những ý tưởng khả thi nhất và xác định kênh truyền tải phù hợp để bắt đầu triển khai.',
+      'Tăng cường giao tiếp, mở rộng mạng lưới quan hệ và đón nhận các cơ hội hợp tác mới.',
+      'Thu gọn lại sự dàn trải, dồn sức hoàn thành dứt điểm các sản phẩm hoặc mục tiêu trọng tâm đã mở ra từ đầu năm.',
+      'Đánh giá lại hiệu quả thực chất của các kết nối mới và chuẩn bị tâm thế kỷ luật cho năm số 4 tiếp theo.',
     ],
   },
 
   4: {
-    title: 'Năm đặt gạch',
-    keywords: ['Kỷ luật', 'Xây nền', 'Ổn định'],
+    title: 'Năm kỷ luật và kiện toàn nền tảng',
+    keywords: ['Kỷ luật', 'Tối ưu quy trình', 'Vững chắc'],
     summary:
-      'Năm cá nhân số 4 là năm của công việc thật. Bạn có thể thấy mình bận rộn hơn, phải sắp xếp lại giấy tờ, tiền bạc hay nếp sinh hoạt. Năm này không lấp lánh, nhưng những gì bạn xây bây giờ sẽ đỡ bạn trong nhiều năm sau. Bạn cứ đi chậm mà chắc là được.',
-    theme: 'Chủ đề của năm là xây nền móng. Những thói quen tốt và kỹ năng bạn rèn trong năm nay là thứ đáng đầu tư nhất.',
+      'Sau giai đoạn mở rộng sôi nổi của năm số 3, năm cá nhân số 4 yêu cầu bạn quay về với sự thực tế, kỷ luật và tính hệ thống. Bạn sẽ cần dành nhiều tâm sức hơn để chuẩn hoá quy trình làm việc, kiểm soát chặt chẽ bài toán tài chính và rèn luyện chuyên môn cốt lõi. Dù nhịp sống năm nay có phần nghiêm túc và đòi hỏi nhiều nỗ lực bền bỉ, mọi viên gạch bạn xây chắc ở hiện tại sẽ là bệ phóng an toàn cho nhiều năm tới. Đi từng bước bài bản, không đốt cháy giai đoạn là chiến lược thông minh nhất trong năm này.',
+    theme: 'Trọng tâm của năm là củng cố nội lực và thiết lập trật tự. Sự chỉn chu, kỷ luật hôm nay sẽ quyết định sức bền của bạn về sau.',
     doMore: [
-      'Lập một ngân sách đơn giản và theo nó suốt năm.',
-      'Học sâu một kỹ năng giúp ích cho công việc chính của bạn.',
-      'Dọn dẹp, sắp xếp lại nhà cửa và các giấy tờ quan trọng.',
+      'Thiết lập bảng quản lý thu chi, tiết kiệm rõ ràng và rà soát lại toàn bộ các cam kết pháp lý, giấy tờ quan trọng.',
+      'Đào sâu rèn luyện một kỹ năng chuyên môn thực chiến giúp nâng cao năng suất và giá trị công việc chính.',
+      'Sắp xếp lại nhịp sinh hoạt, khám sức khoẻ định kỳ và duy trì thói quen vận động đều đặn.',
     ],
     doLess: [
-      'Bớt tìm đường tắt cho những việc cần thời gian.',
-      'Bớt than mệt mà không đổi cách làm.',
-      'Bớt bỏ bữa, bỏ giấc vì công việc.',
+      'Bớt tâm lý tìm đường tắt hoặc đầu tư mạo hiểm thiếu cơ sở dữ liệu chắc chắn.',
+      'Bớt làm việc theo cảm hứng lúc vội vã lúc bỏ bê mà không có quy trình rõ ràng.',
+      'Bớt cắt xén thời gian ngủ nghỉ tối thiểu để chạy theo khối lượng công việc.',
     ],
     byQuarter: [
-      'Lập kế hoạch cụ thể cho năm, có mốc thời gian và con số rõ ràng.',
-      'Bám theo kế hoạch, kể cả những ngày không có hứng.',
-      'Giữ nhịp ngủ nghỉ đều đặn để không đuối sức vào giữa năm.',
-      'Tổng kết những gì đã xây được và chuẩn bị cho một năm nhiều thay đổi.',
+      'Lập kế hoạch tổng thể cho cả năm với các con số định lượng và hạn chót cụ thể cho từng hạng mục.',
+      'Tập trung thực thi đều đặn theo đúng kỷ luật đã đề ra, ưu tiên chất lượng và độ chính xác trong từng đầu việc.',
+      'Kiểm tra lại sức khoẻ thể chất cũng như hiệu quả tài chính giữa năm để kịp thời điều chỉnh những chỗ chưa hợp lý.',
+      'Hoàn tất việc chuẩn hoá nền tảng cá nhân, tạo điểm tựa vững chắc trước khi đón luồng gió dịch chuyển của năm số 5.',
     ],
   },
 
   5: {
-    title: 'Năm đổi gió',
-    keywords: ['Thay đổi', 'Tự do', 'Trải nghiệm'],
+    title: 'Năm dịch chuyển và nắm bắt cơ hội',
+    keywords: ['Đổi mới', 'Linh hoạt', 'Mở rộng trải nghiệm'],
     summary:
-      'Năm cá nhân số 5 nằm giữa vòng chín năm và thường mang theo nhiều thay đổi. Bạn có thể muốn đi xa, đổi việc, đổi chỗ ở hay đơn giản là bỏ một thói quen cũ. Sau một năm làm việc chăm chỉ, đây là lúc bạn được nới lỏng một chút. Điều cần giữ là chọn thay đổi có chủ đích, đừng đổi chỉ vì chán.',
-    theme: 'Chủ đề của năm là trải nghiệm. Bạn học được nhiều nhất khi bước ra khỏi chỗ quen thuộc.',
+      'Nằm ở điểm giữa của chu kỳ chín năm, năm cá nhân số 5 thường mang tới những bước ngoặt, cơ hội mới và nhu cầu bức thiết muốn thoát khỏi sự trì trệ cũ. Sau một năm số 4 rèn kỷ luật vất vả, đây là lúc bạn có không gian để thử nghiệm phương thức làm việc mới, mở rộng thị trường hoặc thực hiện những chuyến đi xa. Môi trường xung quanh có thể phát sinh nhiều thay đổi ngoài dự kiến, đòi hỏi bạn phải giữ tư duy linh hoạt để xoay chuyển tình thế. Bí quyết của năm nay là chủ động đón nhận cái mới nhưng vẫn giữ tỉnh táo trước những quyết định bốc đồng.',
+    theme: 'Trọng tâm của năm là bứt phá khỏi lối mòn và linh hoạt nắm bắt cơ hội. Sự cởi mở học hỏi cái mới sẽ giúp bạn tiến rất nhanh.',
     doMore: [
-      'Đi tới một nơi bạn chưa từng tới, dù chỉ là một thị trấn gần nhà.',
-      'Thử một cách làm việc mới hoặc nhận một nhiệm vụ khác hẳn thường ngày.',
-      'Gặp gỡ những người có lối sống khác bạn.',
+      'Mạnh dạn ứng dụng công nghệ mới, phương pháp mới vào công việc để giải phóng sức lao động.',
+      'Mở rộng không gian trải nghiệm qua các chuyến đi thực tế, dự án liên ngành hoặc tiếp xúc với những môi trường mới.',
+      'Linh hoạt điều chỉnh kế hoạch khi thị trường hoặc hoàn cảnh thực tế mở ra hướng đi tốt hơn.',
     ],
     doLess: [
-      'Bớt ra quyết định lớn chỉ trong một buổi tối.',
-      'Bớt chi quá tay cho những trải nghiệm chóng qua.',
-      'Bớt bỏ dở những cam kết đã hứa với người khác.',
+      'Bớt đưa ra các quyết định đập bỏ toàn bộ nền tảng cũ chỉ vì một phút chán nản nhất thời.',
+      'Bớt vung tay quá trán cho những thú vui ngắn hạn hoặc các khoản đầu tư theo phong trào.',
+      'Bớt hứa hẹn tràn lan khi chưa tính kỹ khả năng đáp ứng về mặt thời gian của bản thân.',
     ],
     byQuarter: [
-      'Liệt kê những thay đổi bạn muốn và xếp theo mức độ quan trọng.',
-      'Thử một hai thay đổi nhỏ trước để xem mình hợp tới đâu.',
-      'Đi xa, học thêm hoặc gặp gỡ người mới để mở rộng góc nhìn.',
-      'Giữ lại những thay đổi tốt và chuẩn bị cho một năm hướng về gia đình.',
+      'Rà soát lại những điểm đang gây tắc nghẽn trong công việc hiện tại và xác định rõ lĩnh vực cần đổi mới.',
+      'Thử nghiệm các hướng tiếp cận mới ở quy mô vừa phải để đánh giá mức độ hiệu quả thực tế.',
+      'Mở rộng tối đa việc học hỏi, di chuyển và kết nối để thu nạp thêm góc nhìn cũng như cơ hội phát triển.',
+      'Chắt lọc giữ lại những cải tiến mang lại giá trị thật và ổn định lại nhịp sinh hoạt để chuẩn bị vào năm số 6.',
     ],
   },
 
   6: {
-    title: 'Năm về nhà',
-    keywords: ['Gia đình', 'Trách nhiệm', 'Chăm sóc'],
+    title: 'Năm gắn kết và chu toàn trách nhiệm',
+    keywords: ['Gia đình', 'Trách nhiệm', 'Củng cố hậu phương'],
     summary:
-      'Năm cá nhân số 6 kéo sự chú ý của bạn về nhà và về những người thân thiết. Bạn có thể phải lo nhiều hơn cho bố mẹ, con cái hay một người bạn đang cần giúp. Năm này cũng hợp để sửa sang chỗ ở hoặc vun lại một mối quan hệ quan trọng. Điều cần giữ là chăm cho người khác mà không bỏ quên bản thân.',
-    theme: 'Chủ đề của năm là trách nhiệm và tình thương. Những việc nhỏ bạn làm cho người thân sẽ có ý nghĩa hơn bạn nghĩ.',
+      'Năm cá nhân số 6 kéo trọng tâm ưu tiên của bạn quay về với gia đình, những người thân thiết và các cam kết trách nhiệm lâu dài. Trong công việc cũng như cuộc sống riêng, bạn sẽ thấy mình cần dành nhiều tâm sức hơn để chăm lo cho đội ngũ cốt cán, sửa sang nơi ở hoặc giải quyết các nghĩa vụ đối với người thân. Đây là giai đoạn rất thuận lợi để thắt chặt các mối quan hệ bền vững và xây dựng uy tín qua sự tận tâm. Điều quan trọng là bạn cần giữ sự cân bằng để lòng tốt không biến thành sự ôm đồm quá sức.',
+    theme: 'Trọng tâm của năm là củng cố hậu phương và thực hiện trọn vẹn các cam kết. Sự vững vàng từ những mối quan hệ gần gũi nhất sẽ tiếp sức cho bạn.',
     doMore: [
-      'Dành thời gian cố định cho gia đình mỗi tuần, như một bữa cơm chung.',
-      'Sửa lại góc nhà bạn hay dùng nhất cho dễ chịu hơn.',
-      'Nói lời cảm ơn và lời xin lỗi khi cần, đừng để dồn lại.',
+      'Dành thời gian chất lượng, cố định mỗi tuần cho gia đình và những người thực sự quan trọng với bạn.',
+      'Cải thiện không gian sống và góc làm việc để tạo sự thoải mái, tái tạo năng lượng mỗi ngày.',
+      'Chủ động đối thoại thẳng thắn, chân thành để tháo gỡ dứt điểm những hiểu lầm còn tồn đọng trong các mối quan hệ.',
     ],
     doLess: [
-      'Bớt gánh việc của người khác chỉ vì ngại từ chối.',
-      'Bớt đòi hỏi mọi thứ trong nhà phải hoàn hảo.',
-      'Bớt ôm hết cảm xúc của người thân vào mình.',
+      'Bớt gánh vác thay phần trách nhiệm mà người khác hoàn toàn có thể tự mình làm được.',
+      'Bớt áp đặt tiêu chuẩn cá nhân của bạn lên cách sống của những người thân xung quanh.',
+      'Bớt hy sinh toàn bộ nhu cầu nghỉ ngơi của bản thân chỉ để làm vừa lòng tất cả mọi người.',
     ],
     byQuarter: [
-      'Xem lại các mối quan hệ quan trọng và chọn một mối quan hệ cần vun vén.',
-      'Lo những việc nhà bị hoãn lâu, từ sửa chữa tới giấy tờ.',
-      'Dành thời gian cho riêng mình để có sức chăm người khác.',
-      'Sum họp với người thân và chuẩn bị cho một năm lắng lại để suy ngẫm.',
+      'Nhìn nhận lại các mối quan hệ trọng yếu và ưu tiên dành thời gian cho những nơi đang cần sự có mặt của bạn.',
+      'Giải quyết gọn gàng các công việc liên quan đến nhà cửa, nơi ở hoặc các nghĩa vụ gia đình từng bị trì hoãn.',
+      'Chú ý cân bằng lại sức khoẻ cá nhân, thiết lập ranh giới hợp lý giữa việc hỗ trợ người khác và việc chăm sóc chính mình.',
+      'Tận hưởng sự gắn kết ấm áp bên người thân và chuẩn bị khoảng lặng cần thiết để bước vào năm số 7.',
     ],
   },
 
   7: {
-    title: 'Năm lắng lại',
-    keywords: ['Suy ngẫm', 'Học hỏi', 'Nội tâm'],
+    title: 'Năm chiêm nghiệm và đào sâu chuyên môn',
+    keywords: ['Nghiên cứu sâu', 'Tĩnh lặng', 'Nâng cấp tư duy'],
     summary:
-      'Năm cá nhân số 7 là một năm chậm và hướng vào bên trong. Bạn có thể muốn ở một mình nhiều hơn, đọc nhiều hơn và đặt câu hỏi về những gì mình đang làm. Đó không phải dấu hiệu bạn đi lùi, đó là lúc bạn hiểu mình sâu hơn. Những câu trả lời tìm được năm nay sẽ giúp bạn chọn hướng cho năm sau.',
-    theme: 'Chủ đề của năm là học và hiểu. Năm này hợp để đi sâu vào một lĩnh vực, hoặc ngồi lại với chính mình.',
+      'Năm cá nhân số 7 là khoảng lặng chiến lược trong chu kỳ chín năm để bạn tạm giảm tốc độ chạy đua bề nổi và quay vào nâng cấp chiều sâu nội lực. Bạn sẽ thấy mình có nhu cầu ở một mình nhiều hơn, muốn đọc sâu hơn và đặt lại câu hỏi về giá trị thực chất của những việc đang theo đuổi. Thay vì lo lắng khi thấy nhịp bên ngoài có vẻ trầm lắng, hãy tận dụng tối đa năm nay để mài sắc chuyên môn và rà soát lại định hướng dài hạn. Những gì bạn nghiên cứu và ngộ ra trong giai đoạn này chính là đòn bẩy quyết định cho bước tiến lớn ở năm số 8 kế tiếp.',
+    theme: 'Trọng tâm của năm là học sâu và tự nhìn lại. Đây là giai đoạn mài sắc tư duy cũng như năng lực cốt lõi trước khi bứt phá.',
     doMore: [
-      'Chọn một chủ đề và học sâu, như một khoá học dài hay vài cuốn sách cùng mảng.',
-      'Dành thời gian đi bộ, viết nhật ký hoặc ngồi yên một lúc mỗi ngày.',
-      'Xem lại lý do bạn chọn công việc, các mối quan hệ và nơi ở hiện tại.',
+      'Đầu tư thời gian cho một chương trình học chuyên sâu, nghiên cứu chuyên ngành hoặc rèn luyện kỹ năng khó.',
+      'Duy trì thói quen ghi chép, phân tích lại những thành công và thất bại trong chặng đường sáu năm vừa qua.',
+      'Chủ động dành những khoảng thời gian tách khỏi mạng xã hội và sự ồn ào để giữ sự minh mẫn cho tâm trí.',
     ],
     doLess: [
-      'Bớt ép mình phải có kết quả nhanh trong năm này.',
-      'Bớt nhận lời những cuộc vui chỉ vì ngại từ chối.',
-      'Bớt thu mình tới mức người thân phải lo lắng.',
+      'Bớt nôn nóng ép bản thân phải mở rộng quy mô ồ ạt hoặc kiếm lợi nhuận ngắn hạn bằng mọi giá.',
+      'Bớt tham gia những buổi tụ tập xã giao hình thức làm tiêu hao năng lượng mà không mang lại giá trị thực.',
+      'Bớt khép kín cực đoan tới mức cắt đứt giao tiếp với cả những người thân đang thực sự quan tâm tới bạn.',
     ],
     byQuarter: [
-      'Viết ra những câu hỏi lớn bạn đang có về cuộc sống và công việc.',
-      'Đọc, học và trò chuyện với người có kinh nghiệm để tìm câu trả lời.',
-      'Dành vài ngày nghỉ để thật sự tách khỏi nhịp thường ngày.',
-      'Ghi lại những điều bạn đã hiểu ra và chuẩn bị cho một năm bận rộn hơn.',
+      'Xác định rõ những lỗ hổng kiến thức hoặc những câu hỏi lớn về định hướng sự nghiệp mà bạn cần lời giải.',
+      'Tập trung hoàn toàn vào việc học tập, nghiên cứu, tìm gặp những chuyên gia có chiều sâu để mở rộng tầm nhìn.',
+      'Dành thời gian nghỉ ngơi tĩnh dưỡng, kết hợp quan sát thực tế để kiểm nghiệm lại những kiến thức vừa thu nạp.',
+      'Đúc kết toàn bộ những gì đã học được thành kế hoạch hành động sắc bén, sẵn sàng cho năm số 8 tăng tốc.',
     ],
   },
 
   8: {
-    title: 'Năm cầm lái',
-    keywords: ['Sự nghiệp', 'Thành quả', 'Quản lý tiền bạc'],
+    title: 'Năm tối ưu hiệu suất và thu hoạch',
+    keywords: ['Sự nghiệp', 'Tài chính', 'Khẳng định năng lực'],
     summary:
-      'Năm cá nhân số 8 thường đưa công việc và tiền bạc lên hàng đầu. Những gì bạn chuẩn bị trong mấy năm qua có cơ hội được nhìn nhận, nếu bạn chủ động đưa nó ra. Bạn có thể được giao thêm trách nhiệm, hoặc muốn đòi hỏi nhiều hơn cho công sức của mình. Năm này hợp để quản lý tiền chặt hơn và mạnh dạn nói về giá trị của bạn.',
-    theme: 'Chủ đề của năm là tin vào năng lực của mình. Bạn nên cầm lái những việc quan trọng thay vì đợi người khác giao.',
+      'Sau thời gian tích luỹ và mài sắc chuyên môn ở năm số 7, năm cá nhân số 8 đẩy các bài toán về sự nghiệp, hiệu suất và tài chính lên vị trí ưu tiên hàng đầu. Đây là giai đoạn những nỗ lực bền bỉ của bạn suốt các năm trước bắt đầu kết trái và mang lại sự ghi nhận xứng đáng. Bạn có nhiều cơ hội để đảm nhận trọng trách lớn hơn, đàm phán lại quyền lợi hoặc mở rộng quy mô kinh doanh thực tế. Sự chủ động, minh bạch và bản lĩnh quản trị nguồn lực chặt chẽ sẽ giúp bạn đạt được bước tiến rất dài trong năm nay.',
+    theme: 'Trọng tâm của năm là thực thi quyết liệt và gặt hái thành quả. Hãy tự tin đứng ra cầm trịch những mục tiêu lớn của bạn.',
     doMore: [
-      'Chuẩn bị số liệu về những gì bạn đã làm được để nói chuyện tăng lương hay xin dự án mới.',
-      'Rà lại các khoản chi, khoản để dành và khoản nợ, rồi đặt kế hoạch rõ ràng.',
-      'Nhận những trách nhiệm giúp bạn học cách quản lý.',
+      'Tổng hợp kết quả công việc bằng số liệu cụ thể để chủ động đề xuất thăng tiến, tăng thu nhập hoặc mở rộng dự án.',
+      'Quản trị dòng tiền chặt chẽ: rà soát lại danh mục đầu tư, tối ưu chi phí và giải quyết dứt điểm các khoản nợ tồn đọng.',
+      'Rèn luyện năng lực lãnh đạo, phân quyền và ra quyết định dựa trên hiệu quả thực chất.',
     ],
     doLess: [
-      'Bớt chi tiêu để chứng tỏ với người khác.',
-      'Bớt hy sinh giấc ngủ và bữa ăn cho công việc.',
-      'Bớt cứng rắn quá mức với người làm cùng.',
+      'Bớt chi tiêu phô trương hình thức bên ngoài vượt quá năng lực tài chính thực tế.',
+      'Bớt thái độ cứng nhắc, áp đặt gây căng thẳng không cần thiết cho cộng sự và người thân.',
+      'Bớt đánh đổi sức khoẻ nền tảng lấy những khoản lợi ích ngắn hạn.',
     ],
     byQuarter: [
-      'Đặt mục tiêu công việc và tài chính cụ thể, có con số.',
-      'Chủ động đề xuất, xin cơ hội và nói về đóng góp của mình.',
-      'Kiểm tra lại cách bạn dùng tiền và thời gian, vá những chỗ đang rò rỉ.',
-      'Nhìn lại thành quả, cảm ơn những người đã giúp bạn và chuẩn bị khép lại một vòng.',
+      'Thiết lập các chỉ tiêu rõ ràng về doanh thu, thu nhập và vị trí công việc cần đạt được trong năm.',
+      'Tăng tốc triển khai các dự án trọng điểm, chủ động nắm bắt cơ hội kinh doanh và đàm phán quyền lợi.',
+      'Kiểm toán lại hiệu quả sử dụng vốn và thời gian, cắt giảm ngay những hạng mục đang gây thất thoát nguồn lực.',
+      'Thu hoạch thành quả, chia sẻ lợi ích công bằng với những người đồng hành và chuẩn bị bước vào năm tổng kết số 9.',
     ],
   },
 
   9: {
-    title: 'Năm khép vòng',
-    keywords: ['Hoàn tất', 'Buông bỏ', 'Bao dung'],
+    title: 'Năm hoàn tất và dọn đường',
+    keywords: ['Tổng kết', 'Thanh lọc', 'Chuẩn bị chu kỳ mới'],
     summary:
-      'Năm cá nhân số 9 là năm cuối của vòng chín năm. Đây là lúc dọn dẹp, làm nốt những việc còn dở và buông những gì không còn hợp với bạn. Bạn có thể thấy vài mối quan hệ hay công việc tự nhiên đi tới hồi kết. Khoảng trống đó là chỗ cho những điều mới khi năm số 1 tới.',
-    theme: 'Chủ đề của năm là hoàn tất và buông. Việc nào đáng xong thì làm cho xong, việc nào đã hết thì để nó đi.',
+      'Năm cá nhân số 9 khép lại trọn vẹn một hành trình chín năm để chuẩn bị mặt bằng cho vòng phát triển tiếp theo. Nhiệm vụ quan trọng nhất của bạn trong năm nay là giải quyết dứt điểm những dự án còn dang dở, đồng thời mạnh dạn buông bỏ những công việc, thói quen hoặc mối quan hệ đã không còn phù hợp. Việc một vài cánh cửa cũ tự nhiên khép lại trong giai đoạn này là quy luật tất yếu để giải phóng nguồn lực của bạn. Càng dọn dẹp gọn gàng và tổng kết sâu sắc bao nhiêu, bạn càng có đà bứt phá nhẹ nhàng bấy nhiêu khi bước sang năm số 1 kế tiếp.',
+    theme: 'Trọng tâm của năm là hoàn tất và buông bỏ có chủ đích. Hãy làm gọn hành trang của mình trước khi bước vào chu kỳ mới.',
     doMore: [
-      'Làm nốt những việc dang dở, từ một khoá học tới một món nợ nhỏ với bạn bè.',
-      'Dọn đồ đạc, dọn danh bạ và dọn lịch làm việc.',
-      'Giúp người khác bằng những kinh nghiệm bạn đã có.',
+      'Tập trung đóng gói và hoàn thành dứt điểm các cam kết, dự án, khoá học hoặc công nợ còn tồn đọng.',
+      'Thanh lọc lại không gian sống, tài liệu làm việc và cắt giảm những đầu việc không còn mang lại giá trị.',
+      'Chia sẻ lại kiến thức, kinh nghiệm bạn đã tích luỹ suốt chín năm qua để hỗ trợ những người đi sau.',
     ],
     doLess: [
-      'Bớt khởi động dự án lớn mới, nên để dành cho năm sau.',
-      'Bớt níu giữ những gì đã rõ là không hợp.',
-      'Bớt ôm giận với chuyện cũ.',
+      'Bớt vội vàng ký kết hoặc khởi động những dự án đầu tư dài hạn hoàn toàn mới vào dịp cuối năm.',
+      'Bớt cố chấp níu kéo những công việc hay mối quan hệ đã bộc lộ rõ sự lệch pha không thể hàn gắn.',
+      'Bớt giữ lại những sự tự trách hoặc hiềm khích cũ đã qua từ lâu.',
     ],
     byQuarter: [
-      'Lập danh sách những việc còn dở và chọn ra việc cần làm xong trước.',
-      'Dọn dẹp đồ đạc, giấy tờ và cả những thói quen không còn giúp gì cho bạn.',
-      'Nói lời tạm biệt hay lời cảm ơn với những gì đã qua.',
-      'Nghỉ ngơi, nhìn lại chín năm vừa rồi và nghĩ về điều bạn muốn gieo khi vòng mới bắt đầu.',
+      'Lập danh sách toàn bộ những việc còn tồn đọng và sắp xếp lộ trình giải quyết dứt điểm từng phần.',
+      'Tiến hành thanh lọc công việc, dọn dẹp môi trường sống và chủ động dừng lại những hướng đi kém hiệu quả.',
+      'Tổng kết lại các bài học lớn của cả chu kỳ chín năm, gửi lời tri ân tới những người đã từng hỗ trợ bạn.',
+      'Dành thời gian nghỉ ngơi tái tạo năng lượng và phác thảo những ý tưởng mới để sẵn sàng khởi động vào năm số 1 tới.',
     ],
   },
 };
@@ -533,255 +533,255 @@ const personalYear = {
 
 const expression = {
   1: {
-    title: 'Người đứng ra nhận việc',
+    title: 'Tác phong tiên phong và tự chủ',
     keywords: ['Chủ động', 'Dẫn dắt', 'Độc lập'],
     summary:
-      'Số sứ mệnh 1 cho thấy bạn thể hiện năng lực rõ nhất khi được đứng ra dẫn dắt. Trong nhóm, bạn hay là người đề xuất hướng đi và chịu trách nhiệm cho nó. Người khác nhớ tới bạn như một người quyết đoán, làm được việc mà không cần nhắc. Thử thách của bạn là biết lúc nào nên dẫn và lúc nào nên lùi lại cho người khác thử.',
+      'Trong công việc thực tế, năng lực của bạn phát huy mạnh nhất khi được đứng ở vị trí mở đường và tự chịu trách nhiệm về kết quả. Khi tập thể cần một người đưa ra quyết định dứt khoát để phá vỡ thế bế tắc, bạn thường là người chủ động nhận lấy vai trò đó. Mọi người tin tưởng bạn ở sự nhanh nhạy, nói đi đôi với làm mà không cần ai phải đốc thúc. Thử thách lớn nhất trong tác phong của bạn là học cách lùi lại đúng lúc để tạo không gian cho cộng sự cùng phát huy.',
     strengths: [
-      'Bạn biến ý định thành hành động nhanh. Họp xong chưa lâu, bạn đã gửi bảng phân công cho cả nhóm.',
-      'Bạn chịu được áp lực khi phải chọn một hướng đi mà chưa chắc chắn.',
-      'Bạn tự học tốt và không ngại một mình mày mò công cụ mới.',
+      'Chuyển hoá nhanh từ bàn bạc sang hành động: kết thúc cuộc họp không lâu, bạn đã có sẵn phương án triển khai cụ thể.',
+      'Vững vàng khi phải tự quyết định trong những tình huống mới mẻ chưa có sẵn tiền lệ.',
+      'Khả năng tự mày mò, làm chủ công cụ và phương pháp mới mà không cần chờ đào tạo cầm tay chỉ việc.',
     ],
     watchOut: [
-      'Bạn có thể thấy khó làm việc dưới quyền một người chậm hơn mình.',
-      'Bạn hay quên khen người khác vì mải nhìn sang việc tiếp theo.',
+      'Dễ nảy sinh tâm lý bức bối khi phải làm việc dưới sự điều hành của một người thiếu quyết đoán hoặc chậm chạp hơn mình.',
+      'Vì luôn nhìn về mục tiêu tiếp theo nên đôi khi bạn quên ghi nhận kịp thời công sức đóng góp của các thành viên trong nhóm.',
     ],
     advice: [
-      'Ở dự án tới, bạn giao một phần việc dẫn dắt cho người khác và đóng vai hỗ trợ.',
-      'Cuối mỗi tuần, bạn gửi một lời ghi nhận cụ thể tới một người trong nhóm.',
+      'Trong các dự án tập thể, hãy chủ động uỷ quyền trọn vẹn một vài hạng mục cho đồng đội và đóng vai trò người hỗ trợ phía sau.',
+      'Duy trì thói quen gửi lời khen cụ thể, đúng trọng tâm tới từng cộng sự sau mỗi cột mốc hoàn thành công việc.',
     ],
-    fields: ['Quản lý, trưởng nhóm', 'Khởi nghiệp', 'Bán hàng', 'Nghề tự do', 'Quản lý sản phẩm'],
+    fields: ['Quản lý dự án, trưởng nhóm', 'Khởi nghiệp kinh doanh', 'Phát triển thị trường, bán hàng', 'Chuyên gia độc lập', 'Quản trị sản phẩm'],
   },
 
   2: {
-    title: 'Người nối người',
-    keywords: ['Hợp tác', 'Khéo léo', 'Chu đáo'],
+    title: 'Tác phong kết nối và phối hợp',
+    keywords: ['Khéo léo', 'Hợp tác', 'Chu đáo'],
     summary:
-      'Số sứ mệnh 2 cho thấy bạn phát huy năng lực tốt nhất khi làm cùng người khác. Bạn có tài làm cầu nối, giúp hai bên hiểu nhau và đi tới một thoả thuận. Bạn để ý tới những điều người khác bỏ sót, như ai đang bị lép vế trong cuộc họp. Thử thách của bạn là dám nhận phần ghi nhận xứng với đóng góp của mình.',
+      'Thế mạnh làm việc rõ nét nhất của bạn nằm ở khả năng điều phối mối quan hệ và giữ cho guồng máy tập thể vận hành êm thấm. Bạn có biệt tài lắng nghe nhu cầu của từng bên, tìm ra điểm giao thoa để đi tới thoả thuận mà không làm sứt mẻ tình cảm. Những chi tiết hậu cần hoặc tâm lý nhân sự mà người khác dễ bỏ sót lại luôn được bạn xử lý rất gọn gàng. Điểm bạn cần rèn thêm là sự dứt khoát bảo vệ công sức của chính mình để không bị chìm khuất ở hậu trường.',
     strengths: [
-      'Bạn trao đổi mềm mà chắc. Gặp khách khó tính, bạn giữ được không khí mà vẫn bảo vệ được quyền lợi của bên mình.',
-      'Bạn làm việc nhóm tốt và giúp người mới hoà nhập nhanh.',
-      'Bạn cẩn thận với chi tiết, từ con số trong báo cáo tới câu chữ trong email.',
+      'Đàm phán mềm mỏng nhưng hiệu quả: đứng trước đối tác khó tính, bạn vẫn giữ được thái độ ôn hoà mà không đánh mất quyền lợi cốt lõi.',
+      'Khả năng hỗ trợ và gắn kết đội ngũ: bạn giúp những thành viên mới hoặc cá tính trái ngược nhau dễ dàng phối hợp làm việc.',
+      'Sự cẩn trọng, tỉ mỉ trong việc rà soát câu chữ, dữ liệu và các khâu chuẩn bị trước khi đưa sản phẩm ra ngoài.',
     ],
     watchOut: [
-      'Bạn hay đứng ở hậu trường nên công sức dễ bị người khác nhận phần.',
-      'Bạn có thể né những cuộc tranh luận cần thiết, để chuyện nhỏ thành chuyện lớn.',
+      'Vì quen nhường phần nổi cho người khác nên đôi khi đóng góp thực chất của bạn không được đánh giá đúng mức.',
+      'Xu hướng né tránh các cuộc tranh luận trực diện, vô tình để những bất đồng nhỏ âm ỉ thành vấn đề lớn.',
     ],
     advice: [
-      'Ghi lại những gì bạn đã đóng góp trong tháng, để khi cần bạn có thể nói ra rõ ràng.',
-      'Khi thấy một vấn đề trong nhóm, bạn nêu nó sớm bằng giọng nhẹ nhàng thay vì đợi nó tự hết.',
+      'Lưu trữ rõ ràng các kết quả công việc bạn đã thực hiện để làm cơ sở trao đổi minh bạch trong các kỳ đánh giá năng lực.',
+      'Khi phát hiện điểm bất hợp lý trong nhóm, hãy chủ động nêu vấn đề sớm trên tinh thần xây dựng thay vì im lặng tự sửa một mình.',
     ],
-    fields: ['Nhân sự', 'Chăm sóc khách hàng', 'Trợ lý điều hành', 'Hoà giải, tư vấn', 'Quan hệ đối tác'],
+    fields: ['Quản trị nhân sự', 'Chăm sóc khách hàng chuyên nghiệp', 'Trợ lý điều hành, thư ký', 'Tư vấn, hoà giải thương mại', 'Phát triển quan hệ đối tác'],
   },
 
   3: {
-    title: 'Người làm chữ và làm vui',
-    keywords: ['Diễn đạt', 'Sáng tạo', 'Truyền cảm hứng'],
+    title: 'Tác phong truyền cảm hứng và sáng tạo',
+    keywords: ['Hoạt ngôn', 'Sáng tạo', 'Thuyết phục'],
     summary:
-      'Số sứ mệnh 3 cho thấy năng lực của bạn lộ ra rõ nhất qua lời nói, chữ viết hoặc hình ảnh. Bạn biết cách trình bày một ý tưởng sao cho người nghe thấy hứng thú. Khi bạn làm điều mình thích, người xung quanh cũng có thêm năng lượng. Thử thách của bạn là giữ tập trung đủ lâu để biến tài năng thành sản phẩm.',
+      'Bạn tạo ra giá trị lớn nhất trong công việc thông qua khả năng ngôn ngữ, trình bày ý tưởng và tìm kiếm góc nhìn mới. Cùng một thông tin chuyên môn, khi qua cách viết hoặc thuyết trình của bạn sẽ trở nên sinh động và dễ thuyết phục người nghe hơn hẳn. Sự nhiệt huyết của bạn cũng là chất xúc tác giúp kéo tinh thần cả nhóm lên cao trong những giai đoạn căng thẳng. Thử thách thực tế của bạn là rèn tính kỷ luật về thời hạn để mỗi ý tưởng bay bổng đều được đóng gói thành sản phẩm hoàn chỉnh.',
     strengths: [
-      'Bạn thuyết trình tốt, biết mở đầu bằng một câu chuyện để kéo người nghe vào.',
-      'Bạn có nhiều ý tưởng mới cho những việc tưởng đã nhàm, như một cách giới thiệu sản phẩm khác hẳn mọi khi.',
-      'Bạn dễ kết thân và giữ được không khí vui vẻ trong nhóm.',
+      'Kỹ năng thuyết trình và kể chuyện lôi cuốn: bạn biết cách đặt vấn đề chạm đúng mối quan tâm của người nghe ngay từ những phút đầu.',
+      'Luôn có phương án sáng tạo để làm mới những quy trình, sản phẩm hoặc chiến dịch truyền thông đã cũ.',
+      'Khả năng giao thiệp rộng, nhanh chóng phá vỡ khoảng cách với khách hàng và đối tác mới.',
     ],
     watchOut: [
-      'Bạn dễ ôm nhiều dự án sáng tạo cùng lúc rồi bỏ dở.',
-      'Bạn có thể nhạy cảm với lời chê về sản phẩm của mình hơn mức cần.',
+      'Dễ bị cuốn vào quá nhiều ý tưởng mới cùng lúc, dẫn đến việc phân tán nguồn lực và chậm trễ tiến độ cam kết.',
+      'Đôi khi phản ứng khá nhạy cảm trước những lời phê bình thẳng thắn về đứa con tinh thần của mình.',
     ],
     advice: [
-      'Chọn một sản phẩm và đưa nó tới tay người dùng, dù nó chưa hoàn hảo.',
-      'Khi nhận góp ý, bạn tách riêng ý tưởng của mình với con người mình để nghe cho khách quan.',
+      'Luôn gắn mỗi ý tưởng sáng tạo với một bảng tiến độ конкрет và hoàn thành bản nháp đầu tiên trước khi cầu toàn chi tiết.',
+      'Tập nhìn nhận các góp ý trái chiều như dữ liệu để tối ưu sản phẩm thay vì coi đó là sự phủ nhận năng lực cá nhân.',
     ],
-    fields: ['Truyền thông, quảng cáo', 'Viết, biên tập', 'Thiết kế', 'Giảng dạy', 'Nghệ thuật biểu diễn'],
+    fields: ['Truyền thông, quảng cáo, PR', 'Biên tập, sáng tạo nội dung', 'Thiết kế đồ hoạ, đa phương tiện', 'Đào tạo, giảng dạy', 'Nghệ thuật biểu diễn, dẫn chương trình'],
   },
 
   4: {
-    title: 'Người làm cho chắc',
-    keywords: ['Tổ chức', 'Tỉ mỉ', 'Bền bỉ'],
+    title: 'Tác phong chuẩn hoá và kỷ luật',
+    keywords: ['Hệ thống', 'Tỉ mỉ', 'Đáng tin cậy'],
     summary:
-      'Số sứ mệnh 4 cho thấy bạn đóng góp tốt nhất qua sự chắc chắn và có hệ thống. Bạn là người dựng quy trình, làm bảng theo dõi và giữ cho mọi thứ không bị sót. Khi bạn đã nhận việc, người khác ít phải lo. Thử thách của bạn là đón nhận ý tưởng mới mà không vội gạt đi chỉ vì nó chưa có tiền lệ.',
+      'Trong bất kỳ tổ chức nào, bạn luôn là trụ cột đảm bảo cho các kế hoạch trên giấy được thực thi chuẩn xác ngoài đời thực. Bạn làm việc dựa trên quy trình rõ ràng, số liệu cụ thể và sự kiểm soát chất lượng chặt chẽ từ đầu tới cuối. Khi giao những hạng mục đòi hỏi sự tỉ mỉ, kiên trì cho bạn, cấp trên và đồng nghiệp hiếm khi phải lo lắng về sai sót. Điều bạn cần lưu ý là giữ sự cởi mở trước những cải tiến mới để tính nguyên tắc không biến thành sự bảo thủ.',
     strengths: [
-      'Bạn biến việc lộn xộn thành quy trình rõ ràng, như sắp lại cả thư mục tài liệu chung của nhóm.',
-      'Bạn giữ chất lượng đều tay, ngày bận hay ngày rảnh đều làm kỹ như nhau.',
-      'Bạn có sức bền với những việc dài hơi và lặp lại.',
+      'Biến sự hỗn độn thành trật tự: bạn rất giỏi thiết lập quy trình, biểu mẫu và hệ thống lưu trữ giúp cả nhóm làm việc hiệu quả hơn.',
+      'Phong độ làm việc ổn định: chất lượng đầu ra của bạn được duy trì đồng đều nhờ tính kỷ luật chứ không phụ thuộc vào cảm hứng.',
+      'Khả năng chịu đựng tốt những công việc đòi hỏi độ chính xác cao và thời gian theo đuổi dài hạn.',
     ],
     watchOut: [
-      'Bạn có thể cẩn thận tới mức chậm trễ, trong khi tình huống cần quyết nhanh.',
-      'Bạn đôi khi bám quy trình cũ dù nó không còn hợp.',
+      'Đôi khi quá thận trọng rà soát từng chi tiết nhỏ khiến tốc độ phản ứng bị chậm trong những tình huống cần quyết nhanh.',
+      'Tâm lý ngại thay đổi, dễ phản kháng ban đầu khi tổ chức áp dụng công cụ hoặc phương thức làm việc mới.',
     ],
     advice: [
-      'Mỗi quý, bạn chọn một quy trình đang dùng và tự hỏi nếu làm lại từ đầu, mình có thiết kế nó như thế này không.',
-      'Thử đặt cho mình một hạn chót ngắn với một việc nhỏ để luyện cách quyết nhanh.',
+      'Định kỳ mỗi quý, hãy chủ động rà soát lại quy trình làm việc của chính mình để cắt bỏ những bước thủ tục không còn cần thiết.',
+      'Tập phân loại công việc theo mức độ quan trọng: những việc cần độ chính xác tuyệt đối thì làm kỹ, những việc thử nghiệm nhỏ thì ưu tiên tốc độ.',
     ],
-    fields: ['Kế toán, kiểm toán', 'Kỹ thuật', 'Quản lý vận hành', 'Phát triển phần mềm', 'Hành chính, pháp chế'],
+    fields: ['Kế toán, kiểm toán, tài chính', 'Kỹ thuật, xây dựng', 'Quản lý vận hành, chuỗi cung ứng', 'Kỹ thuật phần mềm, kiểm thử', 'Hành chính, pháp chế doanh nghiệp'],
   },
 
   5: {
-    title: 'Người xoay xở giỏi',
-    keywords: ['Linh hoạt', 'Đa năng', 'Thuyết phục'],
+    title: 'Tác phong ứng biến và đột phá',
+    keywords: ['Linh hoạt', 'Đa nhiệm', 'Nhạy bén thực tế'],
     summary:
-      'Số sứ mệnh 5 cho thấy bạn thể hiện năng lực tốt nhất ở những nơi có nhiều thay đổi. Bạn học cái mới nhanh, ứng biến tốt và nói chuyện được với nhiều kiểu người. Một công việc đứng yên một chỗ dễ khiến bạn héo dần. Thử thách của bạn là chọn ra vài thế mạnh để đi sâu, thay vì biết một chút về mọi thứ.',
+      'Bạn phát huy tối đa năng lực ở những vị trí đòi hỏi sự linh hoạt, xoay xở nhanh và liên tục tiếp xúc với luồng thông tin mới. Những công việc cố định một chỗ với quy trình cứng nhắc rất dễ làm thui chột sự nhạy bén tự nhiên của bạn. Ngược lại, khi được đặt vào môi trường thị trường biến động hoặc cần xử lý tình huống phát sinh, bạn luôn tìm ra giải pháp cực kỳ tháo vát. Bài toán lớn nhất của bạn là rèn sự kiên định để đào sâu chuyên môn thay vì dừng lại ở việc biết mỗi thứ một ít.',
     strengths: [
-      'Bạn ứng biến tốt khi kế hoạch đổ vỡ, như sự kiện bị mất điện mà bạn vẫn xoay được chương trình.',
-      'Bạn có sức thuyết phục tự nhiên, nhất là khi nói về điều mình thật sự thích.',
-      'Bạn kết nối được người ở nhiều lĩnh vực khác nhau.',
+      'Ứng biến tình huống xuất sắc: khi kế hoạch ban đầu gặp sự cố bất ngờ, bạn bình tĩnh xoay chuyển phương án thay thế ngay tại chỗ.',
+      'Sức thuyết phục tự nhiên trong giao thương nhờ sự hoạt bát, hiểu tâm lý khách hàng và nắm bắt xu hướng nhanh.',
+      'Khả năng kết nối thông tin và con người từ nhiều lĩnh vực khác nhau để tạo ra cơ hội hợp tác mới.',
     ],
     watchOut: [
-      'Bạn dễ chán khi việc bước vào giai đoạn lặp lại và bắt đầu nhìn sang việc khác.',
-      'Bạn có thể hứa nhiều hơn khả năng làm vì quá hào hứng lúc đầu.',
+      'Dễ giảm sút nhiệt huyết khi dự án qua giai đoạn đột phá ban đầu và bước vào khâu duy trì lặp đi lặp lại.',
+      'Đôi khi nhận lời ôm quá nhiều đầu việc cùng lúc vì đánh giá quá lạc quan quỹ thời gian của mình.',
     ],
     advice: [
-      'Chọn hai kỹ năng cốt lõi và đầu tư cho chúng trong một năm.',
-      'Trước khi nhận việc mới, bạn mở lịch ra xem mình còn chỗ trống thật không.',
+      'Xác định rõ một đến hai mũi nhọn chuyên môn mang lại giá trị cao nhất để kiên trì rèn luyện thành lợi thế cạnh tranh dài hạn.',
+      'Sử dụng công cụ quản lý lịch trình và danh sách việc cần làm hằng ngày để giữ kỷ luật hoàn thành cho tới bước cuối cùng.',
     ],
-    fields: ['Bán hàng, kinh doanh', 'Du lịch, sự kiện', 'Báo chí', 'Marketing', 'Tư vấn độc lập'],
+    fields: ['Kinh doanh, phát triển thị trường', 'Tổ chức sự kiện, du lịch', 'Báo chí, truyền thông hiện trường', 'Marketing, thương mại điện tử', 'Tư vấn độc lập'],
   },
 
   6: {
-    title: 'Người chăm cho nơi mình ở',
-    keywords: ['Trách nhiệm', 'Tận tâm', 'Thẩm mỹ'],
+    title: 'Tác phong tận tâm và nâng chuẩn dịch vụ',
+    keywords: ['Trách nhiệm', 'Chu đáo', 'Thẩm mỹ hài hoà'],
     summary:
-      'Số sứ mệnh 6 cho thấy bạn đóng góp tốt nhất khi được chăm lo cho người khác hoặc làm đẹp cho một không gian. Bạn nghĩ tới cảm giác của người dùng, người học hay người được phục vụ. Người ta tin bạn vì bạn coi việc của họ như việc của mình. Thử thách của bạn là đặt giới hạn để sự tận tâm không biến thành kiệt sức.',
+      'Trong công việc, bạn tạo dựng uy tín bằng sự tận tâm, chu đáo và tinh thần trách nhiệm cao với tập thể cũng như khách hàng. Bạn luôn đặt mình vào vị trí của người sử dụng sản phẩm hoặc người nhận dịch vụ để chăm chút từng trải nghiệm nhỏ nhất. Ở đâu có sự tham gia của bạn, ở đó có sự chỉn chu về mặt hình thức lẫn sự ấm áp trong cách đối đãi con người. Thử thách của bạn là thiết lập ranh giới công việc rõ ràng để lòng nhiệt tình không dẫn tới tình trạng quá tải.',
     strengths: [
-      'Bạn để ý tới trải nghiệm của người khác, như khách có thấy dễ chịu khi bước vào cửa hàng hay không.',
-      'Bạn giữ lời, nên hay được giao những việc quan trọng.',
-      'Bạn có gu thẩm mỹ hài hoà trong cách sắp xếp và trình bày.',
+      'Nhạy bén với trải nghiệm con người: bạn nhận ra ngay những điểm nhỏ cần tinh chỉnh để khách hàng hoặc đồng nghiệp cảm thấy hài lòng hơn.',
+      'Đáng tin cậy trong việc giữ chữ tín và bảo vệ chất lượng sản phẩm, dịch vụ của cả đội ngũ.',
+      'Có con mắt thẩm mỹ hài hoà trong việc thiết kế, bài trí không gian và trình bày ấn phẩm.',
     ],
     watchOut: [
-      'Bạn hay nhận thêm việc của đồng nghiệp vì thương họ bận.',
-      'Bạn dễ phật lòng khi sự chăm chút của mình không được ai nhắc tới.',
+      'Hay tự nguyện gánh thêm phần việc của đồng nghiệp vì cả nể, dẫn đến việc chính của mình bị ảnh hưởng tiến độ.',
+      'Dễ cảm thấy hụt hẫng, tủi thân nếu sự hy sinh thầm lặng của mình không được tập thể nhận ra và ghi nhận.',
     ],
     advice: [
-      'Đặt một giờ kết thúc công việc mỗi ngày và giữ đúng ít nhất bốn ngày trong tuần.',
-      'Khi muốn được ghi nhận, bạn nói ra nhẹ nhàng thay vì chờ người khác tự thấy.',
+      'Phân định rõ trách nhiệm của từng vị trí trong nhóm: hỗ trợ đồng đội lúc khẩn cấp nhưng không làm thay công việc thường nhật của họ.',
+      'Khi cần thêm nguồn lực hoặc sự ghi nhận cho công sức đã bỏ ra, hãy trao đổi thẳng thắn bằng số liệu và kết quả với cấp quản lý.',
     ],
-    fields: ['Giáo dục', 'Y tế, điều dưỡng', 'Thiết kế nội thất, thời trang', 'Nhà hàng, khách sạn', 'Công tác xã hội'],
+    fields: ['Giáo dục, đào tạo', 'Y tế, chăm sóc sức khoẻ', 'Thiết kế nội thất, thời trang, ẩm thực', 'Quản trị khách sạn, dịch vụ khách hàng', 'Phát triển văn hoá doanh nghiệp'],
   },
 
   7: {
-    title: 'Người đào sâu',
-    keywords: ['Phân tích', 'Chuyên môn', 'Tư duy độc lập'],
+    title: 'Tác phong chuyên gia và phân tích chiều sâu',
+    keywords: ['Phân tích logic', 'Chuyên môn sâu', 'Độc lập'],
     summary:
-      'Số sứ mệnh 7 cho thấy năng lực của bạn lộ rõ nhất khi được đi sâu vào một vấn đề. Bạn thích tìm hiểu bản chất, hỏi vì sao cho tới khi thật hiểu. Người khác hay tìm tới bạn với những câu hỏi khó. Thử thách của bạn là chia sẻ hiểu biết của mình ra ngoài thay vì giữ nó trong đầu.',
+      'Giá trị đóng góp lớn nhất của bạn nằm ở các công việc đòi hỏi tư duy phân tích độc lập, nghiên cứu chuyên sâu và kiểm định chất lượng. Bạn không thích làm việc kiểu hời hợt chạy theo số lượng mà luôn đào tới tận gốc rễ nguyên lý trước khi đưa ra giải pháp. Trong một đội ngũ, bạn thường là người phát hiện ra những rủi ro tiềm ẩn hoặc lỗi logic mà số đông dễ bỏ qua. Để tiến xa hơn, bạn cần rèn thêm kỹ năng diễn đạt những phân tích chuyên môn phức tạp thành ngôn ngữ dễ hiểu cho mọi người.',
     strengths: [
-      'Bạn phân tích kỹ và hiếm khi kết luận vội, nên lời bạn nói có trọng lượng.',
-      'Bạn làm việc độc lập tốt trong những dự án cần tập trung lâu.',
-      'Bạn phát hiện ra lỗi mà người khác bỏ qua, như một con số bị lệch trong bảng tính.',
+      'Tư duy phản biện và phân tích dữ liệu sắc bén: mọi đề xuất của bạn đều dựa trên cơ sở tìm hiểu kỹ lưỡng, có sức nặng chuyên môn cao.',
+      'Làm việc độc lập cực kỳ hiệu quả trong những dự án phức tạp cần sự tập trung cao độ.',
+      'Khả năng rà soát lỗi hệ thống và nhìn ra quy luật vận hành ngầm phía sau các con số.',
     ],
     watchOut: [
-      'Bạn có thể thấy khó giải thích ý mình cho người không cùng chuyên môn.',
-      'Bạn dễ trì hoãn việc công bố kết quả vì muốn chắc thêm chút nữa.',
+      'Đôi khi gặp khó khăn trong việc tóm lược vấn đề cho những người không có cùng nền tảng chuyên môn kỹ thuật.',
+      'Xu hướng trì hoãn việc bàn giao kết quả chỉ vì muốn dành thêm thời gian tìm hiểu cho thật hoàn hảo.',
     ],
     advice: [
-      'Tập giải thích công việc của bạn cho một người ngoài ngành trong ba câu.',
-      'Đặt hạn chót cho phần tìm hiểu và gửi bản nháp sớm để nhận góp ý.',
+      'Luyện cách trình bày báo cáo theo cấu trúc đi thẳng vào kết luận và giải pháp trước, sau đó mới đính kèm phần phân tích chi tiết phía sau.',
+      'Thống nhất rõ mốc thời gian nghiệm thu cho từng giai đoạn nghiên cứu để đảm bảo tiến độ chung của cả dự án.',
     ],
-    fields: ['Nghiên cứu', 'Phân tích dữ liệu', 'Kỹ thuật phần mềm', 'Y học, dược học', 'Biên tập chuyên môn'],
+    fields: ['Nghiên cứu và phát triển chuyên sâu', 'Phân tích dữ liệu, kinh tế, tài chính', 'Kỹ thuật phần mềm, an ninh mạng', 'Y dược, công nghệ sinh học', 'Tư vấn chiến lược, biên khảo'],
   },
 
   8: {
-    title: 'Người điều hành',
-    keywords: ['Quản lý', 'Kết quả', 'Tầm vóc'],
+    title: 'Tác phong điều hành và tối ưu hiệu quả',
+    keywords: ['Quản trị', 'Định hướng kết quả', 'Quyết đoán'],
     summary:
-      'Số sứ mệnh 8 cho thấy bạn thể hiện năng lực rõ nhất khi được quản lý nguồn lực, con người hay tiền bạc. Bạn nhìn ra cách một việc có thể lớn lên và biết sắp xếp để nó chạy. Người khác thấy ở bạn sự tự tin của một người cầm trịch. Thử thách của bạn là giữ được sự công bằng và tình người khi nắm quyền.',
+      'Năng lực thực thi của bạn bộc lộ mạnh mẽ nhất khi giải quyết các bài toán về tổ chức nhân sự, quản lý ngân sách và mở rộng quy mô. Bạn có cái nhìn rất thực tế về hiệu quả đầu tư: bỏ ra bao nhiêu thời gian, chi phí và thu về kết quả cụ thể gì. Đứng trước các tình huống khủng hoảng hoặc đàm phán thương mại căng thẳng, bạn giữ được sự bình tĩnh và bản lĩnh cầm trịch. Thử thách của bạn là kết hợp sự sắc bén về mặt con số với sự mềm mỏng trong nghệ thuật dùng người.',
     strengths: [
-      'Bạn đặt mục tiêu rõ ràng và theo dõi tiến độ bằng con số cụ thể.',
-      'Bạn đứng vững trước áp lực, kể cả khi phải nói “không” với một khách hàng lớn.',
-      'Bạn biết định giá đúng sản phẩm và công sức, không bán rẻ mình.',
+      'Thiết lập mục tiêu định lượng rõ ràng và biết cách tổ chức bộ máy để đẩy kế hoạch về đích đúng hạn.',
+      'Bản lĩnh đàm phán vững vàng, biết định giá đúng giá trị sức lao động và sản phẩm của đội ngũ.',
+      'Khả năng nhìn ra cơ hội thương mại và tối ưu hoá hiệu suất sử dụng nguồn lực trong tổ chức.',
     ],
     watchOut: [
-      'Bạn có thể đặt hiệu quả lên trên cảm xúc của người làm cùng.',
-      'Bạn dễ gắn giá trị bản thân với chức danh và thu nhập.',
+      'Đôi lúc quá đặt nặng chỉ tiêu hiệu suất mà gây áp lực nghẹt thở lên tâm lý của các thành viên trong nhóm.',
+      'Dễ rơi vào tâm lý muốn kiểm soát mọi quyết định từ lớn đến nhỏ vì chưa thực sự yên tâm về cấp dưới.',
     ],
     advice: [
-      'Với mỗi quyết định lớn, bạn hỏi thêm một câu: quyết định này ảnh hưởng thế nào tới người trong nhóm.',
-      'Dành thời gian kèm một người trẻ hơn. Bạn sẽ thấy sức ảnh hưởng của mình theo một cách khác.',
+      'Khi đưa ra các quyết sách lớn, hãy luôn đánh giá song song cả bài toán lợi nhuận ngắn hạn lẫn sự gắn kết dài hạn của đội ngũ nhân sự.',
+      'Dành thời gian đào tạo và trao quyền theo từng cấp độ cho cộng sự để giải phóng bản thân khỏi các công việc sự vụ.',
     ],
-    fields: ['Quản trị kinh doanh', 'Tài chính, ngân hàng', 'Bất động sản', 'Luật', 'Điều hành dự án'],
+    fields: ['Quản trị và điều hành doanh nghiệp', 'Tài chính, ngân hàng, đầu tư', 'Kinh doanh thương mại, bất động sản', 'Tư vấn luật, mua bán sáp nhập', 'Giám đốc vận hành, quản lý dự án'],
   },
 
   9: {
-    title: 'Người làm vì nhiều người',
-    keywords: ['Nhân văn', 'Nhìn xa', 'Cống hiến'],
+    title: 'Tác phong định hướng tầm nhìn và giá trị chung',
+    keywords: ['Bao quát', 'Nhân văn', 'Truyền động lực'],
     summary:
-      'Số sứ mệnh 9 cho thấy bạn phát huy năng lực tốt nhất khi công việc có ích cho nhiều người. Bạn nhìn vấn đề rộng và dễ đồng cảm với những hoàn cảnh khác mình. Người ta thấy ở bạn một người tử tế và có lý tưởng. Thử thách của bạn là biến lý tưởng thành việc làm cụ thể, có điểm kết thúc rõ ràng.',
+      'Bạn phát huy năng lực xuất sắc nhất trong những công việc mang lại tác động tích cực cho tập thể rộng lớn hoặc giải quyết các bài toán con người. Thay vì bị cuốn vào các chi tiết vụn vặt, bạn có khả năng nhìn tổng thể và kết nối mọi người cùng hướng về một mục tiêu có ý nghĩa. Phong thái làm việc rộng lượng, văn minh giúp bạn dễ dàng hợp tác với nhiều tầng lớp và nền văn hoá khác nhau. Điều bạn cần chú ý là bổ sung tính kỷ luật tài chính và các mốc nghiệm thu cụ thể cho từng dự án.',
     strengths: [
-      'Bạn nói được ý nghĩa của công việc, giúp người khác thấy mình đang góp vào điều gì.',
-      'Bạn làm việc tốt với người đến từ nhiều vùng miền và hoàn cảnh.',
-      'Bạn có cảm xúc tinh tế, hợp với những công việc chạm tới lòng người.',
+      'Khả năng truyền tải tầm nhìn và ý nghĩa công việc, giúp đội ngũ tìm thấy động lực làm việc từ bên trong.',
+      'Làm việc hiệu quả trong môi trường đa văn hoá hoặc các dự án đòi hỏi sự thấu hiểu xã hội sâu sắc.',
+      'Giải quyết các xung đột lợi ích bằng góc nhìn công tâm, hướng tới sự phát triển bền vững của cả tập thể.',
     ],
     watchOut: [
-      'Bạn dễ ôm những mục tiêu quá lớn rồi thấy mình nhỏ bé.',
-      'Bạn có thể bỏ qua chuyện tiền bạc và chi phí khi làm một việc mình tin là tốt.',
+      'Đôi khi đặt mục tiêu quá rộng và lý tưởng hoá khiến kế hoạch thiếu tính khả thi khi đưa vào vận hành thực tế.',
+      'Hay xem nhẹ việc tính toán chi phí, lợi nhuận khiến các dự án tâm huyết dễ bị hụt hơi về nguồn lực.',
     ],
     advice: [
-      'Với mỗi lý tưởng, bạn viết ra một việc nhỏ làm được ngay trong tháng này.',
-      'Khi tham gia dự án cộng đồng, bạn hỏi rõ ngân sách và vai trò để không gánh quá sức.',
+      'Luôn cụ thể hoá mọi mục tiêu lớn thành các chỉ số đo lường được trong từng tháng và từng quý.',
+      'Phối hợp chặt chẽ với những cộng sự giỏi về quản trị tài chính và vận hành chi tiết để giữ cho dự án đi đúng đường ray thực tế.',
     ],
-    fields: ['Phi lợi nhuận, phát triển cộng đồng', 'Giáo dục', 'Nghệ thuật', 'Y tế cộng đồng', 'Quan hệ quốc tế'],
+    fields: ['Quản trị tổ chức phi lợi nhuận, xã hội', 'Giáo dục, đào tạo và phát triển nhân lực', 'Nghệ thuật, văn hoá, truyền thông đại chúng', 'Y tế cộng đồng, môi trường', 'Đối ngoại, hợp tác quốc tế'],
   },
 
   11: {
-    title: 'Người truyền cảm hứng',
-    keywords: ['Cảm hứng', 'Trực giác', 'Nhìn trước'],
+    title: 'Tác phong cố vấn và khơi mở xu hướng',
+    keywords: ['Nhạy bén xu hướng', 'Truyền cảm hứng', 'Thấu suốt'],
     summary:
-      'Số sứ mệnh 11 cho thấy bạn đóng góp mạnh nhất qua ý tưởng và khả năng khiến người khác tin vào nó. Bạn hay thấy một hướng đi trước khi mọi người kịp nhận ra. Khi bạn nói về điều mình tin, người nghe thường bị cuốn theo. Thử thách của bạn là đặt chân xuống đất, ghép cảm hứng với một kế hoạch rõ ràng.',
+      'Trong công việc, bạn đóng góp giá trị đặc biệt qua khả năng nắm bắt nhanh tâm lý con người và nhận diện sớm các xu hướng mới. Bạn thường nhìn ra điểm mấu chốt của một vấn đề truyền thông, nhân sự hay sản phẩm trước khi nó biểu hiện rõ thành số liệu. Khi đảm nhận vai trò cố vấn, đào tạo hoặc thuyết trình, sự tinh tế của bạn tạo ra sức thuyết phục rất lớn. Để năng lực này phát huy trọn vẹn, bạn cần kết hợp nguồn cảm hứng nhạy bén với một quy trình làm việc có kỷ luật.',
     strengths: [
-      'Bạn nắm bắt xu hướng sớm, như nhận ra một thói quen mới của khách hàng trước khi số liệu kịp cho thấy.',
-      'Bạn nói chuyện chạm tới cảm xúc, hợp với những vai trò cần thuyết phục hay động viên người khác.',
-      'Bạn nhạy với nhu cầu tinh thần của những người làm cùng.',
+      'Nắm bắt tâm lý khách hàng và xu hướng thị trường rất nhạy, giúp định hướng nội dung hoặc sản phẩm chạm đúng nhu cầu thật.',
+      'Khả năng cố vấn, khích lệ tinh thần và gỡ rối tâm lý cho các thành viên trong đội ngũ.',
+      'Tạo ra những ý tưởng đột phá mang chiều sâu giá trị chứ không chỉ chạy theo hình thức bề nổi.',
     ],
     watchOut: [
-      'Bạn dễ căng thẳng khi phải xử lý quá nhiều việc vụn vặt.',
-      'Bạn có thể bị cuốn vào ý tưởng mà quên kiểm tra xem nó có làm được không.',
+      'Hiệu suất làm việc dễ bị sụt giảm mạnh nếu phải xử lý quá nhiều thủ tục hành chính vụn vặt hoặc môi trường thiếu sự tôn trọng.',
+      'Đôi khi quá tin vào cảm nhận chủ quan mà bỏ qua bước kiểm chứng thực nghiệm ở quy mô nhỏ.',
     ],
     advice: [
-      'Bắt cặp với một người giỏi thực thi để biến ý tưởng của bạn thành sản phẩm.',
-      'Trước khi trình bày một ý tưởng, bạn chuẩn bị sẵn ba bước làm đầu tiên.',
+      'Hợp tác chặt chẽ với những người mạnh về lập kế hoạch và quản lý tiến độ để chuyển hoá nhanh các ý tưởng của bạn thành kết quả thực tế.',
+      'Trước khi đề xuất một hướng đi mới, hãy chuẩn bị sẵn các dữ kiện thực tế và ba bước thử nghiệm đầu tiên để thuyết phục tập thể.',
     ],
-    fields: ['Diễn giả, đào tạo', 'Sáng tạo nội dung', 'Tư vấn', 'Nghệ thuật', 'Hoạt động xã hội'],
+    fields: ['Cố vấn chiến lược, thương hiệu', 'Đào tạo, huấn luyện phát triển cá nhân', 'Sáng tạo nội dung, biên kịch, nghệ thuật', 'Nghiên cứu hành vi người dùng', 'Truyền thông, quan hệ công chúng'],
   },
 
   22: {
-    title: 'Người dựng hệ thống',
-    keywords: ['Nhìn xa', 'Thực thi', 'Tổ chức'],
+    title: 'Tác phong kiến trúc sư hệ thống',
+    keywords: ['Tầm nhìn chiến lược', 'Tổ chức quy mô', 'Thực thi bền bỉ'],
     summary:
-      'Số sứ mệnh 22, viết là 22/4, cho thấy bạn có thể đóng góp ở quy mô lớn, nơi cần cả tầm nhìn lẫn sự tỉ mỉ. Bạn hình dung được cả một hệ thống và biết từng viên gạch cần đặt ở đâu. Người khác tin tưởng giao cho bạn những việc phức tạp. Thử thách của bạn là chấp nhận tiến độ thực tế và không đòi mọi thứ phải hoàn hảo ngay.',
+      'Được ký hiệu là 22/4, chỉ số này cho thấy bạn có năng lực thiết kế và vận hành những dự án có quy mô lớn, đòi hỏi sự kết hợp giữa tầm nhìn dài hạn và tính chuẩn xác từng chi tiết. Bạn không chỉ nhìn ra mục tiêu xa mà còn biết cách dựng lên bộ khung quy trình để cả một tập thể hàng chục, hàng trăm người cùng chạy theo trật tự. Những bài toán hóc búa về mặt cấu trúc tổ chức hay hạ tầng kỹ thuật là nơi bạn thể hiện rõ nhất bản lĩnh của mình. Thử thách của bạn là biết phân bổ áp lực và chấp nhận mức sai số cho phép trong quá trình vận hành.',
     strengths: [
-      'Bạn thiết kế được quy trình cho cả tổ chức, không chỉ cho riêng mình.',
-      'Bạn bền bỉ với những dự án kéo dài nhiều năm.',
-      'Bạn ghép được người có ý tưởng với người làm thực tế.',
+      'Năng lực thiết kế quy trình và cấu trúc hệ thống có tính mở rộng cao, phục vụ được mục tiêu dài hạn nhiều năm.',
+      'Sự kiên trì và thực tế khi giải quyết các bài toán lớn đòi hỏi phối hợp đa nguồn lực.',
+      'Làm cầu nối hiệu quả giữa nhóm hoạch định chiến lược và đội ngũ thực thi kỹ thuật trực tiếp.',
     ],
     watchOut: [
-      'Bạn có thể tự tạo áp lực quá lớn vì muốn làm việc to tát.',
-      'Bạn dễ ôm hết phần quan trọng vì sợ người khác làm không đúng.',
+      'Tự gây áp lực quá lớn lên bản thân và tập thể vì tiêu chuẩn cầu toàn trong mọi hạng mục.',
+      'Dễ rơi vào tình trạng ôm đồm mọi khâu trọng yếu vì sợ bàn giao cho người khác sẽ làm giảm chất lượng hệ thống.',
     ],
     advice: [
-      'Viết tài liệu hướng dẫn cho những việc bạn đang làm, để người khác có thể tiếp nhận.',
-      'Chia dự án thành từng giai đoạn và cho phép mỗi giai đoạn có vài sai sót nhỏ.',
+      'Xây dựng hệ thống tài liệu hướng dẫn và tiêu chuẩn kiểm soát chất lượng rõ ràng để có thể tự tin chuyển giao việc cho đội ngũ.',
+      'Áp dụng phương pháp triển khai cuốn chiếu: hoàn thiện và đưa vào vận hành từng phân đoạn thực tế thay vì chờ toàn bộ hệ thống hoàn hảo mới ra mắt.',
     ],
-    fields: ['Kiến trúc, quy hoạch', 'Kỹ thuật hệ thống', 'Quản lý chương trình lớn', 'Khởi nghiệp công nghệ', 'Hành chính công'],
+    fields: ['Kiến trúc hệ thống, hạ tầng công nghệ', 'Quản trị chương trình và dự án quy mô lớn', 'Quy hoạch đô thị, xây dựng công trình', 'Điều hành chuỗi cung ứng, sản xuất', 'Quản trị chiến lược doanh nghiệp'],
   },
 
   33: {
-    title: 'Người dẫn dắt bằng tấm gương',
-    keywords: ['Tận tuỵ', 'Dạy dỗ', 'Nâng đỡ'],
+    title: 'Tác phong dẫn dắt và bồi dưỡng con người',
+    keywords: ['Đào tạo', 'Nâng đỡ', 'Chuẩn mực đạo đức'],
     summary:
-      'Số sứ mệnh 33, viết là 33/6, cho thấy bạn thể hiện năng lực rõ nhất khi nâng đỡ người khác lớn lên. Bạn có thể là người thầy, người hướng dẫn hay người quản lý mà ai cũng muốn làm cùng. Sự tận tuỵ của bạn khiến người khác muốn cố gắng hơn. Thử thách của bạn là chăm cho người khác mà vẫn giữ được sức cho mình.',
+      'Được ký hiệu là 33/6, chỉ số này thể hiện năng lực nổi trội của bạn trong việc đào tạo, gắn kết và phát triển con người bằng chính sự gương mẫu của bản thân. Trong tập thể, bạn thường là người định hình văn hoá làm việc tử tế, tạo ra môi trường an toàn để mỗi cá nhân dám học hỏi và phát huy hết khả năng. Lời góp ý của bạn có sức nặng vì mọi người cảm nhận rõ sự chân thành và trách nhiệm phía sau. Điểm cần lưu ý nhất là bạn phải giữ ranh giới hợp lý để không gánh thay phần việc chuyên môn của cấp dưới.',
     strengths: [
-      'Bạn kèm người mới rất có tâm, biết khen đúng lúc và sửa đúng chỗ.',
-      'Bạn tạo ra một môi trường an toàn để người khác dám hỏi và dám sai.',
-      'Bạn sống theo những giá trị rõ ràng, nên lời khuyên của bạn có trọng lượng.',
+      'Năng lực kèm cặp, hướng dẫn nhân sự rất bài bản, biết cách khích lệ đúng lúc và chỉ ra điểm cần sửa một cách tinh tế.',
+      'Xây dựng được sự gắn kết và niềm tin vững chắc trong đội ngũ nhờ tác phong chính trực, nhất quán.',
+      'Giữ được sự điềm tĩnh và góc nhìn nhân văn khi xử lý các khủng hoảng nhân sự hoặc dịch vụ khách hàng.',
     ],
     watchOut: [
-      'Bạn dễ nhận giúp quá nhiều người cùng một lúc.',
-      'Bạn có thể thấy có lỗi mỗi khi đặt nhu cầu của mình lên trước.',
+      'Dễ dành quá nhiều thời gian đi giải quyết tâm lý hoặc làm hộ việc cho người khác đến mức quá tải lịch trình cá nhân.',
+      'Cảm thấy áy náy khi phải đưa ra các quyết định kỷ luật hoặc cắt giảm nhân sự không đáp ứng yêu cầu công việc.',
     ],
     advice: [
-      'Giới hạn số người bạn trực tiếp hướng dẫn, và chọn những người phù hợp nhất.',
-      'Lên lịch nghỉ ngơi giống như lên lịch họp, và giữ nó như một lời hẹn.',
+      'Xác định rõ nguyên tắc quản trị: sự tử tế trong công việc là tạo điều kiện và tiêu chuẩn rõ ràng để nhân sự tự trưởng thành, không phải bao bọc vô điều kiện.',
+      'Giới hạn số lượng người bạn trực tiếp kèm cặp trong mỗi giai đoạn để đảm bảo chất lượng hướng dẫn cũng như sức khoẻ của chính bạn.',
     ],
-    fields: ['Giáo dục, đào tạo', 'Tư vấn tâm lý', 'Y tế', 'Quản lý con người', 'Công tác xã hội'],
+    fields: ['Giáo dục, đào tạo và phát triển tổ chức', 'Tham vấn tâm lý, chăm sóc sức khoẻ', 'Quản trị nhân sự và văn hoá doanh nghiệp', 'Điều hành tổ chức xã hội, giáo dục cộng đồng', 'Quản lý dịch vụ khách hàng cao cấp'],
   },
 };
 
@@ -789,488 +789,87 @@ const expression = {
 
 const soul = {
   1: {
-    title: 'Muốn tự cầm lái',
-    keywords: ['Tự chủ', 'Được là mình', 'Khẳng định'],
+    title: 'Khát khao tự chủ và khẳng định bản lĩnh',
+    keywords: ['Tự quyết', 'Độc lập', 'Khẳng định giá trị'],
     summary:
-      'Số linh hồn 1 cho thấy sâu bên trong, bạn mong được làm chủ cuộc đời mình. Bạn thấy ngột ngạt khi người khác quyết định thay, dù họ có ý tốt. Cảm giác tự tay làm nên một điều gì đó mang lại cho bạn niềm vui rất lớn. Bạn có thể không nói ra, nhưng bạn muốn được nhìn nhận là một người có bản lĩnh riêng.',
+      'Ẩn sâu bên dưới mọi lựa chọn của bạn là nhu cầu mạnh mẽ được tự mình cầm lái cuộc sống và công việc. Bạn cảm thấy cực kỳ ngột ngạt nếu phải sống theo sự sắp đặt sẵn của người khác, kể cả khi sự sắp đặt đó mang lại sự an nhàn. Niềm vui trọn vẹn nhất đến với bạn khi tự tay chinh phục được một mục tiêu khó và được ghi nhận bằng chính thực lực của mình. Dù ít khi nói ra thành lời, bạn luôn mong muốn có một vị thế độc lập để không bao giờ phải phụ thuộc vào ai.',
     strengths: [
-      'Bạn có động lực tự thân, không cần ai thúc vẫn muốn tiến lên.',
-      'Bạn biết mình muốn gì và ít bị đám đông kéo đi.',
-      'Bạn đủ can đảm để chọn con đường khác với gia đình hay bạn bè nếu thấy cần.',
+      'Động lực tự thân rất lớn, luôn chủ động tìm cách vươn lên mà không cần người ngoài thúc ép.',
+      'Có lập trường và tiêu chuẩn cá nhân rõ ràng, hiếm khi bị tâm lý đám đông làm lung lay.',
+      'Đủ can đảm để chọn hướng đi riêng phù hợp với năng lực thực tế của bản thân.',
     ],
     watchOut: [
-      'Bạn có thể ngại nhờ giúp vì sợ bị xem là yếu.',
-      'Khi không được tự quyết, bạn dễ bực bội ngầm mà không nói ra.',
+      'Vì sĩ diện hoặc sợ bị đánh giá là yếu kém nên bạn rất ngại mở lời nhờ giúp đỡ ngay cả khi đang gặp khó khăn thật.',
+      'Dễ nảy sinh sự bức bối ngầm nếu rơi vào môi trường làm việc hoặc mối quan hệ có tính kiểm soát cao.',
     ],
     advice: [
-      'Tìm một góc trong cuộc sống mà bạn hoàn toàn tự quyết, như một dự án riêng hay một sở thích.',
-      'Trong tuần này, bạn tập nói câu “mình cần giúp một chút” với một người tin cậy.',
+      'Luôn duy trì cho mình ít nhất một dự án cá nhân hoặc một mảng công việc mà ở đó bạn có toàn quyền quyết định.',
+      'Tập nhìn nhận việc hỏi ý kiến chuyên gia hoặc nhờ hỗ trợ đúng lúc là cách tối ưu nguồn lực thông minh chứ không phải sự phụ thuộc.',
     ],
   },
 
   2: {
-    title: 'Muốn được ở bên',
-    keywords: ['Gắn bó', 'Bình yên', 'Được thấu hiểu'],
+    title: 'Khát khao bình yên và sự thấu hiểu chân thành',
+    keywords: ['Gắn bó', 'Hài hoà', 'Được thấu hiểu'],
     summary:
-      'Số linh hồn 2 cho thấy điều bạn mong nhất là sự gắn bó và hoà thuận. Bạn thấy bình yên khi có một người để kể chuyện trong ngày, dù chỉ là vài tin nhắn trước khi ngủ. Những cuộc cãi vã, kể cả không liên quan tới bạn, cũng làm bạn bất an. Sâu trong lòng, bạn muốn được hiểu mà không phải giải thích quá nhiều.',
+      'Điều làm bạn cảm thấy an tâm và hạnh phúc nhất không phải là những cuộc đua tranh thắng thua, mà là sự hoà thuận, tin cậy trong các mối quan hệ thân thiết. Bạn luôn mong có những người đồng hành đủ tinh tế để chia sẻ buồn vui thường ngày mà không cần phải phòng bị hay giải thích dài dòng. Những môi trường đầy rẫy sự đấu đá,nói xấu hoặc xung đột gay gắt thường rút cạn năng lượng tinh thần của bạn rất nhanh. Sâu bên trong, bạn coi trọng sự tử tế, êm ấm hơn bất kỳ danh hiệu hào nhoáng nào.',
     strengths: [
-      'Bạn quý các mối quan hệ và giữ liên lạc với người thân rất đều đặn.',
-      'Bạn cảm được nhu cầu của người khác, nên là một người bạn, người thương chu đáo.',
-      'Bạn tìm được niềm vui trong những điều nhỏ, như một bữa cơm có đủ mặt cả nhà.',
+      'Trân trọng và biết cách vun đắp cho các mối quan hệ bền chặt, lâu dài bằng sự chân thành.',
+      'Nhạy bén với cảm xúc của người thương yêu, luôn mang lại cảm giác dịu dàng, an toàn cho người bên cạnh.',
+      'Biết tìm kiếm và trân quý niềm vui từ những khoảnh khắc bình dị, gần gũi trong đời sống hằng ngày.',
     ],
     watchOut: [
-      'Bạn có thể gác mong muốn của mình lại để giữ hoà khí.',
-      'Bạn dễ thấy trống trải khi phải ở một mình lâu.',
+      'Hay tự kìm nén mong muốn thật sự của bản thân để chiều theo ý người khác vì sợ xảy ra bất đồng.',
+      'Dễ rơi vào cảm giác trống trải, bất an khi phải làm việc độc lập hoặc ở một mình trong thời gian dài.',
     ],
     advice: [
-      'Viết ra ba điều bạn muốn cho riêng mình, không liên quan tới ai khác.',
-      'Tập ở một mình một buổi mà vẫn thấy dễ chịu, như đi uống cà phê hay xem phim một mình.',
+      'Tập thói quen nói rõ nhu cầu và mong muốn của bạn một cách nhẹ nhàng, vì người thân không thể lúc nào cũng tự đoán trúng ý bạn.',
+      'Xây dựng những sở thích cá nhân độc lập để bạn luôn cảm thấy bình an, trọn vẹn ngay cả trong những khoảng thời gian ở một mình.',
     ],
   },
 
   3: {
-    title: 'Muốn được vui và được nói',
-    keywords: ['Niềm vui', 'Tự do biểu đạt', 'Được lắng nghe'],
+    title: 'Khát khao tự do biểu đạt và niềm vui sống',
+    keywords: ['Sáng tạo', 'Tự do chia sẻ', 'Được lắng nghe'],
     summary:
-      'Số linh hồn 3 cho thấy bên trong bạn là mong muốn được sống vui và được nói ra điều mình nghĩ. Bạn thấy mình sống động nhất khi được sáng tạo, kể chuyện hay làm người khác bật cười. Một cuộc sống quá nghiêm túc, chỉ có việc và việc, làm bạn héo đi. Bạn mong có người lắng nghe cả những ý tưởng nhỏ nhặt của mình mà không phán xét.',
+      'Động lực ngầm thúc đẩy bạn mỗi ngày là nhu cầu được nói ra suy nghĩ của mình, được sáng tạo và tận hưởng bầu không khí sống động, tích cực. Bạn cảm thấy mình thực sự sống khi được chia sẻ ý tưởng, kể chuyện hoặc tạo ra những sản phẩm mang dấu ấn cá nhân. Một nhịp sống khô khan, cứng nhắc chỉ xoay quanh quy trình lặp đi lặp lại rất dễ làm tinh thần bạn héo mòn. Sâu trong lòng, bạn luôn mong có được những người nghe cởi mở, trân trọng các ý tưởng mới mẻ của bạn mà không vội vàng phán xét.',
     strengths: [
-      'Bạn biết tìm niềm vui ngay trong những ngày bình thường.',
-      'Bạn giàu trí tưởng tượng và thích làm ra những thứ mới.',
-      'Bạn lạc quan, giúp người xung quanh nhẹ lòng hơn.',
+      'Khả năng giữ tinh thần lạc quan và tìm ra góc nhìn thú vị ngay cả trong những giai đoạn nhiều áp lực.',
+      'Đời sống tinh thần phong phú, luôn dồi dào cảm hứng để làm mới không gian sống và công việc.',
+      'Mang lại nguồn năng lượng tích cực, ấm áp cho những người thân thiết xung quanh.',
     ],
     watchOut: [
-      'Bạn có thể né những cảm xúc nặng nề bằng cách lúc nào cũng tỏ ra vui vẻ.',
-      'Bạn dễ buồn khi ý tưởng của mình bị gạt đi.',
+      'Xu hướng dùng sự vui vẻ bề nổi để lảng tránh việc phải đối diện và giải quyết những nỗi buồn sâu bên trong.',
+      'Dễ tụt cảm hứng đột ngột nếu tâm huyết chia sẻ của mình gặp phải thái độ thờ ơ hoặc dội gáo nước lạnh từ người khác.',
     ],
     advice: [
-      'Dành chỗ cho một hoạt động sáng tạo mỗi tuần, như vẽ, hát hay viết.',
-      'Khi buồn, bạn thử nói thật với một người bạn thay vì đùa cho qua.',
+      'Duy trì một kênh cá nhân như sổ tay, blog hoặc một dự án nghệ thuật nhỏ để bạn tự do sáng tạo mà không phụ thuộc vào lời khen chê bên ngoài.',
+      'Cho phép bản thân được lắng lại và tâm sự thẳng thắn với người tin cậy mỗi khi gặp chuyện buồn thay vì cố gồng mình tỏ ra ổn.',
     ],
   },
 
   4: {
-    title: 'Muốn có chỗ dựa vững',
-    keywords: ['Ổn định', 'An toàn', 'Rõ ràng'],
+    title: 'Khát khao sự ổn định và nền tảng vững chắc',
+    keywords: ['An toàn', 'Trật tự', 'Minh bạch'],
     summary:
-      'Số linh hồn 4 cho thấy bạn mong một cuộc sống ổn định và có trật tự. Bạn thấy yên tâm khi biết tháng sau đủ tiền tiêu, nhà cửa gọn gàng và kế hoạch rõ ràng. Những thay đổi đột ngột làm bạn mất ngủ hơn người khác. Sâu bên trong, bạn muốn xây một nền nhà vững cho mình và người thân.',
+      'Nhu cầu cốt lõi nhất bên trong bạn là cảm giác an toàn, rõ ràng và mọi thứ nằm trong tầm kiểm soát dự tính được. Bạn chỉ thực sự ngủ ngon khi biết kế hoạch công việc đã vào guồng, tài chính có khoản dự phòng chắc chắn và các mối quan hệ minh bạch, giữ đúng cam kết. Những sự thay đổi đột ngột phút chót hoặc môi trường làm việc mập mờ, thiếu quy tắc thường làm bạn căng thẳng hơn người khác rất nhiều. Sâu thẳm bên trong, mong ước lớn nhất của bạn là xây dựng được một cuộc sống vững chãi, không bấp bênh cho mình và gia đình.',
     strengths: [
-      'Bạn biết giữ gìn những gì mình có, từ đồ đạc tới các mối quan hệ lâu năm.',
-      'Bạn có kế hoạch cho tương lai, kể cả những khoản để dành nhỏ.',
-      'Bạn trung thực và muốn mọi thứ minh bạch.',
+      'Ý thức trách nhiệm và sự cẩn trọng cao trong việc bảo vệ sự an toàn tài chính cũng như đời sống gia đình.',
+      'Sống chân thực, rõ ràng, luôn tôn trọng các nguyên tắc và lời hứa đã cam kết.',
+      'Kiên trì tích luỹ từng bước để tạo dựng những giá trị bền vững theo thời gian.',
     ],
     watchOut: [
-      'Bạn có thể bỏ qua cơ hội tốt vì nó đi kèm rủi ro.',
-      'Bạn dễ lo xa, lo cả những chuyện chưa chắc sẽ xảy ra.',
+      'Vì quá ưu tiên sự an toàn tuyệt đối nên đôi khi bạn tự đóng cánh cửa trước những cơ hội phát triển mới có độ rủi ro vừa phải.',
+      'Hay lo xa và tự tạo áp lực tâm lý trước những kịch bản bất trắc chưa chắc đã xảy ra trong thực tế.',
     ],
     advice: [
-      'Lập một khoản dự phòng nhỏ để bạn thấy an toàn mà vẫn dám thử điều mới.',
-      'Mỗi khi lo lắng, bạn viết ra điều tệ nhất có thể xảy ra và cách mình sẽ xử lý. Nỗi lo sẽ có hình dạng rõ hơn và bớt đáng sợ.',
+      'Xây dựng một quỹ tài chính dự phòng đủ cho sáu tháng sinh hoạt để tâm lý bạn luôn có điểm tựa vững vàng khi cần thử nghiệm điều mới.',
+      'Mỗi khi lo lắng về một thay đổi sắp tới, hãy viết rõ phương án xử lý cho tình huống xấu nhất ra giấy để giải phóng đầu óc khỏi sự bất an mơ hồ.',
     ],
   },
 
   5: {
-    title: 'Muốn được tự do',
-    keywords: ['Tự do', 'Trải nghiệm', 'Không bị gò bó'],
+    title: 'Khát khao tự do trải nghiệm và khám phá',
+    keywords: ['Tự do', 'Trải nghiệm mới', 'Không gò bó'],
     summary:
-      'Số linh hồn 5 cho thấy điều bạn khao khát nhất là tự do. Bạn muốn được đi đây đi đó và tự chọn cách sống của mình, không bị trói vào một khuôn khổ cố định. Một lịch trình kín mít từ sáng tới tối có thể làm bạn thấy ngộp. Bên trong bạn luôn có một phần muốn biết bên kia ngọn đồi có gì.',
-    strengths: [
-      'Bạn cởi mở với cái mới và không ngại thay đổi.',
-      'Bạn biến những chuyến đi ngắn thành kỷ niệm đáng nhớ.',
-      'Bạn hiểu và tôn trọng nhiều lối sống khác nhau.',
-    ],
-    watchOut: [
-      'Bạn có thể ngại cam kết lâu dài vì sợ mất tự do.',
-      'Bạn dễ tìm tới cảm giác mới để khỏi phải đối diện với cảm giác chán.',
-    ],
-    advice: [
-      'Tìm tự do ngay trong khuôn khổ, như xin cách làm việc linh hoạt thay vì bỏ hẳn công việc.',
-      'Khi thấy muốn bỏ đi, bạn tự hỏi mình đang tránh điều gì.',
-    ],
-  },
-
-  6: {
-    title: 'Muốn một mái nhà ấm',
-    keywords: ['Yêu thương', 'Gia đình', 'Được cần đến'],
-    summary:
-      'Số linh hồn 6 cho thấy bạn mong có một mái nhà ấm áp và những người thân yêu ở quanh mình. Bạn thấy hạnh phúc khi được chăm sóc người khác và được họ cần đến. Một bữa cơm đông đủ có thể làm bạn vui hơn cả một món quà đắt tiền. Sâu bên trong, bạn muốn những người mình thương đều được bình an.',
-    strengths: [
-      'Bạn yêu thương thật lòng và thể hiện bằng việc làm cụ thể.',
-      'Bạn khiến người khác thấy mình thuộc về một nơi nào đó.',
-      'Bạn có tinh thần trách nhiệm cao với gia đình.',
-    ],
-    watchOut: [
-      'Bạn có thể để niềm vui của mình phụ thuộc vào việc người khác có ổn không.',
-      'Bạn dễ thấy có lỗi khi dành thời gian cho riêng mình.',
-    ],
-    advice: [
-      'Nhắc mình rằng chăm cho bản thân cũng là một cách chăm cho gia đình.',
-      'Tập để người thân tự giải quyết chuyện của họ, và chỉ giúp khi được nhờ.',
-    ],
-  },
-
-  7: {
-    title: 'Muốn hiểu cho tận cùng',
-    keywords: ['Hiểu biết', 'Yên tĩnh', 'Sự thật'],
-    summary:
-      'Số linh hồn 7 cho thấy bên trong bạn là mong muốn được hiểu thấu mọi chuyện, kể cả chính mình. Bạn cần những khoảng lặng để nghĩ, và một ngày không có phút nào yên tĩnh làm bạn rất mệt. Bạn coi trọng sự thật hơn những lời nói cho dễ nghe. Bạn mong có vài người thật sự hiểu mình, hơn là có thật nhiều người quen.',
-    strengths: [
-      'Bạn có đời sống bên trong phong phú và biết tự làm mình vui.',
-      'Bạn tìm ý nghĩa sâu xa thay vì dừng ở bề ngoài.',
-      'Bạn trung thực với cảm nhận của mình.',
-    ],
-    watchOut: [
-      'Bạn có thể tự thu mình lại mỗi khi gặp chuyện buồn.',
-      'Bạn dễ nghi ngờ lòng tốt của người khác.',
-    ],
-    advice: [
-      'Giữ một góc riêng trong nhà, dù nhỏ, để bạn có chỗ yên tĩnh.',
-      'Mỗi tuần, chia sẻ điều mình đang nghĩ với một người bạn tin ít nhất một lần.',
-    ],
-  },
-
-  8: {
-    title: 'Muốn làm nên chuyện',
-    keywords: ['Thành tựu', 'Tự chủ tài chính', 'Được tôn trọng'],
-    summary:
-      'Số linh hồn 8 cho thấy sâu bên trong, bạn mong đạt được thành tựu và được người khác tôn trọng. Bạn muốn tự đứng vững về tiền bạc, không phải trông vào ai. Nhìn thấy kết quả cụ thể từ công sức của mình khiến bạn thấy thoả mãn. Bạn có thể không nói ra, nhưng bạn muốn chứng minh rằng mình làm được.',
-    strengths: [
-      'Bạn có động lực mạnh để vượt qua khó khăn.',
-      'Bạn hiểu giá trị của đồng tiền và của công sức.',
-      'Bạn muốn xây một điều gì đó bền vững cho bản thân và gia đình.',
-    ],
-    watchOut: [
-      'Bạn có thể thấy bất an mỗi khi thu nhập chững lại.',
-      'Bạn dễ so sánh mình với những người đi nhanh hơn.',
-    ],
-    advice: [
-      'Viết ra định nghĩa thành công theo cách riêng của bạn, không mượn của ai.',
-      'Ghi lại những thành tựu nhỏ mỗi tháng, đừng đợi tới thành tựu lớn mới cho phép mình vui.',
-    ],
-  },
-
-  9: {
-    title: 'Muốn đời có ý nghĩa',
-    keywords: ['Ý nghĩa', 'Cho đi', 'Lòng trắc ẩn'],
-    summary:
-      'Số linh hồn 9 cho thấy điều bạn mong nhất là sống một cuộc đời có ý nghĩa với người khác. Bạn thấy trống trải nếu chỉ làm việc để kiếm tiền mà không thấy mình giúp được ai. Bạn dễ rung động trước nỗi khổ của cả những người không quen. Sâu bên trong, bạn muốn để lại một điều tốt đẹp sau mình.',
-    strengths: [
-      'Bạn có lòng trắc ẩn và luôn sẵn lòng giúp đỡ.',
-      'Bạn biết tha thứ và không giữ thù lâu.',
-      'Bạn nhìn cuộc sống bằng con mắt rộng lượng.',
-    ],
-    watchOut: [
-      'Bạn có thể cho đi tới mức quên mất nhu cầu của mình.',
-      'Bạn dễ thất vọng khi thế giới không như bạn mong.',
-    ],
-    advice: [
-      'Tìm một cách giúp người vừa với sức mình và làm đều đặn.',
-      'Cho phép mình nhận lại, dù là một lời cảm ơn hay một sự giúp đỡ.',
-    ],
-  },
-
-  11: {
-    title: 'Muốn chạm tới điều sâu xa',
-    keywords: ['Trực giác', 'Đời sống tinh thần', 'Cảm hứng'],
-    summary:
-      'Số linh hồn 11 cho thấy bên trong bạn có nhu cầu tìm kiếm ý nghĩa tinh thần sâu sắc. Bạn nhạy cảm với cái đẹp, với âm nhạc hay một khoảnh khắc lặng yên. Bạn mong cuộc sống của mình truyền được điều gì đó tốt đẹp cho người khác. Đôi khi chính sự nhạy cảm ấy khiến bạn thấy mệt giữa những nơi ồn ào.',
-    strengths: [
-      'Bạn có trực giác mạnh về con người và tình huống.',
-      'Bạn dễ thấy được cái đẹp và ý nghĩa trong những điều bình thường.',
-      'Bạn truyền cảm hứng cho người khác chỉ bằng cách sống thật với mình.',
-    ],
-    watchOut: [
-      'Bạn dễ quá tải cảm xúc khi ở trong môi trường căng thẳng.',
-      'Bạn có thể đặt kỳ vọng rất cao cho bản thân.',
-    ],
-    advice: [
-      'Tìm một hoạt động giúp bạn tĩnh lại, như ngồi yên mười phút mỗi sáng hay đi dạo trong công viên.',
-      'Viết hoặc vẽ ra những gì bạn cảm nhận, để nó có chỗ đi thay vì dồn lại trong lòng.',
-    ],
-  },
-
-  22: {
-    title: 'Muốn để lại điều lâu bền',
-    keywords: ['Để lại dấu ấn', 'Xây dựng', 'Có ích thật'],
-    summary:
-      'Số linh hồn 22, viết là 22/4, cho thấy bạn mong tạo ra điều gì đó lâu bền và có ích cho nhiều người. Bạn không thoả mãn với những thành công lẻ tẻ mà muốn thấy công sức của mình góp vào một thứ lớn hơn. Bạn cần sự ổn định để xây, nhưng điều bạn nhắm tới rộng hơn bốn bức tường nhà mình. Áp lực tự đặt ra có lúc khiến bạn khó thả lỏng.',
-    strengths: [
-      'Bạn có lý tưởng lớn mà vẫn thực tế.',
-      'Bạn kiên trì với những gì mình tin là đáng làm.',
-      'Bạn muốn công việc của mình giúp được cộng đồng.',
-    ],
-    watchOut: [
-      'Bạn dễ thấy những gì mình đang làm là chưa đủ.',
-      'Bạn có thể quên tận hưởng hiện tại vì mải nhìn về tương lai.',
-    ],
-    advice: [
-      'Viết ra điều bạn muốn để lại sau mười năm, rồi chọn một bước làm được ngay trong năm nay.',
-      'Dành thời gian tận hưởng những thành quả nhỏ trước khi lao vào việc tiếp theo.',
-    ],
-  },
-
-  33: {
-    title: 'Muốn thương người trọn vẹn',
-    keywords: ['Lòng trắc ẩn', 'Che chở', 'Phụng sự'],
-    summary:
-      'Số linh hồn 33, viết là 33/6, cho thấy sâu bên trong, bạn mong được yêu thương và che chở cho người khác một cách trọn vẹn. Bạn thấy đời mình có ý nghĩa khi giúp được ai đó vượt qua khó khăn. Nỗi buồn của người khác chạm tới bạn rất nhanh. Bạn cần học cách giữ lại một phần sức cho chính mình.',
-    strengths: [
-      'Bạn có lòng trắc ẩn sâu và chân thành.',
-      'Bạn khiến người khác thấy an toàn khi ở cạnh.',
-      'Bạn sẵn lòng hy sinh cho điều mình tin là đúng.',
-    ],
-    watchOut: [
-      'Bạn dễ mang nỗi buồn của người khác về nhà.',
-      'Bạn có thể quên rằng mình cũng xứng đáng được chăm sóc.',
-    ],
-    advice: [
-      'Tạo một thói quen nhỏ để trút bỏ cảm xúc sau một ngày dài, như tắm nước ấm hay viết nhật ký.',
-      'Khi giúp người, bạn nhắc mình rằng bạn đi cùng họ chứ không gánh thay họ.',
-    ],
-  },
-};
-
-/* ===================== SỐ NHÂN CÁCH ===================== */
-
-const personality = {
-  1: {
-    title: 'Dáng vẻ tự tin',
-    keywords: ['Tự tin', 'Thẳng thắn', 'Có chính kiến'],
-    summary:
-      'Số nhân cách 1 cho thấy người khác thường thấy bạn là người tự tin và có chính kiến. Lần đầu gặp, bạn để lại ấn tượng của một người biết mình muốn gì. Trong buổi phỏng vấn, bạn trả lời dứt khoát và ít vòng vo. Có người thấy bạn hơi khó gần lúc đầu, cho tới khi họ hiểu bạn hơn.',
-    strengths: [
-      'Bạn để lại ấn tượng rõ, dễ được nhớ tên sau lần đầu gặp.',
-      'Bạn trông đáng tin khi đứng ở vai trò dẫn dắt.',
-      'Bạn nói rõ ý mình, người khác không phải đoán.',
-    ],
-    watchOut: [
-      'Bạn có thể bị hiểu là kiêu hoặc lạnh lùng khi chưa kịp cười.',
-      'Sự thẳng thắn của bạn đôi khi làm người nhạy cảm bị tổn thương.',
-    ],
-    advice: [
-      'Khi gặp người mới, bạn hỏi họ một câu về chính họ trước khi nói về mình.',
-      'Thêm một câu mềm vào những góp ý thẳng, như “mình nghĩ thế này, bạn thấy sao”.',
-    ],
-  },
-
-  2: {
-    title: 'Dáng vẻ dịu dàng',
-    keywords: ['Dễ gần', 'Nhẹ nhàng', 'Tế nhị'],
-    summary:
-      'Số nhân cách 2 cho thấy người khác thường thấy ở bạn sự dịu dàng và dễ gần. Lần đầu gặp, người ta thấy bạn biết lắng nghe và không làm ai khó xử. Bạn thường được nhờ vả vì trông hiền và dễ nói chuyện. Có điều, ấn tượng hiền lành ấy có thể khiến người khác đánh giá thấp sự vững vàng trong bạn.',
-    strengths: [
-      'Bạn khiến người khác thấy thoải mái ngay từ đầu.',
-      'Bạn trông đáng tin để người ta kể chuyện riêng.',
-      'Bạn cư xử tế nhị, hợp với những tình huống cần khéo léo.',
-    ],
-    watchOut: [
-      'Bạn có thể bị xem là thiếu quyết đoán.',
-      'Người khác dễ nhờ bạn làm thêm việc vì nghĩ bạn sẽ không từ chối.',
-    ],
-    advice: [
-      'Trước buổi gặp quan trọng, bạn chuẩn bị sẵn một ý kiến rõ ràng để nói ra.',
-      'Tập nhìn vào mắt người đối diện và nói chậm, chắc giọng hơn khi trình bày.',
-    ],
-  },
-
-  3: {
-    title: 'Dáng vẻ rạng rỡ',
-    keywords: ['Có duyên', 'Hoạt bát', 'Hài hước'],
-    summary:
-      'Số nhân cách 3 cho thấy người khác thường thấy bạn vui vẻ và dễ bắt chuyện. Lần đầu gặp, bạn có thể làm cả nhóm cười chỉ sau vài câu. Bạn chăm chút cho vẻ ngoài và cách nói chuyện của mình. Đôi khi người ta nghĩ bạn chỉ vui ngoài mặt mà chưa thấy được chiều sâu bên trong.',
-    strengths: [
-      'Bạn phá băng giỏi, làm buổi gặp đầu tiên bớt ngượng.',
-      'Bạn có phong cách riêng trong cách ăn mặc và trình bày.',
-      'Bạn được nhiều người quý nhờ sự cởi mở.',
-    ],
-    watchOut: [
-      'Bạn có thể bị xem là thiếu nghiêm túc ở những nơi trang trọng.',
-      'Bạn dễ nói nhiều hơn cần khi hồi hộp.',
-    ],
-    advice: [
-      'Trước buổi gặp quan trọng, bạn chuẩn bị vài ý chính và giữ câu chuyện xoay quanh chúng.',
-      'Để người khác thấy chiều sâu của bạn bằng cách kể về một điều bạn đã nghĩ kỹ.',
-    ],
-  },
-
-  4: {
-    title: 'Dáng vẻ chỉn chu',
-    keywords: ['Đáng tin', 'Nghiêm túc', 'Gọn gàng'],
-    summary:
-      'Số nhân cách 4 cho thấy người khác thường thấy bạn chỉn chu và đáng tin cậy. Lần đầu gặp, bạn để lại ấn tượng của một người đúng giờ, ăn mặc gọn gàng và nói có trọng tâm. Người ta sẵn lòng giao việc cho bạn ngay cả khi mới quen. Có điều, bạn có thể trông nghiêm hơn con người thật của mình.',
-    strengths: [
-      'Bạn tạo cảm giác chắc chắn, rất hợp với buổi phỏng vấn hay buổi gặp đối tác.',
-      'Bạn được tin về sự đúng hẹn và cẩn thận.',
-      'Bạn trông có tổ chức, người khác dễ đoán được cách bạn làm việc.',
-    ],
-    watchOut: [
-      'Bạn có thể bị xem là cứng nhắc hoặc khó gần.',
-      'Người khác có thể ngại đùa với bạn vì nghĩ bạn không thích.',
-    ],
-    advice: [
-      'Khi gặp người mới, bạn kể một chuyện nhỏ về sở thích của mình để họ thấy bạn gần gũi hơn.',
-      'Bắt đầu cuộc trò chuyện bằng một nụ cười, kể cả trong những buổi gặp nghiêm túc.',
-    ],
-  },
-
-  5: {
-    title: 'Dáng vẻ phóng khoáng',
-    keywords: ['Năng động', 'Cuốn hút', 'Cởi mở'],
-    summary:
-      'Số nhân cách 5 cho thấy người khác thường thấy bạn là người năng động và có nhiều chuyện hay để kể. Lần đầu gặp, bạn trông như người đã đi đây đi đó và chẳng ngại điều gì mới. Người ta dễ bị cuốn vào năng lượng của bạn. Có điều, bạn cũng có thể bị xem là khó đoán hoặc thiếu kiên định.',
-    strengths: [
-      'Bạn tạo cảm giác mới mẻ và hấp dẫn ngay từ lần gặp đầu.',
-      'Bạn hoà vào được với nhiều kiểu người và hoàn cảnh.',
-      'Bạn trông trẻ trung và tràn đầy năng lượng.',
-    ],
-    watchOut: [
-      'Bạn có thể bị nghĩ là người không ở lâu một chỗ.',
-      'Sự bộc trực của bạn đôi khi bị hiểu là thiếu cẩn trọng.',
-    ],
-    advice: [
-      'Khi đi phỏng vấn, bạn kể về một việc mình đã theo tới cùng để hình ảnh của bạn cân bằng hơn.',
-      'Giữ đúng những lời hẹn nhỏ, như giờ gặp hay một tin nhắn cần trả lời.',
-    ],
-  },
-
-  6: {
-    title: 'Dáng vẻ ấm áp',
-    keywords: ['Đáng mến', 'Chu đáo', 'Đáng tin cậy'],
-    summary:
-      'Số nhân cách 6 cho thấy người khác thường thấy bạn ấm áp và đáng tin cậy. Lần đầu gặp, người ta có cảm giác bạn sẽ giúp nếu họ cần. Bạn hay được nhờ trông đồ, trông em nhỏ hay lo hậu cần cho cả nhóm. Có điều, bạn có thể trông như người lúc nào cũng sẵn sàng hy sinh, khiến người khác dễ dựa dẫm.',
-    strengths: [
-      'Bạn tạo cảm giác an toàn và gần gũi.',
-      'Bạn có vẻ ngoài chăm chút và hài hoà.',
-      'Bạn dễ được tin tưởng ở những vai trò chăm sóc hay phục vụ.',
-    ],
-    watchOut: [
-      'Bạn có thể bị nhờ vả quá mức.',
-      'Vì bị xem là người hiền, ý kiến trái chiều của bạn đôi khi ít được lắng nghe.',
-    ],
-    advice: [
-      'Khi được nhờ ngay lần đầu gặp, bạn có quyền nói “để mình xem lịch đã”.',
-      'Nêu quan điểm riêng trong cuộc trò chuyện, để người khác thấy bạn có chính kiến.',
-    ],
-  },
-
-  7: {
-    title: 'Dáng vẻ trầm tĩnh',
-    keywords: ['Kín đáo', 'Sâu sắc', 'Điềm tĩnh'],
-    summary:
-      'Số nhân cách 7 cho thấy người khác thường thấy bạn kín đáo và điềm tĩnh. Lần đầu gặp, bạn có vẻ như đang quan sát nhiều hơn nói. Người ta tò mò về bạn nhưng chưa biết bắt chuyện từ đâu. Ấn tượng đó có thể khiến bạn trông xa cách, dù thật ra bạn chỉ cần thêm thời gian để cởi mở.',
-    strengths: [
-      'Bạn trông sâu sắc và đáng tin trong những chuyện cần suy nghĩ kỹ.',
-      'Bạn giữ được bình tĩnh khi tình huống căng thẳng.',
-      'Khi bạn lên tiếng, lời bạn nói thường được lắng nghe.',
-    ],
-    watchOut: [
-      'Bạn có thể bị xem là lạnh lùng hay khó gần.',
-      'Người khác không biết bạn đang nghĩ gì nên dễ hiểu lầm sự im lặng của bạn.',
-    ],
-    advice: [
-      'Chuẩn bị sẵn hai ba câu hỏi để bắt chuyện khi gặp người mới.',
-      'Nói ra cảm nhận của mình sớm hơn, dù chỉ là một câu ngắn.',
-    ],
-  },
-
-  8: {
-    title: 'Dáng vẻ có uy',
-    keywords: ['Bản lĩnh', 'Chuyên nghiệp', 'Có uy'],
-    summary:
-      'Số nhân cách 8 cho thấy người khác thường thấy bạn có uy và chuyên nghiệp. Lần đầu gặp, bạn trông như người nắm được tình hình và biết cách giải quyết. Người ta dễ nghĩ bạn là trưởng nhóm, kể cả khi bạn chưa phải. Có điều, với người chưa hiểu bạn, bạn có thể trông khó gần hoặc quá tham vọng.',
-    strengths: [
-      'Bạn để lại ấn tượng mạnh trong các buổi gặp về công việc.',
-      'Bạn trông tự tin về năng lực và giá trị của mình.',
-      'Người khác dễ tin rằng bạn gánh được việc lớn.',
-    ],
-    watchOut: [
-      'Bạn có thể bị xem là áp đặt hoặc lạnh lùng.',
-      'Người khác có thể ngại chia sẻ với bạn những chuyện riêng.',
-    ],
-    advice: [
-      'Khi gặp người mới, bạn hỏi thăm họ về những chuyện ngoài công việc.',
-      'Thỉnh thoảng kể về một lần mình từng thất bại, để người khác thấy bạn gần gũi hơn.',
-    ],
-  },
-
-  9: {
-    title: 'Dáng vẻ bao dung',
-    keywords: ['Rộng lượng', 'Thanh lịch', 'Có chiều sâu'],
-    summary:
-      'Số nhân cách 9 cho thấy người khác thường thấy bạn rộng lượng và có chiều sâu. Lần đầu gặp, bạn trông như người từng trải và hiểu chuyện. Người ta thấy dễ tâm sự với bạn vì bạn không phán xét. Có điều, bạn có thể trông hơi xa vời, như đang nghĩ về một chuyện lớn hơn cuộc trò chuyện trước mắt.',
-    strengths: [
-      'Bạn khiến người đối diện thấy mình được tôn trọng.',
-      'Bạn có phong thái thanh lịch, dễ được quý mến.',
-      'Bạn trông đáng tin trong những việc liên quan tới cộng đồng.',
-    ],
-    watchOut: [
-      'Bạn có thể bị nghĩ là mơ mộng, không thực tế.',
-      'Người khác dễ tìm tới bạn để trút tâm sự, khiến bạn mệt.',
-    ],
-    advice: [
-      'Trong buổi gặp công việc, bạn nói rõ con số và kết quả cụ thể bên cạnh lý tưởng.',
-      'Đặt giới hạn thời gian cho những cuộc tâm sự kéo dài, và nói điều đó một cách nhẹ nhàng.',
-    ],
-  },
-
-  11: {
-    title: 'Sức hút khó gọi tên',
-    keywords: ['Cuốn hút', 'Nhạy cảm', 'Truyền cảm hứng'],
-    summary:
-      'Số nhân cách 11 cho thấy người khác thường thấy ở bạn một sức hút khó gọi tên. Lần đầu gặp, người ta có cảm giác bạn hiểu họ nhanh hơn bình thường. Bạn có thể khiến cả căn phòng chú ý mà không cần nói to. Có điều, sự nhạy cảm của bạn đôi khi lộ ra thành vẻ căng thẳng hay ngượng ngùng.',
-    strengths: [
-      'Bạn để lại ấn tượng khó quên.',
-      'Bạn truyền được cảm hứng qua cách nói chuyện.',
-      'Bạn dễ tạo được sự kết nối sâu ngay từ lần gặp đầu.',
-    ],
-    watchOut: [
-      'Bạn có thể trông hồi hộp hay căng thẳng ở chỗ đông người.',
-      'Người khác có thể kỳ vọng ở bạn nhiều hơn những gì bạn muốn thể hiện.',
-    ],
-    advice: [
-      'Trước buổi gặp quan trọng, bạn dành vài phút hít thở chậm để bình tĩnh lại.',
-      'Chuẩn bị một câu giới thiệu ngắn về mình để mở đầu cho tự tin.',
-    ],
-  },
-
-  22: {
-    title: 'Dáng vẻ vững vàng',
-    keywords: ['Vững vàng', 'Có năng lực', 'Đáng tin'],
-    summary:
-      'Số nhân cách 22, viết là 22/4, cho thấy người khác thường thấy bạn vững vàng và có năng lực. Lần đầu gặp, bạn để lại ấn tượng của người có thể đảm đương việc lớn. Người ta tin bạn vì bạn nói ít mà làm thật. Có điều, bạn có thể trông nghiêm và khó tiếp cận.',
-    strengths: [
-      'Bạn tạo cảm giác yên tâm cho những người làm cùng.',
-      'Bạn trông như người có kế hoạch và nhìn xa.',
-      'Bạn dễ được giao trọng trách ngay từ đầu.',
-    ],
-    watchOut: [
-      'Người khác có thể ngại tìm tới bạn vì những chuyện nhỏ.',
-      'Bạn có thể bị nghĩ là quá nghiêm túc.',
-    ],
-    advice: [
-      'Kể về một sở thích đời thường để người khác thấy bạn dễ gần.',
-      'Chủ động hỏi han đồng nghiệp mới, để họ không ngại bạn.',
-    ],
-  },
-
-  33: {
-    title: 'Dáng vẻ hiền hậu',
-    keywords: ['Hiền hậu', 'Che chở', 'Đáng kính'],
-    summary:
-      'Số nhân cách 33, viết là 33/6, cho thấy người khác thường thấy ở bạn sự hiền hậu và đáng kính. Lần đầu gặp, người ta cảm thấy bạn quan tâm thật lòng. Trẻ nhỏ và người lớn tuổi thường quý bạn khá nhanh. Có điều, bạn có thể bị xem là người lúc nào cũng sẵn sàng gánh vác, nên dễ bị nhờ quá sức.',
-    strengths: [
-      'Bạn khiến người xung quanh thấy được che chở.',
-      'Bạn được tin tưởng ở vai trò hướng dẫn hay chăm sóc.',
-      'Sự tử tế của bạn dễ nhận ra ngay từ đầu.',
-    ],
-    watchOut: [
-      'Bạn dễ bị nhờ vả vượt quá sức mình.',
-      'Người khác có thể nghĩ bạn không bao giờ buồn hay mệt.',
-    ],
-    advice: [
-      'Cho người khác biết khi bạn đang mệt, để họ không mặc định lúc nào bạn cũng ổn.',
-      'Trong tuần này, bạn tập từ chối một lời nhờ không gấp.',
-    ],
-  },
-};
-
-export const MESSAGES = { lifePath, personalYear, expression, soul, personality };
+      'Sâu bên trong, điều bạn sợ nhất không phải là sự vất vả mà là cảm giác cuộc đời mình bị đóng khung trong một kịch bản tẻ nhạt, biết trước từng ngày. Bạn luôn khao khát có được không gian tự do để tự chọn cách làm việc, đi tới những vùng đất mới và trải nghiệm nhiều khía cạnh khác nhau của cuộc sống. Những quy định kiểm soát giờ giấc cứng nhắc hay sự thúc ép phải sống theo khuôn mẫu số đông dễ khiến bạn muốn
