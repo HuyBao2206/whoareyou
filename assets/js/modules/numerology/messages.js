@@ -869,162 +869,162 @@ const soul = {
   },
 
   5: {
-    title: 'Muốn được tự do',
-    keywords: ['Tự do', 'Trải nghiệm', 'Không bị gò bó'],
+    title: 'Khát khao tự do trải nghiệm và khám phá',
+    keywords: ['Tự do', 'Trải nghiệm mới', 'Không gò bó'],
     summary:
-      'Số linh hồn 5 cho thấy điều bạn khao khát nhất là tự do. Bạn muốn được đi đây đi đó và tự chọn cách sống của mình, không bị trói vào một khuôn khổ cố định. Một lịch trình kín mít từ sáng tới tối có thể làm bạn thấy ngộp. Bên trong bạn luôn có một phần muốn biết bên kia ngọn đồi có gì.',
+      'Sâu bên trong, điều bạn sợ nhất không phải là sự vất vả mà là cảm giác cuộc đời mình bị đóng khung trong một kịch bản tẻ nhạt, biết trước từng ngày. Bạn luôn khao khát có được không gian tự do để tự chọn cách làm việc, đi tới những vùng đất mới và trải nghiệm nhiều khía cạnh khác nhau của cuộc sống. Những quy định kiểm soát giờ giấc cứng nhắc hay sự thúc ép phải sống theo khuôn mẫu số đông dễ khiến bạn muốn vùng vẫy thoát ra. Bạn chỉ thực sự tràn đầy sinh lực khi cảm thấy mình vẫn đang học được điều gì đó mới mẻ mỗi ngày.',
     strengths: [
-      'Bạn cởi mở với cái mới và không ngại thay đổi.',
-      'Bạn biến những chuyến đi ngắn thành kỷ niệm đáng nhớ.',
-      'Bạn hiểu và tôn trọng nhiều lối sống khác nhau.',
+      'Tinh thần phóng khoáng, cởi mở đón nhận những góc nhìn và lối sống đa dạng mà không định kiến.',
+      'Biết cách làm cho cuộc sống cá nhân luôn tươi mới thông qua việc học hỏi và dịch chuyển.',
+      'Không bị nỗi sợ thay đổi trói buộc khi cần bước ra khỏi những hoàn cảnh đã lỗi thời.',
     ],
     watchOut: [
-      'Bạn có thể ngại cam kết lâu dài vì sợ mất tự do.',
-      'Bạn dễ tìm tới cảm giác mới để khỏi phải đối diện với cảm giác chán.',
+      'Tâm lý e ngại các cam kết gắn bó dài hạn vì lo sợ điều đó sẽ tước mất quyền tự do cá nhân của mình.',
+      'Đôi khi chạy theo những kích thích mới mẻ bên ngoài chỉ để khoả lấp sự thiếu kiên nhẫn ở bên trong.',
     ],
     advice: [
-      'Tìm tự do ngay trong khuôn khổ, như xin cách làm việc linh hoạt thay vì bỏ hẳn công việc.',
-      'Khi thấy muốn bỏ đi, bạn tự hỏi mình đang tránh điều gì.',
+      'Chủ động thiết kế lối sống và công việc có tính linh hoạt cao về không gian, thời gian thay vì liên tục đập bỏ công việc đang làm.',
+      'Hiểu rằng sự tự do bền vững nhất luôn đi kèm với năng lực tự kỷ luật và tự chủ về mặt tài chính.',
     ],
   },
 
   6: {
-    title: 'Muốn một mái nhà ấm',
-    keywords: ['Yêu thương', 'Gia đình', 'Được cần đến'],
+    title: 'Khát khao mái ấm gắn kết và sự chở che',
+    keywords: ['Gia đình', 'Yêu thương', 'Sự thuộc về'],
     summary:
-      'Số linh hồn 6 cho thấy bạn mong có một mái nhà ấm áp và những người thân yêu ở quanh mình. Bạn thấy hạnh phúc khi được chăm sóc người khác và được họ cần đến. Một bữa cơm đông đủ có thể làm bạn vui hơn cả một món quà đắt tiền. Sâu bên trong, bạn muốn những người mình thương đều được bình an.',
+      'Động lực sâu thẳm nhất trong lòng bạn là xây dựng và gìn giữ một mái ấm bình yên, nơi mọi người thực sự thương yêu và chăm lo cho nhau. Bạn cảm thấy cuộc sống có ý nghĩa trọn vẹn nhất khi sự quan tâm, vun vén của mình mang lại niềm vui và sự ổn định cho người thân. Dù bên ngoài xã hội có đạt được bao nhiêu thành tích, nếu hậu phương gia đình lục đục hoặc thiếu vắng sự sẻ chia, bạn vẫn thấy trống trải. Trong thâm tâm, bạn luôn mong muốn trở thành điểm tựa đáng tin cậy cho những người mình trân quý.',
     strengths: [
-      'Bạn yêu thương thật lòng và thể hiện bằng việc làm cụ thể.',
-      'Bạn khiến người khác thấy mình thuộc về một nơi nào đó.',
-      'Bạn có tinh thần trách nhiệm cao với gia đình.',
+      'Tình cảm chân thành, sâu sắc và luôn thể hiện sự quan tâm qua những hành động chăm sóc thực tế.',
+      'Biết cách tạo dựng không khí sum vầy, ấm cúng, giúp người thân luôn muốn quay về.',
+      'Sẵn sàng sẻ chia, nâng đỡ người khác vượt qua những giai đoạn khó khăn với tất cả sự tận tuỵ.',
     ],
     watchOut: [
-      'Bạn có thể để niềm vui của mình phụ thuộc vào việc người khác có ổn không.',
-      'Bạn dễ thấy có lỗi khi dành thời gian cho riêng mình.',
+      'Dễ đặt toàn bộ niềm vui và giá trị của bản thân phụ thuộc vào thái độ hoặc sự hài lòng của người thân.',
+      'Cảm thấy áy náy, có lỗi vô lý mỗi khi ưu tiên thời gian và tiền bạc cho nhu cầu riêng của chính mình.',
     ],
     advice: [
-      'Nhắc mình rằng chăm cho bản thân cũng là một cách chăm cho gia đình.',
-      'Tập để người thân tự giải quyết chuyện của họ, và chỉ giúp khi được nhờ.',
+      'Ghi nhớ rằng việc bạn giữ cho bản thân khoẻ mạnh, vui vẻ chính là món quà lớn nhất giúp bầu không khí gia đình luôn nhẹ nhàng.',
+      'Học cách tôn trọng khoảng không gian riêng và quyền tự quyết định của người thân thay vì lo lắng bao bọc quá mức.',
     ],
   },
 
   7: {
-    title: 'Muốn hiểu cho tận cùng',
-    keywords: ['Hiểu biết', 'Yên tĩnh', 'Sự thật'],
+    title: 'Khát khao sự tĩnh lặng và hiểu biết bản chất',
+    keywords: ['Chiều sâu nội tâm', 'Sự thật', 'Không gian riêng'],
     summary:
-      'Số linh hồn 7 cho thấy bên trong bạn là mong muốn được hiểu thấu mọi chuyện, kể cả chính mình. Bạn cần những khoảng lặng để nghĩ, và một ngày không có phút nào yên tĩnh làm bạn rất mệt. Bạn coi trọng sự thật hơn những lời nói cho dễ nghe. Bạn mong có vài người thật sự hiểu mình, hơn là có thật nhiều người quen.',
+      'Bên dưới vẻ ngoài giao tiếp thường ngày, bạn luôn cần một khoảng không gian riêng tư tuyệt đối để suy ngẫm và nạp lại năng lượng. Bạn không hứng thú với những giá trị hào nhoáng bề nổi mà luôn khao khát hiểu thấu bản chất thật của con người, công việc và cuộc sống. Một lịch trình phải giao tiếp xã giao liên tục từ sáng tới tối mà không có lấy một giờ yên tĩnh sẽ làm bạn kiệt sức rất nhanh. Trong các mối quan hệ, bạn chỉ cần một vài người thực sự thấu hiểu và tôn trọng chiều sâu tư tưởng của nhau.',
     strengths: [
-      'Bạn có đời sống bên trong phong phú và biết tự làm mình vui.',
-      'Bạn tìm ý nghĩa sâu xa thay vì dừng ở bề ngoài.',
-      'Bạn trung thực với cảm nhận của mình.',
+      'Đời sống nội tâm độc lập, phong phú, hoàn toàn tự tìm thấy niềm vui trong việc đọc, nghiên cứu và chiêm nghiệm một mình.',
+      'Thái độ sống trung thực, trọng thực chất và không bị cuốn theo những trào lưu phù phiếm của đám đông.',
+      'Có trực giác và sự thấu hiểu sâu sắc về quy luật tâm lý cũng như nguyên lý vận hành của sự việc.',
     ],
     watchOut: [
-      'Bạn có thể tự thu mình lại mỗi khi gặp chuyện buồn.',
-      'Bạn dễ nghi ngờ lòng tốt của người khác.',
+      'Xu hướng tự cô lập bản thân và đóng cửa lòng mỗi khi gặp chuyện thất vọng hoặc tổn thương tình cảm.',
+      'Đôi khi quá khắt khe và hoài nghi khiến người muốn quan tâm thật lòng cũng cảm thấy khó bước vào thế giới của bạn.',
     ],
     advice: [
-      'Giữ một góc riêng trong nhà, dù nhỏ, để bạn có chỗ yên tĩnh.',
-      'Mỗi tuần, chia sẻ điều mình đang nghĩ với một người bạn tin ít nhất một lần.',
+      'Thiết lập một góc không gian yên tĩnh cố định tại nhà và thông báo rõ nhu cầu cần thời gian riêng của bạn để người thân thấu hiểu.',
+      'Mở lòng chia sẻ những suy ngẫm hoặc trăn trở của bạn với một người bạn đủ tin cậy để suy nghĩ không bị luẩn quẩn một chiều.',
     ],
   },
 
   8: {
-    title: 'Muốn làm nên chuyện',
-    keywords: ['Thành tựu', 'Tự chủ tài chính', 'Được tôn trọng'],
+    title: 'Khát khao thành tựu lớn và vị thế độc lập',
+    keywords: ['Thành tựu thực chất', 'Tự chủ tài chính', 'Vị thế'],
     summary:
-      'Số linh hồn 8 cho thấy sâu bên trong, bạn mong đạt được thành tựu và được người khác tôn trọng. Bạn muốn tự đứng vững về tiền bạc, không phải trông vào ai. Nhìn thấy kết quả cụ thể từ công sức của mình khiến bạn thấy thoả mãn. Bạn có thể không nói ra, nhưng bạn muốn chứng minh rằng mình làm được.',
+      'Động lực mạnh mẽ nhất thúc đẩy bạn từ bên trong là khát vọng làm nên những thành tựu cụ thể, có quy mô và đạt được sự tự chủ vững vàng về tài chính. Bạn không bằng lòng với một cuộc sống chỉ vừa đủ qua ngày mà luôn muốn thử sức ở những sân chơi lớn hơn để khẳng định năng lực. Cảm giác nhìn thấy một dự án kinh doanh tăng trưởng hoặc một mục tiêu khó được chinh phục mang lại cho bạn sự thoả mãn sâu sắc. Sâu trong lòng, bạn muốn có đủ thực lực và nguồn lực để bảo vệ những người mình thương yêu trước mọi biến cố.',
     strengths: [
-      'Bạn có động lực mạnh để vượt qua khó khăn.',
-      'Bạn hiểu giá trị của đồng tiền và của công sức.',
-      'Bạn muốn xây một điều gì đó bền vững cho bản thân và gia đình.',
+      'Ý chí vươn lên rất mạnh, luôn biến áp lực và nghịch cảnh thành động lực để bứt phá.',
+      'Nhìn nhận thẳng thắn, thực tế về giá trị của đồng tiền cũng như công sức lao động.',
+      'Khát khao xây dựng những nền tảng vật chất và sự nghiệp vững chắc, lâu dài.',
     ],
     watchOut: [
-      'Bạn có thể thấy bất an mỗi khi thu nhập chững lại.',
-      'Bạn dễ so sánh mình với những người đi nhanh hơn.',
+      'Dễ rơi vào cảm giác bứt rứt, tự coi nhẹ bản thân trong những giai đoạn thu nhập hoặc công việc chưa đạt kỳ vọng.',
+      'Thói quen ngầm so sánh tốc độ thành công của mình với người khác dẫn đến căng thẳng tâm lý kéo dài.',
     ],
     advice: [
-      'Viết ra định nghĩa thành công theo cách riêng của bạn, không mượn của ai.',
-      'Ghi lại những thành tựu nhỏ mỗi tháng, đừng đợi tới thành tựu lớn mới cho phép mình vui.',
+      'Tự định nghĩa rõ thước đo thành công toàn diện của riêng bạn, trong đó có cả sự bình an nội tâm và sức khoẻ chứ không chỉ là con số tài khoản.',
+      'Cho phép bản thân ghi nhận và tận hưởng những cột mốc thành quả đã đạt được thay vì lập tức tự ép mình vào cuộc đua tiếp theo.',
     ],
   },
 
   9: {
-    title: 'Muốn đời có ý nghĩa',
-    keywords: ['Ý nghĩa', 'Cho đi', 'Lòng trắc ẩn'],
+    title: 'Khát khao sống có ý nghĩa và cống hiến',
+    keywords: ['Giá trị nhân văn', 'Sẻ chia', 'Lòng trắc ẩn'],
     summary:
-      'Số linh hồn 9 cho thấy điều bạn mong nhất là sống một cuộc đời có ý nghĩa với người khác. Bạn thấy trống trải nếu chỉ làm việc để kiếm tiền mà không thấy mình giúp được ai. Bạn dễ rung động trước nỗi khổ của cả những người không quen. Sâu bên trong, bạn muốn để lại một điều tốt đẹp sau mình.',
+      'Điều làm tâm hồn bạn thực sự thoả mãn là biết rằng sự tồn tại và công việc của mình đang góp phần làm cho cuộc sống của người khác tốt đẹp hơn. Nếu một công việc chỉ mang lại thu nhập cao nhưng hoàn toàn xoay quanh sự tính toán thiệt hơn nhỏ nhặt, bạn sẽ sớm cảm thấy trống rỗng. Bạn dễ đồng cảm sâu sắc trước những mảnh đời khó khăn và luôn có thôi thúc tự nhiên muốn đứng ra nâng đỡ, sẻ chia. Sâu thẳm bên trong, bạn mong muốn sống một cuộc đời rộng lượng và để lại những giá trị tử tế cho cộng đồng.',
     strengths: [
-      'Bạn có lòng trắc ẩn và luôn sẵn lòng giúp đỡ.',
-      'Bạn biết tha thứ và không giữ thù lâu.',
-      'Bạn nhìn cuộc sống bằng con mắt rộng lượng.',
+      'Tấm lòng trắc ẩn chân thành, luôn hướng tới những điều thiện lành và công bằng trong cuộc sống.',
+      'Khả năng vị tha, bao dung lớn, ít khi giữ sự thù hằn hay tính toán chi li với người khác.',
+      'Tìm thấy nguồn năng lượng bền bỉ khi được làm những việc mang lại lợi ích chung cho tập thể.',
     ],
     watchOut: [
-      'Bạn có thể cho đi tới mức quên mất nhu cầu của mình.',
-      'Bạn dễ thất vọng khi thế giới không như bạn mong.',
+      'Dễ tiêu hao quá nhiều tâm sức và tiền bạc để lo chuyện bao đồng trong khi nhu cầu cơ bản của bản thân lại bị bỏ bê.',
+      'Hay rơi vào trạng thái buồn nản, bi quan khi chứng kiến sự thực dụng hoặc bất công trong thực tế xã hội.',
     ],
     advice: [
-      'Tìm một cách giúp người vừa với sức mình và làm đều đặn.',
-      'Cho phép mình nhận lại, dù là một lời cảm ơn hay một sự giúp đỡ.',
+      'Chọn một lĩnh vực đóng góp xã hội phù hợp nhất với chuyên môn và nguồn lực của bạn để làm một cách bền bỉ, có trọng tâm.',
+      'Học cách mở lòng đón nhận sự giúp đỡ và lời cảm ơn từ người khác để dòng chảy cho đi và nhận lại luôn cân bằng.',
     ],
   },
 
   11: {
-    title: 'Muốn chạm tới điều sâu xa',
-    keywords: ['Trực giác', 'Đời sống tinh thần', 'Cảm hứng'],
+    title: 'Khát khao sự đồng điệu tinh thần và chiều sâu tâm thức',
+    keywords: ['Đồng điệu sâu', 'Trực giác', 'Truyền cảm hứng'],
     summary:
-      'Số linh hồn 11 cho thấy bên trong bạn có nhu cầu tìm kiếm ý nghĩa tinh thần sâu sắc. Bạn nhạy cảm với cái đẹp, với âm nhạc hay một khoảnh khắc lặng yên. Bạn mong cuộc sống của mình truyền được điều gì đó tốt đẹp cho người khác. Đôi khi chính sự nhạy cảm ấy khiến bạn thấy mệt giữa những nơi ồn ào.',
+      'Sâu bên trong, bạn luôn tìm kiếm sự kết nối chân thật ở tầng sâu của tâm hồn và tư tưởng chứ không mặn mà với những hào nhoáng vật chất bề nổi. Bạn cực kỳ nhạy cảm với cái đẹp, nghệ thuật và những biến chuyển tinh tế trong bầu không khí tâm lý giữa người với người. Bạn mong muốn cuộc sống và lời nói của mình có thể khơi dậy sự thức tỉnh, niềm tin và điều tử tế nơi người đối diện. Chính vì chuẩn mực tinh thần cao đó, đôi khi bạn cảm thấy lạc lõng giữa những môi trường sống quá vội vã và thực dụng.',
     strengths: [
-      'Bạn có trực giác mạnh về con người và tình huống.',
-      'Bạn dễ thấy được cái đẹp và ý nghĩa trong những điều bình thường.',
-      'Bạn truyền cảm hứng cho người khác chỉ bằng cách sống thật với mình.',
+      'Khả năng thấu cảm và nhận diện vẻ đẹp tinh thần trong những điều giản dị nhất của đời sống.',
+      'Sống chân thật với tiếng nói lương tâm và trực giác nhạy bén của bản thân.',
+      'Truyền đi sự bình an và nguồn cảm hứng sống tích cực cho những người có duyên tiếp xúc sâu với bạn.',
     ],
     watchOut: [
-      'Bạn dễ quá tải cảm xúc khi ở trong môi trường căng thẳng.',
-      'Bạn có thể đặt kỳ vọng rất cao cho bản thân.',
+      'Dễ bị kiệt sức về mặt cảm xúc khi phải tiếp xúc liên tục với những năng lượng tiêu cực, phàn nàn hoặc xung đột.',
+      'Đôi khi cảm thấy cô đơn vì khó tìm được người thực sự hiểu hết những suy tư nhạy cảm trong lòng mình.',
     ],
     advice: [
-      'Tìm một hoạt động giúp bạn tĩnh lại, như ngồi yên mười phút mỗi sáng hay đi dạo trong công viên.',
-      'Viết hoặc vẽ ra những gì bạn cảm nhận, để nó có chỗ đi thay vì dồn lại trong lòng.',
+      'Duy trì các thói quen giúp làm dịu hệ thần kinh mỗi ngày như đi bộ giữa thiên nhiên, tập thở sâu hoặc viết nhật ký.',
+      'Chấp nhận sự khác biệt về mức độ nhạy cảm của mỗi người để không tự làm khổ mình khi người khác chưa hiểu hết ý bạn.',
     ],
   },
 
   22: {
-    title: 'Muốn để lại điều lâu bền',
-    keywords: ['Để lại dấu ấn', 'Xây dựng', 'Có ích thật'],
+    title: 'Khát khao kiến tạo di sản thực chất và bền vững',
+    keywords: ['Di sản lâu bền', 'Kiến tạo quy mô', 'Giá trị thực tế'],
     summary:
-      'Số linh hồn 22, viết là 22/4, cho thấy bạn mong tạo ra điều gì đó lâu bền và có ích cho nhiều người. Bạn không thoả mãn với những thành công lẻ tẻ mà muốn thấy công sức của mình góp vào một thứ lớn hơn. Bạn cần sự ổn định để xây, nhưng điều bạn nhắm tới rộng hơn bốn bức tường nhà mình. Áp lực tự đặt ra có lúc khiến bạn khó thả lỏng.',
+      'Được ký hiệu là 22/4, khát vọng sâu kín nhất của bạn là xây dựng nên những công trình, tổ chức hoặc hệ thống có giá trị sử dụng lâu dài cho nhiều người. Bạn không tìm thấy sự thoả mãn ở những thành công ngắn hạn mang tính thời vụ mà luôn hướng tới những gì có nền móng vững chắc qua năm tháng. Trong bạn vừa có ước mơ vươn tới tầm ảnh hưởng lớn, vừa có nhu cầu kiểm soát thực tế từng bước đi cho thật chắc chắn. Đôi khi chính sức nặng của khát vọng lớn này khiến bạn tự đặt mình vào trạng thái làm việc căng như dây đàn.',
     strengths: [
-      'Bạn có lý tưởng lớn mà vẫn thực tế.',
-      'Bạn kiên trì với những gì mình tin là đáng làm.',
-      'Bạn muốn công việc của mình giúp được cộng đồng.',
+      'Sự kết hợp hiếm có giữa lý tưởng phụng sự rộng lớn và tư duy xây dựng thực tế, bài bản.',
+      'Ý chí bền bỉ, không ngại đầu tư thời gian hàng chục năm cho một mục tiêu xứng đáng.',
+      'Mong muốn tạo ra những giá trị vật chất và hệ thống mang lại lợi ích thiết thực cho xã hội.',
     ],
     watchOut: [
-      'Bạn dễ thấy những gì mình đang làm là chưa đủ.',
-      'Bạn có thể quên tận hưởng hiện tại vì mải nhìn về tương lai.',
+      'Luôn cảm thấy những gì mình đã làm được vẫn còn quá nhỏ bé, dẫn đến tâm lý không bao giờ cho phép mình nghỉ ngơi trọn vẹn.',
+      'Dễ bỏ quên niềm vui sống ở hiện tại vì đầu óc lúc nào cũng bận tính toán cho các kế hoạch dài hạn phía trước.',
     ],
     advice: [
-      'Viết ra điều bạn muốn để lại sau mười năm, rồi chọn một bước làm được ngay trong năm nay.',
-      'Dành thời gian tận hưởng những thành quả nhỏ trước khi lao vào việc tiếp theo.',
+      'Ghi nhận giá trị của từng giai đoạn nhỏ trên hành trình dài, bởi mọi công trình lớn đều được ghép lại từ những phần việc hoàn chỉnh mỗi ngày.',
+      'Dành thời gian nuôi dưỡng đời sống tình cảm cá nhân để tâm hồn luôn có độ mềm mại bên cạnh những mục tiêu kỷ luật.',
     ],
   },
 
   33: {
-    title: 'Muốn thương người trọn vẹn',
-    keywords: ['Lòng trắc ẩn', 'Che chở', 'Phụng sự'],
+    title: 'Khát khao nâng đỡ và chữa lành vô điều kiện',
+    keywords: ['Thấu cảm sâu sắc', 'Che chở', 'Phụng sự con người'],
     summary:
-      'Số linh hồn 33, viết là 33/6, cho thấy sâu bên trong, bạn mong được yêu thương và che chở cho người khác một cách trọn vẹn. Bạn thấy đời mình có ý nghĩa khi giúp được ai đó vượt qua khó khăn. Nỗi buồn của người khác chạm tới bạn rất nhanh. Bạn cần học cách giữ lại một phần sức cho chính mình.',
+      'Được ký hiệu là 33/6, nhu cầu tinh thần cốt lõi của bạn là được lan toả sự ấm áp, che chở và giúp những người xung quanh vượt qua nỗi đau hoặc sự bế tắc. Bạn có khả năng đồng cảm tự nhiên tới mức nỗi buồn của người thân hay cộng sự cũng chạm trực tiếp vào lòng bạn. Niềm hạnh phúc sâu sắc nhất đến với bạn khi nhìn thấy một người từng tổn thương, yếu thế lấy lại được nụ cười và sự vững vàng. Tuy nhiên, để giữ được ngọn lửa bao dung đó lâu dài, bạn buộc phải học cách bảo vệ sức khoẻ tinh thần của chính mình.',
     strengths: [
-      'Bạn có lòng trắc ẩn sâu và chân thành.',
-      'Bạn khiến người khác thấy an toàn khi ở cạnh.',
-      'Bạn sẵn lòng hy sinh cho điều mình tin là đúng.',
+      'Tấm lòng nhân hậu, rộng mở, luôn sẵn sàng lắng nghe và nâng đỡ người khác mà không toan tính.',
+      'Tạo ra cảm giác bình an, tin cậy tuyệt đối cho những ai đang cần một chỗ dựa tinh thần.',
+      'Sống có trách nhiệm sâu sắc với các giá trị đạo đức và tình cảm gia đình, cộng đồng.',
     ],
     watchOut: [
-      'Bạn dễ mang nỗi buồn của người khác về nhà.',
-      'Bạn có thể quên rằng mình cũng xứng đáng được chăm sóc.',
+      'Dễ mang theo những câu chuyện buồn và gánh nặng tâm lý của người khác về nhà khiến bản thân mất ngủ, suy nhược.',
+      'Thường xuyên xếp nhu cầu nghỉ ngơi và cảm xúc riêng của mình xuống vị trí cuối cùng.',
     ],
     advice: [
-      'Tạo một thói quen nhỏ để trút bỏ cảm xúc sau một ngày dài, như tắm nước ấm hay viết nhật ký.',
-      'Khi giúp người, bạn nhắc mình rằng bạn đi cùng họ chứ không gánh thay họ.',
+      'Tập thói quen tách bạch cảm xúc sau mỗi cuộc trò chuyện hỗ trợ: bạn có thể thương và giúp người khác hết lòng nhưng không sống thay cuộc đời của họ.',
+      'Chủ động tìm kiếm những hoạt động và những mối quan hệ mà ở đó chính bạn cũng được lắng nghe, chăm sóc và tiếp thêm sức mạnh.',
     ],
   },
 };
@@ -1033,242 +1033,242 @@ const soul = {
 
 const personality = {
   1: {
-    title: 'Dáng vẻ tự tin',
-    keywords: ['Tự tin', 'Thẳng thắn', 'Có chính kiến'],
+    title: 'Phong thái độc lập và dứt khoát',
+    keywords: ['Tự tin', 'Thẳng thắn', 'Rõ ràng'],
     summary:
-      'Số nhân cách 1 cho thấy người khác thường thấy bạn là người tự tin và có chính kiến. Lần đầu gặp, bạn để lại ấn tượng của một người biết mình muốn gì. Trong buổi phỏng vấn, bạn trả lời dứt khoát và ít vòng vo. Có người thấy bạn hơi khó gần lúc đầu, cho tới khi họ hiểu bạn hơn.',
+      'Trong những lần tiếp xúc đầu tiên, bạn tạo ấn tượng là một người tự chủ, có chính kiến rõ ràng và không thích sự vòng vo. Cách bạn đặt câu hỏi, trả lời phỏng vấn hay đưa ra quan điểm đều đi thẳng vào trọng tâm vấn đề. Nhờ tác phong nhanh gọn đó, người đối diện dễ dàng nhớ tới bạn và tin tưởng khi cần giao việc độc lập. Tuy nhiên, nếu chưa kịp trò chuyện sâu, một số người có thể cảm thấy bạn hơi sắc lạnh hoặc tạo khoảng cách.',
     strengths: [
-      'Bạn để lại ấn tượng rõ, dễ được nhớ tên sau lần đầu gặp.',
-      'Bạn trông đáng tin khi đứng ở vai trò dẫn dắt.',
-      'Bạn nói rõ ý mình, người khác không phải đoán.',
+      'Tạo dấu ấn cá nhân rõ nét ngay từ buổi gặp đầu, không bị hoà lẫn giữa đám đông.',
+      'Toát ra sự tự tin, quyết đoán của người có khả năng tự chịu trách nhiệm.',
+      'Giao tiếp mạch lạc, nói thẳng ý chính giúp tiết kiệm thời gian cho cả hai bên.',
     ],
     watchOut: [
-      'Bạn có thể bị hiểu là kiêu hoặc lạnh lùng khi chưa kịp cười.',
-      'Sự thẳng thắn của bạn đôi khi làm người nhạy cảm bị tổn thương.',
+      'Gương mặt hoặc giọng nói lúc tập trung dễ làm người mới quen hiểu lầm là bạn đang khó chịu hoặc kiêu ngạo.',
+      'Cách phản hồi quá trực diện đôi khi làm những người có tính cách nhạy cảm cảm thấy bị khớp.',
     ],
     advice: [
-      'Khi gặp người mới, bạn hỏi họ một câu về chính họ trước khi nói về mình.',
-      'Thêm một câu mềm vào những góp ý thẳng, như “mình nghĩ thế này, bạn thấy sao”.',
+      'Chủ động mở đầu cuộc trò chuyện bằng một câu hỏi thăm nhẹ nhàng về đối phương để làm mềm bầu không khí.',
+      'Khi cần đưa ra ý kiến phản biện với người mới hợp tác, hãy ghi nhận điểm hợp lý của họ trước rồi mới nêu đề xuất của bạn.',
     ],
   },
 
   2: {
-    title: 'Dáng vẻ dịu dàng',
-    keywords: ['Dễ gần', 'Nhẹ nhàng', 'Tế nhị'],
+    title: 'Phong thái lịch thiệp và dễ gần',
+    keywords: ['Ôn hoà', 'Biết lắng nghe', 'Tinh tế'],
     summary:
-      'Số nhân cách 2 cho thấy người khác thường thấy ở bạn sự dịu dàng và dễ gần. Lần đầu gặp, người ta thấy bạn biết lắng nghe và không làm ai khó xử. Bạn thường được nhờ vả vì trông hiền và dễ nói chuyện. Có điều, ấn tượng hiền lành ấy có thể khiến người khác đánh giá thấp sự vững vàng trong bạn.',
+      'Ấn tượng đầu tiên bạn mang lại cho người đối diện là sự nhẹ nhàng, lịch sự và rất tôn trọng người nghe. Bạn không bao giờ cố giành phần nói hay áp đặt câu chuyện, nhờ vậy những người mới gặp thường cảm thấy thoải mái và dễ mở lòng với bạn. Trong môi trường công sở hay giao dịch, vẻ ngoài điềm đạm của bạn giúp tháo gỡ nhanh sự căng thẳng ban đầu. Điểm cần lưu ý là phong thái quá hiền hoà đôi khi khiến những người thích lấn lướt đánh giá thấp sự kiên định bên trong bạn.',
     strengths: [
-      'Bạn khiến người khác thấy thoải mái ngay từ đầu.',
-      'Bạn trông đáng tin để người ta kể chuyện riêng.',
-      'Bạn cư xử tế nhị, hợp với những tình huống cần khéo léo.',
+      'Tạo thiện cảm và sự an tâm ngay từ vài phút trò chuyện đầu tiên.',
+      'Cư xử khéo léo, tinh tế, biết điều chỉnh nhịp điệu giao tiếp phù hợp với từng hoàn cảnh.',
+      'Dễ được người khác tin cậy chia sẻ thông tin thật hoặc tìm đến nhờ cậy hỗ trợ.',
     ],
     watchOut: [
-      'Bạn có thể bị xem là thiếu quyết đoán.',
-      'Người khác dễ nhờ bạn làm thêm việc vì nghĩ bạn sẽ không từ chối.',
+      'Trong những buổi đàm phán hoặc phỏng vấn cạnh tranh, bạn dễ bị nhìn nhận là hơi thiếu sự quyết liệt.',
+      'Vẻ ngoài dễ chịu khiến người khác hay tự tiện nhờ vả thêm việc vì mặc định bạn sẽ không từ chối.',
     ],
     advice: [
-      'Trước buổi gặp quan trọng, bạn chuẩn bị sẵn một ý kiến rõ ràng để nói ra.',
-      'Tập nhìn vào mắt người đối diện và nói chậm, chắc giọng hơn khi trình bày.',
+      'Trong các buổi họp hoặc phỏng vấn quan trọng, hãy chuẩn bị trước các luận điểm chính và trình bày với âm lượng rõ ràng, dứt khoát.',
+      'Duy trì ánh nhìn thẳng và tư thế ngồi vững chãi để thể hiện rằng sự lịch thiệp của bạn luôn đi kèm với bản lĩnh riêng.',
     ],
   },
 
   3: {
-    title: 'Dáng vẻ rạng rỡ',
-    keywords: ['Có duyên', 'Hoạt bát', 'Hài hước'],
+    title: 'Phong thái cởi mở và cuốn hút',
+    keywords: ['Hoạt ngôn', 'Duyên dáng', 'Năng lượng tích cực'],
     summary:
-      'Số nhân cách 3 cho thấy người khác thường thấy bạn vui vẻ và dễ bắt chuyện. Lần đầu gặp, bạn có thể làm cả nhóm cười chỉ sau vài câu. Bạn chăm chút cho vẻ ngoài và cách nói chuyện của mình. Đôi khi người ta nghĩ bạn chỉ vui ngoài mặt mà chưa thấy được chiều sâu bên trong.',
+      'Ngay từ lần gặp đầu tiên, bạn thường thu hút sự chú ý nhờ lối nói chuyện có duyên, biểu cảm linh hoạt và nguồn năng lượng tươi sáng. Bạn rất giỏi phá vỡ sự ngượng ngập ban đầu bằng một câu nhận xét thông minh hoặc một câu chuyện vừa đủ vui vẻ. Người xung quanh dễ có cảm tình với bạn vì ở cạnh bạn không khí luôn thoải mái, tự nhiên. Dù vậy, nếu không tiết chế đúng lúc, vẻ hoạt bát bề ngoài đôi khi làm người khác chưa nhìn thấy hết độ chín chắn và chiều sâu chuyên môn của bạn.',
     strengths: [
-      'Bạn phá băng giỏi, làm buổi gặp đầu tiên bớt ngượng.',
-      'Bạn có phong cách riêng trong cách ăn mặc và trình bày.',
-      'Bạn được nhiều người quý nhờ sự cởi mở.',
+      'Khả năng bắt chuyện và làm quen cực kỳ tự nhiên trong các sự kiện hoặc môi trường mới.',
+      'Có gu ăn mặc và cách thể hiện bản thân sáng sủa, tạo ấn tượng trẻ trung, linh hoạt.',
+      'Giúp người đối diện nhanh chóng cởi bỏ tâm lý phòng bị để cuộc trao đổi diễn ra thuận lợi.',
     ],
     watchOut: [
-      'Bạn có thể bị xem là thiếu nghiêm túc ở những nơi trang trọng.',
-      'Bạn dễ nói nhiều hơn cần khi hồi hộp.',
+      'Ở những bối cảnh đòi hỏi tính nghi thức nghiêm trang, sự thoải mái quá mức dễ bị hiểu lầm là thiếu sự chuẩn bị kỹ.',
+      'Khi tâm lý hồi hộp, bạn dễ nói lan man sang nhiều chủ đề làm loãng thông điệp chính cần truyền đạt.',
     ],
     advice: [
-      'Trước buổi gặp quan trọng, bạn chuẩn bị vài ý chính và giữ câu chuyện xoay quanh chúng.',
-      'Để người khác thấy chiều sâu của bạn bằng cách kể về một điều bạn đã nghĩ kỹ.',
+      'Trong các cuộc gặp công việc, hãy đan xen sự duyên dáng tự nhiên với những con số và phân tích chuyên môn sắc gọn.',
+      'Tập chừa những khoảng dừng ngắn sau khi nói để lắng nghe phản hồi của đối phương thay vì tự mình lấp đầy toàn bộ cuộc trò chuyện.',
     ],
   },
 
   4: {
-    title: 'Dáng vẻ chỉn chu',
-    keywords: ['Đáng tin', 'Nghiêm túc', 'Gọn gàng'],
+    title: 'Phong thái chỉn chu và đáng tin cậy',
+    keywords: ['Nghiêm túc', 'Đúng mực', 'Chắc chắn'],
     summary:
-      'Số nhân cách 4 cho thấy người khác thường thấy bạn chỉn chu và đáng tin cậy. Lần đầu gặp, bạn để lại ấn tượng của một người đúng giờ, ăn mặc gọn gàng và nói có trọng tâm. Người ta sẵn lòng giao việc cho bạn ngay cả khi mới quen. Có điều, bạn có thể trông nghiêm hơn con người thật của mình.',
+      'Khi mới tiếp xúc, bạn để lại ấn tượng rất rõ về một người đàng hoàng, đúng giờ và làm việc có nguyên tắc. Từ trang phục gọn gàng cho đến cách trả lời đi thẳng vào dữ kiện thực tế, mọi thứ ở bạn đều toát lên sự chuẩn bị kỹ lưỡng. Đối tác hoặc nhà tuyển dụng thường cảm thấy yên tâm rất nhanh vì biết bạn là kiểu người nói được làm được, không hứa suông. Tuy nhiên, sự nghiêm ngắn quá mức lúc ban đầu đôi khi làm người khác cảm thấy bạn hơi khô khan và ngại bắt chuyện xã giao.',
     strengths: [
-      'Bạn tạo cảm giác chắc chắn, rất hợp với buổi phỏng vấn hay buổi gặp đối tác.',
-      'Bạn được tin về sự đúng hẹn và cẩn thận.',
-      'Bạn trông có tổ chức, người khác dễ đoán được cách bạn làm việc.',
+      'Tạo dựng uy tín chuyên nghiệp rất nhanh trong các buổi phỏng vấn, ký kết hoặc làm việc với đối tác.',
+      'Toát ra sự cẩn trọng, chín chắn khiến người khác tin tưởng giao phó những công việc quan trọng.',
+      'Lời nói ngắn gọn, rõ ràng, có căn cứ thực tế chứ không tô vẽ màu mè.',
     ],
     watchOut: [
-      'Bạn có thể bị xem là cứng nhắc hoặc khó gần.',
-      'Người khác có thể ngại đùa với bạn vì nghĩ bạn không thích.',
+      'Dễ tạo cảm giác hơi cứng nhắc hoặc khắt khe khi mới gặp lần đầu.',
+      'Đồng nghiệp mới hoặc cấp dưới có thể ngại chia sẻ các ý tưởng táo bạo vì sợ bạn đánh giá.',
     ],
     advice: [
-      'Khi gặp người mới, bạn kể một chuyện nhỏ về sở thích của mình để họ thấy bạn gần gũi hơn.',
-      'Bắt đầu cuộc trò chuyện bằng một nụ cười, kể cả trong những buổi gặp nghiêm túc.',
+      'Mở đầu các buổi gặp gỡ bằng nụ cười thoải mái và vài câu trò chuyện đời thường trước khi đi thẳng vào nội dung công việc.',
+      'Khi lắng nghe ý kiến mới, hãy giữ biểu cảm cởi mở và đặt câu hỏi tìm hiểu thêm để người đối diện thấy bạn dễ tiếp cận hơn.',
     ],
   },
 
   5: {
-    title: 'Dáng vẻ phóng khoáng',
-    keywords: ['Năng động', 'Cuốn hút', 'Cởi mở'],
+    title: 'Phong thái năng động và phóng khoáng',
+    keywords: ['Linh hoạt', 'Hiện đại', 'Cởi mở'],
     summary:
-      'Số nhân cách 5 cho thấy người khác thường thấy bạn là người năng động và có nhiều chuyện hay để kể. Lần đầu gặp, bạn trông như người đã đi đây đi đó và chẳng ngại điều gì mới. Người ta dễ bị cuốn vào năng lượng của bạn. Có điều, bạn cũng có thể bị xem là khó đoán hoặc thiếu kiên định.',
+      'Người khác khi mới gặp thường nhận thấy ở bạn sự nhanh nhẹn, phóng khoáng và tinh thần cởi mở với mọi điều mới mẻ. Bạn mang lại cảm giác của một người có nhiều trải nghiệm thực tế, dễ dàng thích nghi với bất kỳ chủ đề hay nhóm người nào. Nhờ phong thái tự nhiên không câu nệ hình thức, bạn kết nối với người lạ rất nhanh mà không tạo cảm giác gượng gạo. Mặt trái cần lưu ý là đôi khi sự linh hoạt quá mức khiến những người thiên về truyền thống lo ngại rằng bạn thiếu sự gắn bó lâu dài.',
     strengths: [
-      'Bạn tạo cảm giác mới mẻ và hấp dẫn ngay từ lần gặp đầu.',
-      'Bạn hoà vào được với nhiều kiểu người và hoàn cảnh.',
-      'Bạn trông trẻ trung và tràn đầy năng lượng.',
+      'Tạo bầu không khí hiện đại, sảng khoái và thu hút sự tò mò ngay từ lần đầu trò chuyện.',
+      'Hoà nhập nhanh chóng vào các tập thể mới hoặc những buổi gặp gỡ đa ngành nghề.',
+      'Phản xạ giao tiếp nhạy bén, ứng답 linh hoạt trước những câu hỏi bất ngờ.',
     ],
     watchOut: [
-      'Bạn có thể bị nghĩ là người không ở lâu một chỗ.',
-      'Sự bộc trực của bạn đôi khi bị hiểu là thiếu cẩn trọng.',
+      'Trong mắt những nhà tuyển dụng hoặc đối tác khó tính, bạn có thể bị nghi ngại về tính kiên trì với các công việc dài hạn.',
+      'Cách nói chuyện bộc trực, nhanh nhảu đôi lúc dễ làm lộ sự thiếu kiên nhẫn với các thủ tục quy trình.',
     ],
     advice: [
-      'Khi đi phỏng vấn, bạn kể về một việc mình đã theo tới cùng để hình ảnh của bạn cân bằng hơn.',
-      'Giữ đúng những lời hẹn nhỏ, như giờ gặp hay một tin nhắn cần trả lời.',
+      'Khi trao đổi về công việc, hãy chủ động nhấn mạnh vào những dự án bạn đã kiên trì theo đuổi đến kết quả cuối cùng để tạo sự tin cậy.',
+      'Chú ý giữ chuẩn mực đúng giờ và hoàn thành gọn các cam kết nhỏ ngay từ những lần hợp tác đầu tiên.',
     ],
   },
 
   6: {
-    title: 'Dáng vẻ ấm áp',
-    keywords: ['Đáng mến', 'Chu đáo', 'Đáng tin cậy'],
+    title: 'Phong thái ấm áp và chu đáo',
+    keywords: ['Thân thiện', 'Đáng tin', 'Biết quan tâm'],
     summary:
-      'Số nhân cách 6 cho thấy người khác thường thấy bạn ấm áp và đáng tin cậy. Lần đầu gặp, người ta có cảm giác bạn sẽ giúp nếu họ cần. Bạn hay được nhờ trông đồ, trông em nhỏ hay lo hậu cần cho cả nhóm. Có điều, bạn có thể trông như người lúc nào cũng sẵn sàng hy sinh, khiến người khác dễ dựa dẫm.',
+      'Ấn tượng ban đầu bạn để lại cho người xung quanh là sự gần gũi, chỉn chu và rất có trách nhiệm. Ngay trong lần đầu gặp gỡ, cách bạn để ý tới những chi tiết nhỏ như rót nước, hỏi thăm hay sắp xếp chỗ ngồi đã khiến người đối diện cảm thấy được tôn trọng. Mọi người thường có xu hướng tin tưởng và dễ tìm đến bạn để nhờ hỗ trợ khi ở trong một tập thể mới. Điểm bạn cần để ý là vẻ ngoài quá tận tuỵ đôi khi làm người khác mặc định bạn sẽ luôn nhường nhịn hoặc nhận phần việc vất vả về mình.',
     strengths: [
-      'Bạn tạo cảm giác an toàn và gần gũi.',
-      'Bạn có vẻ ngoài chăm chút và hài hoà.',
-      'Bạn dễ được tin tưởng ở những vai trò chăm sóc hay phục vụ.',
+      'Mang lại cảm giác an tâm, ấm áp và dễ tạo dựng thiện cảm với nhiều lứa tuổi khác nhau.',
+      'Ngoại hình và tác phong luôn giữ được sự tươm tất, lịch sự, hài hoà với hoàn cảnh.',
+      'Dễ dàng tạo dựng lòng tin trong các lĩnh vực dịch vụ, giáo dục, tư vấn hoặc chăm sóc khách hàng.',
     ],
     watchOut: [
-      'Bạn có thể bị nhờ vả quá mức.',
-      'Vì bị xem là người hiền, ý kiến trái chiều của bạn đôi khi ít được lắng nghe.',
+      'Dễ bị những người thiếu ý thức tận dụng lòng tốt để đùn đẩy thêm các phần việc hậu cần không tên.',
+      'Vì trông quá hiền và chu đáo nên đôi khi các đề xuất mang tính đột phá, góc cạnh của bạn ít được chú ý đúng mức.',
     ],
     advice: [
-      'Khi được nhờ ngay lần đầu gặp, bạn có quyền nói “để mình xem lịch đã”.',
-      'Nêu quan điểm riêng trong cuộc trò chuyện, để người khác thấy bạn có chính kiến.',
+      'Giữ sự nhiệt tình vừa phải trong những lần đầu tiếp xúc và chỉ nhận hỗ trợ khi đã nắm rõ phạm vi công việc.',
+      'Khi phát biểu trong cuộc họp, hãy trình bày thẳng vào giải pháp và số liệu để khẳng định năng lực chuyên môn bên cạnh sự chu đáo.',
     ],
   },
 
   7: {
-    title: 'Dáng vẻ trầm tĩnh',
-    keywords: ['Kín đáo', 'Sâu sắc', 'Điềm tĩnh'],
+    title: 'Phong thái điềm tĩnh và có chiều sâu',
+    keywords: ['Chín chắn', 'Kín đáo', 'Quan sát sắc sảo'],
     summary:
-      'Số nhân cách 7 cho thấy người khác thường thấy bạn kín đáo và điềm tĩnh. Lần đầu gặp, bạn có vẻ như đang quan sát nhiều hơn nói. Người ta tò mò về bạn nhưng chưa biết bắt chuyện từ đâu. Ấn tượng đó có thể khiến bạn trông xa cách, dù thật ra bạn chỉ cần thêm thời gian để cởi mở.',
+      'Trong lần đầu tiếp xúc, bạn thường xuất hiện với vẻ ngoài điềm đạm, kiệm lời và quan sát nhiều hơn là vội vã thể hiện bản thân. Bạn không thích những màn chào hỏi ồn ào mà giữ một khoảng cách lịch sự để đánh giá tình hình trước khi lên tiếng. Chính sự tĩnh lặng và ánh nhìn tập trung đó tạo cho bạn phong thái của một người có chiều sâu chuyên môn, nói câu nào chắc câu đó. Tuy nhiên, nếu không chú ý, sự kín tiếng này rất dễ bị người mới quen hiểu lầm là thái độ lạnh nhạt hoặc khó gần.',
     strengths: [
-      'Bạn trông sâu sắc và đáng tin trong những chuyện cần suy nghĩ kỹ.',
-      'Bạn giữ được bình tĩnh khi tình huống căng thẳng.',
-      'Khi bạn lên tiếng, lời bạn nói thường được lắng nghe.',
+      'Toát ra vẻ chững chạc, trí thức, tạo sự nể trọng trong các môi trường học thuật hoặc chuyên môn kỹ thuật.',
+      'Giữ được phong thái bình tĩnh, làm chủ cảm xúc tốt ngay cả trong những buổi làm việc căng thẳng.',
+      'Mỗi khi bạn phát biểu, người nghe thường tập trung chú ý vì biết bạn đã suy nghĩ kỹ trước khi nói.',
     ],
     watchOut: [
-      'Bạn có thể bị xem là lạnh lùng hay khó gần.',
-      'Người khác không biết bạn đang nghĩ gì nên dễ hiểu lầm sự im lặng của bạn.',
+      'Người mới gặp thường cảm thấy ngại bắt chuyện trước vì không đoán được thái độ của bạn.',
+      'Sự im lặng quan sát của bạn đôi khi vô tình gây áp lực tâm lý cho người đang trình bày đối diện.',
     ],
     advice: [
-      'Chuẩn bị sẵn hai ba câu hỏi để bắt chuyện khi gặp người mới.',
-      'Nói ra cảm nhận của mình sớm hơn, dù chỉ là một câu ngắn.',
+      'Tập phản hồi bằng cử chỉ gật đầu khích lệ hoặc đặt một vài câu hỏi ngắn để người đối diện biết bạn vẫn đang lắng nghe tích cực.',
+      'Chủ động giới thiệu ngắn gọn về lĩnh vực mình quan tâm khi vào nhóm mới để mở đường cho những cuộc trò chuyện có chiều sâu.',
     ],
   },
 
   8: {
-    title: 'Dáng vẻ có uy',
-    keywords: ['Bản lĩnh', 'Chuyên nghiệp', 'Có uy'],
+    title: 'Phong thái bản lĩnh và chuyên nghiệp',
+    keywords: ['Chuyên nghiệp', 'Quyết đoán', 'Có sức nặng'],
     summary:
-      'Số nhân cách 8 cho thấy người khác thường thấy bạn có uy và chuyên nghiệp. Lần đầu gặp, bạn trông như người nắm được tình hình và biết cách giải quyết. Người ta dễ nghĩ bạn là trưởng nhóm, kể cả khi bạn chưa phải. Có điều, với người chưa hiểu bạn, bạn có thể trông khó gần hoặc quá tham vọng.',
+      'Khi bước vào một cuộc gặp, bạn tự nhiên toát ra phong thái của người nắm vững cuộc chơi, tự tin và rất coi trọng hiệu quả. Cách bạn trao đổi thẳng vào mục tiêu, nguồn lực cũng như tác phong chỉn chu khiến người đối diện dễ đánh giá bạn ở vị trí quản lý hoặc người có thực quyền. Trong đàm phán thương mại hay phỏng vấn cấp cao, ấn tượng vững chãi này là một lợi thế lớn giúp bạn tạo thế chủ động. Dù vậy, với những môi trường đề cao sự gần gũi, vẻ ngoài quá sắc sảo của bạn đôi khi tạo cảm giác áp lực cho người mới quen.',
     strengths: [
-      'Bạn để lại ấn tượng mạnh trong các buổi gặp về công việc.',
-      'Bạn trông tự tin về năng lực và giá trị của mình.',
-      'Người khác dễ tin rằng bạn gánh được việc lớn.',
+      'Tạo dựng uy tín và sức nặng lời nói ngay từ những phút đầu tiên làm việc với đối tác.',
+      'Thể hiện rõ sự tự tin vào giá trị bản thân, giúp việc thương lượng quyền lợi thuận lợi hơn.',
+      'Mang lại cảm giác an tâm rằng bạn hoàn toàn đủ bản lĩnh để gánh vác các dự án quy mô lớn.',
     ],
     watchOut: [
-      'Bạn có thể bị xem là áp đặt hoặc lạnh lùng.',
-      'Người khác có thể ngại chia sẻ với bạn những chuyện riêng.',
+      'Dễ bị nhìn nhận là người quá thực dụng, cứng rắn hoặc khó thoả hiệp khi mới tiếp xúc.',
+      'Các thành viên trẻ hoặc mới vào nhóm có thể cảm thấy khớp và ngại bộc lộ khó khăn thật trước mặt bạn.',
     ],
     advice: [
-      'Khi gặp người mới, bạn hỏi thăm họ về những chuyện ngoài công việc.',
-      'Thỉnh thoảng kể về một lần mình từng thất bại, để người khác thấy bạn gần gũi hơn.',
+      'Kết hợp tác phong chuyên nghiệp với sự lắng nghe chân thành, dành thời gian hỏi thăm về góc nhìn của cộng sự trước khi chốt phương án.',
+      'Đôi lúc hãy chia sẻ thoải mái về những bài học vấp ngã thực tế của bạn để rút ngắn khoảng cách với người đối diện.',
     ],
   },
 
   9: {
-    title: 'Dáng vẻ bao dung',
-    keywords: ['Rộng lượng', 'Thanh lịch', 'Có chiều sâu'],
+    title: 'Phong thái rộng lượng và từng trải',
+    keywords: ['Văn minh', 'Bao dung', 'Chiều sâu nhân văn'],
     summary:
-      'Số nhân cách 9 cho thấy người khác thường thấy bạn rộng lượng và có chiều sâu. Lần đầu gặp, bạn trông như người từng trải và hiểu chuyện. Người ta thấy dễ tâm sự với bạn vì bạn không phán xét. Có điều, bạn có thể trông hơi xa vời, như đang nghĩ về một chuyện lớn hơn cuộc trò chuyện trước mắt.',
+      'Người khác khi mới gặp thường cảm nhận ở bạn một phong thái điềm đạm, hiểu chuyện và có cái nhìn rất rộng mở. Bạn giao tiếp với mọi người bằng sự tôn trọng bình đẳng, không phân biệt vị thế hay hoàn cảnh xuất thân. Chính sự tử tế, không phán xét đó khiến nhiều người dù mới quen đã cảm thấy tin cậy và muốn chia sẻ câu chuyện của họ với bạn. Điểm cần lưu ý là đôi khi phong thái quá nhẹ nhàng, bao quát làm bạn trông hơi xa rời các chi tiết thực dụng trước mắt.',
     strengths: [
-      'Bạn khiến người đối diện thấy mình được tôn trọng.',
-      'Bạn có phong thái thanh lịch, dễ được quý mến.',
-      'Bạn trông đáng tin trong những việc liên quan tới cộng đồng.',
+      'Tạo thiện cảm tự nhiên và sự kính trọng nhờ cách ứng xử văn minh, lịch lãm.',
+      'Dễ dàng hoà nhập và kết nối với những người đến từ nhiều tầng lớp, văn hoá khác nhau.',
+      'Truyền đi cảm giác bình an, chín chắn trong các buổi thảo luận về định hướng hoặc cộng đồng.',
     ],
     watchOut: [
-      'Bạn có thể bị nghĩ là mơ mộng, không thực tế.',
-      'Người khác dễ tìm tới bạn để trút tâm sự, khiến bạn mệt.',
+      'Trong các cuộc thương lượng thuần tuý về lợi ích thương mại, bạn dễ bị đánh giá là hơi thiên về lý tưởng.',
+      'Người mới quen dễ tìm đến bạn để trút bầu tâm sự cá nhân, đôi khi làm tốn nhiều thời gian làm việc của bạn.',
     ],
     advice: [
-      'Trong buổi gặp công việc, bạn nói rõ con số và kết quả cụ thể bên cạnh lý tưởng.',
-      'Đặt giới hạn thời gian cho những cuộc tâm sự kéo dài, và nói điều đó một cách nhẹ nhàng.',
+      'Khi làm việc với đối tác mới, hãy trình bày song song cả tầm nhìn nhân văn lẫn các chỉ số thực thi cụ thể để tăng tính thuyết phục.',
+      'Giữ sự thân thiện nhưng biết cách khéo léo khép lại những cuộc trò chuyện đi quá xa khỏi trọng tâm công việc.',
     ],
   },
 
   11: {
-    title: 'Sức hút khó gọi tên',
-    keywords: ['Cuốn hút', 'Nhạy cảm', 'Truyền cảm hứng'],
+    title: 'Phong thái tinh tế và giàu sức hút nội tâm',
+    keywords: ['Cuốn hút', 'Tinh tế', 'Chiều sâu cảm xúc'],
     summary:
-      'Số nhân cách 11 cho thấy người khác thường thấy ở bạn một sức hút khó gọi tên. Lần đầu gặp, người ta có cảm giác bạn hiểu họ nhanh hơn bình thường. Bạn có thể khiến cả căn phòng chú ý mà không cần nói to. Có điều, sự nhạy cảm của bạn đôi khi lộ ra thành vẻ căng thẳng hay ngượng ngùng.',
+      'Ấn tượng bạn tạo ra trong lần đầu gặp gỡ không nằm ở sự ồn ào náo nhiệt, mà ở ánh nhìn có chiều sâu và khả năng nắm bắt rất nhanh ý người đối diện. Người khác thường cảm thấy ở bạn có một sức hút đặc biệt khiến họ muốn lắng nghe xem bạn sắp nói điều gì. Khi bạn chia sẻ về một chủ đề mình quan tâm, sự chân thành trong giọng nói của bạn rất dễ chạm tới cảm xúc người nghe. Tuy nhiên, vào những lúc môi trường quá đông đúc hoặc lộn xộn, sự nhạy cảm của bạn có thể lộ ra thành vẻ hơi căng thẳng hoặc trầm ngâm.',
     strengths: [
-      'Bạn để lại ấn tượng khó quên.',
-      'Bạn truyền được cảm hứng qua cách nói chuyện.',
-      'Bạn dễ tạo được sự kết nối sâu ngay từ lần gặp đầu.',
+      'Để lại dấu ấn sâu sắc, khác biệt ngay từ cuộc trò chuyện đầu tiên nhờ góc nhìn tinh tế.',
+      'Tạo được sự kết nối có chiều sâu rất nhanh trong các cuộc trao đổi một-một.',
+      'Khả năng truyền cảm hứng tự nhiên qua phong thái điềm tĩnh và ánh mắt tập trung.',
     ],
     watchOut: [
-      'Bạn có thể trông hồi hộp hay căng thẳng ở chỗ đông người.',
-      'Người khác có thể kỳ vọng ở bạn nhiều hơn những gì bạn muốn thể hiện.',
+      'Dễ lộ vẻ mệt mỏi hoặc thu mình lại nếu phải tham gia những buổi tiệc tùng xã giao kéo dài nhiều tiếng đồng hồ.',
+      'Người ngoài đôi khi đặt kỳ vọng quá cao hoặc cảm thấy bạn hơi bí ẩn, khó đoán.',
     ],
     advice: [
-      'Trước buổi gặp quan trọng, bạn dành vài phút hít thở chậm để bình tĩnh lại.',
-      'Chuẩn bị một câu giới thiệu ngắn về mình để mở đầu cho tự tin.',
+      'Trước những sự kiện hoặc buổi họp quan trọng, hãy dành vài phút tĩnh tâm để làm chủ nhịp thở và giữ trạng thái cân bằng.',
+      'Chủ động sử dụng những ví dụ đời thường, gần gũi khi trò chuyện để người mới quen cảm thấy dễ kết nối với bạn hơn.',
     ],
   },
 
   22: {
-    title: 'Dáng vẻ vững vàng',
-    keywords: ['Vững vàng', 'Có năng lực', 'Đáng tin'],
+    title: 'Phong thái vững chãi và có tầm vóc',
+    keywords: ['Vững vàng', 'Thực tế', 'Bản lĩnh tổ chức'],
     summary:
-      'Số nhân cách 22, viết là 22/4, cho thấy người khác thường thấy bạn vững vàng và có năng lực. Lần đầu gặp, bạn để lại ấn tượng của người có thể đảm đương việc lớn. Người ta tin bạn vì bạn nói ít mà làm thật. Có điều, bạn có thể trông nghiêm và khó tiếp cận.',
+      'Được ký hiệu là 22/4, bạn mang lại ấn tượng ban đầu của một người cực kỳ điềm tĩnh, chắc chắn và có khả năng bao quát công việc lớn. Bạn không thích nói những lời hoa mỹ xã giao mà thường đi thẳng vào cấu trúc vấn đề và giải pháp thực thi khả thi. Nhờ sự kết hợp giữa vẻ ngoài chỉn chu và tư duy mạch lạc, người đối diện rất dễ tin tưởng giao cho bạn những trọng trách phức tạp ngay từ sớm. Điều bạn cần lưu ý là phong thái quá nghiêm nghị đôi khi tạo ra một bức tường vô hình khiến người khác ngại tiếp cận.',
     strengths: [
-      'Bạn tạo cảm giác yên tâm cho những người làm cùng.',
-      'Bạn trông như người có kế hoạch và nhìn xa.',
-      'Bạn dễ được giao trọng trách ngay từ đầu.',
+      'Tạo cảm giác an tâm tuyệt đối về năng lực thực thi và khả năng kiểm soát tình hình.',
+      'Toát ra tầm nhìn của một người biết tổ chức hệ thống chứ không chỉ làm việc manh mún.',
+      'Lời nói có trọng lượng cao trong các cuộc họp chiến lược và triển khai dự án.',
     ],
     watchOut: [
-      'Người khác có thể ngại tìm tới bạn vì những chuyện nhỏ.',
-      'Bạn có thể bị nghĩ là quá nghiêm túc.',
+      'Cộng sự mới hoặc cấp dưới dễ cảm thấy e dè, không dám trao đổi những vướng mắc nhỏ với bạn.',
+      'Dễ bị nhìn nhận là người chỉ biết đến công việc và thiếu sự mềm mại trong giao tiếp.',
     ],
     advice: [
-      'Kể về một sở thích đời thường để người khác thấy bạn dễ gần.',
-      'Chủ động hỏi han đồng nghiệp mới, để họ không ngại bạn.',
+      'Chủ động hỏi thăm cụ thể về những thuận lợi, khó khăn của đồng nghiệp mới để phá vỡ khoảng cách ban đầu.',
+      'Dành chỗ cho những câu chuyện nhẹ nhàng về sở thích đời thường trong các buổi gặp mặt để hình ảnh của bạn cân bằng và gần gũi hơn.',
     ],
   },
 
   33: {
-    title: 'Dáng vẻ hiền hậu',
-    keywords: ['Hiền hậu', 'Che chở', 'Đáng kính'],
+    title: 'Phong thái điềm đạm và giàu lòng nhân ái',
+    keywords: ['Điềm đạm', 'Bao dung', 'Đáng kính trọng'],
     summary:
-      'Số nhân cách 33, viết là 33/6, cho thấy người khác thường thấy ở bạn sự hiền hậu và đáng kính. Lần đầu gặp, người ta cảm thấy bạn quan tâm thật lòng. Trẻ nhỏ và người lớn tuổi thường quý bạn khá nhanh. Có điều, bạn có thể bị xem là người lúc nào cũng sẵn sàng gánh vác, nên dễ bị nhờ quá sức.',
+      'Được ký hiệu là 33/6, bạn tạo ấn tượng ngay từ lần đầu gặp gỡ bởi sự hiền hậu, chững chạc và thái độ quan tâm rất thật lòng tới người đối diện. Ở cạnh bạn, người khác tự nhiên cảm thấy áp lực dịu xuống và có cảm giác được lắng nghe, tôn trọng. Phong thái của bạn giống như một người thầy hoặc người anh, người chị điềm tĩnh, luôn sẵn sàng nâng đỡ mọi người. Tuy nhiên, chính vẻ ngoài quá bao dung đó đôi khi khiến người xung quanh dễ trút hết gánh nặng của họ sang vai bạn ngay từ khi mới quen.',
     strengths: [
-      'Bạn khiến người xung quanh thấy được che chở.',
-      'Bạn được tin tưởng ở vai trò hướng dẫn hay chăm sóc.',
-      'Sự tử tế của bạn dễ nhận ra ngay từ đầu.',
+      'Tạo dựng được sự tin cậy và lòng quý mến rất nhanh nhờ sự chân thành, ấm áp.',
+      'Phù hợp tự nhiên với các vai trò cố vấn, đào tạo, chăm sóc sức khoẻ hoặc dẫn dắt tinh thần.',
+      'Giữ được vẻ ung dung, độ lượng ngay cả khi đối diện với những người đang nóng nảy.',
     ],
     watchOut: [
-      'Bạn dễ bị nhờ vả vượt quá sức mình.',
-      'Người khác có thể nghĩ bạn không bao giờ buồn hay mệt.',
+      'Rất dễ bị người mới quen nhờ vả quá mức hoặc kéo vào những rắc rối cá nhân của họ.',
+      'Mọi người thường mặc định bạn lúc nào cũng vững vàng nên ít khi để ý hỏi han xem bạn có đang mệt mỏi không.',
     ],
     advice: [
-      'Cho người khác biết khi bạn đang mệt, để họ không mặc định lúc nào bạn cũng ổn.',
-      'Trong tuần này, bạn tập từ chối một lời nhờ không gấp.',
+      'Giữ thái độ lắng nghe tử tế nhưng luôn đặt rõ giới hạn về những gì bạn có thể hỗ trợ ngay từ đầu.',
+      'Cho phép bản thân thể hiện sự mệt mỏi hoặc nhu cầu cần nghỉ ngơi một cách tự nhiên thay vì lúc nào cũng gồng mình làm chỗ dựa.',
     ],
   },
 };
